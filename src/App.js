@@ -20,32 +20,37 @@ import "./css/jquery.fancybox.min.css";
 // import "./rs-plugin/css/settings.css";
 import "./rs-plugin/css/navigation.css";
 import "./css/style.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [headerAppear, setHeaderAppear] = useState(false);
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 220) {
+      setHeaderAppear(true);
+    } else {
+      setHeaderAppear(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <Helmet>
-        <meta charset="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta property="og:site_name" content="RAISE - k12 AI Education MIT" />
-        <meta
-          property="og:description"
-          content="Innovating learning and education in the era of AI"
-        />
-
-        <meta property="og:type" content="website" />
-
-        <meta name="twitter:card" content="aied-image" />
-        <meta name="twitter:image" content="/images/aied-mid.png" />
-
-        <meta property="og:image" content="/images/aied-mid.png" />
-        <meta property="og:url" content="https://raise.mit.edu/" />
-      </Helmet>
+    <div
+      className="App"
+      data-spy="scroll"
+      data-target=".navbar"
+      data-offset="90"
+    >
+      <Helmet></Helmet>
       <Loader />
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/home" element={<Home />} />
       </Routes>
