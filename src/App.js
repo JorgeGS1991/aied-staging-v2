@@ -9,18 +9,12 @@ import Home from "./pages/Home/Home";
 
 // CSS Stylesheets
 import "./App.css";
-import "./css/animate.min.css";
-// import "./css/owl.carousel.min.css";
-import "./css/bootstrap.min.css";
-import "./css/dropdown.css";
-import "./css/font-awesome.min.css";
-import "./css/owl.theme.default.min.css";
-import "./css/cubeportfolio.min.css";
-import "./css/jquery.fancybox.min.css";
+// import "./css/animate.min.css";
 // import "./rs-plugin/css/settings.css";
-import "./rs-plugin/css/navigation.css";
 import "./css/style.css";
 import { useEffect, useState } from "react";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Content from "./pages/Dashboard/Content/Content";
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -50,9 +44,10 @@ function App() {
     >
       <Helmet></Helmet>
       <Loader />
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
     </div>
   );
