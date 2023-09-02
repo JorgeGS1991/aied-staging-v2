@@ -22,6 +22,7 @@
 
 .navbar-items .navbar-item {
     padding: 20px;
+    border-right: 1px solid #555;
 }
 
 .navbar-items .navbar-item a {
@@ -30,6 +31,10 @@
 
 svg {
     fill: #ddd;
+}
+
+.navbar-item-logout {
+    margin-top: 15px;
 }
 
 .navbar-logout {

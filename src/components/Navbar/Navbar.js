@@ -26,7 +26,10 @@ function Navbar({ user, logOut }) {
           />
         </div>
         <div className="navbar-items">
-          <div className="navbar-item">
+          <div
+            className="navbar-item"
+            style={{ borderLeft: " 1px solid #555" }}
+          >
             <Link to="/home">Home</Link>
           </div>
           <div className="navbar-item">
@@ -49,7 +52,7 @@ function Navbar({ user, logOut }) {
                   class="dropdown-container"
                   style={{ display: isActive ? "block" : "none" }}
                 >
-                  <div className="navbar-item">
+                  <div className="navbar-item-logout">
                     <a className="navbar-logout" onClick={handleLogout}>
                       Logout
                     </a>
