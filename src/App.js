@@ -15,6 +15,7 @@ import "./css/style.css";
 import { useEffect, useState } from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Content from "./pages/Dashboard/Content/Content";
+import Login from "./pages/Login/Login";
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -48,6 +49,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

@@ -25,6 +25,18 @@
 }
 
 .navbar-items .navbar-item a {
-    text-decoration: none;   
+    text-decoration: none;
+}
+
+svg {
+    fill: #ddd;
+}
+
+.navbar-logout {
+    cursor: pointer
+}
+
+button svg {
+    fill: #c9c9c9;
 }
 

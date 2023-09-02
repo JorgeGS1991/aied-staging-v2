@@ -1,9 +1,13 @@
-import Navbar from "../../components/Navbar/Navbar";
+import { connect } from "react-redux";
 
 import "./Home.css";
 
-function Home() {
+function Home({ user }) {
   return <div className="landing-page"></div>;
 }
 
-export default Home;
+const mapStateToProps = (state) => ({
+  user: state.user.user,
+});
+
+export default connect(mapStateToProps)(Home);
