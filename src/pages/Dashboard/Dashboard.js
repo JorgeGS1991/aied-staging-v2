@@ -57,7 +57,7 @@ function CircularProgressWithLabel(props) {
 }
 
 function Dashboard({ user, progress = 0, setUser, setProgress }) {
-  const [isActive, setIsActive] = useState(Array(4).fill(false));
+  const [isActive, setIsActive] = useState([]);
   const [content, setContent] = useState(localStorage.getItem("content") || "");
   const [topic, setTopic] = useState("");
   const [subTopics, setSubTopics] = useState({});
@@ -102,8 +102,8 @@ function Dashboard({ user, progress = 0, setUser, setProgress }) {
       setUser(users);
     }
   }, [location, setUser, users]);
-  const toggleDropdown = (index) => {
-    console.log(index + " - index");
+  const toggleDropdown = (index, length) => {
+    setIsActive(Array(length).fill(false));
     const newIsActive = [...isActive];
     newIsActive[index] = !newIsActive[index];
     setIsActive(newIsActive);
@@ -131,7 +131,12 @@ function Dashboard({ user, progress = 0, setUser, setProgress }) {
                 {item.subTopics.map((subTopic, index) => {
                   return (
                     <div className="db-item">
-                      <a href="#" onClick={() => toggleDropdown(index)}>
+                      <a
+                        href="#"
+                        onClick={() =>
+                          toggleDropdown(index, item.subTopics.length)
+                        }
+                      >
                         {subTopic.name}
                         {"   "}
                         <svg
@@ -142,30 +147,32 @@ function Dashboard({ user, progress = 0, setUser, setProgress }) {
                           <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
                         </svg>
                       </a>
-                      <div
-                        class="dropdown-container"
-                        style={{
-                          display: isActive[index] ? "flex" : "none",
-                          flexDirection: "column",
-                          marginLeft: "10px",
-                        }}
-                      >
-                        {subTopic.contents.map((subContent) => (
-                          <Link
-                            to={`${item.id}/${index + 1}/${subContent.id}`}
-                            // onClick={() =>
-                            //   getTopic(
-                            //     item.subTopics,
-                            //     subTopic.name,
-                            //     subContent,
-                            //     subContent.id
-                            //   )
-                            // }
-                          >
-                            {subContent.topic}
-                          </Link>
-                        ))}
-                      </div>
+                      {isActive && (
+                        <div
+                          class="dropdown-container"
+                          style={{
+                            display: isActive[index] ? "flex" : "none",
+                            flexDirection: "column",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          {subTopic.contents.map((subContent) => (
+                            <Link
+                              to={`${item.id}/${index + 1}/${subContent.id}`}
+                              // onClick={() =>
+                              //   getTopic(
+                              //     item.subTopics,
+                              //     subTopic.name,
+                              //     subContent,
+                              //     subContent.id
+                              //   )
+                              // }
+                            >
+                              {subContent.topic}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   );
                 })}
