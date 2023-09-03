@@ -39,6 +39,17 @@
     padding: 10px;
 }
 
+.db-content {
+    width: 100%;
+}
+
 .dropdown-container {
     display: none;
+}
+
+.db-skeleton {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

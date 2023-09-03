@@ -14,7 +14,6 @@ import "./App.css";
 import "./css/style.css";
 import { useEffect, useState } from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Content from "./pages/Dashboard/Content/Content";
 import Login from "./pages/Login/Login";
 
 function App() {
@@ -47,6 +46,7 @@ function App() {
       <Loader />
       <Navbar />
       <Routes>
+        <Route exact path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />

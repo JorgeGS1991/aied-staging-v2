@@ -1,9 +1,15 @@
-import { LOG_OUT, SET_USER } from "../actions/userActions";
+import {
+  LOG_OUT,
+  RESET_PROGRESS,
+  SET_PROGRESS,
+  SET_USER,
+} from "../actions/userActions";
 
 const storedUser = JSON.parse(localStorage.getItem("user"));
 
 const initialState = {
   user: storedUser || null,
+  progress: 0,
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -14,6 +20,18 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         user: action.payload,
+      };
+
+    case SET_PROGRESS:
+      return {
+        ...state,
+        progress: action.payload,
+      };
+
+    case RESET_PROGRESS:
+      return {
+        ...state,
+        progress: 0,
       };
 
     case LOG_OUT:
