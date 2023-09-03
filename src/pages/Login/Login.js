@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import "./Login.css";
+
 function Login() {
   //   const handleGoogleLogin = async () => {
   //     try {
@@ -17,8 +19,15 @@ function Login() {
 
   return (
     <div>
-      <h2>Login/Register</h2>
-      <a href="http://localhost:3001/auth/google">Login with Google</a>
+      <h2 className="login-head">Login</h2>
+      <a className="google-button" href="http://localhost:3001/auth/google">
+        <img
+          className="google-icon"
+          src="/images/google.png"
+          alt="google logo"
+        />
+        Login with Google
+      </a>
 
       {/* <button onClick={handleGoogleLogin}>Login with Google</button> */}
       {/* Include your email/password registration form here */}
