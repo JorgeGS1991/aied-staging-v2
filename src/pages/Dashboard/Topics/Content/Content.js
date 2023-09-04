@@ -31,13 +31,13 @@ function Content() {
       </div>
       <div className="content-body">
         {subContent.contents ? (
-          <ul>
+          <ol>
             {subContent.contents.map((content) => (
               <li>
                 <Link to={`${content.id}`}>{content.topic}</Link>
               </li>
             ))}
-          </ul>
+          </ol>
         ) : null}
       </div>
       <Routes>

@@ -56,12 +56,10 @@ function CircularProgressWithLabel(props) {
   );
 }
 
-function Dashboard({ user, progress = 0, setUser, setProgress }) {
+function Dashboard({ user, progress, setUser, setProgress }) {
   const [isActive, setIsActive] = useState([]);
   const [content, setContent] = useState(localStorage.getItem("content") || "");
   const [topic, setTopic] = useState("");
-  const [subTopics, setSubTopics] = useState({});
-  const { id, topicId } = useParams();
 
   const [users, setUsers] = useState(null);
 
@@ -110,14 +108,6 @@ function Dashboard({ user, progress = 0, setUser, setProgress }) {
     console.log(isActive[index]);
   };
 
-  const getTopic = (subTopics, topic, subTopic, index) => {
-    setProgressCurrent(index);
-    setLengthSubTopics(getLength(subTopics));
-    setContent(subTopic);
-    setTopic(topic);
-    setSubTopics(subTopics);
-  };
-
   return (
     <div className="dashboard">
       <div className="db-sidebar">
@@ -159,14 +149,6 @@ function Dashboard({ user, progress = 0, setUser, setProgress }) {
                           {subTopic.contents.map((subContent) => (
                             <Link
                               to={`${item.id}/${index + 1}/${subContent.id}`}
-                              // onClick={() =>
-                              //   getTopic(
-                              //     item.subTopics,
-                              //     subTopic.name,
-                              //     subContent,
-                              //     subContent.id
-                              //   )
-                              // }
                             >
                               {subContent.topic}
                             </Link>

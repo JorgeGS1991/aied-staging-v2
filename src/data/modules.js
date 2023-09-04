@@ -142,6 +142,32 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
       },
     ],
   },
+  {
+    id: 2,
+    topicName: "Unit 1: Computational Thinking",
+    subTopics: [
+      {
+        id: 1,
+        name: "CT Module 0: Introduction to the Course",
+        author: "Hollie Rosser",
+        creationDate: new Date(2023, 3, 19),
+        points: 100,
+        contents: [
+          {
+            id: 1,
+            topic: "Main Content",
+            points: 100,
+            content: `<span><b>Introduction</b><br><br>This course is intended to introduce you to the foundational skills you'll need to learn the Python coding language. It is designed to give you some background knowledge in the ways that computers help us to solve problems and scale solutions. By the end of the course, you should be able to define the four components of computational thinking (decomposition, pattern recognition, abstraction, and algorithms) and explain how each of these components appears both within different kinds of computer technologies and within our everyday lives. Being able to reason in a computational way will make you a more powerful programmer by offering you a way to identify problems, solve them logically, and simplify those solutions in order to make sure that they work efficiently.&nbsp;<br><br>This module will begin with an introduction to computational thinking and some practice with basic problem solving. Next, you'll explore how to break down more complex problems, recognize patterns, create solutions, and build algorithms. This initial course should take about sixteen hours to complete.&nbsp;<br><br><b>Objectives</b><br>By the end of this course, you will be able to:&nbsp;<ul style="list-style-type: disc; margin-left: 30px;"><li>define the components of computational thinking (decomposition, pattern recognition, abstraction, and algorithms);</li><li>connect the components of computational thinking to your everyday life;</li><li>identify and break down challenging problems into smaller parts;</li><li>recognize patterns and use them to simplify complex ideas;</li><li>articulate how one idea might translate into many situations;</li><li>begin to use algorithms in simple coding exercises.</li></ul></span>`,
+          },
+          {
+            id: 2,
+            topic: "Complete Survey",
+            content: "",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export default data;

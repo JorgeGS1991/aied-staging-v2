@@ -19,8 +19,18 @@
     font-weight: 700;
 }
 
+.db-sidebar a {
+    transition: 500ms ease-in-out;
+}
+
+.db-sidebar a:hover {
+    background-color: #D71920;
+    color: #ffffff;
+}
+
 .db-unit {
     color: #D71920;
+    text-align: start;
 }
 
 .db-items {
