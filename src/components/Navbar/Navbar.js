@@ -36,6 +36,9 @@ function Navbar({ user, logOut }) {
             <Link to="/dashboard">Dashboard</Link>
           </div>
           <div className="navbar-item">
+            <Link to="/playground">Playground</Link>
+          </div>
+          <div className="navbar-item">
             {user ? (
               <>
                 <a href="#" onClick={toggleDropdown}>

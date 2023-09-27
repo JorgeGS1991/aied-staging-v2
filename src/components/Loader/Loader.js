@@ -11,7 +11,7 @@ function Loader() {
           loader.style.display = "none";
         }, 500);
       }
-    }, 1000);
+    }, 3000);
     return () => {
       clearTimeout(loaderTimeout);
     };
@@ -21,22 +21,10 @@ function Loader() {
     <div className="loader">
       <div class="loader-inner">
         <div class="loader-blocks">
-          <span class="block-1"></span>
-          <span class="block-2"></span>
-          <span class="block-3"></span>
-          <span class="block-4"></span>
-          <span class="block-5"></span>
-          <span class="block-6"></span>
-          <span class="block-7"></span>
-          <span class="block-8"></span>
-          <span class="block-9"></span>
-          <span class="block-10"></span>
-          <span class="block-11"></span>
-          <span class="block-12"></span>
-          <span class="block-13"></span>
-          <span class="block-14"></span>
-          <span class="block-15"></span>
-          <span class="block-16"></span>
+          <img
+            src="https://www.unomaha.edu/university-communications/downloadables/campus-icon-the-o/uno-icon-color.png"
+            alt="uno logo"
+          />
         </div>
       </div>
     </div>

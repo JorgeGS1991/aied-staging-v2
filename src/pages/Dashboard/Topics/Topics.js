@@ -1,10 +1,8 @@
-import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../../../data/modules";
-import subTopic from "../../../data/modules";
 import "./Topics.css";
-function Topics({ topic, subTopic }) {
+function Topics() {
   const { id } = useParams();
   const [currentTopics, setCurrentTopics] = useState([]);
 

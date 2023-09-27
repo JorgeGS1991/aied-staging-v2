@@ -15,6 +15,7 @@ import "./css/style.css";
 import { useEffect, useState } from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login/Login";
+import Playground from "./pages/Playground/Playground";
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -42,12 +43,12 @@ function App() {
       data-target=".navbar"
       data-offset="90"
     >
-      <Helmet></Helmet>
       <Loader />
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/playground" element={<Playground />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
       </Routes>

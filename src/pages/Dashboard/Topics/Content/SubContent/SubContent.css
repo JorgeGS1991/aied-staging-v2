@@ -2,3 +2,7 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.subcontent-section {
+    font-weight: 400
+}
