@@ -2,14 +2,25 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import SequentialNumberColumn from "../../components/SequentialNumberColumn/SequentialNumberColumn";
 
+import "./CobolCodeEditor.css";
+
+//     `IDENTIFICATION DIVISION.
+//  PROGRAM-ID. HelloWorld.
+//  DATA DIVISION.
+//  WORKING-STORAGE SECTION.
+//  01 WS-MESSAGE PIC X(30) VALUE "Hello, World!".
+//  PROCEDURE DIVISION.
+//  DISPLAY WS-MESSAGE.
+//  STOP RUN.`;
 const CobolCodeEditor = () => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
 
   const runCode = async () => {
     try {
-      const response = await fetch("http://localhost:3001/execute", {
+      await fetch("http://localhost:3001/execute", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -19,25 +30,12 @@ const CobolCodeEditor = () => {
           script: code,
           language: "cobol", // Change this to the desired programming language
           versionIndex: "0",
-          clientId: "7ec0243b3b9611fa78261417c15a063e",
-          clientSecret:
-            "4e98ad0ce89e1d9f9cab56bd6f5c14be0435966ead3f477ff3b5ff2b4f30b82b",
+          clientId: process.env.REACT_APP_COBOL_CLIENT_ID,
+          clientSecret: process.env.REACT_APP_COBOL_CLIENT_SECRET,
         }),
       })
         .then((response) => response.json())
         .then((data) => setOutput(data.output));
-      //   const response = await axios
-      //     .post("http://localhost:3001/execute", {
-      //       language: "python", // Change this to the desired programming language
-      //       versionIndex: "0",
-      //       clientId: "7ec0243b3b9611fa78261417c15a063e",
-      //       clientSecret:
-      //         "4e98ad0ce89e1d9f9cab56bd6f5c14be0435966ead3f477ff3b5ff2b4f30b82b",
-      //     })
-      //     .then((res) => console.log(res.json()));
-      //   let text = await new Response(response).text();
-      //   console.log(JSON.stringify(text));
-      //   setOutput(response.data.output);
     } catch (error) {
       console.error("Error executing code:", error);
     }
@@ -46,7 +44,8 @@ const CobolCodeEditor = () => {
   return (
     <div>
       <div className="flex flex-row space-x-4 items-start px-4 py-4">
-        <div className="flex flex-col w-full h-full justify-start items-end">
+        <div className="cobol-columns flex flex-col w-full h-full justify-start items-start">
+          <SequentialNumberColumn code={code} />
           <textarea
             class="peer block min-h-[auto] w-full rounded border-2 bg-[#1E1E1E] px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none text-white text-xs dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-1"
             value={code}
