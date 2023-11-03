@@ -19,6 +19,7 @@ import contents from "../../data/contents";
 import Topics from "./Topics/Topics";
 import Content from "./Topics/Content/Content";
 import SubContent from "./Topics/Content/SubContent/SubContent";
+import axios from "axios";
 
 function getLength(subTopics) {
   let lastData = subTopics[subTopics.length - 1];
@@ -56,9 +57,10 @@ function CircularProgressWithLabel(props) {
   );
 }
 
-function Dashboard({ user, progress, setUser, setProgress }) {
+function Dashboard({ user, role, progress, setUser, setProgress }) {
   const [isActive, setIsActive] = useState([]);
   const [content, setContent] = useState(localStorage.getItem("content") || "");
+  const [roles, setRole] = useState(localStorage.getItem("role"));
   const [topic, setTopic] = useState("");
 
   const [users, setUsers] = useState(null);
@@ -80,6 +82,25 @@ function Dashboard({ user, progress, setUser, setProgress }) {
       setTopic(topic);
     }
   }, [topic]);
+
+  console.log("Role: " + localStorage.getItem("role"));
+
+  useEffect(() => {
+    console.log("roles: " + roles);
+
+    const updateRole = async (role) => {
+      let newRole = role.substring(1, role.length - 1);
+      await axios
+        .put("/api/users/update-role", { newRole })
+        .then((response) => {
+          console.log("User role updated successfully:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error updating user role:", error);
+        });
+    };
+    updateRole(roles);
+  }, [roles]);
 
   //   useEffect(() => {
   //     if (!progress) {
@@ -184,6 +205,7 @@ function Dashboard({ user, progress, setUser, setProgress }) {
               value={progress ? progress : 0}
             />
           </Box> */}
+
           <Routes>
             <Route path=":id" element={<Topics />} />
             <Route path=":id/:topicId" element={<Content />}>
@@ -201,6 +223,7 @@ function Dashboard({ user, progress, setUser, setProgress }) {
 const mapStateToProps = (state) => ({
   user: state.user.user,
   progress: state.user.progress,
+  role: state.user.role,
 });
 
 export default connect(mapStateToProps, { setUser, setProgress })(Dashboard);

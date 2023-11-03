@@ -6,6 +6,7 @@ const contents = [
         topic: "Main Content",
         author: "Hollie Rosser",
         url: "1/main-content",
+        type: "main",
         points: 100,
         creationDate: new Date(2023, 4, 28),
         content:
@@ -16,6 +17,7 @@ const contents = [
         topic: "Complete Survey",
         author: "Hollie Rosser",
         url: "1/complete-survey",
+        type: "quiz",
         points: 100,
         creationDate: new Date(2023, 4, 28),
         content:

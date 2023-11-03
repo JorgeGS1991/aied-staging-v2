@@ -16,18 +16,6 @@ function Content() {
     <div className="content-section">
       <div className="content-header">
         <h2 className="content-head">{subContent.name}</h2>
-        <div className="content-subhead">
-          <div className="content-author">{subContent.author}</div> {"|"}
-          {subContent.creationDate && (
-            <div className="content-creationdate">
-              {subContent.creationDate.toLocaleDateString("en-us", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })}
-            </div>
-          )}
-        </div>
       </div>
       <div className="content-body">
         {subContent.contents ? (
@@ -40,6 +28,7 @@ function Content() {
           </ol>
         ) : null}
       </div>
+
       <Routes>
         <Route path=":contentId" element={<SubContent />} />
       </Routes>

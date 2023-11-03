@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Quiz from "../../../../../components/Quiz/Quiz";
 import data from "../../../../../data/modules";
 
 import "./SubContent.css";
@@ -13,6 +14,7 @@ function SubContent() {
   });
   //   const navigate = useNavigate();
   const [content, setContent] = useState("");
+  const [type, setType] = useState("");
 
   //   useEffect(() => {
   //     setParams({
@@ -28,6 +30,7 @@ function SubContent() {
     setContent(
       data[id - 1].subTopics[topicId - 1].contents[contentId - 1].content
     );
+    setType(data[id - 1].subTopics[topicId - 1].contents[contentId - 1].type);
   }, [id, topicId, contentId, content]);
 
   //   const getNextId = () => {
@@ -65,7 +68,14 @@ function SubContent() {
 
   return (
     <div className="subcontent-section">
-      <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+      {type !== "quiz" ? (
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      ) : (
+        <Quiz />
+      )}
       {/* <div className="navigate">
         <Button color="error" variant="outlined" onClick={getNextId}>
           Next

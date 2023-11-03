@@ -18,6 +18,23 @@ const CobolCodeEditor = () => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
 
+  const saveOutputToMongoDB = async (output) => {
+    try {
+      await fetch("http://localhost:3001/save-output", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          output: output,
+        }),
+      });
+    } catch (error) {
+      console.error("Error saving output to MongoDB:", error);
+    }
+  };
+
   const runCode = async () => {
     try {
       await fetch("http://localhost:3001/execute", {
@@ -35,7 +52,10 @@ const CobolCodeEditor = () => {
         }),
       })
         .then((response) => response.json())
-        .then((data) => setOutput(data.output));
+        .then((data) => {
+          setOutput(data.output);
+        });
+      saveOutputToMongoDB(code);
     } catch (error) {
       console.error("Error executing code:", error);
     }
