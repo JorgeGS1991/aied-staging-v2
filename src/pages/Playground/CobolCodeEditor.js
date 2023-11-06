@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Button, Box, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import SequentialNumberColumn from "../../components/SequentialNumberColumn/SequentialNumberColumn";
@@ -14,6 +16,28 @@ import "./CobolCodeEditor.css";
 //  PROCEDURE DIVISION.
 //  DISPLAY WS-MESSAGE.
 //  STOP RUN.`;
+
+const RightContainer = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  width: "30%",
+  flexShrink: 0,
+  padding: "16px",
+});
+
+const CodeButton = styled(Button)({
+  marginBottom: "16px",
+});
+
+const CodeOutput = styled(Typography)({
+  fontFamily: "monospace",
+  fontSize: "14px",
+  padding: "12px",
+  borderRadius: "8px",
+  backgroundColor: "#f1f1f1",
+  overflowX: "auto",
+});
+
 const CobolCodeEditor = () => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
@@ -76,12 +100,14 @@ const CobolCodeEditor = () => {
           />
         </div>
 
-        <div className="right-container flex flex-shrink-0 w-[30%] flex-col">
-          <button onClick={runCode}>Run Code</button>
-          <SyntaxHighlighter language="python" style={docco}>
+        <RightContainer>
+          <CodeButton variant="contained" onClick={runCode}>
+            Run Code
+          </CodeButton>
+          <CodeOutput language="python" style={docco}>
             {output}
-          </SyntaxHighlighter>
-        </div>
+          </CodeOutput>
+        </RightContainer>
       </div>
     </div>
   );

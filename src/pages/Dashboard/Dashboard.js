@@ -20,6 +20,7 @@ import Topics from "./Topics/Topics";
 import Content from "./Topics/Content/Content";
 import SubContent from "./Topics/Content/SubContent/SubContent";
 import axios from "axios";
+import Notification from "../../components/SnackBar/SnackBar";
 
 function getLength(subTopics) {
   let lastData = subTopics[subTopics.length - 1];
@@ -62,11 +63,11 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
   const [content, setContent] = useState(localStorage.getItem("content") || "");
   const [roles, setRole] = useState(localStorage.getItem("role"));
   const [topic, setTopic] = useState("");
+  const [notificationOpen, setNotificationOpen] = useState(false);
+  const [notificationMessage, setNotificationMessage] = useState("");
+  const [notificationSeverity, setNotificationSeverity] = useState("success");
 
   const [users, setUsers] = useState(null);
-
-  const [progressCurrent, setProgressCurrent] = useState(0);
-  const [lengthSubTopics, setLengthSubTopics] = useState(0);
 
   const location = useLocation();
 
@@ -98,16 +99,16 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
         .catch((error) => {
           console.error("Error updating user role:", error);
         });
+      setNotificationMessage(
+        `Welcome ${
+          user ? user : "user"
+        }, you are logged in as a ${roles.substring(1, roles.length - 1)}`
+      );
+      setNotificationSeverity("success");
+      setNotificationOpen(true);
     };
     updateRole(roles);
-  }, [roles]);
-
-  //   useEffect(() => {
-  //     if (!progress) {
-  //       setProgress(progress);
-  //     }
-  //     setProgress((progressCurrent * 100) / lengthSubTopics);
-  //   }, [progressCurrent, lengthSubTopics, setProgress]);
+  }, [user, roles]);
 
   useEffect(() => {
     // Parse the user data from the query parameter
@@ -127,6 +128,13 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
     newIsActive[index] = !newIsActive[index];
     setIsActive(newIsActive);
     console.log(isActive[index]);
+  };
+
+  const handleNotificationClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setNotificationOpen(false);
   };
 
   return (
@@ -186,25 +194,12 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
       </div>
       {user ? (
         <div className="db-content">
-          {/* <Box
-            className="db-content-progress"
-            pt={5}
-            pl={50}
-            sx={{ width: "100%" }}
-          > */}
-          {/* {subTopics && topic && content && (
-              <Link
-                to={`${content.id}`}
-                onClick={() => getTopic(subTopics, topic, content, content.id)}
-              >
-                Next
-              </Link>
-            )} */}
-          {/* <CircularProgressWithLabel
-              variant="determinate"
-              value={progress ? progress : 0}
-            />
-          </Box> */}
+          <Notification
+            open={notificationOpen}
+            handleClose={handleNotificationClose}
+            message={notificationMessage}
+            severity={notificationSeverity}
+          />
 
           <Routes>
             <Route path=":id" element={<Topics />} />
