@@ -6,6 +6,7 @@ import { logOut } from "../../redux/actions/userActions";
 import { useState } from "react";
 function Navbar({ user, logOut }) {
   const [isActive, setActive] = useState(false);
+  const [role, setRole] = useState(localStorage.getItem("role"));
   const toggleDropdown = () => {
     setActive(!isActive);
   };
@@ -55,6 +56,16 @@ function Navbar({ user, logOut }) {
                   class="dropdown-container"
                   style={{ display: isActive ? "block" : "none" }}
                 >
+                  {role === '"teacher"' && (
+                    <div className="navbar-item-manage-student">
+                      <Link
+                        to="/manage-students"
+                        className="navbar-manage-student"
+                      >
+                        Manage Students
+                      </Link>
+                    </div>
+                  )}
                   <div className="navbar-item-logout">
                     <a className="navbar-logout" onClick={handleLogout}>
                       Logout

@@ -3,6 +3,12 @@ export const LOG_OUT = "LOG_OUT";
 export const SET_PROGRESS = "SET_PROGRESS";
 export const RESET_PROGRESS = "RESET_PROGRESS";
 export const SET_USER_ROLE = "SET_USER_ROLE";
+export const FETCH_ALL_USERS = "FETCH_ALL_USERS";
+
+export const fetchAllUsers = (users) => ({
+  type: FETCH_ALL_USERS,
+  payload: users,
+});
 
 export const setUser = (user) => ({
   type: SET_USER,

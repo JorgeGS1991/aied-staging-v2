@@ -91,19 +91,21 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
 
     const updateRole = async (role) => {
       let newRole = role.substring(1, role.length - 1);
-      await axios
-        .put("/api/users/update-role", { newRole })
-        .then((response) => {
-          console.log("User role updated successfully:", response.data);
-        })
-        .catch((error) => {
-          console.error("Error updating user role:", error);
-        });
-      setNotificationMessage(
-        `Welcome ${
-          user ? user : "user"
-        }, you are logged in as a ${roles.substring(1, roles.length - 1)}`
-      );
+      if (user) {
+        await axios
+          .put("/api/users/update-role", { newRole })
+          .then((response) => {
+            console.log("User role updated successfully:", response.data);
+          })
+          .catch((error) => {
+            console.error("Error updating user role:", error);
+          });
+        setNotificationMessage(
+          `Welcome ${
+            user ? user : "user"
+          }, you are logged in as a ${roles.substring(1, roles.length - 1)}`
+        );
+      }
       setNotificationSeverity("success");
       setNotificationOpen(true);
     };

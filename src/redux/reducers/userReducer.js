@@ -1,4 +1,5 @@
 import {
+  FETCH_ALL_USERS,
   LOG_OUT,
   RESET_PROGRESS,
   SET_PROGRESS,
@@ -9,6 +10,7 @@ import {
 const storedUser = JSON.parse(localStorage.getItem("user"));
 
 const initialState = {
+  users: [],
   user: storedUser || null,
   progress: 0,
   role: "",
@@ -16,6 +18,11 @@ const initialState = {
 
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_ALL_USERS:
+      return {
+        ...state,
+        users: action.payload,
+      };
     case SET_USER:
       localStorage.setItem("user", JSON.stringify(action.payload));
 
