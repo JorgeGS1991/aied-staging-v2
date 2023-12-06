@@ -13,8 +13,9 @@ import {
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { fetchAllUsers } from "../../redux/actions/userActions";
+import Login from "../Login/Login";
 
-const ManageStudents = ({ users, fetchAllUsers }) => {
+const ManageStudents = ({ user, users, fetchAllUsers }) => {
   const [allUsers, setAllUsers] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -50,52 +51,61 @@ const ManageStudents = ({ users, fetchAllUsers }) => {
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.1)",
       }}
     >
-      <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-        Manage Student Information
-      </Typography>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>User Name</TableCell>
-              <TableCell>Role</TableCell>
-              <TableCell>Email</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {users.map((user, index) => {
-              return user.role === "student" ? (
-                <TableRow key={index}>
-                  <TableCell>
-                    <Typography variant="body1">{user.displayName}</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography variant="body1">{user.role}</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography variant="body1">{user.email}</Typography>
-                  </TableCell>
+      {user ? (
+        <>
+          <Typography variant="h4" sx={{ marginBottom: "20px" }}>
+            Manage Student Information
+          </Typography>
+          <TableContainer component={Paper}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>User Name</TableCell>
+                  <TableCell>Role</TableCell>
+                  <TableCell>Email</TableCell>
                 </TableRow>
-              ) : null;
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <TablePagination
-        rowsPerPageOptions={[5, 10, 25]}
-        component="div"
-        count={users.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-      />
+              </TableHead>
+              <TableBody>
+                {users.map((user, index) => {
+                  return user.role === "student" ? (
+                    <TableRow key={index}>
+                      <TableCell>
+                        <Typography variant="body1">
+                          {user.displayName}
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="body1">{user.role}</Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="body1">{user.email}</Typography>
+                      </TableCell>
+                    </TableRow>
+                  ) : null;
+                })}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={users.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          />
+        </>
+      ) : (
+        <Login />
+      )}
     </Box>
   );
 };
 
 const mapStateToProps = (state) => ({
   users: state.user.users,
+  user: state.user.user,
 });
 
 export default connect(mapStateToProps, { fetchAllUsers })(ManageStudents);

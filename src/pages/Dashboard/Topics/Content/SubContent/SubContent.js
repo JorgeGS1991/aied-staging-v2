@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ParsonsProblem from "../../../../../components/Parsons/Parsons";
 import Quiz from "../../../../../components/Quiz/Quiz";
+import UploadDocument from "../../../../../components/UploadDocument/UploadDocument";
 import data from "../../../../../data/modules";
 
 import "./SubContent.css";
@@ -68,14 +70,15 @@ function SubContent() {
 
   return (
     <div className="subcontent-section">
-      {type !== "quiz" ? (
+      {type !== "quiz" && (
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: content }}
         />
-      ) : (
-        <Quiz />
       )}
+      {type === "quiz" && <Quiz />}
+      {type === "upload" && <UploadDocument />}
+      {type === "parsons" && <ParsonsProblem />}
       {/* <div className="navigate">
         <Button color="error" variant="outlined" onClick={getNextId}>
           Next

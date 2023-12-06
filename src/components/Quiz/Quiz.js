@@ -1,4 +1,10 @@
-// Quiz.js
+/**
+ *  @author: Phillip Nguyen
+ *  Component: Quiz
+ *  Date: 11/15/2023
+ *  Objective: Building a quiz feature for students to complete quizzes on our own application
+ *
+ */
 
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
@@ -7,7 +13,6 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
-  FormGroup,
   List,
   ListItem,
   ListItemButton,
@@ -61,10 +66,6 @@ const Quiz = ({
     fetchQuestionsSuccess(newQuestions);
   }, [fetchQuestionsSuccess, newQuestions]);
 
-  // useEffect(() => {
-  //   setSelectedOptions([...selectedOptions, selectedOptionsMC]);
-  // }, [selectedOptionsMC]);
-
   useEffect(() => {
     selectAnswer(questionIndex, userResponseMC);
     const updatedSelectedOptions = [...selectedOptions];
@@ -112,11 +113,8 @@ const Quiz = ({
     setQuestionIndex(index);
     setSelectedOptionsMC(updatedSelectedOptionsMC);
     selectAnswer(index, userResponseMC);
-    // setSelectedOptions([...selectedOptions, selectedOptionsMC]);
   };
 
-  // console.log(selectedOptions);
-  // console.log("MC Responses: ");
   console.log(userResponses);
   console.log(userResponseMC);
   console.log("----- Selected Options -----");
@@ -224,7 +222,6 @@ const Quiz = ({
                   ))
                 : question.options?.map((option, optionIndex) => (
                     <ListItem key={optionIndex} disablePadding>
-                      {/* <FormGroup> */}
                       <FormControlLabel
                         sx={{
                           backgroundColor: handleBackgroundColor(
@@ -236,17 +233,9 @@ const Quiz = ({
                           marginBottom: "8px",
                           border: "1px solid #000000",
                           width: "100%",
-                          "&:hover": {
-                            // backgroundColor: selectedOptionsMC[index][
-                            // optionIndex
-                            // ]
-                            // ? "#ff9999"
-                            // : "#ffcccc",
-                          },
                         }}
                         control={
                           <Checkbox
-                            // checked={selectedOptionsMC[optionIndex]}
                             onChange={() =>
                               handleCheckboxChange(question, index, optionIndex)
                             }
@@ -254,7 +243,6 @@ const Quiz = ({
                         }
                         label={option}
                       />
-                      {/* </FormGroup> */}
                     </ListItem>
                   ))}
             </List>

@@ -10,6 +10,7 @@ import {
   Box,
   Button,
   CircularProgress,
+  Grid,
   LinearProgress,
   Skeleton,
   Typography,
@@ -21,6 +22,7 @@ import Content from "./Topics/Content/Content";
 import SubContent from "./Topics/Content/SubContent/SubContent";
 import axios from "axios";
 import Notification from "../../components/SnackBar/SnackBar";
+import DBContent from "./DBContent/DBContent";
 
 function getLength(subTopics) {
   let lastData = subTopics[subTopics.length - 1];
@@ -204,6 +206,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
           />
 
           <Routes>
+            <Route path="/" element={<DBContent />} />
             <Route path=":id" element={<Topics />} />
             <Route path=":id/:topicId" element={<Content />}>
               <Route path=":contentId" element={<SubContent />} />
