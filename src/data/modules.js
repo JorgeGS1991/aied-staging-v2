@@ -71,7 +71,11 @@ const data = [
                 <p>Before You Proceed to Other Modules</p>
                 <p>Before you can move on to the other modules of the Work Learn Classroom, we want to make sure you have the computer and digital literacy skills needed to be successful in the program. So, we are asking that you complete the Basic Computer Skills and Internet Basics assessments from the Northstar Digital Literacy website linked below with a score of 85% or better. If you are not successful the first time, please go back to the Basic Computer and Digital Literacy Practice module to improve your skills.</p>
 
+
+
                 <p>When you get to the Northstar website, please click on the green "Take an Assessment" button to get to the menu options you will need to select to complete the assessments. You will find the Basic Computer Skills and Internet Basics under Essential Computer Skills in the left column. An illustrative tutorial of these steps is provided below for you if needed.</p>
+
+
 
                 <p>Helpful Hints</p>
                 <ul>
@@ -80,6 +84,8 @@ const data = [
                     <li>At the beginning of each assessment, there is a tutorial that goes through how to complete the assessments. This tutorial will show you how to navigate through each screen, record your answers, review and change your answers, submit your answers, and receive your final score.</li>
                     <li>Make sure you are confident in your answers before you submit your assessment for grading. You will not be able to return to the questions after the assessment is graded.</li>
                 </ul>
+
+
 
                 <p>When you are done with each assessment, please press Print Result and download your results as a PDF file. Upload each of the files to this assignment. Once your scores are verified to be 85% or better, you will be able to move on to the Computational Thinking module.</p>
             `,
@@ -138,6 +144,8 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
                     </li>
                 </ol>
             </div>
+
+
 
             `,
           },
@@ -222,6 +230,8 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
                     </ol>
                 </div>
 
+
+
                 `,
           },
         ],
@@ -255,6 +265,8 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
                         </li>
                     </ol>
                 </div>
+
+
 
                 `,
           },
@@ -328,6 +340,8 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
     <li>Articulate the ways that computers can help humans break down problems</li>
   </ol>
 
+
+
   <p>The process of breaking things down is decomposition. We look for small solutions to small problems that can help us create big solutions to bigger problems!</p>
     
 <div class="video-intro-section">
@@ -359,6 +373,8 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
   </div>
   </div>
 
+
+
   <div style="margin-top: 20px;">
   <h2 style="font-weight: 600">You try:</h2>
   <p>Think about your morning routine. What are the steps of your morning routine? List them in order:</p>
@@ -370,6 +386,8 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
     <li>5.</li>
     <li>6.</li>
   </ol>
+
+
 
   <p>Pick one step of your morning routine and break it into smaller steps, like if you were trying to teach someone who had never done that thing before:</p>
   <ol>
@@ -387,9 +405,13 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
   margin-top: 20px;
 }
 
+
+
 .video-intro {
   font-weight: 600;
 }
+
+
 
 a {
   text-decoration: underline;
@@ -419,20 +441,30 @@ a {
   <p>If a problem is not decomposed, it is much harder to solve. Dealing with many different stages all at once is much more difficult than breaking a problem down into a number of smaller problems and solving each one, one at a time. Breaking the problem down into smaller parts means that each smaller problem can be examined in greater detail.</p>
   <p>Similarly, trying to understand how a complex system works is easier using decomposition. For example, understanding how a bicycle works is more straightforward if the whole bike is separated into smaller parts (like brakes, gears, wheels, etc.), and each part can be examined to see how it works in more detail.</p>
 
+
+
   <p>When you write a program, you might break it into parts.</p>
 </div>
 <div class="decomp-example">
   <h3>EXAMPLE:</h3>
   <p>This video is a great example of breaking a program into smaller parts. <a href="https://youtu.be/EADcmeBgW8s">(Watch the video)</a></p>
 
+
+
   <p>This video shows how he started off with a code with no parts and everything was just in one big block of code. He then separated parts of the house by breaking it into smaller sections or pieces (decomposition). After doing that, his code looked a lot more organized and it would be easier for someone else to understand by looking at it.</p>
 
+
+
   <p>Lots of computational tools are huge and very complex. Many programmers work together to create them. The big project gets decomposed into smaller parts, and each programmer gets assigned one part at a time. Then the parts get put together. That’s how the web browser you are using got built!</p>
+
+
 
   <p>For an example of a person decomposing how they built their website, read this: <a href="https://sparkbox.com/foundry/web_design_process_decomposition_exercise">Web Design Process Decomposition Exercise</a></p>
   <div>
 </body>
 </html>
+
+
 
 <style>
 .title {
@@ -440,23 +472,35 @@ a {
   font-size: 1.25em;
 }
 
+
+
 .decomp-defn {
   margin: 20px 0;
 
+
+
 }
+
+
 
 .decomp-defn h2 {
   font-weight: 700;
   font-size: 1em;
 }
 
+
+
 .decomp-defn p {
   padding: 10px 0;
 }
 
+
+
 .decomp-why {
   margin-bottom: 20px;
 }
+
+
 
 .decomp-why h2 {
   font-weight: 700;
@@ -465,9 +509,13 @@ a {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 700;
 }
+
+
 
 .decomp-example a {
   text-decoration: underline;
@@ -519,18 +567,26 @@ a {
   font-size: 1.25em;
 }
 
+
+
 .decomp-subtitle {
   padding: 10px 0;
 }
+
+
 
 .decomp-exercise h3 {
   font-weight: 600;
   margin-top: 20px;
 }
 
+
+
 .decomp-exercise a {
   text-decoration: underline;
 }
+
+
 
 .decomp-exercise img {
   width: 500px;
@@ -540,8 +596,13 @@ a {
 }
 
 
+
+
+
 </style>
 </html>
+
+
 
             `,
           },
@@ -565,25 +626,39 @@ a {
   <p>When you have broken the problem down into a set of clear, easy-to-follow steps, the problem is fully decomposed. Decomposition to this degree also allows for delegation and any other programmer should be able to follow what needs to be done easily.</p>
   </div>
 
-  <div class="decomp-example"> 
+
+
+  <div class="decomp-example">
+
+
 
   <h3>Here's an Example</h3>
   <p>An example of this is writing, or creating a program for a piece of artwork made of squares.</p>
 
+
+
   <p>Let’s say you get asked to take this image and code it (using some code language).</p>
   <img src="/images/contents/decomp-computing-1.png" />
 
+
+
   <p>Taking this as it is would take a while to figure out how to code, and could get very confusing. It would be hard to work out and would take a lot of writing. So to make this problem easier we look to see if there are ways we can break it up into smaller parts, so then the code can come easier.</p>
+
+
 
   <p>Looking at that picture you might realize a pattern, and that you can fold it in half and it is the same thing on both sides. So you can break that in half like so.</p>
   <!-- Image decomposing steps could be inserted here -->
   <img src="/images/contents/decomp-computing-2.png" />
+
+
 
   <p>Looking at this it already seems a lot more manageable to code than the first picture, and you can just think of the first picture as two of these pictures side by side. So you can have one code that you have executed twice. However as you look at this you might realize we can decompose(break into smaller parts) it even more.</p>
   <img src="/images/contents/decomp-computing-3.png" />
   <p>This is half of the 2nd, and 1/4th of the original picture, and it is much easier to look at and understand.</p>
   <p>We can then break it down or decompose it even more, until it is just one small square. This one square can be coded and then copied to make the starting picture. </p>
   <img src="/images/contents/decomp-computing-4.png" />
+
+
 
   <p>Decomposing that picture into these smaller parts made it a lot easier to understand and a lot easier to code. You could even take this a step further and break it into the colors.</p>
 </div>
@@ -601,6 +676,8 @@ a {
   </ol>
   </div>
 
+
+
 </body>
 <style>
 .decomp-title {
@@ -611,25 +688,37 @@ a {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 600;
 }
+
+
 
 .decomp-example p {
   padding: 10px 0;
 }
 
+
+
 .decomp-you-try h3 {
   font-weight: 600;
 }
+
+
 
 .decomp-you-try p {
   padding: 10px 0;
 }
 
+
+
 .decomp-you-try ol {
   padding: 0 20px; 
 }
+
+
 
 img {
   width: 300px;
@@ -639,6 +728,9 @@ img {
 }
 </style>
 </html>
+
+
+
 
 
             `,
@@ -672,6 +764,8 @@ img {
     <li>Articulate the ways that computers can help humans solve problems by leveraging patterns in their coding</li>
   </ol>
 
+
+
   <p>You have actually already done a little bit of pattern recognition for this class! The last example problem for decomposition (the art work), you had to be able to recognize patterns to be able to do that. A lot of times you have a lot more practice with recognizing problems then you think you do!</p>
 </div>
 <style>
@@ -679,9 +773,13 @@ img {
   margin-top: 20px;
 }
 
+
+
 .video-intro {
   font-weight: 600;
 }
+
+
 
 a {
   text-decoration: underline;
@@ -712,11 +810,17 @@ a {
 </body>
 </html>
 
+
+
 <style>
+
+
 
 .warm-up a {
   text-decoration: underline;
 }
+
+
 
 .warm-up p {
   padding: 10px 0;
@@ -726,28 +830,43 @@ a {
   font-size: 1.25em;
 }
 
+
+
 .decomp-defn {
   margin: 20px 0;
 
+
+
 }
+
+
 
 .decomp-defn h2 {
   font-weight: 700;
   font-size: 1em;
 }
 
+
+
 .decomp-defn p {
   padding: 10px 0;
 }
+
+
+
 
 
 .decomp-defn ul {
   list-style-type: disc;
 }
 
+
+
 .decomp-why {
   margin-bottom: 20px;
 }
+
+
 
 .decomp-why h2 {
   font-weight: 700;
@@ -756,9 +875,13 @@ a {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 700;
 }
+
+
 
 .decomp-example a {
   text-decoration: underline;
@@ -775,6 +898,8 @@ a {
             points: 100,
             content: `
 
+
+
             <!DOCTYPE html>
 <html>
 <head>
@@ -785,14 +910,21 @@ a {
       padding: 10px 0;
     }
 
+
+
     .title-section a {
       text-decoration: underline;
     }
+
+
 
     .title {
       font-weight: 700;
       font-size: 1.25em;
     }
+
+
+
 
 
     .pattern-defn {
@@ -824,9 +956,13 @@ a {
       padding: 10px 0;
     }
 
+
+
     .us-flag-title {
       font-weight: 600;
     }
+
+
 
     .pattern-example img {
       width: 700px;
@@ -867,6 +1003,8 @@ a {
   </div>
 </body>
 </html>
+
+
 
 `,
           },
@@ -917,9 +1055,13 @@ a {
   <li>If you get stuck, what do you notice about the data that stops a pattern from occurring?</li>
   </ul>
 
+
+
   <div class="google-trends">
       <p><strong>Google Trends: </strong><a href="https://trends.google.com/trends/" >https://trends.google.com/trends/</a></p>
   </div>
+
+
 
 </div>
 </body>
@@ -929,22 +1071,32 @@ a {
   font-size: 1.25em;
 }
 
+
+
 .decomp-subtitle {
   padding: 10px 0;
 }
+
+
 
 .decomp-exercise h3 {
   font-weight: 600;
   margin-top: 20px;
 }
 
+
+
 .decomp-exercise a {
   text-decoration: underline;
 }
 
+
+
 .decomp-exercise p {
   padding: 10px 0;
 }
+
+
 
 .decomp-exercise img {
   width: 500px;
@@ -953,14 +1105,21 @@ a {
   padding: 20px;
 }
 
+
+
 .img-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 
+
+
+
 </style>
 </html>
+
+
 
             `,
           },
@@ -985,7 +1144,11 @@ a {
   <p>Pattern Recognition within and across problems can make you more efficient as a programmer and it can help you to build the most efficient programs possible. </p>
   </div>
 
-  <div class="decomp-example"> 
+
+
+  <div class="decomp-example">
+
+
 
   <h3>Example 1:</h3>
   <p>Social media sites, like Facebook, often use patterns to compress our photos so that they are smaller to store online. Computers use pixels (small units of digital display) to store our images. Data compression for photos entails the computer looking at patterns in pixels and making those patterns smaller by assigning them a symbol (such as a number) rather than trying to store each individual colored pixel. For example:</p>
@@ -995,6 +1158,8 @@ a {
   
   <h3>Example 2:</h3>
   <img src="/images/contents/pattern1.png" />
+
+
 
   <p>Remember this piece of artwork from the decomposition section. In decomposition we broke this picture down into smaller parts. What you might not have realized is that while doing that we were actively doing pattern recognition as well. Realizing that parts of this artwork is just a repetition of other parts is pattern recognition.</p>
   <p>Think about how pattern recognition would help you code this art. </p>
@@ -1030,10 +1195,16 @@ a {
   </div>
   <p>This new code gives the exact same output for wanting 5 rows, but we only need 3 lines of code to execute this, and this code also allows us to have any number of rows we want. Recognizing the pattern is what allowed us to make the code simplified.</p>
 
+
+
 </div>
+
+
 
 </body>
 <style>
+
+
 
 .code23 img {
   width: 600px;
@@ -1050,25 +1221,37 @@ a {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 600;
 }
+
+
 
 .decomp-example p {
   padding: 10px 0;
 }
 
+
+
 .decomp-you-try h3 {
   font-weight: 600;
 }
+
+
 
 .decomp-you-try p {
   padding: 10px 0;
 }
 
+
+
 .decomp-you-try ol {
   padding: 0 20px; 
 }
+
+
 
 img {
   width: 300px;
@@ -1078,6 +1261,9 @@ img {
 }
 </style>
 </html>
+
+
+
 
 
             `,
@@ -1124,9 +1310,13 @@ img {
   margin-top: 20px;
 }
 
+
+
 .video-intro {
   font-weight: 600;
 }
+
+
 
 a {
   text-decoration: underline;
@@ -1167,22 +1357,34 @@ a {
   <p>If a problem is not decomposed, it is much harder to solve. Dealing with many different stages all at once is much more difficult than breaking a problem down into a number of smaller problems and solving each one, one at a time. Breaking the problem down into smaller parts means that each smaller problem can be examined in greater detail.</p>
   <p>Similarly, trying to understand how a complex system works is easier using decomposition. For example, understanding how a bicycle works is more straightforward if the whole bike is separated into smaller parts (like brakes, gears, wheels, etc.), and each part can be examined to see how it works in more detail.</p>
 
+
+
   <p>When you write a program, you might break it into parts.</p>
 </div>
 <div class="decomp-example">
   <h3>EXAMPLE:</h3>
   <p>This video is a great example of breaking a program into smaller parts. <a href="https://youtu.be/EADcmeBgW8s">(Watch the video)</a></p>
 
+
+
   <p>This video shows how he started off with a code with no parts and everything was just in one big block of code. He then separated parts of the house by breaking it into smaller sections or pieces (decomposition). After doing that, his code looked a lot more organized and it would be easier for someone else to understand by looking at it.</p>
 
+
+
   <p>Lots of computational tools are huge and very complex. Many programmers work together to create them. The big project gets decomposed into smaller parts, and each programmer gets assigned one part at a time. Then the parts get put together. That’s how the web browser you are using got built!</p>
+
+
 
   <p>For an example of a person decomposing how they built their website, read this: <a href="https://sparkbox.com/foundry/web_design_process_decomposition_exercise">Web Design Process Decomposition Exercise</a></p>
   <div>
 </body>
 </html>
 
+
+
 <style>
+
+
 
 .monalisa, .vangogh {
   display: grid;
@@ -1190,14 +1392,20 @@ a {
   padding: 50px;
 }
 
+
+
 .monalisa img {
   width: 300px;
   height: auto;
 }
 
+
+
 .vangogh {
   grid-gap: 10px;
 }
+
+
 
 .vangogh img {
   width: 100%;
@@ -1208,23 +1416,35 @@ a {
   font-size: 1.25em;
 }
 
+
+
 .decomp-defn {
   margin: 20px 0;
 
+
+
 }
+
+
 
 .decomp-defn h2 {
   font-weight: 700;
   font-size: 1em;
 }
 
+
+
 .decomp-defn p {
   padding: 10px 0;
 }
 
+
+
 .decomp-why {
   margin-bottom: 20px;
 }
+
+
 
 .decomp-why h2 {
   font-weight: 700;
@@ -1233,9 +1453,13 @@ a {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 700;
 }
+
+
 
 .decomp-example a {
   text-decoration: underline;
@@ -1269,6 +1493,8 @@ a {
                 font-size: 1.25em;
               }
 
+
+
               p a {
                 text-decoration: underline;
               }
@@ -1300,6 +1526,8 @@ a {
               <p>An easier way to think about abstraction is that it is simplification. We are simplifying the problem to make it easier to look at and understand. If you think about the pictures above, the detailed one would be more difficult to copy than the simple one. </p>
               </div>
 
+
+
               <div class="decomp-why">
               <h2>Why is Abstraction Important?</h2>
               <p>Abstraction is important because it helps us to simplify problems by removing unnecessary information. Abstraction is the process of creating an easier to understand representation of a complex system. Abstraction is also important because it lets us think of algorithms as individual units so that we do not have to think of each portion of the algorithm.</p>
@@ -1307,6 +1535,8 @@ a {
               <p>This is important in programming, because a lot of time we want to split up a bigger program into parts (decomposition) and be able to just think of each of those parts are a single thing. Each “thing” is an abstraction. In the algorithms section, you learned about flowcharts. Each box in a flowchart is an abstraction of a set of instructions.</p>
               </div>
             
+
+
 
 </body>
 <style>
@@ -1318,9 +1548,13 @@ h2 {
   padding: 10px 0;
 }
 
+
+
 .decomp-why p {
   padding: 10px 0;
 }
+
+
 
 img {
   width: 300px;
@@ -1373,25 +1607,38 @@ img {
               <img src="/images/contents/map4.png" />
               </div>
 
+
+
 </body>
 <style>
+
+
+
 
 
 .decomp-example a {
   text-decoration: underline;
 }
 
+
+
 .decomp-example img {
   width: 500px;
   margin: auto;
 }
 
+
+
 .decomp-example * {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 600;
+
+
 
 }
 .decomp-example p {
@@ -1405,9 +1652,13 @@ h2 {
   padding: 10px 0;
 }
 
+
+
 .decomp-why p {
   padding: 10px 0;
 }
+
+
 
 img {
   width: 300px;
@@ -1441,6 +1692,8 @@ img {
               <p>Abstraction allows programmers to hide all but the important data in order to make problems simpler and increase the efficiency of their programs. Abstraction allows us to create a representation or model using only the most important data. The programmer tries to make sure that the models they create are clearly named and include all of the necessary information to solve the problem they were designed to solve. This means that every time the computer runs into a similar problem, it has a program that knows exactly what information to pay attention to.</p>
               </div>
 
+
+
               <div class="decomp-example"> 
               <h3>Exercise One:</h3>
               <p>A good example of abstraction in programming is to look at a database that contains a lot of information. Think about an online bookseller that sells a lot of digital books. People will want to be able to find books using all kinds of different information, they might search for the author, title, ISBN, or genre. They also might want to know the reviews others have given the book or how much the book costs. The online store might also have the size, color of the books, and length of the books, but this information is not as relevant for people searching for a new book to buy, so it would not be included in the model abstracted from the database. </p>
@@ -1464,8 +1717,12 @@ img {
               </div>
             
 
+
+
 </body>
 <style>
+
+
 
 
 
@@ -1477,21 +1734,31 @@ ul  {
   margin: 0 20px;
 }
 
+
+
 .decomp-example a {
   text-decoration: underline;
 }
+
+
 
 .decomp-example img {
   width: 500px;
   margin: auto;
 }
 
+
+
 .decomp-example * {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 600;
+
+
 
 }
 .decomp-example p {
@@ -1505,9 +1772,13 @@ h2 {
   padding: 10px 0;
 }
 
+
+
 .decomp-why p {
   padding: 10px 0;
 }
+
+
 
 img {
   width: 300px;
@@ -1559,17 +1830,25 @@ img {
   padding: 10px 0;
 }
 
+
+
 .video-intro-section {
   margin-top: 20px;
 }
+
+
 
 .video-intro {
   font-weight: 600;
 }
 
+
+
 a {
   text-decoration: underline;
 }
+
+
 
 ul {
   list-style-type: disc;
@@ -1588,7 +1867,7 @@ ul {
   <title>Exploring Algorithms</title>
 </head>
 <body>
-<div>
+<div class="explore-alg">
   <h2 class="title">Exploring Algorithms</h2>
   <p>In order to explore how algorithms can give a computer step-by-step instructions, let’s start by playing around with LightBot (<a href="https://www.lightbot.lu/">https://www.lightbot.lu/</a>). LightBot is a game that allows you to sequence instructions with blocks of code in order to move a character around the screen. Begin by reading the instructions in the help section, then try playing the first five levels of LightBot (level 0 - level 4). Upload a screenshot of your medals into the Google Form and answer the discussion questions before moving on to the next set of activities. (See below for step-by-step instructions to get started.)
 </p>
@@ -1604,10 +1883,18 @@ ul {
 </ul>
 </div>
 
+
+
 </body>
 </html>
 
+
+
 <style>
+
+.explore-alg * {
+  padding: 10px 0;
+}
 a {
   text-decoration: underline;
 }
@@ -1620,41 +1907,10 @@ img {
   font-size: 1.25em;
 }
 
-.decomp-defn {
-  margin: 20px 0;
-
-}
-
-.decomp-defn h2 {
-  font-weight: 700;
-  font-size: 1em;
-}
-
-.decomp-defn p {
+.steps ul li {
   padding: 10px 0;
 }
 
-.decomp-why {
-  margin-bottom: 20px;
-}
-
-.decomp-why h2 {
-  font-weight: 700;
-}
-.decomp-why p {
-  padding: 10px 0;
-}
-
-.decomp-example h3 {
-  font-weight: 700;
-}
-
-.decomp-example a {
-  text-decoration: underline;
-}
-.decomp-example p {
-  padding: 10px 0;
-}
 </style>
             `,
           },
@@ -1686,11 +1942,17 @@ img {
 </body>
 </html>
 
+
+
 <style>
+
+
 
 .title-section *, .lightbot-list * {
   padding: 10px 0;
 }
+
+
 
 ul {
   list-style-type: disc;
@@ -1698,28 +1960,43 @@ ul {
 }
 
 
+
+
+
 .title {
   font-weight: 700;
   font-size: 1.25em;
 }
 
+
+
 .decomp-defn {
   margin: 20px 0;
 
+
+
 }
+
+
 
 .decomp-defn h2 {
   font-weight: 700;
   font-size: 1em;
 }
 
+
+
 .decomp-defn p {
   padding: 10px 0;
 }
 
+
+
 .decomp-why {
   margin-bottom: 20px;
 }
+
+
 
 .decomp-why h2 {
   font-weight: 700;
@@ -1728,9 +2005,13 @@ ul {
   padding: 10px 0;
 }
 
+
+
 .decomp-example h3 {
   font-weight: 700;
 }
+
+
 
 .decomp-example a {
   text-decoration: underline;
@@ -1742,394 +2023,337 @@ ul {
             `,
           },
           {
+            id: 4,
+            topic: "Applying Ideas in the Real World",
+            points: 100,
+            content: `
+           <!DOCTYPE html>
+<html>
+<head>
+  <title>Applying Ideas in the Real World</title>
+</head>
+<body>
+<div class="decomp-title">
+  <h2>Applying Ideas in the Real World</h2>
+  </div>
+  <div class="alg-example">
+  <h3>Exercise One:</h3>
+  <ul>
+  <li>
+  1.  In the video you watched about algorithms, the narrator discussed the algorithm for making pasta. Take a look at the choice below and identify which of the instructions are in the correct order for making spaghetti.
+  <ul class="sub-ul">
+            <li>
+            a) 1) Boil water; 2) Put water in the pot; 3) Cook the spaghetti; 4) Add the sauce; 5) Serve; 6) Eat the pasta
+          </li>
+<li>b) 1) Put water in the pot; 2) Boil the water; 3) Add the noodles; 4) Cook the pasta; 5) drain the water; 6) Serve the pasta
+</li>
+<li>c) 1) Boil the water; 2) Add the noodles; 3) Add the sauce; 4) Cook the pasta; 5) Eat the pasta; 6) Clean the dishes
+</li>
+<li>d) 1) Put the water in the pot; 2) Cook the spaghetti; 3) Add the noodles; 4) Add the sauce; 5) Drain the water; 6) Serve the pasta 
+</li>
+  </ul>
+  </li>
+  <li>
+  2. Using Google Draw or a piece of paper, illustrate the algorithm you chose as a flowchart, then compare your answer to ours. Were you able to accurately represent your algorithm? (Hint: Remember that computers will always need a “start” and “stop” indicator)
+  <p> Answer: </p>
+  <img src="/images/contents/diagram3.png" />
+  </li>
+  <li>
+  3.  <strong>Reflect</strong>: What do you think might happen if you had two different kinds of noodles? How could you create a flowchart that offered a user multiple options for how to cook different kinds of pasta? 
+  </li>
+  </ul>
+  </div>
+  <div class="alg-example">
+  <h3>Exercise Two:</h3>
+  <p>Now that you’ve had some practice representing your own algorithms, let’s go back to LightBot and try some of the harder levels. As you play levels 5-10, think about the algorithms you’re building to move the bot. When you finish levels 5-9, upload a screenshot of your progress on the home screen, then use the following prompts to push your thinking.</p>
+  <ul>
+  <li>1. Choose one level that you struggled with in the LightBot game and use the space below to explain your struggle and how you worked around the problem to solve the level.</li>
+  <li>2. Choose one level to replay and upload a screenshot of your initial code here. </li>
+  <li>3. Next, play the level again and try to solve the problem more efficiently. Take a screenshot of your final attempt to show your progress.</li>
+  <li>4. In the space below, explain how decomposition, pattern recognition, and algorithms all work together to help you solve the LightBot challenges. If there are any points you’re continuing to struggle with, see if you can come up with solutions as you write your thoughts here. </li>
+  </ul>  
+  </div>
+  <div class="alg-example">
+    <h3>Exercise Three:</h3>
+    <p><a href="https://thewordsearch.com/hangman/">https://thewordsearch.com/hangman/</a></p>
+    <p>Click on this link and play a game of hangman.</p>
+    <p>Hangman is a code that can easily be made once you understand algorithms. Although you have not learned any coding yet, you can still think of how this algorithm might look like in the world of a flow chart. Provided below are a list of all instructions in a randomized order and the flowchart with instructions.</p>
+    <p>Match the instructions to the correct place on the flow chart. (Match the number to the letter)</p>
+    <div class="diagram-grid">
+    <img src="/images/contents/diagram4.png" />
+    <ul>
+    <li>1) Display number of dashes 1 per letter in word </li>
+    <li>2) Select word from dictionary </li>
+    <li>3) Is the word complete? </li>
+    <li>4) Get input = letter </li>
+    <li>5) Yes - put letter in place of dash </li>
+    <li>6) Add part to hangman and then go back to step 4 </li>
+    <li>7) Count letters in word </li>
+    <li>8) Yes: YOU WIN </li>
+    <li>9) Is letter in word? </li>
+    </ul>
+    </div>
+    <p><strong>Correct Answers: A2, B7, C1, D4, E9, F6, G5, H3, I8</strong></p>
+
+
+
+  </div>
+
+
+
+</body>
+<style>
+
+.sub-ul {
+  margin: 10px 20px;
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+.diagram-grid ul {
+  margin: 50px 0;
+}
+.decomp-title {
+  font-weight: 700;
+  font-size: 1.25em;
+}
+.decomp-subtitles p {
+  padding: 10px 0;
+}
+
+.alg-example * {
+  padding: 10px 0;
+}
+
+.alg-example h3 {
+  font-weight: 600;
+}
+
+.alg-example a {
+  text-decoration: underline;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+}
+</style>
+</html>
+
+
+
+
+
+            `,
+          },
+
+          {
             id: 5,
             topic: "Algorithms in Computer Programming",
             points: 100,
             content: `
-            <!DOCTYPE html>
+           <!DOCTYPE html>
 <html>
 <head>
   <title>Algorithms in Computer Programming</title>
 </head>
 <body>
-<div class="decomp-title"> 
+<div class="decomp-title">
   <h2>Algorithms in Computer Programming</h2>
-</div>
-<div class="decomp-subtitle">
-<h3>How Do We Use Algorithms in Computer Programming?</h3>
+  </div>
+  <div class="alg-example">
+  <h3>How Do We Use Algorithms in Computer Programming?</h3>
   <p>Algorithms are the foundation of computer programming because they allow computers to make  decisions. They are like the blueprint that tells a computer what to do when faced with a problem. An algorithm improves the efficiency of a computer program by finding the best possible ways to solve problems. This means that your programs will be accurate and produce the very best results.</p>
-  <p>Language is extremely important when it comes to computer programming, and that is why having clear and precise algorithms are so important. Computers are fundamentally quite dumb. They will only do exactly what you tell them to, in the language they understand. Also there are many different computer programming languages, but they all still have algorithms in them even if the actual language is different. </p>
-  <p>Algorithms are also important because they ensure that a program consumes the least amount of memory possible. As you progress through the course, you’ll find that there are many different kinds of algorithms. Choosing the right algorithm can ensure that your program runs exactly the way you envision.</p>
-  <p>Example from coding: </p>
-  <img src="/images/contents/coding.png" />
-  <p>This might look like a lot of random words, but what you are looking at is an algorithm in the coding language of python. This code is an algorithm to output a letter grade based on the input of a percentage. </p>
-  <p>This code is saying:</p>
-  <p>1. Give an input-score</p>
-  <ul>
-      <li>a. If score is greater than or equal to 90
-            <ul>
-              <li>i. Print A (letter grade is A)</li>
-            </ul>
-      </li>
-      <li>b. If score is not move on
-            <ul>
-              <li>i. If score is greater than or equal to 80)
-              <ul>
-              <li>1. Print B</li>
-              </ul>
-              </li>
-              <li>
-              ii. If not move on
-              <ul>
-              <li>1. If score is greater than or equal to 70
-              <ul>
-              <li>a. Print C
-              </li>
-              <li>1. If not, move on
-              <ul>
-              <li>a. If score is greater than or equal to 60
-              <ul>
-              <li>i. Print D</li>
-              </ul>
-              </li>
-              <li>b. If not print F
-              </li>
-              </ul>
-              </li>
-              </ul>
-              </li>
-            </ul>
-      </li>
-  </ul>
 
-<p>A flow chart of this might look like (marks = score).</p>
+
+
+<p>Language is extremely important when it comes to computer programming, and that is why having clear and precise algorithms are so important. Computers are fundamentally quite dumb. They will only do exactly what you tell them to, in the language they understand. Also there are many different computer programming languages, but they all still have algorithms in them even if the actual language is different.</p>
+<p>Algorithms are also important because they ensure that a program consumes the least amount of memory possible. As you progress through the course, you’ll find that there are many different kinds of algorithms. Choosing the right algorithm can ensure that your program runs exactly the way you envision. </p>
+<div class="nestedif">
+<p class="example">Example from coding: 
+<img src="/images/contents/nested-if.png" />
+<p>Algorithms are the foundation of computer programming because they allow computers to make  decisions. They are like the blueprint that tells a computer what to do when faced with a problem. An algorithm improves the efficiency of a computer program by finding the best possible ways to solve problems. This means that your programs will be accurate and produce the very best results.</p>
+<p>Language is extremely important when it comes to computer programming, and that is why having clear and precise algorithms are so important. Computers are fundamentally quite dumb. They will only do exactly what you tell them to, in the language they understand. Also there are many different computer programming languages, but they all still have algorithms in them even if the actual language is different.</p>
+<p>Algorithms are also important because they ensure that a program consumes the least amount of memory possible. As you progress through the course, you’ll find that there are many different kinds of algorithms. Choosing the right algorithm can ensure that your program runs exactly the way you envision. </p>
+<p class="example">Example from coding: </p>
+<p>This might look like a lot of random words, but what you are looking at is an algorithm in the coding language of python. This code is an algorithm to output a letter grade based on the input of a percentage. </p>
+<p>This code is saying: </p>
+<p>1. Give an input score
+<ul id="gradeList">
+    <li>a. If score is greater than or equal to 90
+      <ul>
+        <li>i. Print A (letter grade is A)</li>
+      </ul>
+    </li>
+    <li>b. If score is not move on
+      <ul>
+        <li>i. If score is greater than or equal to 80
+          <ul>
+            <li>1. Print B</li>
+          </ul>
+        </li>
+        <li>ii. If not move on
+          <ul>
+            <li>1. If score is greater than or equal to 70 
+              <ul>
+                <li>a. Print C</li>
+              </ul>
+            </li>
+            <li>2. If not move on
+              <ul>
+                <li>a. If score is greater than or equal to 60
+                  <ul>
+                    <li>i. Print D</li>
+                  </ul>
+                </li>
+                <li>b. If not print F</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>A flow chart of this might look like (marks = score).</p>
+  <img src="/images/contents/nested-diagram.png" />
+  <div class="watch-video">
+    <h3>Watch this video: </h3>
+    <p><a href="https://youtu.be/ixIoDYVfKA0">The ethical dilemma of self-driving cars - Patrick Lin</a></p>
+    <p>As the video illustrates, learning algorithmic thinking is important because it allows you to navigate the very real complications of the ways that computers integrate into our daily lives.</p>
+    <p>Remember, all of the pillars of computational thinking go into helping you find the best algorithm possible to solve a problem. As you move through the rest of this course, continue to think about the ways that technology and algorithms play a role in your everyday life. </p>
+  </div>
+
+
+
 </div>
-<div class="decomp-why">
-<h2>Why are Algorithms Important?</h2>
-<p>Algorithms are important because they are the key to processing information. Algorithms provide a clear and precise system of instructions to solve a problem. Creating algorithms can make it easier for other people and computers to help us achieve our goals. Understanding algorithms is also important because it will help us better follow programs other people have created and analyze them. (Remember that a flowchart is just a written explanation of an algorithm.) Computer programs are built from code that is made up entirely of algorithms.</p>
-<p>A good example of algorithms we use everyday are those within an online map. When we input a destination, the app uses an algorithm to look at all of the possible routes from our starting point. Next, it uses a different algorithm to check the current traffic and road conditions. Finally, it uses a third algorithm to put all of that information together and calculate the best available route.</p>
-<p>As you learn to code in future modules, algorithms will be the foundation of your computer code. Let’s look at a few examples of algorithms represented in flowcharts before we move on to our practice. (The following was adapted from <a href="https://www.coursera.org/learn/computational-thinking-problem-solving/lecture/Yb3W4/1-5-algorithms">Computational Thinking for Problem Solving)</a></p>
-<p>An algorithm for making black tea might look like this:</p>
-<img class="diagram1" src="/images/contents/diagram1.png" />
-<p>But what would happen to the representation if you had a choice between black and green tea? We could use pattern recognition to see that the process is almost the same. However, we’d have to modify our algorithm to show that the user can make a choice.</p>
-<img src="/images/contents/diagram2.png" />
-<p>In this case, the user can choose to input either black or green tea as the variable, the algorithm will then adjust the temperature of the water according to that choice. Then the algorithm continues in the same way as before. </p>
-<p><strong>Video Introduction: </strong>This video gives a quick overview of algorithms that will help you complete the exercises in the next section.</p>
-<p><a href="https://www.youtube.com/watch?v=kM9ASKAni_s&t=1s">Computer Science Basics: Algorithms</a></p>
-<p>Algorithms often depend on three core structures to work as efficiently as possible. Take a look at this video to learn a little about the different concepts embedded in the algorithms you will use.</p>
-<p><a href="https://www.youtube.com/watch?v=eSYeHlwDCNA">Computer Science Basics: Sequences, Selections, and Loops</a></p>
-</div>
+
+
 </body>
 <style>
 
-a {
-  text-decoration: underline;
+
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.decomp-why * {
-  padding: 10px 0;
-}
 
-.decomp-why h2 {
-  font-weight: 700;
-}
-.decomp-why .diagram1 {
-  width: 200px;
-}
-.decomp-why img {
-  width: 400px;
-  height: auto; 
-  margin: auto;
-  padding: 20px;
+
+.diagram-grid ul {
+  margin: 50px 0;
 }
 .decomp-title {
   font-weight: 700;
   font-size: 1.25em;
 }
-
-.decomp-subtitle {
+.decomp-subtitles p {
   padding: 10px 0;
 }
 
-.decomp-subtitle img {
-  width: 500px;
-  height: auto;
-  margin: auto;
-  padding: 20px;
-}
 
-.decomp-exercise h3 {
+
+.alg-example h3 {
   font-weight: 600;
   margin-top: 20px;
 }
 
-.decomp-exercise a {
+
+
+.alg-example p {
+  padding: 10px 0;
+}
+
+
+
+.decomp-you-try h3 {
+  font-weight: 600;
+}
+
+
+
+.decomp-you-try p {
+  padding: 10px 0;
+}
+
+
+
+.decomp-you-try ol {
+  padding: 0 20px; 
+}
+
+
+
+img {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+}
+
+
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Apply indentation for nested lists */
+ul#gradeList { 
+  margin: 5px 30px;
+}
+ul {
+  list-style-type: none;
+}
+
+
+
+ul#gradeList ul {
+  margin-left: 20px; /* Adjust the indentation as needed */
+}
+
+ul#gradeList ul ul {
+  margin-left: 40px; /* Nested indentation */
+}
+
+/* Optional: Style list items */
+ul#gradeList li, ul#gradeList ul li,  ul#gradeList ul ul li  {
+  margin-bottom: 5px; /* Adjust spacing between list items */
+}
+
+img {
+  width: 500px; 
+  height: auto;
+}
+
+.watch-video *  {
+  padding: 10px 0;
+}
+
+.watch-video a {
   text-decoration: underline;
 }
-
-.decomp-exercise img {
-  width: 500px;
-  height: auto;
-  margin: auto;
-  padding: 20px;
+.watch-video h3 {
+  font-weight: 600;
 }
-
-
 </style>
 </html>
-
             `,
           },
           {
-            id: 5,
-            topic: "Applying Ideas in the Real World",
+            id: 6,
+            topic: "Quiz for Points",
+            type: "quiz",
             points: 100,
-            content: `
-           <!DOCTYPE html>
-<html>
-<head>
-  <title>Applying Ideas in the Real World</title>
-</head>
-<body>
-<div class="decomp-title">
-  <h2>Applying Ideas in the Real World</h2>
-  </div>
-  <div class="alg-example">
-  <h3>Exercise One:</h3>
-  <ul>
-  <li>
-  1.  In the video you watched about algorithms, the narrator discussed the algorithm for making pasta. Take a look at the choice below and identify which of the instructions are in the correct order for making spaghetti.
-  <ul class="sub-ul">
-            <li>
-            a) 1) Boil water; 2) Put water in the pot; 3) Cook the spaghetti; 4) Add the sauce; 5) Serve; 6) Eat the pasta
-          </li>
-<li>b) 1) Put water in the pot; 2) Boil the water; 3) Add the noodles; 4) Cook the pasta; 5) drain the water; 6) Serve the pasta
-</li>
-<li>c) 1) Boil the water; 2) Add the noodles; 3) Add the sauce; 4) Cook the pasta; 5) Eat the pasta; 6) Clean the dishes
-</li>
-<li>d) 1) Put the water in the pot; 2) Cook the spaghetti; 3) Add the noodles; 4) Add the sauce; 5) Drain the water; 6) Serve the pasta 
-</li>
-  </ul>
-  </li>
-  <li>
-  2. Using Google Draw or a piece of paper, illustrate the algorithm you chose as a flowchart, then compare your answer to ours. Were you able to accurately represent your algorithm? (Hint: Remember that computers will always need a “start” and “stop” indicator)
-  <p> Answer: </p>
-  <img src="/images/contents/diagram3.png" />
-  </li>
-  <li>
-  3.  <strong>Reflect</strong>: What do you think might happen if you had two different kinds of noodles? How could you create a flowchart that offered a user multiple options for how to cook different kinds of pasta? 
-  </li>
-  </ul>
-  </div>
-  <div class="alg-example">
-  <h3>Exercise Two:</h3>
-  <p>Now that you’ve had some practice representing your own algorithms, let’s go back to LightBot and try some of the harder levels. As you play levels 5-10, think about the algorithms you’re building to move the bot. When you finish levels 5-9, upload a screenshot of your progress on the home screen, then use the following prompts to push your thinking.</p>
-  <ul>
-  <li>1. Choose one level that you struggled with in the LightBot game and use the space below to explain your struggle and how you worked around the problem to solve the level.</li>
-  <li>2. Choose one level to replay and upload a screenshot of your initial code here. </li>
-  <li>3. Next, play the level again and try to solve the problem more efficiently. Take a screenshot of your final attempt to show your progress.</li>
-  <li>4. In the space below, explain how decomposition, pattern recognition, and algorithms all work together to help you solve the LightBot challenges. If there are any points you’re continuing to struggle with, see if you can come up with solutions as you write your thoughts here. </li>
-  </ul>  
-  </div>
-  <div class="alg-example">
-    <h3>Exercise Three:</h3>
-    <p><a href="https://thewordsearch.com/hangman/">https://thewordsearch.com/hangman/</a></p>
-    <p>Click on this link and play a game of hangman.</p>
-    <p>Hangman is a code that can easily be made once you understand algorithms. Although you have not learned any coding yet, you can still think of how this algorithm might look like in the world of a flow chart. Provided below are a list of all instructions in a randomized order and the flowchart with instructions.</p>
-    <p>Match the instructions to the correct place on the flow chart. (Match the number to the letter)</p>
-    <div class="diagram-grid">
-    <img src="/images/contents/diagram4.png" />
-    <ul>
-    <li>1) Display number of dashes 1 per letter in word </li>
-    <li>2) Select word from dictionary </li>
-    <li>3) Is the word complete? </li>
-    <li>4) Get input = letter </li>
-    <li>5) Yes - put letter in place of dash </li>
-    <li>6) Add part to hangman and then go back to step 4 </li>
-    <li>7) Count letters in word </li>
-    <li>8) Yes: YOU WIN </li>
-    <li>9) Is letter in word? </li>
-    </ul>
-    </div>
-
-  </div>
-
-</body>
-<style>
-
-.diagram-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.diagram-grid ul {
-  margin: 50px 0;
-}
-.decomp-title {
-  font-weight: 700;
-  font-size: 1.25em;
-}
-.decomp-subtitles p {
-  padding: 10px 0;
-}
-
-.decomp-example h3 {
-  font-weight: 600;
-}
-
-.decomp-example p {
-  padding: 10px 0;
-}
-
-.decomp-you-try h3 {
-  font-weight: 600;
-}
-
-.decomp-you-try p {
-  padding: 10px 0;
-}
-
-.decomp-you-try ol {
-  padding: 0 20px; 
-}
-
-img {
-  width: 300px;
-  height: auto;
-  margin: auto;
-  padding: 10px;
-}
-</style>
-</html>
-
-
-            `,
-          },
-
-          {
-            id: 5,
-            topic: "Applying Ideas in the Real World",
-            points: 100,
-            content: `
-           <!DOCTYPE html>
-<html>
-<head>
-  <title>Applying Ideas in the Real World</title>
-</head>
-<body>
-<div class="decomp-title">
-  <h2>Applying Ideas in the Real World</h2>
-  </div>
-  <div class="alg-example">
-  <h3>Exercise One:</h3>
-  <ul>
-  <li>
-  1.  In the video you watched about algorithms, the narrator discussed the algorithm for making pasta. Take a look at the choice below and identify which of the instructions are in the correct order for making spaghetti.
-  <ul class="sub-ul">
-            <li>
-            a) 1) Boil water; 2) Put water in the pot; 3) Cook the spaghetti; 4) Add the sauce; 5) Serve; 6) Eat the pasta
-          </li>
-<li>b) 1) Put water in the pot; 2) Boil the water; 3) Add the noodles; 4) Cook the pasta; 5) drain the water; 6) Serve the pasta
-</li>
-<li>c) 1) Boil the water; 2) Add the noodles; 3) Add the sauce; 4) Cook the pasta; 5) Eat the pasta; 6) Clean the dishes
-</li>
-<li>d) 1) Put the water in the pot; 2) Cook the spaghetti; 3) Add the noodles; 4) Add the sauce; 5) Drain the water; 6) Serve the pasta 
-</li>
-  </ul>
-  </li>
-  <li>
-  2. Using Google Draw or a piece of paper, illustrate the algorithm you chose as a flowchart, then compare your answer to ours. Were you able to accurately represent your algorithm? (Hint: Remember that computers will always need a “start” and “stop” indicator)
-  <p> Answer: </p>
-  <img src="/images/contents/diagram3.png" />
-  </li>
-  <li>
-  3.  <strong>Reflect</strong>: What do you think might happen if you had two different kinds of noodles? How could you create a flowchart that offered a user multiple options for how to cook different kinds of pasta? 
-  </li>
-  </ul>
-  </div>
-  <div class="alg-example">
-  <h3>Exercise Two:</h3>
-  <p>Now that you’ve had some practice representing your own algorithms, let’s go back to LightBot and try some of the harder levels. As you play levels 5-10, think about the algorithms you’re building to move the bot. When you finish levels 5-9, upload a screenshot of your progress on the home screen, then use the following prompts to push your thinking.</p>
-  <ul>
-  <li>1. Choose one level that you struggled with in the LightBot game and use the space below to explain your struggle and how you worked around the problem to solve the level.</li>
-  <li>2. Choose one level to replay and upload a screenshot of your initial code here. </li>
-  <li>3. Next, play the level again and try to solve the problem more efficiently. Take a screenshot of your final attempt to show your progress.</li>
-  <li>4. In the space below, explain how decomposition, pattern recognition, and algorithms all work together to help you solve the LightBot challenges. If there are any points you’re continuing to struggle with, see if you can come up with solutions as you write your thoughts here. </li>
-  </ul>  
-  </div>
-  <div class="alg-example">
-    <h3>Exercise Three:</h3>
-    <p><a href="https://thewordsearch.com/hangman/">https://thewordsearch.com/hangman/</a></p>
-    <p>Click on this link and play a game of hangman.</p>
-    <p>Hangman is a code that can easily be made once you understand algorithms. Although you have not learned any coding yet, you can still think of how this algorithm might look like in the world of a flow chart. Provided below are a list of all instructions in a randomized order and the flowchart with instructions.</p>
-    <p>Match the instructions to the correct place on the flow chart. (Match the number to the letter)</p>
-    <div class="diagram-grid">
-    <img src="/images/contents/diagram4.png" />
-    <ul>
-    <li>1) Display number of dashes 1 per letter in word </li>
-    <li>2) Select word from dictionary </li>
-    <li>3) Is the word complete? </li>
-    <li>4) Get input = letter </li>
-    <li>5) Yes - put letter in place of dash </li>
-    <li>6) Add part to hangman and then go back to step 4 </li>
-    <li>7) Count letters in word </li>
-    <li>8) Yes: YOU WIN </li>
-    <li>9) Is letter in word? </li>
-    </ul>
-    </div>
-
-  </div>
-
-</body>
-<style>
-
-.diagram-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.diagram-grid ul {
-  margin: 50px 0;
-}
-.decomp-title {
-  font-weight: 700;
-  font-size: 1.25em;
-}
-.decomp-subtitles p {
-  padding: 10px 0;
-}
-
-.decomp-example h3 {
-  font-weight: 600;
-}
-
-.decomp-example p {
-  padding: 10px 0;
-}
-
-.decomp-you-try h3 {
-  font-weight: 600;
-}
-
-.decomp-you-try p {
-  padding: 10px 0;
-}
-
-.decomp-you-try ol {
-  padding: 0 20px; 
-}
-
-img {
-  width: 300px;
-  height: auto;
-  margin: auto;
-  padding: 10px;
-}
-</style>
-</html>
-
-
-            `,
           },
         ],
       },

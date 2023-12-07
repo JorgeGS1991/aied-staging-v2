@@ -52,6 +52,7 @@
 
 .db-item {
     padding: 10px;
+    
 }
 
 .db-content {
@@ -60,6 +61,7 @@
 
 .dropdown-container {
     display: none;
+    list-style-type: decimal;
 }
 
 .db-skeleton {

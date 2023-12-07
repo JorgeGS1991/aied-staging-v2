@@ -171,7 +171,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                         </svg>
                       </a>
                       {isActive && (
-                        <div
+                        <ul
                           class="dropdown-container"
                           style={{
                             display: isActive[index] ? "flex" : "none",
@@ -180,13 +180,15 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                           }}
                         >
                           {subTopic.contents.map((subContent) => (
-                            <Link
-                              to={`${item.id}/${index + 1}/${subContent.id}`}
-                            >
-                              {subContent.topic}
-                            </Link>
+                            <li>
+                              <Link
+                                to={`${item.id}/${index + 1}/${subContent.id}`}
+                              >
+                                {subContent.topic}
+                              </Link>
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       )}
                     </div>
                   );

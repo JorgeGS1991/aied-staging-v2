@@ -34,3 +34,7 @@
 .content-body ul {
     padding: 30px;
 }
+
+.content-body a {
+    text-decoration: underline;
+}
