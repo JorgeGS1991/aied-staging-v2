@@ -128,7 +128,7 @@ const data = [
             <div>
                 <ol>
                     <li>
-                        <a href="https://www.youtube.com/watch?v=qSxNLaWm74g&authuser=1">Student Guide to Google Classroom</a>
+                        <iframe width="966" height="543" src="https://www.youtube.com/embed/qSxNLaWm74g" title="Student Guide to Google Classroom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </li><li>
                         <a href="https://usadultliteracy.com/how-to-use-google-classroom-for-students-computer-tutorial/?authuser=1">How to Use Google Classroom for Students (Computer Tutorial) – US Adult Literacy</a>
                     </li><li>
@@ -317,6 +317,7 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
       {
         id: 1,
         name: "CT Module 0: Decomposition",
+        type: "decomposition",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 3, 19),
         points: 100,
@@ -740,8 +741,7 @@ img {
       {
         id: 2,
         name: "CT Module 1: Pattern Recognition",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 3, 19),
+        type: "pattern-recognition",
         points: 100,
         contents: [
           {
@@ -970,6 +970,13 @@ a {
       margin: auto;
       padding: 10px 0;
     }
+
+    .youtube iframe {
+      border-radius: 8px;
+      width: 600px;
+      height: 350px;
+      margin: auto;
+    }
   </style>
 </head>
 <body>
@@ -977,7 +984,9 @@ a {
   <div class="title-section">
     <h2 class="title">Building Background Knowledge</h2>
     <p class="subtitle">The process of finding similarities across different ideas and problems is called pattern recognition.</p>
-    <p><a href="https://www.youtube.com/watch?v=SixLnIDV1yY&t=281s">Video Introduction</a>
+    <div class="youtube">
+    <iframe width="966" height="543" src="https://www.youtube.com/embed/SixLnIDV1yY" title="Computational Thinking: Pattern Recognition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
     <p>Watch until around 7:30 in the video.</p>
     </div>
     <div class="pattern-defn">
@@ -1271,10 +1280,9 @@ img {
         ],
       },
       {
-        id: 1,
+        id: 3,
         name: "CT Module 2: Abstraction",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 3, 19),
+        type: "abstraction",
         points: 100,
         contents: [
           {
@@ -1485,7 +1493,9 @@ a {
               <div class="decomp-title"> 
               <h2>Video Introduction</h2>
               </div>
-              <p><a href="https://www.youtube.com/watch?v=jV-7Hy-PF2Q">Video Introduction</a></p>
+              <div class="youtube">
+              <iframe width="966" height="543" src="https://www.youtube.com/embed/jV-7Hy-PF2Q" title="Abstraction - Computational Thinking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
               </body>
               <style>
               .decomp-title {
@@ -1493,7 +1503,12 @@ a {
                 font-size: 1.25em;
               }
 
-
+              .youtube iframe {
+                 border-radius: 8px;
+                 width: 600px;
+                 height: 350px;
+                 margin: auto;
+              }
 
               p a {
                 text-decoration: underline;
@@ -1684,7 +1699,9 @@ img {
               <div class="decomp-title">
               <h2>Abstraction in Computer Programming</h2>
               <p>Start by watching this video about abstraction (stick with it if it gets confusing!):</p>
-              <p><a href="https://www.youtube.com/watch?v=_y-5nZAbgt4">What is Abstraction in Computer Science?</a></p>
+              <div class="youtube"> 
+              <iframe width="966" height="543" src="https://www.youtube.com/embed/_y-5nZAbgt4" title="What Is Abstraction in Computer Science" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
               </div>
               <div class="decomp-how">
               <h2>How Do We Use Abstraction in Computer Programming?</h2>
@@ -1713,7 +1730,9 @@ img {
               <p>It is getting rid of the unnecessary details of what the numbers themselves are and focusing solely on what the process is. We generalized the problem.</p>
               <h3>Video</h3>
               <p>This video does a great job about talking about abstraction, using a real word example, as well as showing abstraction in a coding language.</p>
-              <p><a href="https://youtu.be/Ui7Dca5Kbvw">Abstraction explained with real-life examples and code! - C++ OOP Course</a></p>
+              <div class="youtube">
+              <iframe width="966" height="543" src="https://www.youtube.com/embed/Ui7Dca5Kbvw" title="Abstraction explained with real-life examples and code! - C++ OOP Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
               </div>
             
 
@@ -1722,7 +1741,12 @@ img {
 </body>
 <style>
 
-
+.youtube iframe {
+  border-radius: 8px;
+  width: 600px;
+  height: 350px;
+  margin: auto;
+}
 
 
 
@@ -1791,7 +1815,7 @@ img {
             `,
           },
           {
-            id: 3,
+            id: 7,
             topic: "Quiz",
             type: "quiz",
             points: 100,
@@ -1799,10 +1823,9 @@ img {
         ],
       },
       {
-        id: 1,
+        id: 4,
         name: "CT Module 3: Algorithms",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 3, 19),
+        type: "algorithms",
         points: 100,
         contents: [
           {
@@ -1946,8 +1969,6 @@ img {
 
 <style>
 
-
-
 .title-section *, .lightbot-list * {
   padding: 10px 0;
 }
@@ -1958,9 +1979,6 @@ ul {
   list-style-type: disc;
   margin: 0 20px;
 }
-
-
-
 
 
 .title {
@@ -2225,7 +2243,9 @@ img {
   <img src="/images/contents/nested-diagram.png" />
   <div class="watch-video">
     <h3>Watch this video: </h3>
-    <p><a href="https://youtu.be/ixIoDYVfKA0">The ethical dilemma of self-driving cars - Patrick Lin</a></p>
+    <div class="youtube">
+      <iframe width="966" height="543" src="https://www.youtube.com/embed/ixIoDYVfKA0" title="The ethical dilemma of self-driving cars - Patrick Lin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
     <p>As the video illustrates, learning algorithmic thinking is important because it allows you to navigate the very real complications of the ways that computers integrate into our daily lives.</p>
     <p>Remember, all of the pillars of computational thinking go into helping you find the best algorithm possible to solve a problem. As you move through the rest of this course, continue to think about the ways that technology and algorithms play a role in your everyday life. </p>
   </div>
@@ -2238,6 +2258,12 @@ img {
 </body>
 <style>
 
+.youtube iframe {
+  border-radius: 8px;
+  width: 600px;
+  height: 350px;
+  margin: auto;
+}
 
 
 .diagram-grid {

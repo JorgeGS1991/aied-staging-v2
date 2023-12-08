@@ -25,7 +25,10 @@ import {
 } from "../../redux/actions/quizActions";
 import Notification from "../SnackBar/SnackBar";
 
+import "./Quiz.css";
+
 const Quiz = ({
+  type,
   questions,
   correctAnswers,
   userResponses,
@@ -100,14 +103,11 @@ const Quiz = ({
     if (updatedSelectedOptionsMC[optionIndex]) {
       setUserResponseMC([...userResponseMC, optionIndex]);
       console.log("choice selected" + optionIndex);
-      // console.log(userResponseMC);
     } else {
       setUserResponseMC(
         userResponseMC.filter((userResponse) => userResponse !== optionIndex)
       );
       console.log("choice deselected" + optionIndex);
-
-      // console.log(userResponseMC);
     }
 
     setQuestionIndex(index);
@@ -123,6 +123,7 @@ const Quiz = ({
   console.log("----- CorrectAnswers -----");
   console.log(correctAnswers);
 
+  console.log("quiz type: " + type);
   const handleNotificationClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -193,59 +194,78 @@ const Quiz = ({
             className="question-card"
             sx={{ marginBottom: "20px" }}
           >
-            <Typography variant="h6" sx={{ marginBottom: "10px" }}>
-              {question.question}
-            </Typography>
-            <List>
-              {!Array.isArray(question.correctAnswer)
-                ? question.options?.map((option, optionIndex) => (
-                    <ListItem key={optionIndex} disablePadding>
-                      <ListItemButton
-                        onClick={() => handleOptionClick(index, optionIndex)}
-                        sx={{
-                          backgroundColor: handleBackgroundColor(
-                            index,
-                            optionIndex
-                          ),
-                          borderRadius: "8px",
-                          padding: "12px",
-                          marginBottom: "8px",
-                          border: "1px solid #000000",
-                          "&:hover": {
-                            backgroundColor: "#bfdfff", // Light red background on hover
-                          },
-                        }}
-                      >
-                        {option}
-                      </ListItemButton>
-                    </ListItem>
-                  ))
-                : question.options?.map((option, optionIndex) => (
-                    <ListItem key={optionIndex} disablePadding>
-                      <FormControlLabel
-                        sx={{
-                          backgroundColor: handleBackgroundColor(
-                            index,
-                            optionIndex
-                          ),
-                          borderRadius: "8px",
-                          padding: "12px",
-                          marginBottom: "8px",
-                          border: "1px solid #000000",
-                          width: "100%",
-                        }}
-                        control={
-                          <Checkbox
-                            onChange={() =>
-                              handleCheckboxChange(question, index, optionIndex)
-                            }
-                          />
-                        }
-                        label={option}
-                      />
-                    </ListItem>
-                  ))}
-            </List>
+            {question.type === type && (
+              <>
+                <Typography variant="h6" sx={{ marginBottom: "10px" }}>
+                  {question.question}
+                </Typography>
+                {question.imgURL && (
+                  <img
+                    class="img-url"
+                    src={question.imgURL}
+                    alt={question.question}
+                  />
+                )}
+                <List>
+                  <>
+                    {!Array.isArray(question.correctAnswer)
+                      ? question.options?.map((option, optionIndex) => (
+                          <ListItem key={optionIndex} disablePadding>
+                            <ListItemButton
+                              onClick={() =>
+                                handleOptionClick(index, optionIndex)
+                              }
+                              sx={{
+                                backgroundColor: handleBackgroundColor(
+                                  index,
+                                  optionIndex
+                                ),
+                                borderRadius: "8px",
+                                padding: "12px",
+                                marginBottom: "8px",
+                                border: "1px solid #000000",
+                                "&:hover": {
+                                  backgroundColor: "#bfdfff", // Light red background on hover
+                                },
+                              }}
+                            >
+                              {option}
+                            </ListItemButton>
+                          </ListItem>
+                        ))
+                      : question.options?.map((option, optionIndex) => (
+                          <ListItem key={optionIndex} disablePadding>
+                            <FormControlLabel
+                              sx={{
+                                backgroundColor: handleBackgroundColor(
+                                  index,
+                                  optionIndex
+                                ),
+                                borderRadius: "8px",
+                                padding: "12px",
+                                marginBottom: "8px",
+                                border: "1px solid #000000",
+                                width: "100%",
+                              }}
+                              control={
+                                <Checkbox
+                                  onChange={() =>
+                                    handleCheckboxChange(
+                                      question,
+                                      index,
+                                      optionIndex
+                                    )
+                                  }
+                                />
+                              }
+                              label={option}
+                            />
+                          </ListItem>
+                        ))}
+                  </>
+                </List>
+              </>
+            )}
           </Box>
         ))}
       <Button
