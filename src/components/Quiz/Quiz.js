@@ -48,6 +48,7 @@ const Quiz = ({
   ]);
 
   const [userResponseMC, setUserResponseMC] = useState([]);
+  const [userResponsesMC, setUserResponsesMC] = useState([]);
 
   const [score, setScore] = useState(0);
   const [submitted, setSubmitted] = useState(false);
@@ -59,11 +60,30 @@ const Quiz = ({
     const fetchQuestions = async () => {
       const response = await fetch("http://localhost:3001/api/questions");
       const data = await response.json();
-      setNewQuestions(data);
+
+      const filteredData = data.filter((question) => question.type === type);
+      const multipleChoiceQs = filteredData.filter(
+        (question) => typeof question.correctAnswer === "object"
+      );
+
+      setNewQuestions(filteredData);
+      setSelectedOptions(Array(filteredData.length).fill(null));
     };
 
     fetchQuestions();
   }, []);
+
+  useEffect(() => {
+    const currentUserResponsesMC = correctAnswers.map((response) => {
+      if (Array.isArray(response)) {
+        return [];
+      } else {
+        return null;
+      }
+    });
+
+    setUserResponsesMC(currentUserResponsesMC);
+  }, [correctAnswers, type]);
 
   useEffect(() => {
     fetchQuestionsSuccess(newQuestions);
@@ -95,33 +115,60 @@ const Quiz = ({
     }
   };
 
-  const handleCheckboxChange = (question, index, optionIndex) => {
+  const handleCheckboxChange = async (event, question, index, optionIndex) => {
+    const { checked } = event.target;
     const updatedSelectedOptionsMC = [...selectedOptionsMC];
-    updatedSelectedOptionsMC[optionIndex] =
-      !updatedSelectedOptionsMC[optionIndex];
+    const updatedSelectedOptions = [...selectedOptions];
 
-    if (updatedSelectedOptionsMC[optionIndex]) {
-      setUserResponseMC([...userResponseMC, optionIndex]);
-      console.log("choice selected" + optionIndex);
+    const currentSelectedOptionsMC = []; // have []
+    console.log("updatedSelectedOptions[index]", index);
+    console.log(updatedSelectedOptions);
+    // if (currentSelectedOptionsMC.includes(optionIndex)) {
+    //   currentSelectedOptionsMC.filter((option) => option !== optionIndex);
+    // } else {
+    //   currentSelectedOptionsMC.push(optionIndex);
+    // }
+    // console.log("currentSelectedOptionsMC");
+    // console.log(currentSelectedOptionsMC);
+
+    updatedSelectedOptionsMC[optionIndex] = checked;
+
+    const currentUserResponsesMC = [...userResponsesMC];
+
+    console.log(checked, optionIndex);
+    if (checked) {
+      currentUserResponsesMC[index].push(optionIndex);
+      console.log("choice selected " + optionIndex);
     } else {
-      setUserResponseMC(
-        userResponseMC.filter((userResponse) => userResponse !== optionIndex)
+      currentUserResponsesMC[index] = currentUserResponsesMC[index].filter(
+        (option) => option !== optionIndex
       );
-      console.log("choice deselected" + optionIndex);
+      console.log("choice deselected " + optionIndex);
     }
 
+    console.log("+++ currentUserResponsesMC +++");
+    console.log(currentUserResponsesMC);
+
+    updatedSelectedOptions[index] = currentUserResponsesMC[index];
+
+    // console.log(userResponseMC);
+    // setUserResponsesMC(currentUserResponsesMC);
+    setUserResponsesMC(currentUserResponsesMC);
+    setSelectedOptions(updatedSelectedOptions);
     setQuestionIndex(index);
     setSelectedOptionsMC(updatedSelectedOptionsMC);
     selectAnswer(index, userResponseMC);
   };
 
-  console.log(userResponses);
-  console.log(userResponseMC);
+  // console.log(userResponses);
+  console.log("----userResponsesMC----");
+  console.log(userResponsesMC);
+  // console.log(userResponseMC);
   console.log("----- Selected Options -----");
   console.log(selectedOptions);
-  console.log(selectedOptionsMC);
-  console.log("----- CorrectAnswers -----");
-  console.log(correctAnswers);
+  // console.log(selectedOptionsMC);
+  // console.log("----- CorrectAnswers -----");
+  // console.log(correctAnswers);
 
   console.log("quiz type: " + type);
   const handleNotificationClose = (event, reason) => {
@@ -133,8 +180,10 @@ const Quiz = ({
 
   const handleBackgroundColor = (index, optionIndex) => {
     if (submitted) {
-      console.log(correctAnswers);
-      console.log(userResponses);
+      // console.log("Correct-Answer with BgColor");
+      // console.log(correctAnswers);
+      // console.log("User responses with BgColor");
+      // console.log(userResponses);
       if (typeof selectedOptions[index] !== "object") {
         return selectedOptions[index] === optionIndex
           ? correctAnswers[index] === userResponses[index]
@@ -144,7 +193,11 @@ const Quiz = ({
           ? "#00e348"
           : "#dddddd";
       } else {
-        return correctAnswers[index].includes(optionIndex)
+        // console.log("correct answer" + index);
+        // console.log(correctAnswers[index]);
+
+        return correctAnswers[index] &&
+          correctAnswers[index].includes(optionIndex)
           ? "#00e348"
           : "#ff4141";
       }
@@ -156,7 +209,7 @@ const Quiz = ({
     let newScore = score; // Initialize a variable to keep track of the new score
 
     // Compare userResponses with correctAnswers
-    userResponses.forEach((response, index) => {
+    selectedOptions.forEach((response, index) => {
       if (typeof response !== "object") {
         if (response === correctAnswers[index]) {
           newScore++; // Increment the score when the response is correct
@@ -166,6 +219,11 @@ const Quiz = ({
           console.log("== MC Submit ==");
           const sortedArr1 = response.slice().sort();
           const sortedArr2 = correctAnswers[index].slice().sort();
+          console.log("------Submission------");
+          console.log("response");
+          console.log(sortedArr1);
+          console.log("correctAnswers");
+          console.log(sortedArr2);
           if (sortedArr1.every((value, index) => value === sortedArr2[index])) {
             newScore++;
           }
@@ -249,8 +307,9 @@ const Quiz = ({
                               }}
                               control={
                                 <Checkbox
-                                  onChange={() =>
+                                  onChange={(event) =>
                                     handleCheckboxChange(
+                                      event,
                                       question,
                                       index,
                                       optionIndex
