@@ -21,9 +21,9 @@ const data = [
           {
             id: 2,
             topic: "Complete Survey",
-            type: "quiz",
+            type: "content",
             content:
-              "<a href='https://unomaha.az1.qualtrics.com/jfe/form/SV_8iGZnehHEJ64MCO?authuser=1' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>",
+              "<a style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_8iGZnehHEJ64MCO?authuser=1' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>",
           },
         ],
       },
@@ -316,17 +316,19 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
     subTopics: [
       {
         id: 1,
-        name: "CT Module 0: Decomposition",
-        type: "decomposition",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 3, 19),
-        points: 100,
+        name: "CT Module 1: Four Pillars of Computational Thinking",
         contents: [
           {
             id: 1,
-            topic: "Introduction",
+            topic: "CT Module 1.1: Decomposition",
+            type: "decomposition",
             points: 100,
-            content: `
+            contents: [
+              {
+                id: 1,
+                topic: "Introduction",
+                type: "content",
+                content: `
   <div>
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -419,12 +421,12 @@ a {
 }
 </style>
             `,
-          },
-          {
-            id: 2,
-            topic: "Building Background Knowledge",
-            points: 100,
-            content: `
+              },
+              {
+                id: 2,
+                topic: "Building Background Knowledge",
+                points: 100,
+                content: `
 <html>
 <head>
   <title>Building Background Knowledge</title>
@@ -526,18 +528,18 @@ a {
 }
 </style>
             `,
-          },
-          {
-            id: 3,
-            topic: "Quiz",
-            type: "quiz",
-            points: 100,
-          },
-          {
-            id: 4,
-            topic: "Decomposition in the Real World",
-            points: 100,
-            content: `
+              },
+              {
+                id: 3,
+                topic: "Quiz",
+                type: "quiz",
+                points: 100,
+              },
+              {
+                id: 4,
+                topic: "Decomposition in the Real World",
+                points: 100,
+                content: `
             <!DOCTYPE html>
 <html>
 <head>
@@ -606,12 +608,12 @@ a {
 
 
             `,
-          },
-          {
-            id: 5,
-            topic: "Decomposition in Computing",
-            points: 100,
-            content: `
+              },
+              {
+                id: 5,
+                topic: "Decomposition in Computing",
+                points: 100,
+                content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -735,20 +737,20 @@ img {
 
 
             `,
+              },
+            ],
           },
-        ],
-      },
-      {
-        id: 2,
-        name: "CT Module 1: Pattern Recognition",
-        type: "pattern-recognition",
-        points: 100,
-        contents: [
           {
-            id: 1,
-            topic: "Introduction",
+            id: 2,
+            topic: "CT Module 1: Pattern Recognition",
+            type: "pattern-recognition",
             points: 100,
-            content: `
+            contents: [
+              {
+                id: 1,
+                topic: "Introduction",
+                points: 100,
+                content: `
   <div>
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -786,12 +788,12 @@ a {
 }
 </style>
             `,
-          },
-          {
-            id: 2,
-            topic: "Warm Up",
-            points: 100,
-            content: `
+              },
+              {
+                id: 2,
+                topic: "Warm Up",
+                points: 100,
+                content: `
 <html>
 <head>
   <title>Warm Up</title>
@@ -891,12 +893,12 @@ a {
 }
 </style>
             `,
-          },
-          {
-            id: 3,
-            topic: "Building Background Knowledge",
-            points: 100,
-            content: `
+              },
+              {
+                id: 3,
+                topic: "Building Background Knowledge",
+                points: 100,
+                content: `
 
 
 
@@ -1016,18 +1018,18 @@ a {
 
 
 `,
-          },
-          {
-            id: 4,
-            topic: "Quiz for Points",
-            type: "quiz",
-            points: 100,
-          },
-          {
-            id: 5,
-            topic: "Applying Idea in the Real World",
-            points: 100,
-            content: `
+              },
+              {
+                id: 4,
+                topic: "Quiz for Points",
+                type: "quiz",
+                points: 100,
+              },
+              {
+                id: 5,
+                topic: "Applying Idea in the Real World",
+                points: 100,
+                content: `
             <!DOCTYPE html>
 <html>
 <head>
@@ -1131,12 +1133,12 @@ a {
 
 
             `,
-          },
-          {
-            id: 6,
-            topic: "Pattern Recognition in Computer Programming",
-            points: 100,
-            content: `
+              },
+              {
+                id: 6,
+                topic: "Pattern Recognition in Computer Programming",
+                points: 100,
+                content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -1276,20 +1278,20 @@ img {
 
 
             `,
+              },
+            ],
           },
-        ],
-      },
-      {
-        id: 3,
-        name: "CT Module 2: Abstraction",
-        type: "abstraction",
-        points: 100,
-        contents: [
           {
-            id: 1,
-            topic: "Introduction",
+            id: 3,
+            topic: "CT Module 2: Abstraction",
+            type: "abstraction",
             points: 100,
-            content: `
+            contents: [
+              {
+                id: 1,
+                topic: "Introduction",
+                points: 100,
+                content: `
   <div>
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -1331,12 +1333,12 @@ a {
 }
 </style>
             `,
-          },
-          {
-            id: 2,
-            topic: "Thinking about Abstraction",
-            points: 100,
-            content: `
+              },
+              {
+                id: 2,
+                topic: "Thinking about Abstraction",
+                points: 100,
+                content: `
 <html>
 <head>
   <title>Thinking about Abstraction</title>
@@ -1477,13 +1479,13 @@ a {
 }
 </style>
 `,
-          },
+              },
 
-          {
-            id: 3,
-            topic: "Video Introduction",
-            points: 100,
-            content: `
+              {
+                id: 3,
+                topic: "Video Introduction",
+                points: 100,
+                content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1520,12 +1522,12 @@ a {
               </html>
               
               `,
-          },
-          {
-            id: 4,
-            topic: "What is Abstraction?",
-            points: 100,
-            content: `
+              },
+              {
+                id: 4,
+                topic: "What is Abstraction?",
+                points: 100,
+                content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1580,12 +1582,12 @@ img {
 </style>
 </html>
             `,
-          },
-          {
-            id: 5,
-            topic: "Applying Ideas in the Real World",
-            points: 100,
-            content: `
+              },
+              {
+                id: 5,
+                topic: "Applying Ideas in the Real World",
+                points: 100,
+                content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1684,12 +1686,12 @@ img {
 </style>
 </html>
             `,
-          },
-          {
-            id: 6,
-            topic: "Abstraction in Computer Programming",
-            points: 100,
-            content: `
+              },
+              {
+                id: 6,
+                topic: "Abstraction in Computer Programming",
+                points: 100,
+                content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1813,26 +1815,26 @@ img {
 </style>
 </html>
             `,
+              },
+              {
+                id: 7,
+                topic: "Quiz",
+                type: "quiz",
+                points: 100,
+              },
+            ],
           },
           {
-            id: 7,
-            topic: "Quiz",
-            type: "quiz",
+            id: 4,
+            topic: "CT Module 3: Algorithms",
+            type: "algorithms",
             points: 100,
-          },
-        ],
-      },
-      {
-        id: 4,
-        name: "CT Module 3: Algorithms",
-        type: "algorithms",
-        points: 100,
-        contents: [
-          {
-            id: 1,
-            topic: "Introduction",
-            points: 100,
-            content: `
+            contents: [
+              {
+                id: 1,
+                topic: "Introduction",
+                points: 100,
+                content: `
   <div>
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -1879,12 +1881,12 @@ ul {
 }
 </style>
             `,
-          },
-          {
-            id: 2,
-            topic: "Exploring Algorithms",
-            points: 100,
-            content: `
+              },
+              {
+                id: 2,
+                topic: "Exploring Algorithms",
+                points: 100,
+                content: `
 <html>
 <head>
   <title>Exploring Algorithms</title>
@@ -1936,12 +1938,12 @@ img {
 
 </style>
             `,
-          },
-          {
-            id: 3,
-            topic: "Building Background Knowledge",
-            points: 100,
-            content: `
+              },
+              {
+                id: 3,
+                topic: "Building Background Knowledge",
+                points: 100,
+                content: `
 <html>
 <head>
   <title>Building Background Knowledge</title>
@@ -2039,12 +2041,12 @@ ul {
 }
 </style>
             `,
-          },
-          {
-            id: 4,
-            topic: "Applying Ideas in the Real World",
-            points: 100,
-            content: `
+              },
+              {
+                id: 4,
+                topic: "Applying Ideas in the Real World",
+                points: 100,
+                content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -2170,13 +2172,13 @@ img {
 
 
             `,
-          },
+              },
 
-          {
-            id: 5,
-            topic: "Algorithms in Computer Programming",
-            points: 100,
-            content: `
+              {
+                id: 5,
+                topic: "Algorithms in Computer Programming",
+                points: 100,
+                content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -2374,12 +2376,14 @@ img {
 </style>
 </html>
             `,
-          },
-          {
-            id: 6,
-            topic: "Quiz for Points",
-            type: "quiz",
-            points: 100,
+              },
+              {
+                id: 6,
+                topic: "Quiz for Points",
+                type: "quiz",
+                points: 100,
+              },
+            ],
           },
         ],
       },

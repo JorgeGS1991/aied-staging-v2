@@ -24,6 +24,8 @@ import SubContent from "./Topics/Content/SubContent/SubContent";
 import axios from "axios";
 import Notification from "../../components/SnackBar/SnackBar";
 import DBContent from "./DBContent/DBContent";
+import NestedContent from "./Topics/Content/SubContent/NestedContent/NestedContent";
+import { HashLink } from "react-router-hash-link";
 
 function getLength(subTopics) {
   let lastData = subTopics[subTopics.length - 1];
@@ -63,6 +65,7 @@ function CircularProgressWithLabel(props) {
 
 function Dashboard({ user, role, progress, setUser, setProgress }) {
   const [isActive, setIsActive] = useState([]);
+  const [isActive2, setIsActive2] = useState([]);
   const [content, setContent] = useState(localStorage.getItem("content") || "");
   const [roles, setRole] = useState(localStorage.getItem("role"));
   const [topic, setTopic] = useState("");
@@ -96,7 +99,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
       let newRole = role.substring(1, role.length - 1);
       if (user) {
         await axios
-          .put("/api/users/update-role", { newRole })
+          .put("/api/users/update-role", { newRole }, { withCredentials: true })
           .then((response) => {
             console.log("User role updated successfully:", response.data);
           })
@@ -135,6 +138,14 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
     console.log(isActive[index]);
   };
 
+  const toggleDropdown2 = (index, length) => {
+    setIsActive2(Array(length).fill(false));
+    const newIsActive2 = [...isActive2];
+    newIsActive2[index] = !newIsActive2[index];
+    setIsActive2(newIsActive2);
+    console.log(isActive2[index]);
+  };
+
   const handleNotificationClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -155,7 +166,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                 {item.subTopics.map((subTopic, index) => {
                   return (
                     <div className="db-item">
-                      <a
+                      <HashLink
                         href="#"
                         onClick={() =>
                           toggleDropdown(index, item.subTopics.length)
@@ -170,7 +181,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                         >
                           <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
                         </svg>
-                      </a>
+                      </HashLink>
                       {isActive && (
                         <ul
                           class="dropdown-container"
@@ -180,15 +191,74 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                             marginLeft: "10px",
                           }}
                         >
-                          {subTopic.contents.map((subContent) => (
-                            <li>
-                              <Link
-                                to={`${item.id}/${index + 1}/${subContent.id}`}
-                              >
-                                {subContent.topic}
-                              </Link>
-                            </li>
-                          ))}
+                          {subTopic.contents.map((subContent, idx) => {
+                            return !subContent.contents ? (
+                              <li>
+                                <Link
+                                  to={`${item.id}/${index + 1}/${
+                                    subContent.id
+                                  }`}
+                                >
+                                  {subContent.topic}
+                                </Link>
+
+                                {/* {subContent.contents ? (
+                                <div>{subContent.contents[0].topic}</div>
+                              ) : null} */}
+                              </li>
+                            ) : (
+                              <div className="db-item">
+                                <HashLink
+                                  to="#"
+                                  onClick={() =>
+                                    toggleDropdown2(
+                                      idx,
+                                      subContent.contents.length
+                                    )
+                                  }
+                                >
+                                  {subContent.topic}
+                                  {"   "}
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 320 512"
+                                  >
+                                    <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                  </svg>
+                                </HashLink>
+                                {isActive2 && (
+                                  <ul
+                                    class="dropdown-container"
+                                    style={{
+                                      display: isActive2[idx] ? "flex" : "none",
+                                      flexDirection: "column",
+                                      marginLeft: "10px",
+                                    }}
+                                  >
+                                    {subContent.contents.map(
+                                      (nestedContent, idx) => {
+                                        return (
+                                          <li
+                                            key={idx}
+                                            className="db-nested-content"
+                                          >
+                                            <Link
+                                              to={`${item.id}/${index + 1}/${
+                                                subContent.id
+                                              }/${nestedContent.id}`}
+                                            >
+                                              {nestedContent.topic}
+                                            </Link>
+                                          </li>
+                                        );
+                                      }
+                                    )}
+                                  </ul>
+                                )}
+                              </div>
+                            );
+                          })}
                         </ul>
                       )}
                     </div>
@@ -212,8 +282,12 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
             <Route path="/" element={<DBContent />} />
             <Route path=":id" element={<Topics />} />
             <Route path=":id/:topicId" element={<Content />}>
-              <Route path=":contentId" element={<SubContent />} />
+              <Route path=":contentId" element={<SubContent />}></Route>
             </Route>
+            <Route
+              path=":id/:topicId/:contentId/:subContentId"
+              element={<NestedContent />}
+            />
           </Routes>
         </div>
       ) : (

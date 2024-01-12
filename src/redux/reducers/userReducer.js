@@ -1,10 +1,13 @@
+import { ScrollRestoration } from "react-router-dom";
 import {
   FETCH_ALL_USERS,
+  FETCH_USER,
   LOG_OUT,
   RESET_PROGRESS,
   SET_PROGRESS,
   SET_USER,
   SET_USER_ROLE,
+  UPDATE_QUIZ_SCORE,
 } from "../actions/userActions";
 
 const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -14,6 +17,12 @@ const initialState = {
   user: storedUser || null,
   progress: 0,
   role: "",
+  quizScore: {
+    decompositionScore: 0,
+    patternScore: 0,
+    abstractionScore: 0,
+    algorithmScore: 0,
+  },
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -22,6 +31,12 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         users: action.payload,
+      };
+
+    case FETCH_USER:
+      return {
+        ...state,
+        user: localStorage.getItem("user"),
       };
     case SET_USER:
       localStorage.setItem("user", JSON.stringify(action.payload));
@@ -35,6 +50,16 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         role: action.payload,
+      };
+
+    case UPDATE_QUIZ_SCORE:
+      
+      return {
+        ...state,
+        quizScore: {
+          ...state.quizScore,
+          [action.payload.type]: action.payload.quizScore,
+        },
       };
 
     case SET_PROGRESS:

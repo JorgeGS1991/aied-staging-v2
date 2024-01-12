@@ -12,8 +12,11 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import { Route, Routes } from "react-router";
+import { Link } from "react-router-dom";
 import { fetchAllUsers } from "../../redux/actions/userActions";
 import Login from "../Login/Login";
+import ManageStudentDetails from "./ManageStudentDetails/ManageStudentDetails";
 
 const ManageStudents = ({ user, users, fetchAllUsers }) => {
   const [allUsers, setAllUsers] = useState([]);
@@ -71,7 +74,9 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
                     <TableRow key={index}>
                       <TableCell>
                         <Typography variant="body1">
-                          {user.displayName}
+                          <Link to={`/manage-students/${user._id}`}>
+                            {user.displayName}
+                          </Link>
                         </Typography>
                       </TableCell>
                       <TableCell>
@@ -95,6 +100,9 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
           />
+          <Routes>
+            <Route path="/:userId" element={<ManageStudentDetails />} />
+          </Routes>
         </>
       ) : (
         <Login />

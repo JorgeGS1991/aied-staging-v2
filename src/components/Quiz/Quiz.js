@@ -23,9 +23,12 @@ import {
   fetchQuestionsSuccess,
   selectAnswer,
 } from "../../redux/actions/quizActions";
+
+import { updateQuizScore } from "../../redux/actions/userActions";
 import Notification from "../SnackBar/SnackBar";
 
 import "./Quiz.css";
+import axios from "axios";
 
 const Quiz = ({
   type,
@@ -34,6 +37,8 @@ const Quiz = ({
   userResponses,
   fetchQuestionsSuccess,
   selectAnswer,
+  updateQuizScore,
+  quizScore,
 }) => {
   const [newQuestions, setNewQuestions] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState(
@@ -51,8 +56,36 @@ const Quiz = ({
   const [userResponsesMC, setUserResponsesMC] = useState([]);
 
   const [score, setScore] = useState(0);
+  const [quizType, setQuizType] = useState(null);
   const [submitted, setSubmitted] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(true);
+
+  useEffect(() => {
+    const updateQuizScoreState = async () => {
+      await axios.put(
+        "/api/users/quiz",
+        {
+          quizScore,
+          type,
+        },
+        { withCredentials: true }
+      );
+    };
+    updateQuizScoreState();
+  }, [quizScore, type]);
+
+  useEffect(() => {
+    if (type === "decomposition") {
+      setQuizType("decompositionScore");
+    } else if (type === "pattern-recognition") {
+      setQuizType("patternScore");
+    } else if (type === "abstraction") {
+      setQuizType("abstractionScore");
+    } else if (type === "algorithms") {
+      setQuizType("algorithmScore");
+    }
+    updateQuizScore(score, quizType);
+  }, [type, score, quizType, updateQuizScore]);
 
   useEffect(() => {
     // Simulate fetching questions asynchronously
@@ -167,8 +200,8 @@ const Quiz = ({
   console.log("----- Selected Options -----");
   console.log(selectedOptions);
   // console.log(selectedOptionsMC);
-  // console.log("----- CorrectAnswers -----");
-  // console.log(correctAnswers);
+  console.log("----- CorrectAnswers -----");
+  console.log(correctAnswers);
 
   console.log("quiz type: " + type);
   const handleNotificationClose = (event, reason) => {
@@ -232,6 +265,7 @@ const Quiz = ({
     });
 
     setScore(newScore); // Update the score state with the new score
+
     setSubmitted(true); // Set submitted to true to indicate the quiz has been submitted
   };
 
@@ -360,8 +394,10 @@ const mapStateToProps = (state) => ({
   questions: state.quiz.questions,
   userResponses: state.quiz.userResponses,
   correctAnswers: state.quiz.correctAnswers,
+  quizScore: state.user.quizScore,
 });
 export default connect(mapStateToProps, {
   fetchQuestionsSuccess,
   selectAnswer,
+  updateQuizScore,
 })(Quiz);

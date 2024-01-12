@@ -17,6 +17,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login/Login";
 import Playground from "./pages/Playground/Playground";
 import ManageStudents from "./pages/ManageStudents/ManageStudents";
+import ManageStudentDetails from "./pages/ManageStudents/ManageStudentDetails/ManageStudentDetails";
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -52,6 +53,10 @@ function App() {
         <Route path="/playground" element={<Playground />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/manage-students" element={<ManageStudents />} />
+        <Route
+          path="/manage-students/:userId"
+          element={<ManageStudentDetails />}
+        />
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>

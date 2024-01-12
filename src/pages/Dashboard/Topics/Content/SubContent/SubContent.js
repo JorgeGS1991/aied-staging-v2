@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, Route, Routes, useParams } from "react-router-dom";
 import ParsonsProblem from "../../../../../components/Parsons/Parsons";
 import Quiz from "../../../../../components/Quiz/Quiz";
 import UploadDocument from "../../../../../components/UploadDocument/UploadDocument";
 import data from "../../../../../data/modules";
+import NestedContent from "./NestedContent/NestedContent";
 
 import "./SubContent.css";
 
@@ -16,6 +17,7 @@ function SubContent() {
   });
   //   const navigate = useNavigate();
   const [content, setContent] = useState("");
+  const [contents, setContents] = useState(null);
   const [type, setType] = useState("");
   const [quizType, setQuizType] = useState("");
 
@@ -23,12 +25,31 @@ function SubContent() {
     setContent(
       data[id - 1].subTopics[topicId - 1].contents[contentId - 1].content
     );
+    setContents(
+      data[id - 1].subTopics[topicId - 1].contents[contentId - 1].contents
+    );
     setType(data[id - 1].subTopics[topicId - 1].contents[contentId - 1].type);
     setQuizType(data[id - 1].subTopics[topicId - 1].type);
-  }, [id, topicId, contentId, content, quizType]);
+  }, [id, topicId, contentId, content, quizType, contents]);
 
+  console.log("type", type);
   return (
     <div className="subcontent-section">
+      <h1>Hello</h1>
+      {contents && (
+        <>
+          <ol>
+            {contents.map((content) => (
+              <li>
+                <Link to={`${content.id}`}>{content.topic}</Link>
+              </li>
+            ))}
+          </ol>
+          <Routes>
+            <Route path=":subContentId" element={<NestedContent />} />
+          </Routes>
+        </>
+      )}
       {type !== "quiz" && (
         <div
           className="content"
