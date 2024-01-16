@@ -22,6 +22,7 @@ const initialState = {
     patternScore: 0,
     abstractionScore: 0,
     algorithmScore: 0,
+    introScore: 0,
   },
 };
 
@@ -53,7 +54,6 @@ export const userReducer = (state = initialState, action) => {
       };
 
     case UPDATE_QUIZ_SCORE:
-      
       return {
         ...state,
         quizScore: {

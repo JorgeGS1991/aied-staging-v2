@@ -45,7 +45,7 @@ function ManageStudentDetails({ user, getUser }) {
             <LinearProgress variant="determinate" value={scoreOutOfTen} />
           </Grid>
           <Grid item xs={2}>
-            <Typography>{score !== -1 ? score : "NA"}/10</Typography>
+            <Typography>{score !== -1 ? score : "NA"}</Typography>
           </Grid>
         </Grid>
       </Grid>
@@ -92,6 +92,10 @@ function ManageStudentDetails({ user, getUser }) {
                     {renderScoreBar(
                       currentUser.patternScore,
                       "Pattern Recognition"
+                    )}
+                    {renderScoreBar(
+                      currentUser.introScore,
+                      "Introduction to Computational Thinking"
                     )}
                   </Grid>
                 </>

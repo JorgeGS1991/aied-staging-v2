@@ -240,6 +240,109 @@ const data = [
     subTopics: [
       {
         id: 1,
+        name: "CT Module 0: Introduction to Computational Thinking",
+        type: "intro",
+        contents: [
+          {
+            id: 1,
+            topic: "CT Module 1.1: Computational Thinking: How Computers Think",
+            type: "content",
+            points: 100,
+            content: `
+        <div class="how-comp-think">
+              <h1>Computational Thinking: How Computers Think</h1>
+
+      <p>
+          Computational thinking is a way of solving problems. It is called computational thinking because we are specifically thinking in the same way that we could tell a computer to solve a problem. In computational thinking, we break problems and their solutions into simple steps. We use computational thinking when we write computer programs. We can also use computational thinking in everyday life. Computers are often used to model the real world, so many of the problems we solve with computers are like problems we solve in real life.
+      </p>
+
+      <h2>Four Cornerstones to Computational Thinking</h2>
+
+      <p>
+          Computational thinking is an approach in which you break down problems into distinct parts, look for similarities, identify the relevant information and opportunities for simplification, and create a plan for a solution. There are four key techniques (cornerstones) to computational thinking: decomposition, pattern recognition, abstraction, algorithms.
+      </p>
+
+      <ul>
+          <li><strong>Decomposition:</strong> Breaking down a complex problem or system into smaller, more manageable parts;</li>
+          <li><strong>Pattern Recognition:</strong> Looking for similarities among and within problems;</li>
+          <li><strong>Abstraction:</strong> Focusing on the important information only, ignoring irrelevant detail;</li>
+          <li><strong>Algorithms:</strong> Developing a step-by-step solution to the problem, or the rules to follow to solve the problem.</li>
+      </ul>
+
+      <h2>What Problems Can Computational Thinking Solve?</h2>
+
+      <p>
+          Another element of computational thinking is knowing what kinds of problems can be solved well by a computer and what problems are better for humans to resolve. A computer is really good at recording, processing, and searching for data making them a great tool for keeping track of data and completing complex computational tasks. On the other hand, computers are not very good at completing creative tasks or providing subjective opinions making humans still better at these activities. So, although computers are getting more powerful and sophisticated in what they can do, people are still required to program them!
+      </p>
+
+      <h2>Here's an Example</h2>
+
+      <p>
+          In real life, you might have to fill out a form while at a government office. That form has stuff on it like your name and address. In computing, we would call your entries on the form data. This data needs to be stored somewhere--like in a folder placed into a filing cabinet--and the people at the office will need to be able to find that folder later.
+      </p>
+
+      <p>
+          In the computer, the form would be called a file that would be stored in a folder on the hard drive. Then, if a person needs to access the data in the file, they can either go directly to the folder the file is stored in (just like pulling the folder from the cabinet in real life), or they can look for the file using the computer's search function.
+      </p>
+
+      <p>
+          Computational thinking can help us think about how to store the file and also how to search for it, both in real life and in the computer.
+      </p>
+
+      <h2>Final Thoughts</h2>
+
+      <ul>
+          <li>Computational Thinking is a way of solving problems;</li>
+          <li>Helps us formulate solutions that can be easily carried out by a computer;</li>
+          <li>With computational thinking, we solve problems creatively;</li>
+          <li>With computational thinking, we get to the root of the problem, which is a crucial step in solving it.</li>
+      </ul>
+      </div>
+        <style> 
+    .how-comp-think {
+            font-family: Arial, sans-serif;
+            // line-height: 1.6;
+            // margin: 20px;
+        }
+
+        .how-comp-think h1 {
+            color: #333;
+            padding-bottom: 10px;
+            font-weight: 700;
+            // border-bottom: 2px solid #333;
+        }
+
+        .how-comp-think h2 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-weight: 700;
+            // border-bottom: 1px solid #ccc;
+        }
+
+        .how-comp-think p {
+            margin-bottom: 15px;
+        }
+
+        .how-comp-think ul {
+            margin-bottom: 15px;
+        }
+
+        .how-comp-think li {
+            margin-bottom: 5px;
+        }
+        </style>
+              `,
+          },
+          {
+            id: 2,
+            topic: "Quiz",
+            type: "quiz",
+            points: 100,
+          },
+        ],
+      },
+      {
+        id: 1,
         name: "CT Module 1: Four Pillars of Computational Thinking",
         contents: [
           {

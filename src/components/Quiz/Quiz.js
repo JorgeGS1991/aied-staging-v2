@@ -60,6 +60,8 @@ const Quiz = ({
   const [submitted, setSubmitted] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(true);
 
+  console.log(quizScore, type);
+
   useEffect(() => {
     const updateQuizScoreState = async () => {
       await axios.put(
@@ -83,6 +85,8 @@ const Quiz = ({
       setQuizType("abstractionScore");
     } else if (type === "algorithms") {
       setQuizType("algorithmScore");
+    } else if (type === "intro") {
+      setQuizType("introScore");
     }
     updateQuizScore(score, quizType);
   }, [type, score, quizType, updateQuizScore]);
@@ -213,10 +217,6 @@ const Quiz = ({
 
   const handleBackgroundColor = (index, optionIndex) => {
     if (submitted) {
-      // console.log("Correct-Answer with BgColor");
-      // console.log(correctAnswers);
-      // console.log("User responses with BgColor");
-      // console.log(userResponses);
       if (typeof selectedOptions[index] !== "object") {
         return selectedOptions[index] === optionIndex
           ? correctAnswers[index] === userResponses[index]
@@ -226,9 +226,6 @@ const Quiz = ({
           ? "#00e348"
           : "#dddddd";
       } else {
-        // console.log("correct answer" + index);
-        // console.log(correctAnswers[index]);
-
         return correctAnswers[index] &&
           correctAnswers[index].includes(optionIndex)
           ? "#00e348"
