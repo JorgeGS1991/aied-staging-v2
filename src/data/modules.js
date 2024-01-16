@@ -94,101 +94,25 @@ const data = [
       },
       {
         id: 4,
-        name: "GS Module 2.1: Getting to Know Google Classroom, Drive, Docs, and Slides",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 4, 28),
+        name: "GS Module 2: Tutorial on How to Navigate in Work-Learn Application",
         contents: [
           {
             id: 1,
             topic: "Main Content",
             points: 100,
             content: `
-                <div class="nGi02b tLDEHd j70YMc" guidedhelpid="assignmentInstructionsGH">
-                <span>Knowing how to use the software you are going to be using to learn something 
-                new is one of the most important first steps you can take to be 
-                successful as an online learner. This module gives you a brief 
-                description of a few of the Google applications you'll be using the 
-                most.&nbsp; Most of the tutorials provided to you offer a step-by-step guide 
-                for you to walk through the different applications. Some of them have 
-                specific activities and quizzes that you can complete to test your abilities.<br><br>
-                **<i>PLEASE NOTE:&nbsp; You will need to create an account on GCF Global in order 
-                to save your progress on any of the step-by-step tutorials provided by that organization. 
-                This is a free account and you can use your WorkLearn Google account credentials to log in.</i><br><br>
-                <b>Google Classroom</b><br><br>Google Classroom is the <i>learning platform </i>the Work Learn project is using provide you the materials you need to complete our coursework in <i>Computational Thinking</i>, <i>Python</i>, <i>Mainframe</i>, and <i>COBOL</i>. While Google Classroom is pretty easy to use, it does take a little bit of practice to get the hang of. Lucky for you, we have found a really good video and step-by-step tutorial to get you started using Google Classroom right away. <br><br><b>Google Drive</b><br><br>Google drive is cloud-based data storage. This storage is part of your Google account and can be accessed in the Google Apps menu bar (9 dots on the top right next to your icon). When you use any one of Google's productivity 
-                applications (Docs, Slides, Sheets, etc), they are automatically saved in your Google Drive account for you. To learn more about Google Drive (and Docs), take a few minutes to go over the tutorial and/or watch the video presentation below. <br><br><b>Google Docs</b><b></b><br><br>One of the most important apps you'll want to learn more about is Google Docs. This is Google's word processing program and works a lot like Microsoft Word. There are some differences between the two, though, so it's a good idea to start your review of the Google Drive and Docs tutorial at Section 7 to make your own comparisons between the two products. <br><br><b>Google Slides</b><br><br>Some of your lessons and reading materials may be presented to you as Google Slides. Understanding how to navigate this app will help you access the material you need to complete your coursework. Like Google Docs, there are a lot of similarities (and differences) between Google Slides and Microsoft Power Point, so it's important to be familiar with both programs. Check out the tutorial and/or video presentations below to learn more about Google Slides<b></b><br><br><b>What To Turn In:</b><br><br><b></b>Complete the Challenge! in each section of the GCFGlobal tutorials. For activities that require answering questions, you will upload your answers as part of your assignment. Please use one document for each tutorial. When you are asked to complete an activity, (like using a template from the Google Template Gallery) upload the completed activity with your Challenge! answers.</span>
-                </div>
-            `,
-          },
-          {
-            id: 2,
-            topic: "Resources",
-            points: 100,
-            type: "parsons",
-            content: `
-            <div>
-                <ol>
-                    <li>
-                        <iframe width="966" height="543" src="https://www.youtube.com/embed/qSxNLaWm74g" title="Student Guide to Google Classroom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </li><li>
-                        <a href="https://usadultliteracy.com/how-to-use-google-classroom-for-students-computer-tutorial/?authuser=1">How to Use Google Classroom for Students (Computer Tutorial) – US Adult Literacy</a>
-                    </li><li>
-                        <a href="https://youtube.com/playlist?list=PLDCE614622E1D2691&authuser=1">Google Drive and Docs - YouTube</a>
-                    </li><li>
-                        <a href="https://edu.gcfglobal.org/en/googledriveanddocs/?authuser=1">Free Google Drive Tutorial at GCFGlobal</a>
-                    </li><li>
-                        <a href="https://edu.gcfglobal.org/en/googleslides/?authuser=1">
-Free Google Slides Tutorial at GCFGlobal</a>
-                    </li><li>
-                        <a href="https://youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0&authuser=1">
-https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
-                    </li>
-                </ol>
+            <div style="display: flex; justify-content: center">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/tutorial.mp4"
+                  type="video/mp4">
+              </video>
             </div>
-
-
-
             `,
           },
         ],
       },
       {
         id: 5,
-        name: "GS Module 2.2: Getting to Know: Google Drive Quiz",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 4, 28),
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 150,
-            content: `
-                    <span>Let's test your understanding of how to use Google Drive and Google Docs! There are 15 questions from the the Google Drive and Docs tutorial, and you will need to answer 12 of those questions correctly to receive your incentive payment of $____. <br><br><br>You can take the quiz as many times as you need to reach the goal of 12 out 15 correct answers.</span>
-                    
-                    <div><a href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeboqNTEq-7EivAwjPMrvyQmXaSN_TXP_v3jifnKYfBUBM-BA/viewform">Getting to Know Google Quiz</a></div>
-                `,
-          },
-        ],
-      },
-      {
-        id: 6,
-        name: "GS Module 2.3: Getting to Know: Google Slides Quiz",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 4, 28),
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 150,
-            content: `
-                    <span>Let's test your understanding of how to use Google Drive and Google Docs! <br><br><br>There are 15 questions from the the Google Drive and Docs tutorial, and you will need to answer 12 of those questions correctly to receive your incentive payment of $____. <br><br>You can take the quiz as many times as you need to reach the goal of 12 out 15 correct answers.</span>
-                    
-                    <div><a href="https://docs.google.com/forms/d/e/1FAIpQLScsNGMW0d5Hn5vt871_yABSr_NqYp2MxSe9RB03qDKDiS_OhA/viewform?authuser=1">Getting to Know Google Slides Quiz</a></div>
-                `,
-          },
-        ],
-      },
-      {
-        id: 7,
         name: "LF Module 1.1: Looking Forward: Your Digital Footprint, Using Tech and Crafting Quality Emails at Work",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
@@ -237,7 +161,7 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
         ],
       },
       {
-        id: 7,
+        id: 6,
         name: "LF Module 1.2: Looking Forward: Your Digital Footprint Assessment",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
@@ -273,7 +197,7 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
         ],
       },
       {
-        id: 8,
+        id: 7,
         name: "LF Module 1.3: Looking Forward: Email Basics Quiz",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
@@ -291,7 +215,7 @@ https://www.youtube.com/playlist?list=PLpQQipWcxwt8VFQWcbUcmlHKejroVSzs0</a>
         ],
       },
       {
-        id: 9,
+        id: 8,
         name: "LF Module 1.4: Looking Forward: Beyond Email Quiz",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),

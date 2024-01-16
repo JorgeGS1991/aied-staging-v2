@@ -15,7 +15,13 @@ import CustomInput from "../../components/CustomInput/CustomInput";
 import OutputDetails from "../../components/OutputDetails/OutputDetails";
 import ThemeDropdown from "../../components/ThemeDropdown/ThemeDropdown";
 import LanguagesDropdown from "../../components/LanguagesDropdown/LanguagesDropdown";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 import CobolCodeEditor from "./CobolCodeEditor";
+import { Box, Button } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
 
 const javascriptDefault = `// some comment`;
 
@@ -26,6 +32,11 @@ function Playground() {
   const [processing, setProcessing] = useState(null);
   const [theme, setTheme] = useState("cobalt");
   const [language, setLanguage] = useState(languages[0]);
+  const [value, setValue] = React.useState("1");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   const enterPress = useKeyPress("Enter");
   const ctrlPress = useKeyPress("Control");
@@ -142,7 +153,7 @@ function Playground() {
   const showSuccessToast = (msg) => {
     toast.success(msg || `Compiled Successfully!`, {
       position: "top-right",
-      autoClose: 1000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -164,59 +175,77 @@ function Playground() {
 
   return (
     <>
-      {/* <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <div className="flex flex-row">
-        <div className="px-4 py-2">
-          <LanguagesDropdown onSelectChange={onSelectChange} />
-        </div>
-        <div className="px-4 py-2">
-          <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
-        </div>
-      </div>
-      <div className="flex flex-row space-x-4 items-start px-4 py-4">
-        <div className="flex flex-col w-full h-full justify-start items-end">
-          <CodeEditorWindow
-            code={code}
-            onChange={onChange}
-            language={language?.value}
-            theme={theme.value}
+      <TabContext value={value}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <TabList onChange={handleChange} aria-label="lab API tabs example">
+            <Tab label="JS/Python" value="1" />
+            <Tab label="COBOL" value="2" />
+          </TabList>
+        </Box>
+        <TabPanel value="1">
+          <ToastContainer
+            position="top-right"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
           />
-        </div>
-
-        <div className="right-container flex flex-shrink-0 w-[30%] flex-col">
-          <OutputWindow outputDetails={outputDetails} />
-          <div className="flex flex-col items-end">
-            <CustomInput
-              customInput={customInput}
-              setCustomInput={setCustomInput}
-            />
-            <button
-              onClick={handleCompile}
-              disabled={!code}
-              className={classnames(
-                "mt-4 border border-black rounded-md z-10 rounded-sm px-4 py-2 hover:bg-red-700 hover:text-white cursor-pointer transition duration-200 bg-white flex-shrink-0",
-                !code ? "opacity-50" : ""
-              )}
-            >
-              {processing ? "Processing..." : "Compile and Execute"}
-            </button>
+          <div className="flex flex-row">
+            <div className="px-4 py-2">
+              <LanguagesDropdown onSelectChange={onSelectChange} />
+            </div>
+            <div className="px-4 py-2">
+              <ThemeDropdown
+                handleThemeChange={handleThemeChange}
+                theme={theme}
+              />
+            </div>
           </div>
-          {outputDetails && <OutputDetails outputDetails={outputDetails} />}
-        </div>
-      </div> */}
-      <>
-        <CobolCodeEditor />
-      </>
+          <div className="flex flex-row space-x-4 items-start px-4 py-4">
+            <div className="flex flex-col w-full h-full justify-start items-end">
+              <CodeEditorWindow
+                code={code}
+                onChange={onChange}
+                language={language?.value}
+                theme={theme.value}
+              />
+            </div>
+
+            <div className="right-container flex flex-shrink-0 w-[30%] flex-col">
+              <OutputWindow outputDetails={outputDetails} />
+              <div className="flex flex-col items-end">
+                <CustomInput
+                  customInput={customInput}
+                  setCustomInput={setCustomInput}
+                />
+                {processing ? (
+                  <LoadingButton loading variant="outlined">
+                    Processing
+                  </LoadingButton>
+                ) : (
+                  <Button
+                    onClick={handleCompile}
+                    disabled={!code}
+                    variant="contained"
+                    color="success"
+                    className="compile-button"
+                  >
+                    Compile
+                  </Button>
+                )}
+              </div>
+              {outputDetails && <OutputDetails outputDetails={outputDetails} />}
+            </div>
+          </div>
+        </TabPanel>
+        <TabPanel value="2">
+          <CobolCodeEditor />
+        </TabPanel>
+      </TabContext>
     </>
   );
 }

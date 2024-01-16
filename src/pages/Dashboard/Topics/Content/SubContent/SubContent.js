@@ -35,7 +35,6 @@ function SubContent() {
   console.log("type", type);
   return (
     <div className="subcontent-section">
-      <h1>Hello</h1>
       {contents && (
         <>
           <ol>

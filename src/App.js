@@ -48,8 +48,7 @@ function App() {
       <Loader />
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route exact path="/" element={<Dashboard />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/manage-students" element={<ManageStudents />} />
