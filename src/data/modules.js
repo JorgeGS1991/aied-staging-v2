@@ -356,7 +356,7 @@ const data = [
                 topic: "Introduction",
                 type: "content",
                 content: `
-  <div>
+  <div class="decomp">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
   <p style="text-align: center; padding: 20px;">(Brackman et al., 2016)</p>
@@ -431,6 +431,10 @@ const data = [
   <div>
 </div>
 <style>
+
+.decomp p {
+  color: black;
+}
 .video-intro-section {
   margin-top: 20px;
 }
@@ -459,7 +463,7 @@ a {
   <title>Building Background Knowledge</title>
 </head>
 <body>
-<div>
+<div class="decomp">
   <h2 class="title">Building Background Knowledge</h2>
   <p>Before computers can be used to solve a problem, the problem and the ways in which it can be resolved must be understood. Decomposition helps us by breaking down complex programs into more manageable components.</p>
 <div class="decomp-defn">
@@ -497,6 +501,10 @@ a {
 
 
 <style>
+
+.decomp p {
+  color: black;
+}
 .title {
   font-weight: 700;
   font-size: 1.25em;
@@ -573,6 +581,7 @@ a {
   <title>Decomposition in the Real World</title>
 </head>
 <body>
+<div class="decomp">
 <div class="decomp-title"> 
   <h2>Decomposition in the Real World</h2>
 </div>
@@ -590,8 +599,13 @@ a {
   <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdExrair1SM7NHSpsT8jQthLOAu5dqguiI_5pIQZLNVOk88Qg/viewform?authuser=0">Exercise Two Link</a></p>
   <img src="/images/contents/railsystemmap.png" />
 </div>
+</div>
 </body>
 <style>
+
+.decomp p {
+  color: black;
+}
 .decomp-title {
   font-weight: 700;
   font-size: 1.25em;
@@ -647,6 +661,7 @@ a {
   <title>Decomposition in Computing</title>
 </head>
 <body>
+<div class="decomp">
 <div class="decomp-title">
   <h2>How Do We Use Decomposition in Computer Programming?</h2>
   </div>
@@ -706,10 +721,14 @@ a {
   </ol>
   </div>
 
+  </div>
 
 
 </body>
 <style>
+.decomp p {
+  color: black;
+}
 .decomp-title {
   font-weight: 700;
   font-size: 1.25em;
@@ -778,7 +797,7 @@ img {
                 topic: "Introduction",
                 points: 100,
                 content: `
-  <div>
+  <div class="pattern">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
   <p style="text-align: center; padding: 20px;">(Brackman et al., 2016)</p>
@@ -798,6 +817,9 @@ img {
   <p>You have actually already done a little bit of pattern recognition for this class! The last example problem for decomposition (the art work), you had to be able to recognize patterns to be able to do that. A lot of times you have a lot more practice with recognizing problems then you think you do!</p>
 </div>
 <style>
+.pattern p {
+  color: black;
+}
 .video-intro-section {
   margin-top: 20px;
 }
@@ -826,6 +848,7 @@ a {
   <title>Warm Up</title>
 </head>
 <body>
+<div class="pattern">
 <div class="warm-up">
   <h2 class="title">Warm Up</h2>
   <p><a href="https://forms.gle/G1VtsGN7a3HYByuSA">Warm Up Form</a></p>
@@ -835,6 +858,7 @@ a {
   <li>As you were looking for patterns in the seeding ideas activity, what process did you use? How did you go about finding the answer?</li>
   <li>Given what you know right now about computational thinking and decomposition, how do you think computers might use patterns to help solve problems?</li>
   </ul>
+  </div>
 </div>
 </body>
 </html>
@@ -843,7 +867,9 @@ a {
 
 <style>
 
-
+.pattern p {
+  color: black;
+}
 
 .warm-up a {
   text-decoration: underline;
@@ -934,6 +960,9 @@ a {
 <head>
   <title>Building Background Knowledge</title>
   <style>
+  .pattern p {
+  color: black;
+}
     /* Your CSS styles here */
     .title-section p {
       padding: 10px 0;
@@ -1009,7 +1038,7 @@ a {
   </style>
 </head>
 <body>
-  <div>
+  <div class="pattern">
   <div class="title-section">
     <h2 class="title">Building Background Knowledge</h2>
     <p class="subtitle">The process of finding similarities across different ideas and problems is called pattern recognition.</p>
@@ -1063,6 +1092,7 @@ a {
   <title>Decomposition in the Real World</title>
 </head>
 <body>
+<div class="pattern">
 <div class="decomp-title"> 
   <h2>Applying Idea in the Real World</h2>
 </div>
@@ -1099,11 +1129,14 @@ a {
       <p><strong>Google Trends: </strong><a href="https://trends.google.com/trends/" >https://trends.google.com/trends/</a></p>
   </div>
 
-
+</div>
 
 </div>
 </body>
 <style>
+.pattern p {
+  color: black;
+}
 .decomp-title {
   font-weight: 700;
   font-size: 1.25em;
@@ -1172,6 +1205,7 @@ a {
   <title>Pattern Recognition in Computer Programming</title>
 </head>
 <body>
+<div class="pattern">
 <div class="decomp-title">
   <h2>Pattern Recognition in Computer Programming</h2>
   </div>
@@ -1236,13 +1270,16 @@ a {
 
 
 </div>
+</div>
 
 
 
 </body>
 <style>
 
-
+.pattern p {
+  color: black;
+}
 
 .code23 img {
   width: 600px;
@@ -1319,7 +1356,7 @@ img {
                 topic: "Introduction",
                 points: 100,
                 content: `
-  <div>
+  <div class="abstraction">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
   <p style="text-align: center; padding: 20px;">(Brackman et al., 2016)</p>
@@ -1336,6 +1373,9 @@ img {
   </div>
 </div>
 <style>
+.abstraction p {
+  color: black;
+}
 .purpose * {
   padding: 10px 0;
 }
@@ -1371,6 +1411,7 @@ a {
   <title>Thinking about Abstraction</title>
 </head>
 <body>
+<div class="abstraction">
 <div>
   <h2 class="title">Thinking about Abstraction</h2>
   <p>One way to make sense of this idea is to think about abstract art. Realistic art, like a photograph, has all of the details (image on the left). But a piece of art that is more abstract does not have all the details (image on the right). </p>
@@ -1413,7 +1454,11 @@ a {
 
 
   <p>For an example of a person decomposing how they built their website, read this: <a href="https://sparkbox.com/foundry/web_design_process_decomposition_exercise">Web Design Process Decomposition Exercise</a></p>
-  <div>
+  </div>
+
+</div>
+
+
 </body>
 </html>
 
@@ -1421,7 +1466,9 @@ a {
 
 <style>
 
-
+.abstraction p {
+  color: black;
+}
 
 .monalisa, .vangogh {
   display: grid;
@@ -1519,34 +1566,40 @@ a {
               <title>Video Introduction</title>
               </head>
               <body>
+              <div class="abstraction>
               <div class="decomp-title"> 
               <h2>Video Introduction</h2>
               </div>
               <div class="youtube">
               <iframe width="966" height="543" src="https://www.youtube.com/embed/jV-7Hy-PF2Q" title="Abstraction - Computational Thinking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
+              </div>
               </body>
-              <style>
-              .decomp-title {
-                font-weight: 700;
-                font-size: 1.25em;
-              }
+<style>
+.abstraction p {
+  color: black;
+}
 
-              .youtube iframe {
-                 border-radius: 8px;
-                 width: 600px;
-                 height: 350px;
-                 margin: auto;
-              }
+.decomp-title {
+  font-weight: 700;
+  font-size: 1.25em;
+}
 
-              p a {
-                text-decoration: underline;
-              }
-            
-              
-              
-              </style>
-              </html>
+.youtube iframe {
+    border-radius: 8px;
+    width: 600px;
+    height: 350px;
+    margin: auto;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+
+
+</style>
+</html>
               
               `,
               },
@@ -1561,6 +1614,7 @@ a {
               <title>What is Abstraction?</title>
               </head>
               <body>
+              <div class="abstraction">
               <div class="decomp-title">
               <h2>What is Abstraction?</h2>
               </div>
@@ -1578,12 +1632,13 @@ a {
               <p>Think back to the decomposition section. In decomposition, we took an algorithm, like your morning routine, and broke it into smaller and smaller parts. Abstraction is the opposite - it’s when we take step-by-step instructions and think about them as a single task or algorithm. For example, we decomposed “take the bus to the library” into a set of instructions (an algorithm). If we had the set of instructions, we could abstract those instructions into a single thing called “take the bus to the library”.</p>
               <p>This is important in programming, because a lot of time we want to split up a bigger program into parts (decomposition) and be able to just think of each of those parts are a single thing. Each “thing” is an abstraction. In the algorithms section, you learned about flowcharts. Each box in a flowchart is an abstraction of a set of instructions.</p>
               </div>
+              </div>
             
-
-
-
 </body>
 <style>
+.abstraction p {
+  color: black;
+}
 h2 {
   font-weight: 700;
   font-size: 1.25em;
@@ -1621,6 +1676,7 @@ img {
               <title>Applying Ideas in the Real World</title>
               </head>
               <body>
+              <div class="abstraction">
               <div class="decomp-title">
               <h2>Applying Ideas in the Real World</h2>
               </div>
@@ -1650,15 +1706,16 @@ img {
               </ul>
               <img src="/images/contents/map4.png" />
               </div>
+              </div>
 
 
 
 </body>
 <style>
 
-
-
-
+.abstraction p {
+  color: black;
+}
 
 .decomp-example a {
   text-decoration: underline;
@@ -1725,6 +1782,7 @@ img {
               <title>Abstraction in Computer Programming</title>
               </head>
               <body>
+              <div class="abstraction">
               <div class="decomp-title">
               <h2>Abstraction in Computer Programming</h2>
               <p>Start by watching this video about abstraction (stick with it if it gets confusing!):</p>
@@ -1763,13 +1821,16 @@ img {
               <iframe width="966" height="543" src="https://www.youtube.com/embed/Ui7Dca5Kbvw" title="Abstraction explained with real-life examples and code! - C++ OOP Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
               </div>
+              </div>
             
 
 
 
 </body>
 <style>
-
+.abstraction p {
+  color: black;
+}
 .youtube iframe {
   border-radius: 8px;
   width: 600px;
@@ -1862,7 +1923,7 @@ img {
                 topic: "Introduction",
                 points: 100,
                 content: `
-  <div>
+  <div class="algorithm">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
   <p style="text-align: center; padding: 20px;">(Brackman et al., 2016)</p>
@@ -1878,6 +1939,9 @@ img {
   </div>
   </div>
 <style>
+.algorithm p {
+  color: black;
+}
 .purpose * {
   padding: 10px 0;
 }
@@ -1919,6 +1983,7 @@ ul {
   <title>Exploring Algorithms</title>
 </head>
 <body>
+<div class="algorithm">
 <div class="explore-alg">
   <h2 class="title">Exploring Algorithms</h2>
   <p>In order to explore how algorithms can give a computer step-by-step instructions, let’s start by playing around with LightBot (<a href="https://www.lightbot.lu/">https://www.lightbot.lu/</a>). LightBot is a game that allows you to sequence instructions with blocks of code in order to move a character around the screen. Begin by reading the instructions in the help section, then try playing the first five levels of LightBot (level 0 - level 4). Upload a screenshot of your medals into the Google Form and answer the discussion questions before moving on to the next set of activities. (See below for step-by-step instructions to get started.)
@@ -1934,6 +1999,7 @@ ul {
 </li>
 </ul>
 </div>
+</div>
 
 
 
@@ -1943,7 +2009,9 @@ ul {
 
 
 <style>
-
+.algorithm p {
+  color: black;
+}
 .explore-alg * {
   padding: 10px 0;
 }
@@ -1976,6 +2044,7 @@ img {
   <title>Building Background Knowledge</title>
 </head>
 <body>
+<div class="algorithm">
 <div class="title-section">
   <h2 class="title">Building Background Knowledge</h2>
   <p>As you keep finding out, computational thinking helps us to solve open-ended problems. Algorithms help us to solve these problems by giving us a way to tell the computer what to do and in what order to execute those steps. Algorithms allow computers, smartphones, websites, and even cars to function.</p>
@@ -1991,13 +2060,16 @@ img {
 </ul>
 <p>As you can see in each level you gave the robot specific instructions to move to reach the blue colored blocks. You had to be extremely precise on the directions so that you could complete the level. This was building an algorithm. Congratulations!</p>
   </div>
+  </div>
 </body>
 </html>
 
 
 
 <style>
-
+.algorithm p {
+  color: black;
+}
 .title-section *, .lightbot-list * {
   padding: 10px 0;
 }
@@ -2080,6 +2152,7 @@ ul {
   <title>Applying Ideas in the Real World</title>
 </head>
 <body>
+<div class="algorithm">
 <div class="decomp-title">
   <h2>Applying Ideas in the Real World</h2>
   </div>
@@ -2146,11 +2219,13 @@ ul {
 
   </div>
 
-
+</div>
 
 </body>
 <style>
-
+.algorithm p {
+  color: black;
+}
 .sub-ul {
   margin: 10px 20px;
 }
@@ -2212,6 +2287,7 @@ img {
   <title>Algorithms in Computer Programming</title>
 </head>
 <body>
+<div class="algorithm">
 <div class="decomp-title">
   <h2>Algorithms in Computer Programming</h2>
   </div>
@@ -2283,10 +2359,13 @@ img {
 
 </div>
 
+</div>
 
 </body>
 <style>
-
+.algorithm p {
+  color: black;
+}
 .youtube iframe {
   border-radius: 8px;
   width: 600px;
