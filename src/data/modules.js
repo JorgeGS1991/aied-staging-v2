@@ -134,7 +134,7 @@ const data = [
             points: 150,
             // type: "upload",
             content: `
-                <div>
+                <div class="lf">
                     <ol>
                         <li>
                             <a href="https://www.youtube.com/watch?v=iVEdvp8MWTg&authuser=1">Good and proper use of technology in the workplace</a>
@@ -153,7 +153,11 @@ const data = [
                         </li>
                     </ol>
                 </div>
-
+                <style>
+                .lf a {
+                  text-decoration: underline;
+                }
+                </style>
 
 
                 `,
@@ -179,7 +183,7 @@ const data = [
             topic: "Resources",
             points: 150,
             content: `
-                <div>
+                <div class="lf">
                     <ol>
                         <li>
                             <a href="https://drive.google.com/file/d/1lKbPnqPOEBmS4l6sK4S8Zn6OHnYG1cVx/view?usp=drive_web&authuser=1">Northstar Navigation Tutorial-DL.pdf</a>
@@ -190,7 +194,11 @@ const data = [
                     </ol>
                 </div>
 
-
+                <style>
+                .lf a {
+                  text-decoration: underline;
+                }
+                </style>
 
                 `,
           },
@@ -245,7 +253,7 @@ const data = [
         contents: [
           {
             id: 1,
-            topic: "CT Module 1.1: Computational Thinking: How Computers Think",
+            topic: "Computational Thinking: How Computers Think",
             type: "content",
             points: 100,
             content: `
@@ -347,7 +355,7 @@ const data = [
         contents: [
           {
             id: 1,
-            topic: "CT Module 1.1: Decomposition",
+            topic: "1.1: Decomposition",
             type: "decomposition",
             points: 100,
             contents: [
@@ -788,7 +796,7 @@ img {
           },
           {
             id: 2,
-            topic: "CT Module 1: Pattern Recognition",
+            topic: "1.2: Pattern Recognition",
             type: "pattern-recognition",
             points: 100,
             contents: [
@@ -1347,7 +1355,7 @@ img {
           },
           {
             id: 3,
-            topic: "CT Module 2: Abstraction",
+            topic: "1.3: Abstraction",
             type: "abstraction",
             points: 100,
             contents: [
@@ -1920,7 +1928,7 @@ img {
           },
           {
             id: 4,
-            topic: "CT Module 3: Algorithms",
+            topic: "1.4: Algorithms",
             type: "algorithms",
             points: 100,
             contents: [
@@ -2501,7 +2509,7 @@ img {
       },
       {
         id: 3,
-        name: "CT Module 1.2: Review Your Knowledge",
+        name: "CT Module 2: Review Your Knowledge",
         type: "intro",
         contents: [
           {
