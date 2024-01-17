@@ -44,7 +44,7 @@ const CobolCodeEditor = () => {
 
   const saveOutputToMongoDB = async (output) => {
     try {
-      await fetch("http://localhost:3001/save-output", {
+      await fetch("https://aied-staging-backend.vercel.app/save-output", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -61,7 +61,7 @@ const CobolCodeEditor = () => {
 
   const runCode = async () => {
     try {
-      await fetch("http://localhost:3001/execute", {
+      await fetch("https://aied-staging-backend.vercel.app/execute", {
         method: "POST",
         headers: {
           Accept: "application/json",

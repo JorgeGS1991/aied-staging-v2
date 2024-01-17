@@ -95,7 +95,9 @@ const Quiz = ({
     // Simulate fetching questions asynchronously
     // Replace this with your actual API call
     const fetchQuestions = async () => {
-      const response = await fetch("http://localhost:3001/api/questions");
+      const response = await fetch(
+        "https://aied-staging-backend.vercel.app/api/questions"
+      );
       const data = await response.json();
 
       const filteredData = data.filter((question) => question.type === type);

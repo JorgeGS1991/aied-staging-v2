@@ -38,7 +38,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
   );
   useEffect(() => {
     const fetchUsers = async () => {
-      await fetch("http://localhost:3001/api/users")
+      await fetch("https://aied-staging-backend.vercel.app/api/users")
         .then((res) => res.json())
         .then((data) => fetchAllUsers(data));
     };
