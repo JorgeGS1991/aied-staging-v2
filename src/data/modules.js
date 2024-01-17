@@ -132,7 +132,7 @@ const data = [
             id: 2,
             topic: "Resources",
             points: 150,
-            type: "upload",
+            // type: "upload",
             content: `
                 <div>
                     <ol>
@@ -1566,7 +1566,7 @@ a {
               <title>Video Introduction</title>
               </head>
               <body>
-              <div class="abstraction>
+              <div class="abstraction">
               <div class="decomp-title"> 
               <h2>Video Introduction</h2>
               </div>
@@ -1589,12 +1589,14 @@ a {
     border-radius: 8px;
     width: 600px;
     height: 350px;
-    margin: auto;
+    margin: 20px auto;
 }
 
 p a {
   text-decoration: underline;
 }
+
+
 
 
 
@@ -1831,11 +1833,15 @@ img {
 .abstraction p {
   color: black;
 }
+
+.youtube {
+}
 .youtube iframe {
   border-radius: 8px;
   width: 600px;
   height: 350px;
   margin: auto;
+
 }
 
 
@@ -2490,6 +2496,19 @@ img {
                 points: 100,
               },
             ],
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "CT Module 1.2: Review Your Knowledge",
+        type: "intro",
+        contents: [
+          {
+            id: 1,
+            topic: "Quiz",
+            type: "quiz",
+            points: 100,
           },
         ],
       },

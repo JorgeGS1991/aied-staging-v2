@@ -10,18 +10,18 @@ import "./SubContent.css";
 
 function SubContent() {
   const { id, topicId, contentId } = useParams();
-  const [params, setParams] = useState({
-    id: id,
-    topicId: topicId,
-    contentId: contentId,
-  });
-  //   const navigate = useNavigate();
   const [content, setContent] = useState("");
   const [contents, setContents] = useState(null);
   const [type, setType] = useState("");
   const [quizType, setQuizType] = useState("");
+  // const [nextContent, setNextContent] = useState("");
+
+  // console.log("nextContent", nextContent);
 
   useEffect(() => {
+    // if (data[id - 1].subTopics[topicId - 1].contents[contentId]) {
+    //   setNextContent(data[id - 1].subTopics[topicId - 1].contents[contentId]);
+    // }
     setContent(
       data[id - 1].subTopics[topicId - 1].contents[contentId - 1].content
     );
@@ -33,6 +33,7 @@ function SubContent() {
   }, [id, topicId, contentId, content, quizType, contents]);
 
   console.log("type", type);
+  console.log(contentId);
   return (
     <div className="subcontent-section">
       {contents && (
@@ -58,6 +59,11 @@ function SubContent() {
       {type === "quiz" && <Quiz type={quizType} />}
       {type === "upload" && <UploadDocument />}
       {type === "parsons" && <ParsonsProblem />}
+      {/* {nextContent !== "undefined" && (
+        <Link to={`/dashboard/${id}/${topicId}/${parseInt(contentId) + 1}`}>
+          Next
+        </Link>
+      )} */}
     </div>
   );
 }

@@ -14,7 +14,6 @@ const NestedContent = () => {
   const [quizType, setQuizType] = useState("");
 
   console.log(type);
-  console.log(content);
 
   useEffect(() => {
     setContent(

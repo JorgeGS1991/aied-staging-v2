@@ -18,6 +18,7 @@ import Login from "./pages/Login/Login";
 import Playground from "./pages/Playground/Playground";
 import ManageStudents from "./pages/ManageStudents/ManageStudents";
 import ManageStudentDetails from "./pages/ManageStudents/ManageStudentDetails/ManageStudentDetails";
+import { Navigate, Redirect } from "react-router";
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -48,7 +49,7 @@ function App() {
       <Loader />
       <Navbar />
       <Routes>
-        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/" element={<Navigate to="/dashboard" />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/manage-students" element={<ManageStudents />} />
