@@ -1,8 +1,8 @@
 {
   "name": "aied-staging",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001",
-  "homepage": "http://localhost:3000",
+  "proxy": "https://aied-staging-backend.vercel.app",
+  "homepage": "https://aied-staging-v2.vercel.app",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.3",
