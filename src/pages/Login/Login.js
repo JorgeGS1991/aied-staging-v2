@@ -43,7 +43,7 @@ function Login({ setUserRole, role }) {
         Login
       </Typography>
       <Link
-        to="http://localhost:3001/auth/google"
+        to="https://aied-staging-backend.vercel.app/auth/google"
         style={{ textDecoration: "none", marginTop: "20px" }}
       >
         <Button
