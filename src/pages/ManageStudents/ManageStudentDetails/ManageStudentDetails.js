@@ -21,7 +21,9 @@ function ManageStudentDetails({ user, getUser }) {
   useEffect(() => {
     const fetchUser = async () => {
       await axios
-        .get(`/api/users/${userId}`, { withCredentials: true })
+        .get(`https://aied-staging-backend.vercel.app/api/users/${userId}`, {
+          withCredentials: true,
+        })
         .then((res) => setCurrentUser(res.data));
       setLoading(false);
     };
