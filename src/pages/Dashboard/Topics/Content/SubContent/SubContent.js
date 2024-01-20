@@ -32,8 +32,6 @@ function SubContent() {
     setQuizType(data[id - 1].subTopics[topicId - 1].type);
   }, [id, topicId, contentId, content, quizType, contents]);
 
-  console.log("type", type);
-  console.log(contentId);
   return (
     <div className="subcontent-section">
       {contents && (

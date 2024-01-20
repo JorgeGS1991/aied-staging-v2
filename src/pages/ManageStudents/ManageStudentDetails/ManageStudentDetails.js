@@ -31,7 +31,7 @@ function ManageStudentDetails({ user, getUser }) {
 
     return () => clearTimeout(delay);
   }, []);
-  console.log(currentUser);
+
   const renderScoreBar = (score, attribute) => {
     const scoreOutOfTen = score !== -1 ? (score / 10) * 100 : 0;
 

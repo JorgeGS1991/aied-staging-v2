@@ -19,7 +19,6 @@ import Login from "../Login/Login";
 import ManageStudentDetails from "./ManageStudentDetails/ManageStudentDetails";
 
 const ManageStudents = ({ user, users, fetchAllUsers }) => {
-  const [allUsers, setAllUsers] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
@@ -32,10 +31,6 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
     setPage(0);
   };
 
-  const displayedUsers = users.slice(
-    page * rowsPerPage,
-    page * rowsPerPage + rowsPerPage
-  );
   useEffect(() => {
     const fetchUsers = async () => {
       await fetch(

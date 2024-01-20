@@ -7,13 +7,10 @@ import "./NestedContent.css";
 
 const NestedContent = () => {
   const { id, topicId, contentId, subContentId } = useParams();
-  console.log(id, topicId, contentId);
 
   const [type, setType] = useState("");
   const [content, setContent] = useState("");
   const [quizType, setQuizType] = useState("");
-
-  console.log(type);
 
   useEffect(() => {
     setContent(

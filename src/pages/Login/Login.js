@@ -25,7 +25,6 @@ function Login({ setUser, setUserRole }) {
         { withCredentials: true }
       );
       const { token, user } = response.data;
-      console.log(user.role);
       setUser(user.firstName + " " + user.lastName);
       setUserRole(user.role);
       localStorage.setItem("token", token);

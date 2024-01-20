@@ -67,17 +67,10 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
   const [isActive, setIsActive] = useState([]);
   const [isActive2, setIsActive2] = useState([]);
   const [content, setContent] = useState(localStorage.getItem("content") || "");
-  const [roles, setRole] = useState(localStorage.getItem("role"));
   const [topic, setTopic] = useState("");
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
   const [notificationSeverity, setNotificationSeverity] = useState("success");
-
-  console.log("role", role);
-
-  const [users, setUsers] = useState(null);
-
-  const location = useLocation();
 
   useEffect(() => {
     if (content) {
@@ -86,13 +79,10 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
   }, [content]);
 
   useEffect(() => {
-    console.log(topic);
     if (topic) {
       setTopic(topic);
     }
   }, [topic]);
-
-  console.log("Role: " + role);
 
   useEffect(() => {
     const updateRole = async (role) => {
@@ -107,25 +97,11 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
     updateRole(role);
   }, [user, role]);
 
-  // useEffect(() => {
-  //   // Parse the user data from the query parameter
-  //   const searchParams = new URLSearchParams(location.search);
-  //   const userData = searchParams.get("user");
-
-  //   if (userData) {
-  //     // Parse the user data if needed
-  //     const parsedUser = JSON.parse(decodeURIComponent(userData));
-  //     setUsers(parsedUser);
-  //     setUser(users);
-  //   }
-  // }, [location, setUser, users]);
-
   const toggleDropdown = (index, length) => {
     setIsActive(Array(length).fill(false));
     const newIsActive = [...isActive];
     newIsActive[index] = !newIsActive[index];
     setIsActive(newIsActive);
-    console.log(isActive[index]);
   };
 
   const toggleDropdown2 = (index, length) => {
@@ -133,7 +109,6 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
     const newIsActive2 = [...isActive2];
     newIsActive2[index] = !newIsActive2[index];
     setIsActive2(newIsActive2);
-    console.log(isActive2[index]);
   };
 
   const handleNotificationClose = (event, reason) => {

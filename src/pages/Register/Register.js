@@ -14,8 +14,6 @@ function Register({ role, setUserRole }) {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
-  console.log(firstName, lastName, username);
-
   const history = useNavigate();
   const handleRegister = async () => {
     try {
@@ -31,7 +29,6 @@ function Register({ role, setUserRole }) {
         }
       );
       history("/login");
-      console.log(response.data.message);
     } catch (error) {
       console.error(error);
       setError(error.response.data.message);
@@ -40,7 +37,6 @@ function Register({ role, setUserRole }) {
   const handleRoleSelect = (role) => {
     // Handle the selected role (send to the server, store in state, etc.)
     setUserRole(role);
-    console.log("Selected Role:", role);
   };
 
   return (

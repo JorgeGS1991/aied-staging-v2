@@ -175,24 +175,15 @@ const Quiz = ({
 
     const currentUserResponsesMC = [...userResponsesMC];
 
-    console.log(checked, optionIndex);
     if (checked) {
       currentUserResponsesMC[index].push(optionIndex);
-      console.log("choice selected " + optionIndex);
     } else {
       currentUserResponsesMC[index] = currentUserResponsesMC[index].filter(
         (option) => option !== optionIndex
       );
-      console.log("choice deselected " + optionIndex);
     }
 
-    console.log("+++ currentUserResponsesMC +++");
-    console.log(currentUserResponsesMC);
-
     updatedSelectedOptions[index] = currentUserResponsesMC[index];
-
-    // console.log(userResponseMC);
-    // setUserResponsesMC(currentUserResponsesMC);
     setUserResponsesMC(currentUserResponsesMC);
     setSelectedOptions(updatedSelectedOptions);
     setQuestionIndex(index);
@@ -200,17 +191,6 @@ const Quiz = ({
     selectAnswer(index, userResponseMC);
   };
 
-  // console.log(userResponses);
-  console.log("----userResponsesMC----");
-  console.log(userResponsesMC);
-  // console.log(userResponseMC);
-  console.log("----- Selected Options -----");
-  console.log(selectedOptions);
-  // console.log(selectedOptionsMC);
-  console.log("----- CorrectAnswers -----");
-  console.log(correctAnswers);
-
-  console.log("quiz type: " + type);
   const handleNotificationClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -249,14 +229,8 @@ const Quiz = ({
         }
       } else {
         if (response.length === correctAnswers[index].length) {
-          console.log("== MC Submit ==");
           const sortedArr1 = response.slice().sort();
           const sortedArr2 = correctAnswers[index].slice().sort();
-          console.log("------Submission------");
-          console.log("response");
-          console.log(sortedArr1);
-          console.log("correctAnswers");
-          console.log(sortedArr2);
           if (sortedArr1.every((value, index) => value === sortedArr2[index])) {
             newScore++;
           }
