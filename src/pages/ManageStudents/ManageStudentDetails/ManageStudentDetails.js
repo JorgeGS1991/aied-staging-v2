@@ -74,7 +74,7 @@ function ManageStudentDetails({ user, getUser }) {
                 <>
                   <Grid item xs={12}>
                     <Typography variant="h5">
-                      {currentUser?.displayName}
+                      {currentUser?.firstName + " " + currentUser?.lastName}
                     </Typography>
                     <Typography>Email: {currentUser.email}</Typography>
                     <Typography>Role: {currentUser.role}</Typography>

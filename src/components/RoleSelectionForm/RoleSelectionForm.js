@@ -19,8 +19,16 @@ const RoleSelectionForm = ({ role, onRoleSelect, setUserRole }) => {
       onChange={handleRoleChange}
       row
     >
-      <FormControlLabel value="student" control={<Radio />} label="Student" />
-      <FormControlLabel value="teacher" control={<Radio />} label="Teacher" />
+      <FormControlLabel
+        value="student"
+        control={<Radio color="error" />}
+        label="Student"
+      />
+      <FormControlLabel
+        value="teacher"
+        control={<Radio color="error" />}
+        label="Teacher"
+      />
     </RadioGroup>
   );
 };

@@ -65,7 +65,7 @@ const Quiz = ({
   useEffect(() => {
     const updateQuizScoreState = async () => {
       await axios.put(
-        "/api/users/quiz",
+        "https://aied-staging-backend.vercel.app/api/users/quiz",
         {
           quizScore,
           type,
@@ -97,6 +97,7 @@ const Quiz = ({
     const fetchQuestions = async () => {
       const response = await fetch(
         "https://aied-staging-backend.vercel.app/api/questions"
+        // "http://localhost:3001/api/questions"
       );
       const data = await response.json();
 

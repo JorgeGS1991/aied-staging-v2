@@ -1,4 +1,3 @@
-import { ScrollRestoration } from "react-router-dom";
 import {
   FETCH_ALL_USERS,
   FETCH_USER,
@@ -14,9 +13,9 @@ const storedUser = JSON.parse(localStorage.getItem("user"));
 
 const initialState = {
   users: [],
-  user: storedUser || null,
+  user: storedUser || "",
   progress: 0,
-  role: "",
+  role: "student",
   quizScore: {
     decompositionScore: 0,
     patternScore: 0,
@@ -77,7 +76,7 @@ export const userReducer = (state = initialState, action) => {
     case LOG_OUT:
       // Clear user data from local storage
       localStorage.removeItem("user");
-      localStorage.setItem("role", '"student"');
+      localStorage.removeItem("role");
       return {
         ...state,
         user: null,

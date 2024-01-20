@@ -44,16 +44,21 @@ const CobolCodeEditor = () => {
 
   const saveOutputToMongoDB = async (output) => {
     try {
-      await fetch("https://aied-staging-backend.vercel.app/save-output", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          output: output,
-        }),
-      });
+      await fetch(
+        "https://aied-staging-backend.vercel.app/save-output",
+        // "http://localhost:3001/save-output",
+
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            output: output,
+          }),
+        }
+      );
     } catch (error) {
       console.error("Error saving output to MongoDB:", error);
     }
@@ -61,20 +66,24 @@ const CobolCodeEditor = () => {
 
   const runCode = async () => {
     try {
-      await fetch("https://aied-staging-backend.vercel.app/execute", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          script: code,
-          language: "cobol", // Change this to the desired programming language
-          versionIndex: "0",
-          clientId: process.env.REACT_APP_COBOL_CLIENT_ID,
-          clientSecret: process.env.REACT_APP_COBOL_CLIENT_SECRET,
-        }),
-      })
+      await fetch(
+        "https://aied-staging-backend.vercel.app/execute",
+        // "http://localhost:3001/execute",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            script: code,
+            language: "cobol", // Change this to the desired programming language
+            versionIndex: "0",
+            clientId: process.env.REACT_APP_COBOL_CLIENT_ID,
+            clientSecret: process.env.REACT_APP_COBOL_CLIENT_SECRET,
+          }),
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           setOutput(data.output);

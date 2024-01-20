@@ -73,6 +73,8 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
   const [notificationMessage, setNotificationMessage] = useState("");
   const [notificationSeverity, setNotificationSeverity] = useState("success");
 
+  console.log("role", role);
+
   const [users, setUsers] = useState(null);
 
   const location = useLocation();
@@ -90,46 +92,34 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
     }
   }, [topic]);
 
-  console.log("Role: " + localStorage.getItem("role"));
+  console.log("Role: " + role);
 
   useEffect(() => {
-    console.log("roles: " + roles);
-
     const updateRole = async (role) => {
-      let newRole = role.substring(1, role.length - 1);
       if (user) {
-        await axios
-          .put("/api/users/update-role", { newRole }, { withCredentials: true })
-          .then((response) => {
-            console.log("User role updated successfully:", response.data);
-          })
-          .catch((error) => {
-            console.error("Error updating user role:", error);
-          });
         setNotificationMessage(
-          `Welcome ${
-            user ? user : "user"
-          }, you are logged in as a ${roles.substring(1, roles.length - 1)}`
+          `Welcome ${user ? user : "user"}, you are logged in as a ${role}`
         );
       }
       setNotificationSeverity("success");
       setNotificationOpen(true);
     };
-    updateRole(roles);
-  }, [user, roles]);
+    updateRole(role);
+  }, [user, role]);
 
-  useEffect(() => {
-    // Parse the user data from the query parameter
-    const searchParams = new URLSearchParams(location.search);
-    const userData = searchParams.get("user");
+  // useEffect(() => {
+  //   // Parse the user data from the query parameter
+  //   const searchParams = new URLSearchParams(location.search);
+  //   const userData = searchParams.get("user");
 
-    if (userData) {
-      // Parse the user data if needed
-      const parsedUser = JSON.parse(decodeURIComponent(userData));
-      setUsers(parsedUser);
-      setUser(users);
-    }
-  }, [location, setUser, users]);
+  //   if (userData) {
+  //     // Parse the user data if needed
+  //     const parsedUser = JSON.parse(decodeURIComponent(userData));
+  //     setUsers(parsedUser);
+  //     setUser(users);
+  //   }
+  // }, [location, setUser, users]);
+
   const toggleDropdown = (index, length) => {
     setIsActive(Array(length).fill(false));
     const newIsActive = [...isActive];
@@ -188,12 +178,12 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                           style={{
                             display: isActive[index] ? "flex" : "none",
                             flexDirection: "column",
-                            marginLeft: "10px",
+                            marginLeft: "30px",
                           }}
                         >
                           {subTopic.contents.map((subContent, idx) => {
                             return !subContent.contents ? (
-                              <li>
+                              <li style={{ fontWeight: "400" }}>
                                 <Link
                                   to={`${item.id}/${index + 1}/${
                                     subContent.id
@@ -207,7 +197,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                               ) : null} */}
                               </li>
                             ) : (
-                              <div className="db-item">
+                              <div className="db-item mod-1">
                                 <HashLink
                                   to="#"
                                   onClick={() =>
@@ -233,7 +223,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                                     style={{
                                       display: isActive2[idx] ? "flex" : "none",
                                       flexDirection: "column",
-                                      marginLeft: "10px",
+                                      marginLeft: "30px",
                                     }}
                                   >
                                     {subContent.contents.map(
@@ -242,6 +232,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                                           <li
                                             key={idx}
                                             className="db-nested-content"
+                                            style={{ fontWeight: "400" }}
                                           >
                                             <Link
                                               to={`${item.id}/${index + 1}/${
@@ -269,31 +260,30 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
           );
         })}
       </div>
-      {/* {user ? ( */}
-      <div className="db-content">
-        <Notification
-          open={notificationOpen}
-          handleClose={handleNotificationClose}
-          message={notificationMessage}
-          severity={notificationSeverity}
-        />
-
-        <Routes>
-          <Route path="/" element={<DBContent />} />
-          <Route path=":id" element={<Topics />} />
-          <Route path=":id/:topicId" element={<Content />}>
-            <Route path=":contentId" element={<SubContent />}></Route>
-          </Route>
-          <Route
-            path=":id/:topicId/:contentId/:subContentId"
-            element={<NestedContent />}
+      {user ? (
+        <div className="db-content">
+          <Notification
+            open={notificationOpen}
+            handleClose={handleNotificationClose}
+            message={notificationMessage}
+            severity={notificationSeverity}
           />
-        </Routes>
-      </div>
-      {/*  ) 
-       : (
-         <Login />
-       )} */}
+
+          <Routes>
+            <Route path="/" element={<DBContent />} />
+            <Route path=":id" element={<Topics />} />
+            <Route path=":id/:topicId" element={<Content />}>
+              <Route path=":contentId" element={<SubContent />}></Route>
+            </Route>
+            <Route
+              path=":id/:topicId/:contentId/:subContentId"
+              element={<NestedContent />}
+            />
+          </Routes>
+        </div>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }

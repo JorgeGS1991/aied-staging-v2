@@ -19,6 +19,7 @@ import Playground from "./pages/Playground/Playground";
 import ManageStudents from "./pages/ManageStudents/ManageStudents";
 import ManageStudentDetails from "./pages/ManageStudents/ManageStudentDetails/ManageStudentDetails";
 import { Navigate, Redirect } from "react-router";
+import Register from "./pages/Register/Register";
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -58,6 +59,7 @@ function App() {
           element={<ManageStudentDetails />}
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );

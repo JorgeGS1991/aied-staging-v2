@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 function DBContent() {
   return (
-    <Box sx={{ textAlign: "start", marginTop: "20px", padding: "20px" }}>
+    <Box sx={{ textAlign: "start", marginTop: "20px", padding: "50px" }}>
       <img
         src="/images/welcome.png"
         alt="Landing Page"

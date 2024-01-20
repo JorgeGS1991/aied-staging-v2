@@ -20,7 +20,7 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import CobolCodeEditor from "./CobolCodeEditor";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 
 const javascriptDefault = `// some comment`;
@@ -196,9 +196,22 @@ function Playground() {
           />
           <div className="flex flex-row">
             <div className="px-4 py-2">
+              <Typography
+                sx={{ display: "flex", justifyContent: "flex-start" }}
+                variant="caption"
+              >
+                Language
+              </Typography>
               <LanguagesDropdown onSelectChange={onSelectChange} />
             </div>
             <div className="px-4 py-2">
+              <Typography
+                variant="caption"
+                sx={{ display: "flex", justifyContent: "flex-start" }}
+              >
+                Theme
+              </Typography>
+
               <ThemeDropdown
                 handleThemeChange={handleThemeChange}
                 theme={theme}
@@ -234,7 +247,7 @@ function Playground() {
                     color="success"
                     className="compile-button"
                   >
-                    Compile
+                    Run Code
                   </Button>
                 )}
               </div>

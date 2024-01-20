@@ -1,83 +1,95 @@
-import { Box, Button, Typography } from "@mui/material";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import RoleSelectionForm from "../../components/RoleSelectionForm/RoleSelectionForm";
+import { Button, Box, TextField, Typography } from "@mui/material";
+import axios from "axios";
+import { useState } from "react";
 import { connect } from "react-redux";
-import { IconButton } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+import { setUser, setUserRole } from "../../redux/actions/userActions";
 
 import "./Login.css";
-import { setUserRole } from "../../redux/actions/userActions";
-import axios from "axios";
 
-function Login({ setUserRole, role }) {
-  const [formData, setFormData] = useState({
-    googleId: "",
-    displayName: "",
-    email: "",
-    role: "student",
-  });
+function Login({ setUser, setUserRole }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useNavigate();
 
-  const handleRoleSelect = (role) => {
-    // Handle the selected role (send to the server, store in state, etc.)
-    setUserRole(role);
-    console.log("Selected Role:", role);
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        // "http://localhost:3001/login",
+        "https://aied-staging-backend.vercel.app/login",
+        {
+          username,
+          password,
+        },
+        { withCredentials: true }
+      );
+      const { token, user } = response.data;
+      console.log(user.role);
+      setUser(user.firstName + " " + user.lastName);
+      setUserRole(user.role);
+      localStorage.setItem("token", token);
+      history("/dashboard");
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "start",
-        // width: "500px",
-        marginTop: "100px",
-        padding: "20px", // Added padding for spacing
-        // backgroundColor: "#eee", // Background color following Material Design guidelines
-        borderRadius: "8px", // Optional: Add border radius for rounded corners
-        // height: "100vh",
+        width: "50%",
+        padding: "20px 50px",
+        margin: "auto",
+        marginTop: "50px",
+        background: "#eee",
+        boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
       }}
     >
-      <Typography variant="h4" gutterBottom>
-        Login
-      </Typography>
-      <Link
-        to="https://aied-staging-backend.vercel.app/auth/google"
-        style={{ textDecoration: "none", marginTop: "20px" }}
+      <Typography variant="h4">Login</Typography>
+      <TextField
+        label="Username"
+        variant="outlined"
+        sx={{ width: "60%", margin: "20px auto", background: "#fff" }}
+        margin="normal"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <TextField
+        label="Password"
+        type="password"
+        variant="outlined"
+        sx={{
+          width: "60%",
+          margin: "20px auto",
+          marginTop: "0",
+          background: "#fff",
+        }}
+        margin="normal"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <Button
+        sx={{ width: "20%", margin: "auto", marginBottom: "30px" }}
+        variant="contained"
+        color="error"
+        onClick={handleLogin}
       >
-        <Button
-          variant="filled"
-          color="primary"
-          sx={{
-            textTransform: "capitalize",
-            borderRadius: "8px",
-            padding: "10px 34px",
-            border: "1px solid #333",
-            fontSize: "0.95em",
-            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-            "&:hover": {
-              backgroundColor: "#3367D6",
-              color: "#ffffff",
-            },
-          }}
-        >
-          <img
-            src="/images/search.png"
-            alt="google icon"
-            className="google-icon"
-          />
-          Sign in with Google
-        </Button>
+        Login
+      </Button>
+      <Link
+        to="/register"
+        style={{ padding: "0 20px", textDecoration: "underline" }}
+      >
+        Not a member? Start here
       </Link>
-      <div className="login-as">--- Login as ---</div>
-      {role !== null && <RoleSelectionForm onRoleSelect={handleRoleSelect} />}
     </Box>
   );
 }
 
 const mapStateToProps = (state) => ({
-  role: state.user.role,
+  user: state.user.user,
 });
-
-export default connect(mapStateToProps, { setUserRole })(Login);
+export default connect(mapStateToProps, { setUser, setUserRole })(Login);

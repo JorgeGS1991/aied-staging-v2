@@ -38,7 +38,10 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
   );
   useEffect(() => {
     const fetchUsers = async () => {
-      await fetch("https://aied-staging-backend.vercel.app/api/users")
+      await fetch(
+        "https://aied-staging-backend.vercel.app/api/users"
+        // "http://localhost:3001/api/users"
+      )
         .then((res) => res.json())
         .then((data) => fetchAllUsers(data));
     };
@@ -63,9 +66,9 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>User Name</TableCell>
+                  <TableCell>Full Name</TableCell>
                   <TableCell>Role</TableCell>
-                  <TableCell>Email</TableCell>
+                  <TableCell>Username</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -75,7 +78,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
                       <TableCell>
                         <Typography variant="body1">
                           <Link to={`/manage-students/${user._id}`}>
-                            {user.displayName}
+                            {user.firstName + " " + user.lastName}
                           </Link>
                         </Typography>
                       </TableCell>
@@ -83,7 +86,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
                         <Typography variant="body1">{user.role}</Typography>
                       </TableCell>
                       <TableCell>
-                        <Typography variant="body1">{user.email}</Typography>
+                        <Typography variant="body1">{user.username}</Typography>
                       </TableCell>
                     </TableRow>
                   ) : null;
