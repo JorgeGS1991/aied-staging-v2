@@ -12,7 +12,9 @@ import {
   Box,
   Button,
   Checkbox,
+  CircularProgress,
   FormControlLabel,
+  Grid,
   List,
   ListItem,
   ListItemButton,
@@ -253,7 +255,7 @@ const Quiz = ({
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.1)", // Box shadow
       }}
     >
-      {questions.length > 0 &&
+      {questions.length > 0 ? (
         questions.map((question, index) => (
           <Box
             key={index}
@@ -334,7 +336,17 @@ const Quiz = ({
               </>
             )}
           </Box>
-        ))}
+        ))
+      ) : (
+        <Grid
+          item
+          xs={12}
+          mt={5}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+          <CircularProgress />
+        </Grid>
+      )}
       <Button
         variant="contained"
         color="primary"
