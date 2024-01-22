@@ -1,4 +1,4 @@
-import { Button, Box, TextField, Typography } from "@mui/material";
+import { Button, Box, TextField, Typography, Alert } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
 import { connect } from "react-redux";
@@ -11,6 +11,7 @@ import "./Login.css";
 function Login({ setUser, setUserRole }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const history = useNavigate();
 
   const handleLogin = async () => {
@@ -31,6 +32,7 @@ function Login({ setUser, setUserRole }) {
       history("/dashboard");
     } catch (error) {
       console.error(error);
+      setError(error.response.data.message);
     }
   };
 
@@ -48,6 +50,7 @@ function Login({ setUser, setUserRole }) {
       }}
     >
       <Typography variant="h4">Login</Typography>
+      {error && <Alert severity="error">{error}</Alert>}
       <TextField
         label="Username"
         variant="outlined"
