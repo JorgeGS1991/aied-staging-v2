@@ -32,7 +32,7 @@ function Login({ setUser, setUserRole }) {
       history("/dashboard");
     } catch (error) {
       console.error(error);
-      setError(error.response.data.message);
+      setError(error.response.data);
     }
   };
 
@@ -50,7 +50,11 @@ function Login({ setUser, setUserRole }) {
       }}
     >
       <Typography variant="h4">Login</Typography>
-      {error && <Alert severity="error">{error}</Alert>}
+      {error === "Unauthorized" && (
+        <Alert severity="error">
+          Please enter correct username and/or password.
+        </Alert>
+      )}
       <TextField
         label="Username"
         variant="outlined"
