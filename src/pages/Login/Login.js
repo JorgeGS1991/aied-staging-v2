@@ -12,7 +12,6 @@ function Login({ setUser, setUserRole }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const history = useNavigate();
-  console.log(process.env.REACT_APP_BACKEND_URL);
 
   const handleLogin = async () => {
     try {
