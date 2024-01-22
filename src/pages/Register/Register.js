@@ -17,17 +17,14 @@ function Register({ role, setUserRole }) {
   const history = useNavigate();
   const handleRegister = async () => {
     try {
-      const response = await axios.post(
-        "https://aied-staging-backend.vercel.app/register",
-        {
-          firstName,
-          lastName,
-          username,
-          password,
-          confirmPassword,
-          role: role ? role : "'student'",
-        }
-      );
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, {
+        firstName,
+        lastName,
+        username,
+        password,
+        confirmPassword,
+        role: role ? role : "'student'",
+      });
       history("/login");
     } catch (error) {
       console.error(error);
