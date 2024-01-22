@@ -1,4 +1,11 @@
-import { Alert, Box, Button, TextField, Typography } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  InputLabel,
+  TextField,
+  Typography,
+} from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
 import { connect } from "react-redux";
@@ -54,15 +61,24 @@ function Register({ role, setUserRole }) {
       <Typography variant="h4">Create Your Account</Typography>
       {error && <Alert severity="error">{error}</Alert>}
       <TextField
-        label="First Name"
+        label={
+          <InputLabel htmlFor="firstName" required>
+            First Name
+          </InputLabel>
+        }
         variant="outlined"
         sx={{ width: "60%", margin: "20px auto", background: "#fff" }}
         margin="normal"
         value={firstName}
         onChange={(e) => setFirstName(e.target.value)}
+        id="firstName"
       />
       <TextField
-        label="Last Name"
+        label={
+          <InputLabel htmlFor="lastName" required>
+            Last Name
+          </InputLabel>
+        }
         variant="outlined"
         sx={{
           width: "60%",
@@ -73,9 +89,14 @@ function Register({ role, setUserRole }) {
         margin="normal"
         value={lastName}
         onChange={(e) => setLastName(e.target.value)}
+        id="lastName"
       />
       <TextField
-        label="Username"
+        label={
+          <InputLabel htmlFor="username" required>
+            Username
+          </InputLabel>
+        }
         variant="outlined"
         sx={{
           width: "60%",
@@ -86,9 +107,14 @@ function Register({ role, setUserRole }) {
         margin="normal"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        id="username"
       />
       <TextField
-        label="Username"
+        label={
+          <InputLabel htmlFor="email" required>
+            Email
+          </InputLabel>
+        }
         variant="outlined"
         sx={{
           width: "60%",
@@ -99,9 +125,14 @@ function Register({ role, setUserRole }) {
         margin="normal"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        id="email"
       />
       <TextField
-        label="Password"
+        label={
+          <InputLabel htmlFor="password" required>
+            Password
+          </InputLabel>
+        }
         type="password"
         variant="outlined"
         sx={{
@@ -113,9 +144,14 @@ function Register({ role, setUserRole }) {
         margin="normal"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        id="password"
       />
       <TextField
-        label="Confirm Password"
+        label={
+          <InputLabel htmlFor="confirmPassword" required>
+            Confirm Password
+          </InputLabel>
+        }
         type="password"
         variant="outlined"
         sx={{
@@ -127,6 +163,7 @@ function Register({ role, setUserRole }) {
         margin="normal"
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
+        id="confirmPassword"
       />
       <div className="login-as">
         Register as
