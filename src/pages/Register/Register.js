@@ -10,6 +10,7 @@ function Register({ role, setUserRole }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -21,6 +22,7 @@ function Register({ role, setUserRole }) {
         firstName,
         lastName,
         username,
+        email,
         password,
         confirmPassword,
         role: role ? role : "'student'",
@@ -84,6 +86,19 @@ function Register({ role, setUserRole }) {
         margin="normal"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+      />
+      <TextField
+        label="Username"
+        variant="outlined"
+        sx={{
+          width: "60%",
+          margin: "20px auto",
+          background: "#fff",
+          marginTop: "0",
+        }}
+        margin="normal"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <TextField
         label="Password"
