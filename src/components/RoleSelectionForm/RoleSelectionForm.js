@@ -17,6 +17,7 @@ const RoleSelectionForm = ({ role, onRoleSelect, setUserRole }) => {
       name="role"
       value={selectedRole}
       onChange={handleRoleChange}
+      color="white"
       row
     >
       <FormControlLabel

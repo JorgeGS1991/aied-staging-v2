@@ -16,6 +16,7 @@ function Register({ role, setUserRole }) {
   const [error, setError] = useState("");
 
   const history = useNavigate();
+
   const handleRegister = async () => {
     try {
       await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, {
@@ -27,7 +28,8 @@ function Register({ role, setUserRole }) {
         confirmPassword,
         role: role ? role : "'student'",
       });
-      history("/login");
+      setError([]);
+      history("/dashboard");
     } catch (error) {
       console.error(error);
       setError(error.response.data.message);
@@ -45,10 +47,10 @@ function Register({ role, setUserRole }) {
         flexDirection: "column",
         width: "50%",
         padding: "20px 50px",
-        margin: "auto",
-        marginTop: "50px",
+        margin: "50px auto",
         background: "#eee",
-        boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+        boxShadow: "rgba(0, 0, 0, 0.5) 0px 1px 4px",
+        borderRadius: "8px",
       }}
     >
       <Typography variant="h4">Create Your Account</Typography>
@@ -76,6 +78,7 @@ function Register({ role, setUserRole }) {
         onChange={(e) => setLastName(e.target.value)}
         required
       />
+
       <TextField
         label="Username"
         variant="outlined"
@@ -139,7 +142,7 @@ function Register({ role, setUserRole }) {
         {role !== null && <RoleSelectionForm onRoleSelect={handleRoleSelect} />}
       </div>
       <Button
-        sx={{ width: "20%", margin: "auto" }}
+        sx={{ width: "60%", margin: "auto" }}
         variant="contained"
         color="error"
         onClick={handleRegister}

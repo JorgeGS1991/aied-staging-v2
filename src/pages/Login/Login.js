@@ -46,7 +46,8 @@ function Login({ setUser, setUserRole }) {
         margin: "auto",
         marginTop: "50px",
         background: "#eee",
-        boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+        boxShadow: "rgba(0, 0, 0, 0.5) 0px 1px 4px",
+        borderRadius: "8px",
       }}
     >
       <Typography variant="h4">Login</Typography>
@@ -78,7 +79,7 @@ function Login({ setUser, setUserRole }) {
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button
-        sx={{ width: "20%", margin: "auto", marginBottom: "30px" }}
+        sx={{ width: "60%", margin: "auto", marginBottom: "30px" }}
         variant="contained"
         color="error"
         onClick={handleLogin}
