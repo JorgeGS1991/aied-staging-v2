@@ -11,8 +11,8 @@ function Home({ user }) {
         alt="Landing Page"
         className="dashboard-img"
       />
-      <Box sx={{ padding: "100px" }}>
-        <Typography sx={{ marginTop: "50px" }} variant="h4" gutterBottom>
+      <Box sx={{ padding: "50px 100px" }}>
+        <Typography variant="h4" gutterBottom>
           Welcome to the Work-Learn Project!
         </Typography>
         <Typography sx={{ color: "black", marginTop: "20px" }}>
