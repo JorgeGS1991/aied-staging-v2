@@ -9,7 +9,7 @@ function DBContent() {
         className="dashboard-img"
       />
       <Typography sx={{ marginTop: "50px" }} variant="h4" gutterBottom>
-        Welcome to the Work-Learn Curriculum!
+        Welcome to the Work-Learn!
       </Typography>
       <Typography>
         Congratulations on starting a rewarding learning journey!

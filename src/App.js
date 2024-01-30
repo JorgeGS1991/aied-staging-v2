@@ -50,7 +50,7 @@ function App() {
       <Loader />
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Navigate to="/dashboard" />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/manage-students" element={<ManageStudents />} />

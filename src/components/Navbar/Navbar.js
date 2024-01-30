@@ -32,6 +32,9 @@ function Navbar({ user, role, logOut }) {
             className="navbar-item"
             style={{ borderLeft: " 1px solid #555" }}
           >
+            <Link to="/">Home</Link>
+          </div>
+          <div className="navbar-item">
             <Link to="/dashboard">Dashboard</Link>
           </div>
           <div className="navbar-item">
