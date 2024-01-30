@@ -11,10 +11,10 @@ function Home({ user }) {
         alt="Landing Page"
         className="dashboard-img"
       />
-      <Typography sx={{ marginTop: "50px" }} variant="h4" gutterBottom>
-        Welcome to the Work-Learn Project!
-      </Typography>
       <Box sx={{ padding: "100px" }}>
+        <Typography sx={{ marginTop: "50px" }} variant="h4" gutterBottom>
+          Welcome to the Work-Learn Project!
+        </Typography>
         <Typography sx={{ color: "black", marginTop: "20px" }}>
           MOOCs – Massive Open Online Courses – promised to democratize
           education by allowing anyone with a computer and internet connection
