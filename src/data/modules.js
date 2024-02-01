@@ -5,7 +5,26 @@ const data = [
     subTopics: [
       {
         id: 1,
-        name: "GS Module 0: Getting to Know You",
+        name: "Tutorial on How to Navigate in Work-Learn Application",
+        contents: [
+          {
+            id: 1,
+            topic: "Main Content",
+            points: 100,
+            content: `
+            <div style="display: flex; justify-content: center">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/tutorial.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            `,
+          },
+        ],
+      },
+      {
+        id: 2,
+        name: "Getting to Know You",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
         points: 100,
@@ -28,8 +47,8 @@ const data = [
         ],
       },
       {
-        id: 2,
-        name: "GS Module 1.1: Basic Computer and Digital Literacy Practice",
+        id: 3,
+        name: "Basic Computer and Digital Literacy",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
 
@@ -58,8 +77,8 @@ const data = [
         ],
       },
       {
-        id: 3,
-        name: "GS Module 1.2: Assessing Your Computer and Digital Literacy",
+        id: 4,
+        name: "Assessing Your Computer and Digital Literacy",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
         contents: [
@@ -93,27 +112,8 @@ const data = [
         ],
       },
       {
-        id: 4,
-        name: "GS Module 2: Tutorial on How to Navigate in Work-Learn Application",
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 100,
-            content: `
-            <div style="display: flex; justify-content: center">
-               <video controls width="700">
-                  <source src="https://work-learn-bucket.s3.amazonaws.com/tutorial.mp4"
-                  type="video/mp4">
-              </video>
-            </div>
-            `,
-          },
-        ],
-      },
-      {
         id: 5,
-        name: "LF Module 1.1: Looking Forward: Your Digital Footprint, Using Tech and Crafting Quality Emails at Work",
+        name: "Your Digital Footprint",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
         contents: [
@@ -162,51 +162,52 @@ const data = [
 
                 `,
           },
+          //           {
+          //             id: 3,
+          //             topic: "Looking Forward: Your Digital Footprint Assessment",
+          //             author: "Hollie Rosser",
+          //             creationDate: new Date(2023, 4, 28),
+          //             contents: [
+          //               {
+          //                 id: 1,
+          //                 topic: "Main Content",
+          //                 points: 100,
+          //                 content: `
+          // <span>As part of the Looking Forward module you just completed, you learned a bit about what your digital footprint is and why it's important. <br><br><br><br>When you get to the Northstar website from the link below, please click on the green "<i>Take an Assessment</i>" button to get to the menu options you will need to select to complete the assessments. You will find the<b> Your Digital Footprint</b> under <i>Using Technology in Daily Life</i> in the right column. An illustrative tutorial of these steps is provided below for you if needed.<br><br>Before you get started on this assignment, however, here are a couple of helpful hints:<ul><li>You<br> can take the assessments multiple times by using the private mode of <br>your web browser. If you do not use the private viewing mode, you will <br>only be able to take the assessments once per day. <br></li><li>These <br>assessments have voice-over prompts for each question. Please be mindful<br> of others around you and use headphones, turn on closed captioning, or <br>mute your device. The platform tutorial will also go through how to do <br>this. <br></li><li>At the beginning of each assessment, there is a <br>tutorial that goes through how to complete the assessments. This <br>tutorial will show you how to navigate through each screen, record your <br>answers, review and change your answers, submit your answers and receive<br> your final score. <br></li><li>Make sure you are confident in your <br>answers before you submit your assessment for grading. You will not be <br>able to return to the questions after the assessment is graded. </li></ul>When <br>you are done with each assessment, please press Print Result and <br>download your results as a PDF file. Upload each of the files to this <br>assignment. You will need to achieve an 80% or better to receive your incentive pay of $_____.</span>
+          //                 `,
+          //               },
+          //               {
+          //                 id: 2,
+          //                 topic: "Resources",
+          //                 points: 150,
+          //                 content: `
+          //                 <div class="lf">
+          //                     <ol>
+          //                         <li>
+          //                             <a href="https://drive.google.com/file/d/1lKbPnqPOEBmS4l6sK4S8Zn6OHnYG1cVx/view?usp=drive_web&authuser=1">Northstar Navigation Tutorial-DL.pdf</a>
+          //                         </li>
+          //                         <li>
+          //                             <a href="https://www.digitalliteracyassessment.org/?authuser=1">Home | Northstar Digital Literacy</a>
+          //                         </li>
+          //                     </ol>
+          //                 </div>
+
+          //                 <style>
+          //                 .lf a {
+          //                   text-decoration: underline;
+          //                 }
+          //                 </style>
+
+          //                 `,
+          //               },
+          //             ],
+          //           },
         ],
       },
+
       {
         id: 6,
-        name: "LF Module 1.2: Looking Forward: Your Digital Footprint Assessment",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 4, 28),
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 100,
-            content: `
-<span>As part of the Looking Forward module you just completed, you learned a bit about what your digital footprint is and why it's important. <br><br><br><br>When you get to the Northstar website from the link below, please click on the green "<i>Take an Assessment</i>" button to get to the menu options you will need to select to complete the assessments. You will find the<b> Your Digital Footprint</b> under <i>Using Technology in Daily Life</i> in the right column. An illustrative tutorial of these steps is provided below for you if needed.<br><br>Before you get started on this assignment, however, here are a couple of helpful hints:<ul><li>You<br> can take the assessments multiple times by using the private mode of <br>your web browser. If you do not use the private viewing mode, you will <br>only be able to take the assessments once per day. <br></li><li>These <br>assessments have voice-over prompts for each question. Please be mindful<br> of others around you and use headphones, turn on closed captioning, or <br>mute your device. The platform tutorial will also go through how to do <br>this. <br></li><li>At the beginning of each assessment, there is a <br>tutorial that goes through how to complete the assessments. This <br>tutorial will show you how to navigate through each screen, record your <br>answers, review and change your answers, submit your answers and receive<br> your final score. <br></li><li>Make sure you are confident in your <br>answers before you submit your assessment for grading. You will not be <br>able to return to the questions after the assessment is graded. </li></ul>When <br>you are done with each assessment, please press Print Result and <br>download your results as a PDF file. Upload each of the files to this <br>assignment. You will need to achieve an 80% or better to receive your incentive pay of $_____.</span>
-                `,
-          },
-          {
-            id: 2,
-            topic: "Resources",
-            points: 150,
-            content: `
-                <div class="lf">
-                    <ol>
-                        <li>
-                            <a href="https://drive.google.com/file/d/1lKbPnqPOEBmS4l6sK4S8Zn6OHnYG1cVx/view?usp=drive_web&authuser=1">Northstar Navigation Tutorial-DL.pdf</a>
-                        </li>
-                        <li>
-                            <a href="https://www.digitalliteracyassessment.org/?authuser=1">Home | Northstar Digital Literacy</a>
-                        </li>
-                    </ol>
-                </div>
-
-                <style>
-                .lf a {
-                  text-decoration: underline;
-                }
-                </style>
-
-                `,
-          },
-        ],
-      },
-      {
-        id: 7,
-        name: "LF Module 1.3: Looking Forward: Email Basics Quiz",
+        name: "Writing Professional E-mail",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
         contents: [
@@ -224,7 +225,7 @@ const data = [
       },
       {
         id: 8,
-        name: "LF Module 1.4: Looking Forward: Beyond Email Quiz",
+        name: "Looking Forward: Beyond Email Quiz",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
         contents: [
@@ -248,7 +249,7 @@ const data = [
     subTopics: [
       {
         id: 1,
-        name: "CT Module 0: Introduction to Computational Thinking",
+        name: "Introduction to Computational Thinking",
         type: "intro",
         contents: [
           {
@@ -349,21 +350,21 @@ const data = [
           },
         ],
       },
+      // {
+      // id: 1,
+      // name: "CT Module 1: Four Pillars of Computational Thinking",
+      // contents: [
       {
-        id: 1,
-        name: "CT Module 1: Four Pillars of Computational Thinking",
+        id: 2,
+        name: "Decomposition",
+        type: "decomposition",
+        points: 100,
         contents: [
           {
             id: 1,
-            topic: "1.1: Decomposition",
-            type: "decomposition",
-            points: 100,
-            contents: [
-              {
-                id: 1,
-                topic: "Introduction",
-                type: "content",
-                content: `
+            topic: "Introduction",
+            type: "content",
+            content: `
   <div class="decomp">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -447,25 +448,21 @@ const data = [
   margin-top: 20px;
 }
 
-
+.video-intro-section a {
+  text-decoration: underline;
+}
 
 .video-intro {
   font-weight: 600;
 }
-
-
-
-a {
-  text-decoration: underline;
-}
 </style>
             `,
-              },
-              {
-                id: 2,
-                topic: "Building Background Knowledge",
-                points: 100,
-                content: `
+          },
+          {
+            id: 2,
+            topic: "Building Background Knowledge",
+            points: 100,
+            content: `
 <html>
 <head>
   <title>Building Background Knowledge</title>
@@ -571,18 +568,18 @@ a {
 }
 </style>
             `,
-              },
-              {
-                id: 3,
-                topic: "Quiz",
-                type: "quiz",
-                points: 100,
-              },
-              {
-                id: 4,
-                topic: "Decomposition in the Real World",
-                points: 100,
-                content: `
+          },
+          {
+            id: 3,
+            topic: "Quiz",
+            type: "quiz",
+            points: 100,
+          },
+          {
+            id: 4,
+            topic: "Decomposition in the Real World",
+            points: 100,
+            content: `
             <!DOCTYPE html>
 <html>
 <head>
@@ -657,12 +654,12 @@ a {
 
 
             `,
-              },
-              {
-                id: 5,
-                topic: "Decomposition in Computing",
-                points: 100,
-                content: `
+          },
+          {
+            id: 5,
+            topic: "Decomposition in Computing",
+            points: 100,
+            content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -791,20 +788,20 @@ img {
 
 
             `,
-              },
-            ],
           },
+        ],
+      },
+      {
+        id: 3,
+        name: "Pattern Recognition",
+        type: "pattern-recognition",
+        points: 100,
+        contents: [
           {
-            id: 2,
-            topic: "1.2: Pattern Recognition",
-            type: "pattern-recognition",
+            id: 1,
+            topic: "Introduction",
             points: 100,
-            contents: [
-              {
-                id: 1,
-                topic: "Introduction",
-                points: 100,
-                content: `
+            content: `
   <div class="pattern">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -832,25 +829,18 @@ img {
   margin-top: 20px;
 }
 
-
-
 .video-intro {
   font-weight: 600;
 }
 
-
-
-a {
-  text-decoration: underline;
-}
 </style>
             `,
-              },
-              {
-                id: 2,
-                topic: "Warm Up",
-                points: 100,
-                content: `
+          },
+          {
+            id: 2,
+            topic: "Warm Up",
+            points: 100,
+            content: `
 <html>
 <head>
   <title>Warm Up</title>
@@ -954,12 +944,12 @@ a {
 }
 </style>
             `,
-              },
-              {
-                id: 3,
-                topic: "Building Background Knowledge",
-                points: 100,
-                content: `
+          },
+          {
+            id: 3,
+            topic: "Building Background Knowledge",
+            points: 100,
+            content: `
 
 
 
@@ -1082,18 +1072,18 @@ a {
 
 
 `,
-              },
-              {
-                id: 4,
-                topic: "Quiz for Points",
-                type: "quiz",
-                points: 100,
-              },
-              {
-                id: 5,
-                topic: "Applying Idea in the Real World",
-                points: 100,
-                content: `
+          },
+          {
+            id: 4,
+            topic: "Quiz for Points",
+            type: "quiz",
+            points: 100,
+          },
+          {
+            id: 5,
+            topic: "Applying Idea in the Real World",
+            points: 100,
+            content: `
             <!DOCTYPE html>
 <html>
 <head>
@@ -1201,12 +1191,12 @@ a {
 
 
             `,
-              },
-              {
-                id: 6,
-                topic: "Pattern Recognition in Computer Programming",
-                points: 100,
-                content: `
+          },
+          {
+            id: 6,
+            topic: "Pattern Recognition in Computer Programming",
+            points: 100,
+            content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -1350,20 +1340,20 @@ img {
 
 
             `,
-              },
-            ],
           },
+        ],
+      },
+      {
+        id: 4,
+        name: "Abstraction",
+        type: "abstraction",
+        points: 100,
+        contents: [
           {
-            id: 3,
-            topic: "1.3: Abstraction",
-            type: "abstraction",
+            id: 1,
+            topic: "Introduction",
             points: 100,
-            contents: [
-              {
-                id: 1,
-                topic: "Introduction",
-                points: 100,
-                content: `
+            content: `
   <div class="abstraction">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -1401,19 +1391,14 @@ img {
   font-weight: 600;
 }
 
-
-
-a {
-  text-decoration: underline;
-}
 </style>
             `,
-              },
-              {
-                id: 2,
-                topic: "Thinking about Abstraction",
-                points: 100,
-                content: `
+          },
+          {
+            id: 2,
+            topic: "Thinking about Abstraction",
+            points: 100,
+            content: `
 <html>
 <head>
   <title>Thinking about Abstraction</title>
@@ -1561,13 +1546,13 @@ a {
 }
 </style>
 `,
-              },
+          },
 
-              {
-                id: 3,
-                topic: "Video Introduction",
-                points: 100,
-                content: `
+          {
+            id: 3,
+            topic: "Video Introduction",
+            points: 100,
+            content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1612,12 +1597,12 @@ p a {
 </html>
               
               `,
-              },
-              {
-                id: 4,
-                topic: "What is Abstraction?",
-                points: 100,
-                content: `
+          },
+          {
+            id: 4,
+            topic: "What is Abstraction?",
+            points: 100,
+            content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1674,12 +1659,12 @@ img {
 </style>
 </html>
             `,
-              },
-              {
-                id: 5,
-                topic: "Applying Ideas in the Real World",
-                points: 100,
-                content: `
+          },
+          {
+            id: 5,
+            topic: "Applying Ideas in the Real World",
+            points: 100,
+            content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1780,12 +1765,12 @@ img {
 </style>
 </html>
             `,
-              },
-              {
-                id: 6,
-                topic: "Abstraction in Computer Programming",
-                points: 100,
-                content: `
+          },
+          {
+            id: 6,
+            topic: "Abstraction in Computer Programming",
+            points: 100,
+            content: `
               <!DOCTYPE html>
               <html>
               <head>
@@ -1917,26 +1902,26 @@ img {
 </style>
 </html>
             `,
-              },
-              {
-                id: 7,
-                topic: "Quiz",
-                type: "quiz",
-                points: 100,
-              },
-            ],
           },
           {
-            id: 4,
-            topic: "1.4: Algorithms",
-            type: "algorithms",
+            id: 7,
+            topic: "Quiz",
+            type: "quiz",
             points: 100,
-            contents: [
-              {
-                id: 1,
-                topic: "Introduction",
-                points: 100,
-                content: `
+          },
+        ],
+      },
+      {
+        id: 5,
+        name: "Algorithms",
+        type: "algorithms",
+        points: 100,
+        contents: [
+          {
+            id: 1,
+            topic: "Introduction",
+            points: 100,
+            content: `
   <div class="algorithm">
   <div style="width: 100%; height: auto">
   <img src="/images/contents/computation.png" style="width: 50%; height: auto; margin:auto"/>
@@ -1973,25 +1958,18 @@ img {
 }
 
 
-
-a {
-  text-decoration: underline;
-}
-
-
-
 ul {
   list-style-type: disc;
   margin: 0 20px;
 }
 </style>
             `,
-              },
-              {
-                id: 2,
-                topic: "Exploring Algorithms",
-                points: 100,
-                content: `
+          },
+          {
+            id: 2,
+            topic: "Exploring Algorithms",
+            points: 100,
+            content: `
 <html>
 <head>
   <title>Exploring Algorithms</title>
@@ -2029,9 +2007,6 @@ ul {
 .explore-alg * {
   padding: 10px 0;
 }
-a {
-  text-decoration: underline;
-}
 img {
   width: 500px;
   height: auto;
@@ -2047,12 +2022,12 @@ img {
 
 </style>
             `,
-              },
-              {
-                id: 3,
-                topic: "Building Background Knowledge",
-                points: 100,
-                content: `
+          },
+          {
+            id: 3,
+            topic: "Building Background Knowledge",
+            points: 100,
+            content: `
 <html>
 <head>
   <title>Building Background Knowledge</title>
@@ -2154,12 +2129,12 @@ ul {
 }
 </style>
             `,
-              },
-              {
-                id: 4,
-                topic: "Applying Ideas in the Real World",
-                points: 100,
-                content: `
+          },
+          {
+            id: 4,
+            topic: "Applying Ideas in the Real World",
+            points: 100,
+            content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -2288,13 +2263,13 @@ img {
 
 
             `,
-              },
+          },
 
-              {
-                id: 5,
-                topic: "Algorithms in Computer Programming",
-                points: 100,
-                content: `
+          {
+            id: 5,
+            topic: "Algorithms in Computer Programming",
+            points: 100,
+            content: `
            <!DOCTYPE html>
 <html>
 <head>
@@ -2496,20 +2471,20 @@ img {
 </style>
 </html>
             `,
-              },
-              {
-                id: 6,
-                topic: "Quiz for Points",
-                type: "quiz",
-                points: 100,
-              },
-            ],
+          },
+          {
+            id: 6,
+            topic: "Quiz for Points",
+            type: "quiz",
+            points: 100,
           },
         ],
       },
+      // ],
+      // },
       {
-        id: 3,
-        name: "CT Module 2: Review Your Knowledge",
+        id: 6,
+        name: "Review Your Knowledge",
         type: "intro",
         contents: [
           {
