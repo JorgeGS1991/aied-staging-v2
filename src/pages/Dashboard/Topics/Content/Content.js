@@ -14,24 +14,38 @@ function Content() {
   }, [subContent, id, topicId]);
   return (
     <div className="content-section">
-      <div className="content-header">
-        <h2 className="content-head">{subContent.name}</h2>
-      </div>
-      <div className="content-body">
-        {subContent.contents ? (
-          <ol>
-            {subContent.contents.map((content) => (
-              <li>
-                <Link to={`${content.id}`}>{content.topic}</Link>
-              </li>
-            ))}
-          </ol>
-        ) : null}
-      </div>
+      {subContent.content ? (
+        <>
+          <div className="content-header">
+            <h2 className="content-head">{subContent.name}</h2>
+          </div>
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: subContent.content }}
+          />
+        </>
+      ) : (
+        <>
+          <div className="content-header">
+            <h2 className="content-head">{subContent.name}</h2>
+          </div>
+          <div className="content-body">
+            {subContent.contents ? (
+              <ol>
+                {subContent.contents.map((content) => (
+                  <li>
+                    <Link to={`${content.id}`}>{content.topic}</Link>
+                  </li>
+                ))}
+              </ol>
+            ) : null}
+          </div>
 
-      <Routes>
-        <Route path=":contentId" element={<SubContent />} />
-      </Routes>
+          <Routes>
+            <Route path=":contentId" element={<SubContent />} />
+          </Routes>
+        </>
+      )}
     </div>
   );
 }

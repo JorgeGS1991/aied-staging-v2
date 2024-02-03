@@ -62,8 +62,6 @@ const Quiz = ({
   const [submitted, setSubmitted] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(true);
 
-  console.log(quizScore, type);
-
   useEffect(() => {
     const updateQuizScoreState = async () => {
       await axios.put(

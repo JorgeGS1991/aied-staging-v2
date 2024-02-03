@@ -6,12 +6,7 @@ const data = [
       {
         id: 1,
         name: "Tutorial on How to Navigate in Work-Learn Application",
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 100,
-            content: `
+        content: `
             <div style="display: flex; justify-content: center">
                <video controls width="700">
                   <source src="https://work-learn-bucket.s3.amazonaws.com/tutorial.mp4"
@@ -19,8 +14,6 @@ const data = [
               </video>
             </div>
             `,
-          },
-        ],
       },
       {
         id: 2,
@@ -28,331 +21,322 @@ const data = [
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
         points: 100,
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            type: "content",
-            points: 100,
-            content:
-              "<p>Welcome from all of us at Work-Learn!</p><p>We are interested in helping people like you gain new skills and expanding the opportunities you have entering (or re-entering) careers in computer and information technology. To accomplish this goal, we need to learn about who you are and what your experiences are while you are in the program.</p><p>This will happen in a couple of ways:</p><p>Complete the Qualtrics Survey linked below to provide us with some background information about you and your past education experiences. The answers to this survey are confidential. Your name will not be used so no one will know who you are. All information about you will be kept in locked offices of the research team and information kept on computers will be password protected.</p><p>Schedule a time to meet with a member of our team either in person or online. This will be the first of three meetings you will have with a Work-Learn team member as you move through the program. We will be using the same email address you logged into the Work-Learn Classroom to contact you for scheduling.</p><p>We will be on campus at SFH _________________ and will make every effort to schedule a time to meet with you in person while we're here. If this isn't possible, one of our team members will be contacting you by email to schedule a time to meet virtually using an online communications platform (zoom).</p><p>Finally, we know that your time is valuable, and we truly appreciate all of your efforts as you work your way through the program. For this reason, you will be given $_______ for each of the three meetings you have with us.</p><p>If you have any questions before you get started, please direct those questions by email to <a href='mailto:worklearnproject@gmail.com'>worklearnproject@gmail.com</a>.</p>",
-          },
-          {
-            id: 2,
-            topic: "Complete Survey",
-            type: "content",
-            content:
-              "<a style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_8iGZnehHEJ64MCO?authuser=1' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>",
-          },
-        ],
+        content: `
+        <div>
+        <p>Welcome from all of us at Work-Learn!</p><p>We are interested in helping people like you gain new skills and expanding the opportunities you have entering (or re-entering) careers in computer and information technology. To accomplish this goal, we need to learn about who you are and what your experiences are while you are in the program.</p><p>This will happen in a couple of ways:</p><p>Complete the Qualtrics Survey linked below to provide us with some background information about you and your past education experiences. The answers to this survey are confidential. Your name will not be used so no one will know who you are. All information about you will be kept in locked offices of the research team and information kept on computers will be password protected.</p><p>Schedule a time to meet with a member of our team either in person or online. This will be the first of three meetings you will have with a Work-Learn team member as you move through the program. We will be using the same email address you logged into the Work-Learn Classroom to contact you for scheduling.</p><p>We will be on campus at SFH and will make every effort to schedule a time to meet with you in person while we're here. If this isn't possible, one of our team members will be contacting you by email to schedule a time to meet virtually using an online communications platform (zoom).</p><p>Finally, we know that your time is valuable, and we truly appreciate all of your efforts as you work your way through the program. For this reason, you will be given $ for each of the three meetings you have with us.</p><p>If you have any questions before you get started, please direct those questions by email to <a href='mailto:worklearnproject@gmail.com'>worklearnproject@gmail.com</a>.</p>
+        </div>
+        `,
       },
       {
         id: 3,
-        name: "Basic Computer and Digital Literacy",
+        name: "Qualtrics Survey",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
-
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 100,
-            content: `
-                <p>What is Computer Literacy?</p>
-                <p>Computer literacy can be defined as the level of experience and comfort someone has using computers to accomplish a goal. Your skill level can range from having no or very basic knowledge of how to use a computer all the way to operating common software programs or being able to write code. It's important to keep in mind that this definition is always changing and evolving depending on the advances made in that technology. It covers the basics of being able to functionally use the physical elements of a computer to achieve some task.</p>
-                
-                <p>What is Digital Literacy?</p>
-                <p>Digital literacy is a little bit different. It refers to a person's ability to use computers and other digital media to find, evaluate, and communicate information. While early digital literacy definitions were more closely related to computer literacy skills, the birth of the internet quickly led to a definition that included the creation, gathering, and sharing of information through the use of a computer. These skills include the ability to use social media platforms (like Facebook or Twitter), search engines (Google), and office productivity suites (Office 365 and GSuite/Google Workplace).</p>
-                
-                <p>What's Next?</p>
-                <p>To learn a little bit more about computer and digital literacy, check out the lesson below from Northstar Online Learning on Basic Computer Skills.</p>
-                
-                <p>Using a trackpad instead of a mouse can be tricky. The Mousercise! link below will help you practice navigating around your screen using the trackpad. If you're using a mouse, this can be good practice for you too!</p>
-                
-                <p>Want a little more practice before moving on? Check out the mini-course, Getting Started on a Computer, to work on your computer literacy skills.</p>
-                
-                <p>To get started on improving your digital literacy skills, check out the lesson on Using a PC. It will take you through the basics of working on a desktop, working with windows, and handling files and folders.</p>
-                `,
-          },
-          {
-            id: 2,
-            topic: "Resources",
-            content: `
-              <ul class="resources">
-              <li>
-              <a href="https://assessment.digitalliteracyassessment.org/basic-computer-skills/practice/getting-started-with-computers?authuser=3">Northstar Digital Literacy</a>
-              </li>    
-              <li>
-              <a href="https://www.digitallearn.org/courses/getting-started-on-a-computer-new?authuser=3">Getting Started on a Computer</a>
-              </li>
-              <li>
-              <a href="https://www.digitallearn.org/courses/using-a-pc-windows-10-new?authuser=3">Using a PC (Windows 10)</a>
-              </li>
-              <li>
-              <a href="http://www.pbclibrary.org/mousing/mousercise.htm?authuser=3">Palm Beach County Library System Mousing Tutorial</a>
-              </li>
-              </ul>
-              <style>
-              .resources li a {
-                text-decoration: underline;
-              }
-              </style>
-
-            `,
-          },
-        ],
+        points: 100,
+        content: `
+              <a style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_8iGZnehHEJ64MCO?authuser=1' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+              `,
       },
-      {
-        id: 4,
-        name: "Assessing Your Computer and Digital Literacy",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 4, 28),
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 100,
-            content: `
-                <p>Before You Proceed to Other Modules</p>
-                <p>Before you can move on to the other modules of the Work Learn Classroom, we want to make sure you have the computer and digital literacy skills needed to be successful in the program. So, we are asking that you complete the Basic Computer Skills and Internet Basics assessments from the Northstar Digital Literacy website linked below with a score of 85% or better. If you are not successful the first time, please go back to the Basic Computer and Digital Literacy Practice module to improve your skills.</p>
+      //       {
+      //         id: 3,
+      //         name: "Basic Computer and Digital Literacy",
+      //         author: "Hollie Rosser",
+      //         creationDate: new Date(2023, 4, 28),
 
+      //         contents: [
+      //           {
+      //             id: 1,
+      //             topic: "Main Content",
+      //             points: 100,
+      //             content: `
+      //                 <p>What is Computer Literacy?</p>
+      //                 <p>Computer literacy can be defined as the level of experience and comfort someone has using computers to accomplish a goal. Your skill level can range from having no or very basic knowledge of how to use a computer all the way to operating common software programs or being able to write code. It's important to keep in mind that this definition is always changing and evolving depending on the advances made in that technology. It covers the basics of being able to functionally use the physical elements of a computer to achieve some task.</p>
 
+      //                 <p>What is Digital Literacy?</p>
+      //                 <p>Digital literacy is a little bit different. It refers to a person's ability to use computers and other digital media to find, evaluate, and communicate information. While early digital literacy definitions were more closely related to computer literacy skills, the birth of the internet quickly led to a definition that included the creation, gathering, and sharing of information through the use of a computer. These skills include the ability to use social media platforms (like Facebook or Twitter), search engines (Google), and office productivity suites (Office 365 and GSuite/Google Workplace).</p>
 
-                <p>When you get to the Northstar website, please click on the green "Take an Assessment" button to get to the menu options you will need to select to complete the assessments. You will find the Basic Computer Skills and Internet Basics under Essential Computer Skills in the left column. An illustrative tutorial of these steps is provided below for you if needed.</p>
+      //                 <p>What's Next?</p>
+      //                 <p>To learn a little bit more about computer and digital literacy, check out the lesson below from Northstar Online Learning on Basic Computer Skills.</p>
 
+      //                 <p>Using a trackpad instead of a mouse can be tricky. The Mousercise! link below will help you practice navigating around your screen using the trackpad. If you're using a mouse, this can be good practice for you too!</p>
 
+      //                 <p>Want a little more practice before moving on? Check out the mini-course, Getting Started on a Computer, to work on your computer literacy skills.</p>
 
-                <p>Helpful Hints</p>
-                <ul>
-                    <li>You can take the assessments multiple times by using the private mode of your web browser. If you do not use the private viewing mode, you will only be able to take the assessments once per day.</li>
-                    <li>These assessments have voice-over prompts for each question. Please be mindful of others around you and use headphones, turn on closed captioning, or mute your device. The platform tutorial will also go through how to do this.</li>
-                    <li>At the beginning of each assessment, there is a tutorial that goes through how to complete the assessments. This tutorial will show you how to navigate through each screen, record your answers, review and change your answers, submit your answers, and receive your final score.</li>
-                    <li>Make sure you are confident in your answers before you submit your assessment for grading. You will not be able to return to the questions after the assessment is graded.</li>
-                </ul>
+      //                 <p>To get started on improving your digital literacy skills, check out the lesson on Using a PC. It will take you through the basics of working on a desktop, working with windows, and handling files and folders.</p>
+      //                 `,
+      //           },
+      //           {
+      //             id: 2,
+      //             topic: "Resources",
+      //             content: `
+      //               <ul class="resources">
+      //               <li>
+      //               <a href="https://assessment.digitalliteracyassessment.org/basic-computer-skills/practice/getting-started-with-computers?authuser=3">Northstar Digital Literacy</a>
+      //               </li>
+      //               <li>
+      //               <a href="https://www.digitallearn.org/courses/getting-started-on-a-computer-new?authuser=3">Getting Started on a Computer</a>
+      //               </li>
+      //               <li>
+      //               <a href="https://www.digitallearn.org/courses/using-a-pc-windows-10-new?authuser=3">Using a PC (Windows 10)</a>
+      //               </li>
+      //               <li>
+      //               <a href="http://www.pbclibrary.org/mousing/mousercise.htm?authuser=3">Palm Beach County Library System Mousing Tutorial</a>
+      //               </li>
+      //               </ul>
+      //               <style>
+      //               .resources li a {
+      //                 text-decoration: underline;
+      //               }
+      //               </style>
 
+      //             `,
+      //           },
+      //         ],
+      //       },
+      //       {
+      //         id: 4,
+      //         name: "Assessing Your Computer and Digital Literacy",
+      //         author: "Hollie Rosser",
+      //         creationDate: new Date(2023, 4, 28),
+      //         contents: [
+      //           {
+      //             id: 1,
+      //             topic: "Main Content",
+      //             points: 100,
+      //             content: `
+      //                 <p>Before You Proceed to Other Modules</p>
+      //                 <p>Before you can move on to the other modules of the Work Learn Classroom, we want to make sure you have the computer and digital literacy skills needed to be successful in the program. So, we are asking that you complete the Basic Computer Skills and Internet Basics assessments from the Northstar Digital Literacy website linked below with a score of 85% or better. If you are not successful the first time, please go back to the Basic Computer and Digital Literacy Practice module to improve your skills.</p>
 
+      //                 <p>When you get to the Northstar website, please click on the green "Take an Assessment" button to get to the menu options you will need to select to complete the assessments. You will find the Basic Computer Skills and Internet Basics under Essential Computer Skills in the left column. An illustrative tutorial of these steps is provided below for you if needed.</p>
 
-                <p>When you are done with each assessment, please press Print Result and download your results as a PDF file. Upload each of the files to this assignment. Once your scores are verified to be 85% or better, you will be able to move on to the Computational Thinking module.</p>
-            `,
-          },
-        ],
-      },
-      {
-        id: 5,
-        name: "Your Digital Footprint",
-        author: "Hollie Rosser",
-        creationDate: new Date(2023, 4, 28),
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 150,
-            content: `
-                    <span><b>Your Digital Footprint<br></b><br>Digital footprint refers to the trails, traces, and crumbs that are left behind after someone uses the internet. This information is available for others to find without a lot of effort, and never goes away. Not only is your personal digital footprint affected by what you post and do online, it is also affected by what others might post about you online. Having a negative digital footprint, even if it's from a long time ago, 
-                    can have consequences on future employment opportunities, so it's important to understand what contributes to your digital footprint and how it can impact your future. <br><br>Here are just a few examples of online sources that can make up your digital footprint:<ul><li>Social media posts on Facebook, Instagram, Twitter, etc. 
-                    <br></li><li>YouTube uploads, channel subscriptions, and public comment history</li><li>Postings on Yelp, Amazon, Google</li><li>Personal websites, blog posts, and digital art portfolios</li><li>Accepted cookies from websites you have visited<br></li></ul>So, here are a couple of recommendations to keep in mind:&nbsp; 1) Always think twice or even three times before you post questionable content or opinions on the internet--including your social media accounts; and 2) Maybe even consider maintaining separate accounts for personal and professional use to mitigate potential bleed through. <br><br><i>**For more information and practice on identifying sources of your digital footprint, check out the video, </i><b><i>Your Digital Footprint</i></b><i>. You'll test your knowledge with a skills assessment on the Northstar Digital Literacy site, </i><b><i>Using Technology in Daily Life--Your Digital Footprint</i></b><i> a little later. </i><br><br><b>Personal Use of Technology at Work</b><br><br>Have you ever checked your socials or email, do some online shopping, or even read up on the daily news while you're on the clock at work? You are not alone and most workers will admit that they either use their work computers for personal use or use their personal devices while at work. Sometimes this is okay. Research has shown that taking a short break from your work will also give your brain a break, and this can improve your productivity. It's also been shown that these brief online breaks can improve your mood while you're working because you tend to visit sites you want to or enjoy going to. <br><br><br>Whether or not this is an okay use of your on-the-clock-time depends on a lot of different variables and has its limits. First of all, be aware of your employer's policy on personal use of technology at work. Many employers will have this policy spelled out in their employee handbook. If they don't, ask before you start scrolling. Second, make sure you are getting your work done, its done well, and you're meeting your deadlines. Ultimately, you are being paid to do work for your employer, and that should be your priority while you're there. 
-                    Finally, looking at funny pet videos on YouTube would be appropriate, going to sexually explicit, gambling, or sites selling illegal materials employer is paying you for.&nbsp;<br><br><i>**Take a couple of minutes to watch the video, </i><b><i>Good and Proper Use of Technology in the Workplace</i></b><i>, for more information on this topic.</i><br><br><b>Crafting Professional Emails</b><br><b><br></b>In the video you just watched, you learned a little bit about email etiquette at work. As you enter into a work setting where email is often a primary source of communication, it will become more and more important for you to know how to craft high quality professional emails. Direct messaging (DM)/instant messaging (IM) is also a popular way to communicate with your co-workers, and in a lot of ways is very similar to sending and receiving text messages. However, it's also equally important to remember that there a few more guidelines you need to pay attention to when you're using DMs at work. <br><br>Regardless of whether you are communicating through an email or a direct messaging app, your writing should always be professional and business-friendly. The tutorials and videos below will give you a good idea of how to craft a quality work-ready email and DM. <br><br><br><i>**Check out the tutorials on, </i><b><i>Email Basics, Beyond Email, Communication Skills, </i></b><i>and </i><b><i>Business Communication</i></b><i>. We've also provided you with a video series for the </i><b><i>Business Communication</i></b><i> tutorial that provides several short videos to reinforce your learning.</i></span>                    
-                `,
-          },
-          {
-            id: 2,
-            topic: "Resources",
-            points: 150,
-            // type: "upload",
-            content: `
-                <div class="lf">
-                    <ol>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=iVEdvp8MWTg&authuser=1">Good and proper use of technology in the workplace</a>
-                        </li><li>
-                            <a href="https://www.digitalliteracyassessment.org/?authuser=1">Home | Northstar Digital Literacy</a>
-                        </li><li>
-                            <a href="https://edu.gcfglobal.org/en/email101/?authuser=1">Free Email Basics Tutorial at GCFGlobal</a>
-                        </li><li>
-                            <a href="https://edu.gcfglobal.org/en/beyondemail/?authuser=1">Free Beyond Email Tutorial at GCFGlobal</a>
-                        </li><li>
-                            <a href="https://edu.gcfglobal.org/en/communicationskills/?authuser=1">Free Communication Skills Tutorial at GCFGlobal</a>
-                        </li><li>
-                            <a href="https://youtube.com/playlist?list=PLpQQipWcxwt_vpL6XGO94Lhs-sWLVpurs&authuser=1">Business Communication - YouTube</a>
-                        </li><li>
-                            <a href="https://www.youtube.com/watch?v=6TUMHplBveo&authuser=1">Your Digital Footprint</a>
-                        </li>
-                    </ol>
-                </div>
-                <style>
-                .lf a {
-                  text-decoration: underline;
-                }
-                </style>
+      //                 <p>Helpful Hints</p>
+      //                 <ul>
+      //                     <li>You can take the assessments multiple times by using the private mode of your web browser. If you do not use the private viewing mode, you will only be able to take the assessments once per day.</li>
+      //                     <li>These assessments have voice-over prompts for each question. Please be mindful of others around you and use headphones, turn on closed captioning, or mute your device. The platform tutorial will also go through how to do this.</li>
+      //                     <li>At the beginning of each assessment, there is a tutorial that goes through how to complete the assessments. This tutorial will show you how to navigate through each screen, record your answers, review and change your answers, submit your answers, and receive your final score.</li>
+      //                     <li>Make sure you are confident in your answers before you submit your assessment for grading. You will not be able to return to the questions after the assessment is graded.</li>
+      //                 </ul>
 
+      //                 <p>When you are done with each assessment, please press Print Result and download your results as a PDF file. Upload each of the files to this assignment. Once your scores are verified to be 85% or better, you will be able to move on to the Computational Thinking module.</p>
+      //             `,
+      //           },
+      //         ],
+      //       },
+      //       {
+      //         id: 5,
+      //         name: "Your Digital Footprint",
+      //         author: "Hollie Rosser",
+      //         creationDate: new Date(2023, 4, 28),
+      //         contents: [
+      //           {
+      //             id: 1,
+      //             topic: "Main Content",
+      //             points: 150,
+      //             content: `
+      //                     <span><b>Your Digital Footprint<br></b><br>Digital footprint refers to the trails, traces, and crumbs that are left behind after someone uses the internet. This information is available for others to find without a lot of effort, and never goes away. Not only is your personal digital footprint affected by what you post and do online, it is also affected by what others might post about you online. Having a negative digital footprint, even if it's from a long time ago,
+      //                     can have consequences on future employment opportunities, so it's important to understand what contributes to your digital footprint and how it can impact your future. <br><br>Here are just a few examples of online sources that can make up your digital footprint:<ul><li>Social media posts on Facebook, Instagram, Twitter, etc.
+      //                     <br></li><li>YouTube uploads, channel subscriptions, and public comment history</li><li>Postings on Yelp, Amazon, Google</li><li>Personal websites, blog posts, and digital art portfolios</li><li>Accepted cookies from websites you have visited<br></li></ul>So, here are a couple of recommendations to keep in mind:&nbsp; 1) Always think twice or even three times before you post questionable content or opinions on the internet--including your social media accounts; and 2) Maybe even consider maintaining separate accounts for personal and professional use to mitigate potential bleed through. <br><br><i>**For more information and practice on identifying sources of your digital footprint, check out the video, </i><b><i>Your Digital Footprint</i></b><i>. You'll test your knowledge with a skills assessment on the Northstar Digital Literacy site, </i><b><i>Using Technology in Daily Life--Your Digital Footprint</i></b><i> a little later. </i><br><br><b>Personal Use of Technology at Work</b><br><br>Have you ever checked your socials or email, do some online shopping, or even read up on the daily news while you're on the clock at work? You are not alone and most workers will admit that they either use their work computers for personal use or use their personal devices while at work. Sometimes this is okay. Research has shown that taking a short break from your work will also give your brain a break, and this can improve your productivity. It's also been shown that these brief online breaks can improve your mood while you're working because you tend to visit sites you want to or enjoy going to. <br><br><br>Whether or not this is an okay use of your on-the-clock-time depends on a lot of different variables and has its limits. First of all, be aware of your employer's policy on personal use of technology at work. Many employers will have this policy spelled out in their employee handbook. If they don't, ask before you start scrolling. Second, make sure you are getting your work done, its done well, and you're meeting your deadlines. Ultimately, you are being paid to do work for your employer, and that should be your priority while you're there.
+      //                     Finally, looking at funny pet videos on YouTube would be appropriate, going to sexually explicit, gambling, or sites selling illegal materials employer is paying you for.&nbsp;<br><br><i>**Take a couple of minutes to watch the video, </i><b><i>Good and Proper Use of Technology in the Workplace</i></b><i>, for more information on this topic.</i><br><br><b>Crafting Professional Emails</b><br><b><br></b>In the video you just watched, you learned a little bit about email etiquette at work. As you enter into a work setting where email is often a primary source of communication, it will become more and more important for you to know how to craft high quality professional emails. Direct messaging (DM)/instant messaging (IM) is also a popular way to communicate with your co-workers, and in a lot of ways is very similar to sending and receiving text messages. However, it's also equally important to remember that there a few more guidelines you need to pay attention to when you're using DMs at work. <br><br>Regardless of whether you are communicating through an email or a direct messaging app, your writing should always be professional and business-friendly. The tutorials and videos below will give you a good idea of how to craft a quality work-ready email and DM. <br><br><br><i>**Check out the tutorials on, </i><b><i>Email Basics, Beyond Email, Communication Skills, </i></b><i>and </i><b><i>Business Communication</i></b><i>. We've also provided you with a video series for the </i><b><i>Business Communication</i></b><i> tutorial that provides several short videos to reinforce your learning.</i></span>
+      //                 `,
+      //           },
+      //           {
+      //             id: 2,
+      //             topic: "Resources",
+      //             points: 150,
+      //             // type: "upload",
+      //             content: `
+      //                 <div class="lf">
+      //                     <ol>
+      //                         <li>
+      //                             <a href="https://www.youtube.com/watch?v=iVEdvp8MWTg&authuser=1">Good and proper use of technology in the workplace</a>
+      //                         </li><li>
+      //                             <a href="https://www.digitalliteracyassessment.org/?authuser=1">Home | Northstar Digital Literacy</a>
+      //                         </li><li>
+      //                             <a href="https://edu.gcfglobal.org/en/email101/?authuser=1">Free Email Basics Tutorial at GCFGlobal</a>
+      //                         </li><li>
+      //                             <a href="https://edu.gcfglobal.org/en/beyondemail/?authuser=1">Free Beyond Email Tutorial at GCFGlobal</a>
+      //                         </li><li>
+      //                             <a href="https://edu.gcfglobal.org/en/communicationskills/?authuser=1">Free Communication Skills Tutorial at GCFGlobal</a>
+      //                         </li><li>
+      //                             <a href="https://youtube.com/playlist?list=PLpQQipWcxwt_vpL6XGO94Lhs-sWLVpurs&authuser=1">Business Communication - YouTube</a>
+      //                         </li><li>
+      //                             <a href="https://www.youtube.com/watch?v=6TUMHplBveo&authuser=1">Your Digital Footprint</a>
+      //                         </li>
+      //                     </ol>
+      //                 </div>
+      //                 <style>
+      //                 .lf a {
+      //                   text-decoration: underline;
+      //                 }
+      //                 </style>
 
-                `,
-          },
-          {
-            id: 3,
-            topic: "Assessment",
-            content: `
-            <div class="assessment">
-            <p>
-            As part of the Looking Forward module you just completed, you learned a bit about what your digital footprint is and why it's important.
-            </p>
-            <p>
-            When you get to the Northstar website from the link below, please click on the green "Take an Assessment" button to get to the menu options you will need to select to complete the assessments. You will find the Your Digital Footprint under Using Technology in Daily Life in the right column. An illustrative tutorial of these steps is provided below for you if needed.
-            </p>
-            <p>
-            Before you get started on this assignment, however, here are a couple of helpful hints:
-            </p>
-            <ul class='list'>
-            <li>
-            You
-can take the assessments multiple times by using the private mode of
-your web browser. If you do not use the private viewing mode, you will
-only be able to take the assessments once per day.
-            </li>
-            <li>
-            These
-assessments have voice-over prompts for each question. Please be mindful
-of others around you and use headphones, turn on closed captioning, or
-mute your device. The platform tutorial will also go through how to do
-this.
-            </li>
-            <li>
-            At the beginning of each assessment, there is a
-tutorial that goes through how to complete the assessments. This
-tutorial will show you how to navigate through each screen, record your
-answers, review and change your answers, submit your answers and receive
-your final score.</li>
-            <li>Make sure you are confident in your
-answers before you submit your assessment for grading. You will not be
-able to return to the questions after the assessment is graded.</li>
-            
-            </ul>
-            <p>
-            When
-you are done with each assessment, please press Print Result and
-download your results as a PDF file. Upload each of the files to this
-assignment. You will need to achieve an 80% or better to receive your incentive pay of $_____.
-            </p>
-            <div class="resources">
-            <h3>Resources</h3>
-            <ul>
-            <li>
-            <a href="https://work-learn-bucket.s3.amazonaws.com/northstar-tutorial.pdf">Northstar Navigation Tutorial-DL.pdf</a>
-            </li>
-            <li>
-            <a href="https://www.digitalliteracyassessment.org/?authuser=0">Home | Northstar Digital Literacy</a>
-            </li>
+      //                 `,
+      //           },
+      //           {
+      //             id: 3,
+      //             topic: "Assessment",
+      //             content: `
+      //             <div class="assessment">
+      //             <p>
+      //             As part of the Looking Forward module you just completed, you learned a bit about what your digital footprint is and why it's important.
+      //             </p>
+      //             <p>
+      //             When you get to the Northstar website from the link below, please click on the green "Take an Assessment" button to get to the menu options you will need to select to complete the assessments. You will find the Your Digital Footprint under Using Technology in Daily Life in the right column. An illustrative tutorial of these steps is provided below for you if needed.
+      //             </p>
+      //             <p>
+      //             Before you get started on this assignment, however, here are a couple of helpful hints:
+      //             </p>
+      //             <ul class='list'>
+      //             <li>
+      //             You
+      // can take the assessments multiple times by using the private mode of
+      // your web browser. If you do not use the private viewing mode, you will
+      // only be able to take the assessments once per day.
+      //             </li>
+      //             <li>
+      //             These
+      // assessments have voice-over prompts for each question. Please be mindful
+      // of others around you and use headphones, turn on closed captioning, or
+      // mute your device. The platform tutorial will also go through how to do
+      // this.
+      //             </li>
+      //             <li>
+      //             At the beginning of each assessment, there is a
+      // tutorial that goes through how to complete the assessments. This
+      // tutorial will show you how to navigate through each screen, record your
+      // answers, review and change your answers, submit your answers and receive
+      // your final score.</li>
+      //             <li>Make sure you are confident in your
+      // answers before you submit your assessment for grading. You will not be
+      // able to return to the questions after the assessment is graded.</li>
 
-            </ul>
-            </div>
-            </div>
+      //             </ul>
+      //             <p>
+      //             When
+      // you are done with each assessment, please press Print Result and
+      // download your results as a PDF file. Upload each of the files to this
+      // assignment. You will need to achieve an 80% or better to receive your incentive pay of $_____.
+      //             </p>
+      //             <div class="resources">
+      //             <h3>Resources</h3>
+      //             <ul>
+      //             <li>
+      //             <a href="https://work-learn-bucket.s3.amazonaws.com/northstar-tutorial.pdf">Northstar Navigation Tutorial-DL.pdf</a>
+      //             </li>
+      //             <li>
+      //             <a href="https://www.digitalliteracyassessment.org/?authuser=0">Home | Northstar Digital Literacy</a>
+      //             </li>
 
-            <style>
-            .assessment p, assessment ul.list {
-              margin-top: 20px;
-            }
+      //             </ul>
+      //             </div>
+      //             </div>
 
-            .list {
-              list-style-type: disc;
-              padding: 30px;
-            }
-            .resources h3 {
-              font-weight: 700;
-              margin-top: 20px;
-            }
-            .resources a {
-              text-decoration: underline;
-            }
-            </style>
-            `,
-          },
-          //           {
-          //             id: 3,
-          //             topic: "Looking Forward: Your Digital Footprint Assessment",
-          //             author: "Hollie Rosser",
-          //             creationDate: new Date(2023, 4, 28),
-          //             contents: [
-          //               {
-          //                 id: 1,
-          //                 topic: "Main Content",
-          //                 points: 100,
-          //                 content: `
-          // <span>As part of the Looking Forward module you just completed, you learned a bit about what your digital footprint is and why it's important. <br><br><br><br>When you get to the Northstar website from the link below, please click on the green "<i>Take an Assessment</i>" button to get to the menu options you will need to select to complete the assessments. You will find the<b> Your Digital Footprint</b> under <i>Using Technology in Daily Life</i> in the right column. An illustrative tutorial of these steps is provided below for you if needed.<br><br>Before you get started on this assignment, however, here are a couple of helpful hints:<ul><li>You<br> can take the assessments multiple times by using the private mode of <br>your web browser. If you do not use the private viewing mode, you will <br>only be able to take the assessments once per day. <br></li><li>These <br>assessments have voice-over prompts for each question. Please be mindful<br> of others around you and use headphones, turn on closed captioning, or <br>mute your device. The platform tutorial will also go through how to do <br>this. <br></li><li>At the beginning of each assessment, there is a <br>tutorial that goes through how to complete the assessments. This <br>tutorial will show you how to navigate through each screen, record your <br>answers, review and change your answers, submit your answers and receive<br> your final score. <br></li><li>Make sure you are confident in your <br>answers before you submit your assessment for grading. You will not be <br>able to return to the questions after the assessment is graded. </li></ul>When <br>you are done with each assessment, please press Print Result and <br>download your results as a PDF file. Upload each of the files to this <br>assignment. You will need to achieve an 80% or better to receive your incentive pay of $_____.</span>
-          //                 `,
-          //               },
-          //               {
-          //                 id: 2,
-          //                 topic: "Resources",
-          //                 points: 150,
-          //                 content: `
-          //                 <div class="lf">
-          //                     <ol>
-          //                         <li>
-          //                             <a href="https://drive.google.com/file/d/1lKbPnqPOEBmS4l6sK4S8Zn6OHnYG1cVx/view?usp=drive_web&authuser=1">Northstar Navigation Tutorial-DL.pdf</a>
-          //                         </li>
-          //                         <li>
-          //                             <a href="https://www.digitalliteracyassessment.org/?authuser=1">Home | Northstar Digital Literacy</a>
-          //                         </li>
-          //                     </ol>
-          //                 </div>
+      //             <style>
+      //             .assessment p, assessment ul.list {
+      //               margin-top: 20px;
+      //             }
 
-          //                 <style>
-          //                 .lf a {
-          //                   text-decoration: underline;
-          //                 }
-          //                 </style>
+      //             .list {
+      //               list-style-type: disc;
+      //               padding: 30px;
+      //             }
+      //             .resources h3 {
+      //               font-weight: 700;
+      //               margin-top: 20px;
+      //             }
+      //             .resources a {
+      //               text-decoration: underline;
+      //             }
+      //             </style>
+      //             `,
+      //           },
+      //           //           {
+      //           //             id: 3,
+      //           //             topic: "Looking Forward: Your Digital Footprint Assessment",
+      //           //             author: "Hollie Rosser",
+      //           //             creationDate: new Date(2023, 4, 28),
+      //           //             contents: [
+      //           //               {
+      //           //                 id: 1,
+      //           //                 topic: "Main Content",
+      //           //                 points: 100,
+      //           //                 content: `
+      //           // <span>As part of the Looking Forward module you just completed, you learned a bit about what your digital footprint is and why it's important. <br><br><br><br>When you get to the Northstar website from the link below, please click on the green "<i>Take an Assessment</i>" button to get to the menu options you will need to select to complete the assessments. You will find the<b> Your Digital Footprint</b> under <i>Using Technology in Daily Life</i> in the right column. An illustrative tutorial of these steps is provided below for you if needed.<br><br>Before you get started on this assignment, however, here are a couple of helpful hints:<ul><li>You<br> can take the assessments multiple times by using the private mode of <br>your web browser. If you do not use the private viewing mode, you will <br>only be able to take the assessments once per day. <br></li><li>These <br>assessments have voice-over prompts for each question. Please be mindful<br> of others around you and use headphones, turn on closed captioning, or <br>mute your device. The platform tutorial will also go through how to do <br>this. <br></li><li>At the beginning of each assessment, there is a <br>tutorial that goes through how to complete the assessments. This <br>tutorial will show you how to navigate through each screen, record your <br>answers, review and change your answers, submit your answers and receive<br> your final score. <br></li><li>Make sure you are confident in your <br>answers before you submit your assessment for grading. You will not be <br>able to return to the questions after the assessment is graded. </li></ul>When <br>you are done with each assessment, please press Print Result and <br>download your results as a PDF file. Upload each of the files to this <br>assignment. You will need to achieve an 80% or better to receive your incentive pay of $_____.</span>
+      //           //                 `,
+      //           //               },
+      //           //               {
+      //           //                 id: 2,
+      //           //                 topic: "Resources",
+      //           //                 points: 150,
+      //           //                 content: `
+      //           //                 <div class="lf">
+      //           //                     <ol>
+      //           //                         <li>
+      //           //                             <a href="https://drive.google.com/file/d/1lKbPnqPOEBmS4l6sK4S8Zn6OHnYG1cVx/view?usp=drive_web&authuser=1">Northstar Navigation Tutorial-DL.pdf</a>
+      //           //                         </li>
+      //           //                         <li>
+      //           //                             <a href="https://www.digitalliteracyassessment.org/?authuser=1">Home | Northstar Digital Literacy</a>
+      //           //                         </li>
+      //           //                     </ol>
+      //           //                 </div>
 
-          //                 `,
-          //               },
-          //             ],
-          //           },
-        ],
-      },
+      //           //                 <style>
+      //           //                 .lf a {
+      //           //                   text-decoration: underline;
+      //           //                 }
+      //           //                 </style>
 
-      {
-        id: 6,
-        name: "Writing Professional E-mail",
-        author: "Hollie Rosser",
-        type: "email",
-        creationDate: new Date(2023, 4, 28),
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 150,
-            content: `
-                   <span>After you have gone through the Email Basics tutorials in Looking Forward, please take this quiz to test your understanding of the topic. <br><br><br>You'll need to answer 8 of the questions correctly to receive your incentive of $_____.</span>
-                `,
-          },
-          {
-            id: 2,
-            topic: "Assessment",
-            type: "quiz",
-          },
-        ],
-      },
-      {
-        id: 7,
-        name: "Looking Forward: Beyond Email Quiz",
-        author: "Hollie Rosser",
-        type: "beyond",
-        creationDate: new Date(2023, 4, 28),
-        contents: [
-          {
-            id: 1,
-            topic: "Main Content",
-            points: 150,
-            content: `
-                    <span>After you have gone through the Beyond Email tutorials in the Looking Forward module, please take this quiz to test your understanding of the topic. <br><br><br>You'll need to answer 8 of the questions correctly to receive your incentive of $________.</span>
-                `,
-          },
-          {
-            id: 2,
-            topic: "Assessment",
-            type: "quiz",
-          },
-        ],
-      },
+      //           //                 `,
+      //           //               },
+      //           //             ],
+      //           //           },
+      //         ],
+      //       },
+
+      //       {
+      //         id: 6,
+      //         name: "Writing Professional E-mail",
+      //         author: "Hollie Rosser",
+      //         type: "email",
+      //         creationDate: new Date(2023, 4, 28),
+      //         contents: [
+      //           {
+      //             id: 1,
+      //             topic: "Main Content",
+      //             points: 150,
+      //             content: `
+      //                    <span>After you have gone through the Email Basics tutorials in Looking Forward, please take this quiz to test your understanding of the topic. <br><br><br>You'll need to answer 8 of the questions correctly to receive your incentive of $_____.</span>
+      //                 `,
+      //           },
+      //           {
+      //             id: 2,
+      //             topic: "Assessment",
+      //             type: "quiz",
+      //           },
+      //         ],
+      //       },
+      //       {
+      //         id: 7,
+      //         name: "Looking Forward: Beyond Email Quiz",
+      //         author: "Hollie Rosser",
+      //         type: "beyond",
+      //         creationDate: new Date(2023, 4, 28),
+      //         contents: [
+      //           {
+      //             id: 1,
+      //             topic: "Main Content",
+      //             points: 150,
+      //             content: `
+      //                     <span>After you have gone through the Beyond Email tutorials in the Looking Forward module, please take this quiz to test your understanding of the topic. <br><br><br>You'll need to answer 8 of the questions correctly to receive your incentive of $________.</span>
+      //                 `,
+      //           },
+      //           {
+      //             id: 2,
+      //             topic: "Assessment",
+      //             type: "quiz",
+      //           },
+      //         ],
+      //       },
     ],
   },
   {

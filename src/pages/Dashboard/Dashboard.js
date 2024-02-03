@@ -123,108 +123,126 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
   return (
     <div className="dashboard">
       <div className="db-sidebar">
-        {data.map((item) => {
+        {data.map((item, i) => {
           return (
             <div>
               <div className="db-unit">
-                <Link to={`${item.id}`}>{item.topicName}</Link>
+                <p>{item.topicName}</p>
               </div>
               <div className="db-items">
                 {item.subTopics.map((subTopic, index) => {
                   return (
-                    <div className="db-item">
-                      <div className="db-link">
-                        <HashLink
-                          href="#"
-                          onClick={() =>
-                            toggleDropdown(index, item.subTopics.length)
-                          }
-                        >
-                          {subTopic.name}
-                        </HashLink>
-                        <ArrowDropDownIcon />
-                      </div>
-                      {isActive && (
-                        <ul
-                          class="dropdown-container"
-                          style={{
-                            display: isActive[index] ? "flex" : "none",
-                            flexDirection: "column",
-                            marginLeft: "30px",
-                          }}
-                        >
-                          {subTopic.contents.map((subContent, idx) => {
-                            return !subContent.contents ? (
-                              <li style={{ fontWeight: "400" }}>
-                                <Link
-                                  to={`${item.id}/${index + 1}/${
-                                    subContent.id
-                                  }`}
-                                >
-                                  {subContent.topic}
-                                </Link>
+                    <>
+                      {i !== 0 ? (
+                        <>
+                          <div className="db-item">
+                            <div className="db-link">
+                              <HashLink
+                                href="#"
+                                onClick={() =>
+                                  toggleDropdown(index, item.subTopics.length)
+                                }
+                              >
+                                {subTopic.name}
+                              </HashLink>
+                              <ArrowDropDownIcon />
+                            </div>
+                            {isActive && (
+                              <ul
+                                class="dropdown-container"
+                                style={{
+                                  display: isActive[index] ? "flex" : "none",
+                                  flexDirection: "column",
+                                  marginLeft: "30px",
+                                }}
+                              >
+                                {subTopic.contents.map((subContent, idx) => {
+                                  return !subContent.contents ? (
+                                    <li style={{ fontWeight: "400" }}>
+                                      <Link
+                                        to={`${item.id}/${index + 1}/${
+                                          subContent.id
+                                        }`}
+                                      >
+                                        {subContent.topic}
+                                      </Link>
 
-                                {/* {subContent.contents ? (
+                                      {/* {subContent.contents ? (
                                 <div>{subContent.contents[0].topic}</div>
                               ) : null} */}
-                              </li>
-                            ) : (
-                              <div className="db-item mod-1">
-                                <HashLink
-                                  to="#"
-                                  onClick={() =>
-                                    toggleDropdown2(
-                                      idx,
-                                      subContent.contents.length
-                                    )
-                                  }
-                                >
-                                  {subContent.topic}
-                                  {"   "}
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="1em"
-                                    viewBox="0 0 320 512"
-                                  >
-                                    <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                                  </svg>
-                                </HashLink>
-                                {isActive2 && (
-                                  <ul
-                                    class="dropdown-container"
-                                    style={{
-                                      display: isActive2[idx] ? "flex" : "none",
-                                      flexDirection: "column",
-                                      marginLeft: "30px",
-                                    }}
-                                  >
-                                    {subContent.contents.map(
-                                      (nestedContent, idx) => {
-                                        return (
-                                          <li
-                                            key={idx}
-                                            className="db-nested-content"
-                                            style={{ fontWeight: "400" }}
-                                          >
-                                            <Link
-                                              to={`${item.id}/${index + 1}/${
-                                                subContent.id
-                                              }/${nestedContent.id}`}
-                                            >
-                                              {nestedContent.topic}
-                                            </Link>
-                                          </li>
-                                        );
-                                      }
-                                    )}
-                                  </ul>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </ul>
+                                    </li>
+                                  ) : (
+                                    <div className="db-item mod-1">
+                                      <HashLink
+                                        to="#"
+                                        onClick={() =>
+                                          toggleDropdown2(
+                                            idx,
+                                            subContent.contents.length
+                                          )
+                                        }
+                                      >
+                                        {subContent.topic}
+                                        {"   "}
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          height="1em"
+                                          viewBox="0 0 320 512"
+                                        >
+                                          <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                        </svg>
+                                      </HashLink>
+                                      {isActive2 && (
+                                        <ul
+                                          class="dropdown-container"
+                                          style={{
+                                            display: isActive2[idx]
+                                              ? "flex"
+                                              : "none",
+                                            flexDirection: "column",
+                                            marginLeft: "30px",
+                                          }}
+                                        >
+                                          {subContent.contents.map(
+                                            (nestedContent, idx) => {
+                                              return (
+                                                <li
+                                                  key={idx}
+                                                  className="db-nested-content"
+                                                  style={{ fontWeight: "400" }}
+                                                >
+                                                  <Link
+                                                    to={`${item.id}/${
+                                                      index + 1
+                                                    }/${subContent.id}/${
+                                                      nestedContent.id
+                                                    }`}
+                                                  >
+                                                    {nestedContent.topic}
+                                                  </Link>
+                                                </li>
+                                              );
+                                            }
+                                          )}
+                                        </ul>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </ul>
+                            )}
+                          </div>
+                        </>
+                      ) : (
+                        <div className="db-item">
+                          <div className="db-link">
+                            <Link to={`${i + 1}/${subTopic.id}`}>
+                              {subTopic.name}
+                            </Link>
+                          </div>
+                        </div>
                       )}
-                    </div>
+                    </>
                   );
                 })}
               </div>
