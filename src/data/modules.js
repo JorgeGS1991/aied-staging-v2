@@ -74,6 +74,32 @@ const data = [
                 <p>To get started on improving your digital literacy skills, check out the lesson on Using a PC. It will take you through the basics of working on a desktop, working with windows, and handling files and folders.</p>
                 `,
           },
+          {
+            id: 2,
+            topic: "Resources",
+            content: `
+              <ul class="resources">
+              <li>
+              <a href="https://assessment.digitalliteracyassessment.org/basic-computer-skills/practice/getting-started-with-computers?authuser=3">Northstar Digital Literacy</a>
+              </li>    
+              <li>
+              <a href="https://www.digitallearn.org/courses/getting-started-on-a-computer-new?authuser=3">Getting Started on a Computer</a>
+              </li>
+              <li>
+              <a href="https://www.digitallearn.org/courses/using-a-pc-windows-10-new?authuser=3">Using a PC (Windows 10)</a>
+              </li>
+              <li>
+              <a href="http://www.pbclibrary.org/mousing/mousercise.htm?authuser=3">Palm Beach County Library System Mousing Tutorial</a>
+              </li>
+              </ul>
+              <style>
+              .resources li a {
+                text-decoration: underline;
+              }
+              </style>
+
+            `,
+          },
         ],
       },
       {
@@ -162,6 +188,84 @@ const data = [
 
                 `,
           },
+          {
+            id: 3,
+            topic: "Assessment",
+            content: `
+            <div class="assessment">
+            <p>
+            As part of the Looking Forward module you just completed, you learned a bit about what your digital footprint is and why it's important.
+            </p>
+            <p>
+            When you get to the Northstar website from the link below, please click on the green "Take an Assessment" button to get to the menu options you will need to select to complete the assessments. You will find the Your Digital Footprint under Using Technology in Daily Life in the right column. An illustrative tutorial of these steps is provided below for you if needed.
+            </p>
+            <p>
+            Before you get started on this assignment, however, here are a couple of helpful hints:
+            </p>
+            <ul class='list'>
+            <li>
+            You
+can take the assessments multiple times by using the private mode of
+your web browser. If you do not use the private viewing mode, you will
+only be able to take the assessments once per day.
+            </li>
+            <li>
+            These
+assessments have voice-over prompts for each question. Please be mindful
+of others around you and use headphones, turn on closed captioning, or
+mute your device. The platform tutorial will also go through how to do
+this.
+            </li>
+            <li>
+            At the beginning of each assessment, there is a
+tutorial that goes through how to complete the assessments. This
+tutorial will show you how to navigate through each screen, record your
+answers, review and change your answers, submit your answers and receive
+your final score.</li>
+            <li>Make sure you are confident in your
+answers before you submit your assessment for grading. You will not be
+able to return to the questions after the assessment is graded.</li>
+            
+            </ul>
+            <p>
+            When
+you are done with each assessment, please press Print Result and
+download your results as a PDF file. Upload each of the files to this
+assignment. You will need to achieve an 80% or better to receive your incentive pay of $_____.
+            </p>
+            <div class="resources">
+            <h3>Resources</h3>
+            <ul>
+            <li>
+            <a href="https://work-learn-bucket.s3.amazonaws.com/northstar-tutorial.pdf">Northstar Navigation Tutorial-DL.pdf</a>
+            </li>
+            <li>
+            <a href="https://www.digitalliteracyassessment.org/?authuser=0">Home | Northstar Digital Literacy</a>
+            </li>
+
+            </ul>
+            </div>
+            </div>
+
+            <style>
+            .assessment p, assessment ul.list {
+              margin-top: 20px;
+            }
+
+            .list {
+              list-style-type: disc;
+              padding: 30px;
+            }
+            .resources h3 {
+              font-weight: 700;
+              margin-top: 20px;
+            }
+            .resources a {
+              text-decoration: underline;
+            }
+            </style>
+            `,
+          },
           //           {
           //             id: 3,
           //             topic: "Looking Forward: Your Digital Footprint Assessment",
@@ -209,6 +313,7 @@ const data = [
         id: 6,
         name: "Writing Professional E-mail",
         author: "Hollie Rosser",
+        type: "email",
         creationDate: new Date(2023, 4, 28),
         contents: [
           {
@@ -217,16 +322,20 @@ const data = [
             points: 150,
             content: `
                    <span>After you have gone through the Email Basics tutorials in Looking Forward, please take this quiz to test your understanding of the topic. <br><br><br>You'll need to answer 8 of the questions correctly to receive your incentive of $_____.</span>
-                    
-                    <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKEOyl3mU00sibC3nLdWeyDJ1SHvhdQ-27jl9WtnEEkIwQBQ/viewform?authuser=1">Looking Forward: Email Basics Quiz Google Forms</a></div>
                 `,
+          },
+          {
+            id: 2,
+            topic: "Assessment",
+            type: "quiz",
           },
         ],
       },
       {
-        id: 8,
+        id: 7,
         name: "Looking Forward: Beyond Email Quiz",
         author: "Hollie Rosser",
+        type: "beyond",
         creationDate: new Date(2023, 4, 28),
         contents: [
           {
@@ -235,9 +344,12 @@ const data = [
             points: 150,
             content: `
                     <span>After you have gone through the Beyond Email tutorials in the Looking Forward module, please take this quiz to test your understanding of the topic. <br><br><br>You'll need to answer 8 of the questions correctly to receive your incentive of $________.</span>
-                    
-                    <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSegIocNJJi0psb5ljd_1yaWq8NUPbbuWxJrRJs0X1o3fmCK1Q/viewform?authuser=1">Looking Forward: Beyond Email Quiz Google Forms</a></div>
                 `,
+          },
+          {
+            id: 2,
+            topic: "Assessment",
+            type: "quiz",
           },
         ],
       },

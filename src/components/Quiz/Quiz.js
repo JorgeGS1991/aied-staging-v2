@@ -89,6 +89,10 @@ const Quiz = ({
       setQuizType("algorithmScore");
     } else if (type === "intro") {
       setQuizType("introScore");
+    } else if (type === "email") {
+      setQuizType("emailScore");
+    } else if (type === "beyond") {
+      setQuizType("beyondScore");
     }
     updateQuizScore(score, quizType);
   }, [type, score, quizType, updateQuizScore]);

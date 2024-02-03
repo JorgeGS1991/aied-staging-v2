@@ -22,6 +22,8 @@ const initialState = {
     abstractionScore: 0,
     algorithmScore: 0,
     introScore: 0,
+    emailScore: 0,
+    beyondScore: 0,
   },
 };
 

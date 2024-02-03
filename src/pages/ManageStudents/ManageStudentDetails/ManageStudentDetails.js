@@ -99,6 +99,14 @@ function ManageStudentDetails({ user, getUser }) {
                       currentUser.introScore,
                       "Introduction to Computational Thinking"
                     )}
+                    {renderScoreBar(
+                      currentUser.emailScore,
+                      "Writing Professional Email Assessment"
+                    )}
+                    {renderScoreBar(
+                      currentUser.beyond,
+                      "Beyond Email Assessment"
+                    )}
                   </Grid>
                 </>
               )}
