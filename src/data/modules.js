@@ -5,6 +5,48 @@ const data = [
     subTopics: [
       {
         id: 1,
+        name: "Link to Slack Channel",
+        content: `
+            <p>This is the link to the Slack Channel:</p>
+            <a style="margin-top: 20px; text-decoration: underline;" target="_blank" href="https://join.slack.com/t/worklearn-workspace/shared_invite/zt-2bztctjoz-eWdMmylcL91X6e9FNJKuKg">Slack Channel</a>
+            `,
+      },
+      {
+        id: 2,
+        name: "Payment",
+        content: `
+            <div class="payment">
+               <p>For participating in the WorkLearn class, you can earn up to $1000. WorkLearn follows the Siena Francis House bi-weekly payment schedule. Successfully achieved tasks will be paid out in your bi-weekly checks.</p>
+               <p>Here is an overview of the units to understand how they align to the payments.</p>
+               <ul>
+               <li>Introductory Interview: $15</li>
+               <li>Getting Started: $5</li>
+               <li>Computational Thinking: $100</li>
+               <li>Professional Skills: $25</li>
+               <li>Python: $170</li>
+               <li>COBOL: $170</li>
+               <li>WebDev Challenges: $250</li>
+               <li>Mainframe Challenges: $250</li>
+               <li>Exit Interview: $15</li>
+               </ul>
+               <p>There are two types of payments: Complete/Incomplete and Content Mastery.</p>
+               <p>We will use Complete/Incomplete-type payments when we ask you to complete a task that is not linked to learning new materials. For example, if there are surveys or interviews, we need you to complete the task but we do not need you to prepare any new materials first.</p>
+               <p>We will use Content Mastery-type payments when we ask you to complete a task that is linked to your having studied the materials or using knowledge that you have gained in previous units. For Content Mastery-type payments, we require that you achieve at least 80% correctness on the tasks.</p>
+               <p>Content Mastery payments will have different tasks associated with them. Sometimes, you will be asked to take a quiz or write short answers to show content mastery; sometimes you will need to write code to create small programs or correct bugs. Learning materials and Challenges are Content Mastery-type payments.</p>
+            </div>
+            <style>
+            .payment p, .payment ul {
+              margin-top: 20px;
+            }
+            .payment ul {
+              list-style-type: disc;
+              margin-left: 20px;
+            }
+            </style> 
+            `,
+      },
+      {
+        id: 3,
         name: "Tutorial on How to Navigate in Work-Learn Application",
         content: `
             <div style="display: flex; justify-content: center">
@@ -16,7 +58,25 @@ const data = [
             `,
       },
       {
-        id: 2,
+        id: 4,
+        name: "Troubleshooting",
+        content: `
+            <div class="troubleshooting">
+            <p>This is where we will post about known errors (called bugs) on the page.</p>
+            <hr/>
+            <h3 style="font-weight: 700">Date: 4 Feb 2024</h3>
+            <p>No known bugs</p>
+            </div>
+            <style>
+            .troubleshooting p, .troubleshooting h3 {
+              margin-top: 20px;
+            }
+            </style>
+            `,
+      },
+
+      {
+        id: 5,
         name: "Getting to Know You",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
@@ -41,12 +101,13 @@ const data = [
         `,
       },
       {
-        id: 3,
+        id: 6,
         name: "Qualtrics Survey",
         author: "Hollie Rosser",
         creationDate: new Date(2023, 4, 28),
         points: 100,
         content: `
+              <p style="margin-top:20px;">Completing this survey is worth $5.</p>
               <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6l2Xy1csb3HF422' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
               `,
       },
