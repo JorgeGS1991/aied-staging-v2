@@ -22,9 +22,22 @@ const data = [
         creationDate: new Date(2023, 4, 28),
         points: 100,
         content: `
-        <div>
-        <p>Welcome from all of us at Work-Learn!</p><p>We are interested in helping people like you gain new skills and expanding the opportunities you have entering (or re-entering) careers in computer and information technology. To accomplish this goal, we need to learn about who you are and what your experiences are while you are in the program.</p><p>This will happen in a couple of ways:</p><p>Complete the Qualtrics Survey linked below to provide us with some background information about you and your past education experiences. The answers to this survey are confidential. Your name will not be used so no one will know who you are. All information about you will be kept in locked offices of the research team and information kept on computers will be password protected.</p><p>Schedule a time to meet with a member of our team either in person or online. This will be the first of three meetings you will have with a Work-Learn team member as you move through the program. We will be using the same email address you logged into the Work-Learn Classroom to contact you for scheduling.</p><p>We will be on campus at SFH and will make every effort to schedule a time to meet with you in person while we're here. If this isn't possible, one of our team members will be contacting you by email to schedule a time to meet virtually using an online communications platform (zoom).</p><p>Finally, we know that your time is valuable, and we truly appreciate all of your efforts as you work your way through the program. For this reason, you will be given $ for each of the three meetings you have with us.</p><p>If you have any questions before you get started, please direct those questions by email to <a href='mailto:worklearnproject@gmail.com'>worklearnproject@gmail.com</a>.</p>
+        <div class="gtk">
+        <p>Welcome from all of us at Work-Learn!</p>
+        <p>We are interested in helping people like you gain new skills and expanding the opportunities you have entering (or re-entering) careers in computer and information technology. To accomplish this goal, we need to learn about who you are and what your experiences are while you are in the program.</p>
+        <p>This will happen in a couple of ways:</p>
+        <p>We will be on campus at SFH weekly and will make every effort to schedule a time to meet with you in person while we're here. If this isn't possible, one of our team members will be available on the Slack Channel that is set up for you.</p>
+        <p>Complete the Qualtrics Survey linked on the next page to provide us with some background information about you and your past education experiences. The answers to this survey are confidential. Your name will not be used so no one will know who you are. All information about you will be kept in locked offices of the research team and information kept on computers will be password protected.</p>
+        <p>We will also interview you several times. You have already completed the first of the interviews. We will be using the same email address you logged into the Work-Learn Classroom to contact you for scheduling.</p>
+        <p>Finally, we know that your time is valuable, and we truly appreciate all of your efforts as you work your way through the program. For this reason, you will be given $15 for each of the interviews you have with us.</p>
+        <p>If you have any questions before you get started, please direct those questions by email to <a style="text-decoration: underline;" target="_blank" href='mailto:worklearnproject@gmail.com'>worklearnproject@gmail.com</a>.
+        </p>
         </div>
+        <style>
+        .gtk p {
+          margin-top: 20px;
+        }
+        </style>
         `,
       },
       {
@@ -34,7 +47,7 @@ const data = [
         creationDate: new Date(2023, 4, 28),
         points: 100,
         content: `
-              <a style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_8iGZnehHEJ64MCO?authuser=1' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+              <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6l2Xy1csb3HF422' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
               `,
       },
       //       {
@@ -481,7 +494,12 @@ const data = [
     
 <div class="video-intro-section">
   <h2 class="video-intro">Video Introduction</h2>
-  <p><a href="https://drive.google.com/file/d/1Gg_FD8TpbU4Q9N1xjD0dGgv9ZiGF-u40/view">View Video Introduction</a></p>
+  <div style="display: flex; justify-content: center">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/DecompositionIntroduction.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
   </div>
 </div>
 <div style="margin-top: 30px;">
@@ -582,7 +600,10 @@ const data = [
 </div>
 <div class="decomp-example">
   <h3>EXAMPLE:</h3>
-  <p>This video is a great example of breaking a program into smaller parts. <a href="https://youtu.be/EADcmeBgW8s">(Watch the video)</a></p>
+  <p>This video is a great example of breaking a program into smaller parts. </p>
+  <div class="youtube">
+  <iframe width="966" height="531" src="https://www.youtube.com/embed/EADcmeBgW8s" title="Procedural Decomposition on Existing Code Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
 
 
 
@@ -594,7 +615,7 @@ const data = [
 
 
 
-  <p>For an example of a person decomposing how they built their website, read this: <a href="https://sparkbox.com/foundry/web_design_process_decomposition_exercise">Web Design Process Decomposition Exercise</a></p>
+  <p>For an example of a person decomposing how they built their website, read this: <a target="_blank" href="https://sparkbox.com/foundry/web_design_process_decomposition_exercise">Web Design Process Decomposition Exercise</a></p>
   <div>
 </body>
 </html>
@@ -662,17 +683,19 @@ const data = [
 .decomp-example p {
   padding: 10px 0;
 }
+
+.youtube iframe {
+    border-radius: 8px;
+    width: 600px;
+    height: 350px;
+    margin: 20px auto;
+}
 </style>
             `,
           },
+
           {
             id: 3,
-            topic: "Quiz",
-            type: "quiz",
-            points: 100,
-          },
-          {
-            id: 4,
             topic: "Decomposition in the Real World",
             points: 100,
             content: `
@@ -692,12 +715,12 @@ const data = [
 <div class="decomp-exercise"> 
   <h3>Exercise One:</h3>
   <p>Everyday, we are faced with preparing for the day, whether it’s brushing our teeth, cleaning our space, or even navigating the tasks we have to accomplish. Choose one task you do every day and break that task down into its smallest steps.</p>
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSerrjEZ0oU7tcATLgZWyLq-oDC8yamMtAu5Dn6oENVduVsRVQ/viewform?authuser=0">Exercise One Link</a></p>
+  <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSerrjEZ0oU7tcATLgZWyLq-oDC8yamMtAu5Dn6oENVduVsRVQ/viewform?authuser=0">Exercise One Link</a></p>
   </div>
 <div class="decomp-exercise">
   <h3>Exercise Two:</h3>
   <p>You are traveling to Chicago and have to figure out how to navigate the train system to get from Midway on the Orange Line to Logan Square on the Blue Line. Look at the map of the city transit and determine what you would do to navigate this system. What are the steps you take to get to your destination?</p>
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdExrair1SM7NHSpsT8jQthLOAu5dqguiI_5pIQZLNVOk88Qg/viewform?authuser=0">Exercise Two Link</a></p>
+  <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdExrair1SM7NHSpsT8jQthLOAu5dqguiI_5pIQZLNVOk88Qg/viewform?authuser=0">Exercise Two Link</a></p>
   <img src="/images/contents/railsystemmap.png" />
 </div>
 </div>
@@ -752,7 +775,7 @@ const data = [
             `,
           },
           {
-            id: 5,
+            id: 4,
             topic: "Decomposition in Computing",
             points: 100,
             content: `
@@ -885,6 +908,12 @@ img {
 
             `,
           },
+          {
+            id: 5,
+            topic: "Quiz",
+            type: "quiz",
+            points: 100,
+          },
         ],
       },
       {
@@ -945,7 +974,7 @@ img {
 <div class="pattern">
 <div class="warm-up">
   <h2 class="title">Warm Up</h2>
-  <p><a href="https://forms.gle/G1VtsGN7a3HYByuSA">Warm Up Form</a></p>
+  <p><a target="_blank" href="https://forms.gle/G1VtsGN7a3HYByuSA">Warm Up Form</a></p>
   </div>
 <div class="decomp-defn">
   <ul>
@@ -1169,14 +1198,9 @@ img {
 
 `,
           },
+
           {
             id: 4,
-            topic: "Quiz for Points",
-            type: "quiz",
-            points: 100,
-          },
-          {
-            id: 5,
             topic: "Applying Idea in the Real World",
             points: 100,
             content: `
@@ -1196,7 +1220,7 @@ img {
 <div class="decomp-exercise"> 
   <h3>Exercise One:</h3>
   <p>Everyday, we are faced with recognizing patterns, for example, whether an animal is a cat or a dog, whether they are friendly or unfriendly, whether or not we should approach and pet them. What are the patterns we notice that help us make these choices? Take a few moments to look at the pictures below. What patterns do you see across the images? Describe the patterns that help you determine which you want to approach and which to stay away from? If you had to draw a cat, what are the key components you would use in your drawing?  (All images open source from pixabay)</p>
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSd9lorcPzE-NxqaIH7G7Q_phyixI_RKg1b7h2P2wo00Yb5uTQ/viewform">Exercise One</a></p>
+  <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd9lorcPzE-NxqaIH7G7Q_phyixI_RKg1b7h2P2wo00Yb5uTQ/viewform">Exercise One</a></p>
   <div class="img-grid">
   <img src="/images/contents/animal1.png" />
   <img src="/images/contents/animal2.png" />
@@ -1207,9 +1231,9 @@ img {
 <div class="decomp-exercise">
   <h3>Exercise Two:</h3>
   <p>You are working for a company that needs to interpret a large amount of public data. Because you’re an expert in pattern recognition, they ask you to take a look first and help them determine what patterns you see to help them start making sense of the data provided. Take a look at the 
-  <a href="https://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&ctype=b&strail=false&nselm=s&met_x=sp_dyn_le00_in&scale_x=lin&ind_x=false&met_y=sp_dyn_tfrt_in&scale_y=lin&ind_y=false&met_s=sp_pop_totl&scale_s=lin&ind_s=false&dimp_c=country:region&ifdim=country&iconSize=0.5&uniSize=0.035#!ctype=b&strail=false&bcs=d&nselm=s&met_x=sp_dyn_le00_in&scale_x=lin&ind_x=false&met_y=sp_dyn_tfrt_in&scale_y=lin&ind_y=false&met_s=sp_pop_totl&scale_s=lin&ind_s=false&dimp_c=country:region&idim=country:AFG&ifdim=country&hl=en_US&dl=en_US&ind=false">Google public data</a> site on World Development Indicators and then answer the following questions.</p>
-  <p><a href="https://youtu.be/AM6w_tUlIn4">Tutorial on Google Public Data</a></p>
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdPxbN0mSLRbMsbRKMrKiFXXyhRyzKRv3TuziFLQ2BJWiM-jg/viewform">Exercise Two Link</a></p>
+  <a target="_blank" href="https://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&ctype=b&strail=false&nselm=s&met_x=sp_dyn_le00_in&scale_x=lin&ind_x=false&met_y=sp_dyn_tfrt_in&scale_y=lin&ind_y=false&met_s=sp_pop_totl&scale_s=lin&ind_s=false&dimp_c=country:region&ifdim=country&iconSize=0.5&uniSize=0.035#!ctype=b&strail=false&bcs=d&nselm=s&met_x=sp_dyn_le00_in&scale_x=lin&ind_x=false&met_y=sp_dyn_tfrt_in&scale_y=lin&ind_y=false&met_s=sp_pop_totl&scale_s=lin&ind_s=false&dimp_c=country:region&idim=country:AFG&ifdim=country&hl=en_US&dl=en_US&ind=false">Google public data</a> site on World Development Indicators and then answer the following questions.</p>
+  <p><a target="_blank" href="https://youtu.be/AM6w_tUlIn4">Tutorial on Google Public Data</a></p>
+  <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdPxbN0mSLRbMsbRKMrKiFXXyhRyzKRv3TuziFLQ2BJWiM-jg/viewform">Exercise Two Link</a></p>
   <ul>
   <li>What kinds of information do you think this data can tell you? </li>
   <li>What patterns do you notice? What questions do these patterns raise? </li>
@@ -1220,7 +1244,7 @@ img {
 
 
   <div class="google-trends">
-      <p><strong>Google Trends: </strong><a href="https://trends.google.com/trends/" >https://trends.google.com/trends/</a></p>
+      <p><strong>Google Trends: </strong><a target="_blank" href="https://trends.google.com/trends/" >https://trends.google.com/trends/</a></p>
   </div>
 
 </div>
@@ -1289,7 +1313,7 @@ img {
             `,
           },
           {
-            id: 6,
+            id: 5,
             topic: "Pattern Recognition in Computer Programming",
             points: 100,
             content: `
@@ -1336,7 +1360,7 @@ img {
 <div class="decomp-you-try">
   <h3>You Try:</h3>
   <p>Now that you know more about pattern recognition, I want you to try and make your own artwork with patterns in it.</p>
-  <p>Go to this website: <a href="https://bricklayer.org/apps/grid_lite/grid.html">https://bricklayer.org/apps/grid_lite/grid.html</a></p>
+  <p>Go to this website: <a target="_blank" style="text-decoration: underline;" href="https://bricklayer.org/apps/grid_lite/grid.html">https://bricklayer.org/apps/grid_lite/grid.html</a></p>
   <p>Turn in a screenshot of your pattern.</p>
 </div>
 <div class="decomp-example">
@@ -1437,6 +1461,12 @@ img {
 
             `,
           },
+          {
+            id: 6,
+            topic: "Quiz",
+            type: "quiz",
+            points: 100,
+          },
         ],
       },
       {
@@ -1515,36 +1545,6 @@ img {
   <img src="/images/contents/vangogh1.png" />
   <img src="/images/contents/vangogh2.png" />
   </div>
-<div class="decomp-defn">
-  <h2>What is Decomposition?</h2>
-  <p>Decomposition is the process of breaking down a problem into smaller parts or components. These smaller parts can then be examined and solved. They are generally simpler to work with than the larger, more complex problem (like writing a computer program).</p>
-</div>
-<div class="decomp-why"> 
-  <h2>Why is Decomposition Important?</h2>
-  <p>If a problem is not decomposed, it is much harder to solve. Dealing with many different stages all at once is much more difficult than breaking a problem down into a number of smaller problems and solving each one, one at a time. Breaking the problem down into smaller parts means that each smaller problem can be examined in greater detail.</p>
-  <p>Similarly, trying to understand how a complex system works is easier using decomposition. For example, understanding how a bicycle works is more straightforward if the whole bike is separated into smaller parts (like brakes, gears, wheels, etc.), and each part can be examined to see how it works in more detail.</p>
-
-
-
-  <p>When you write a program, you might break it into parts.</p>
-</div>
-<div class="decomp-example">
-  <h3>EXAMPLE:</h3>
-  <p>This video is a great example of breaking a program into smaller parts. <a href="https://youtu.be/EADcmeBgW8s">(Watch the video)</a></p>
-
-
-
-  <p>This video shows how he started off with a code with no parts and everything was just in one big block of code. He then separated parts of the house by breaking it into smaller sections or pieces (decomposition). After doing that, his code looked a lot more organized and it would be easier for someone else to understand by looking at it.</p>
-
-
-
-  <p>Lots of computational tools are huge and very complex. Many programmers work together to create them. The big project gets decomposed into smaller parts, and each programmer gets assigned one part at a time. Then the parts get put together. That’s how the web browser you are using got built!</p>
-
-
-
-  <p>For an example of a person decomposing how they built their website, read this: <a href="https://sparkbox.com/foundry/web_design_process_decomposition_exercise">Web Design Process Decomposition Exercise</a></p>
-  </div>
-
 </div>
 
 
@@ -1781,13 +1781,13 @@ img {
               <div class="decomp-example"> 
               <h3>Exercise Two:</h3>
               <p> In the space below, describe your ideal car. Next, explain how you would describe this car to a mechanic. What would you say about this car to a friend who loves to take long road trips? How would you describe your car to a child? (Each of these descriptions is abstraction. You’re simplifying your description, leaving out some information, because the information that’s important changes depending on the purpose for your description.)</p>
-              <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfn8YdPcn8FAEi7xNuPfuH5ksjtsmWpWHldlajoFg8xueD6qA/viewform?authuser=0">Google Forms</a></p>
+              <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfn8YdPcn8FAEi7xNuPfuH5ksjtsmWpWHldlajoFg8xueD6qA/viewform?authuser=0">Google Forms</a></p>
               </div>
               
               <div class="decomp-example"> 
               <h3>Exercise Three:</h3>
               <p>In the video you watched about abstraction, the narrator discusses the power of maps because every map is built with a purpose in mind. Think of your daily life. What kinds of maps are useful to you? Design a map that provides an abstraction of your general week day. First, choose the purpose of the map; what information would someone need to complete the kind of day you generally have during the week? Next, decide what data you need to include. Finally, sketch a map either on paper or with a digital tool and upload a screenshot or picture of it below. </p>
-              <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeQDoNnpyQEAlb4cRpZV04z0bbfdQtt8U0WUZXSNaq5Y06OvQ/viewform?authuser=0">Google Forms</a></p>
+              <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeQDoNnpyQEAlb4cRpZV04z0bbfdQtt8U0WUZXSNaq5Y06OvQ/viewform?authuser=0">Google Forms</a></p>
               <ul>
                 <li>What was the purpose of your map?</li>
                 <li>What data did you choose to include? What do you leave out?</li>
@@ -2074,16 +2074,16 @@ ul {
 <div class="algorithm">
 <div class="explore-alg">
   <h2 class="title">Exploring Algorithms</h2>
-  <p>In order to explore how algorithms can give a computer step-by-step instructions, let’s start by playing around with LightBot (<a href="https://www.lightbot.lu/">https://www.lightbot.lu/</a>). LightBot is a game that allows you to sequence instructions with blocks of code in order to move a character around the screen. Begin by reading the instructions in the help section, then try playing the first five levels of LightBot (level 0 - level 4). Upload a screenshot of your medals into the Google Form and answer the discussion questions before moving on to the next set of activities. (See below for step-by-step instructions to get started.)
+  <p>In order to explore how algorithms can give a computer step-by-step instructions, let’s start by playing around with LightBot (<a target="_blank" style="text-decoration: underline;" href="https://www.lightbot.lu/">https://www.lightbot.lu/</a>). LightBot is a game that allows you to sequence instructions with blocks of code in order to move a character around the screen. Begin by reading the instructions in the help section, then try playing the first five levels of LightBot (level 0 - level 4). Upload a screenshot of your medals into the Google Form and answer the discussion questions before moving on to the next set of activities. (See below for step-by-step instructions to get started.)
 </p>
 </div>
 <div class="steps"> 
 <ul>
-<li>1. Go to <a href="https://www.lightbot.lu">https://www.lightbot.lu</a><img src="/images/contents/alg1.png" /></li>
+<li>1. Go to <a style="text-decoration: underline;" href="https://www.lightbot.lu">https://www.lightbot.lu</a><img src="/images/contents/alg1.png" /></li>
 <li>2. Click on the “Help” button in the bottom right hand corner to get instructions on how to play the game. <img src="/images/contents/alg2.png" /> </li>
 <li>3. Click on each of the titles and read the instructions to understand how each of the coding buttons functions within the game. <img src="/images/contents/alg3.png" /> </li>
 <li>4. When you feel you understand the instructions, click back to the main menu and then click start.</li>
-<li>5. Play through level 4, then take a screenshot of your progress and upload it to this <a href="https://forms.gle/zQHMkafs1oCHY5gz5">Google Form</a>. (See a sample screenshot below.) Reflect on the questions in the form before moving onto the next activity. You’ll come back to LightBot in a bit to see if you can continue making progress and improve your score. ***Don’t worry if you’re not yet successful in completing the game, remember, this is just a place to play around with ideas. <img src="/images/contents/alg4.png" />
+<li>5. Play through level 4, then take a screenshot of your progress and upload it to this <a target="_blank" style="text-decoration: underline;" href="https://forms.gle/zQHMkafs1oCHY5gz5">Google Form</a>. (See a sample screenshot below.) Reflect on the questions in the form before moving onto the next activity. You’ll come back to LightBot in a bit to see if you can continue making progress and improve your score. ***Don’t worry if you’re not yet successful in completing the game, remember, this is just a place to play around with ideas. <img src="/images/contents/alg4.png" />
 </li>
 </ul>
 </div>
@@ -2280,7 +2280,7 @@ ul {
   </div>
   <div class="alg-example">
     <h3>Exercise Three:</h3>
-    <p><a href="https://thewordsearch.com/hangman/">https://thewordsearch.com/hangman/</a></p>
+    <p><a target="_blank" href="https://thewordsearch.com/hangman/">https://thewordsearch.com/hangman/</a></p>
     <p>Click on this link and play a game of hangman.</p>
     <p>Hangman is a code that can easily be made once you understand algorithms. Although you have not learned any coding yet, you can still think of how this algorithm might look like in the world of a flow chart. Provided below are a list of all instructions in a randomized order and the flowchart with instructions.</p>
     <p>Match the instructions to the correct place on the flow chart. (Match the number to the letter)</p>
@@ -2298,8 +2298,6 @@ ul {
     <li>9) Is letter in word? </li>
     </ul>
     </div>
-    <p><strong>Correct Answers: A2, B7, C1, D4, E9, F6, G5, H3, I8</strong></p>
-
 
 
   </div>
@@ -2570,7 +2568,7 @@ img {
           },
           {
             id: 6,
-            topic: "Quiz for Points",
+            topic: "Quiz",
             type: "quiz",
             points: 100,
           },
@@ -2590,6 +2588,22 @@ img {
             points: 100,
           },
         ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    topicName: "Unit 2: Professional Skills",
+    subTopics: [
+      {
+        id: 1,
+        name: "Professional Skills",
+        content: `
+        <div class="prof-skills">
+        <p>Please go through this professional skills units provided by Dr. Magie Hall from this links: <a target="_blank" style="text-decoration: underline;" href="https://classroom.google.com/u/3/c/NjQ4MTU1MTIwMTYz">Professional Skills Units</a></p>
+        <h3 style="font-weight: 600; margin-top: 20px;">Class Code: 3gtbaty</h3>
+        </div>
+        `,
       },
     ],
   },

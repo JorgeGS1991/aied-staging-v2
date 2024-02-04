@@ -9,6 +9,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import {
+  Alert,
   Box,
   Button,
   Checkbox,
@@ -257,6 +258,10 @@ const Quiz = ({
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.1)", // Box shadow
       }}
     >
+      <Alert severity="warning">
+        Please refresh the page if the quiz does not come up.
+      </Alert>
+
       {questions.length > 0 ? (
         questions.map((question, index) => (
           <Box
