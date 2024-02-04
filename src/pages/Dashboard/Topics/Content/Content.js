@@ -29,7 +29,7 @@ function Content() {
           <div className="content-header">
             <h2 className="content-head">{subContent.name}</h2>
           </div>
-          <div className="content-body">
+          {/* <div className="content-body">
             {subContent.contents ? (
               <ol>
                 {subContent.contents.map((content) => (
@@ -39,7 +39,7 @@ function Content() {
                 ))}
               </ol>
             ) : null}
-          </div>
+          </div> */}
 
           <Routes>
             <Route path=":contentId" element={<SubContent />} />
