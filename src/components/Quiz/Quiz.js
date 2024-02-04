@@ -32,6 +32,7 @@ import Notification from "../SnackBar/SnackBar";
 
 import "./Quiz.css";
 import axios from "axios";
+import { useParams } from "react-router";
 
 const Quiz = ({
   type,
@@ -63,6 +64,8 @@ const Quiz = ({
   const [submitted, setSubmitted] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(true);
 
+  const { id, topicId, contentId } = useParams();
+
   useEffect(() => {
     const updateQuizScoreState = async () => {
       await axios.put(
@@ -74,8 +77,10 @@ const Quiz = ({
         { withCredentials: true }
       );
     };
-    updateQuizScoreState();
-  }, [quizScore, type]);
+    if (submitted) {
+      updateQuizScoreState();
+    }
+  }, [submitted, quizScore, type]);
 
   useEffect(() => {
     if (type === "decomposition") {
@@ -116,7 +121,7 @@ const Quiz = ({
     };
 
     fetchQuestions();
-  }, []);
+  }, [id, topicId, contentId, type]);
 
   useEffect(() => {
     const currentUserResponsesMC = correctAnswers.map((response) => {
