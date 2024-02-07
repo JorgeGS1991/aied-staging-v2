@@ -64,6 +64,9 @@ const data = [
             <div class="troubleshooting">
             <p>This is where we will post about known errors (called bugs) on the page.</p>
             <hr/>
+            <h3 style="font-weight: 700">Date: 6 Feb 2024</h3>
+            <p>Problem/bug: Some accounts are unable to login, and the site is down for some computers/laptops.</p>
+            <hr/>
             <h3 style="font-weight: 700">Date: 4 Feb 2024</h3>
             <p>No known bugs</p>
             </div>
