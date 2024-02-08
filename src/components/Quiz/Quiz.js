@@ -109,8 +109,9 @@ const Quiz = ({
     // Replace this with your actual API call
     const fetchQuestions = async () => {
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/api/questions`
-        // "http://localhost:3001/api/questions"
+        `${process.env.REACT_APP_BACKEND_URL}/api/questions`,
+        // "http://localhost:3001/api/questions",
+        { credentials: "include" }
       );
       const data = await response.json();
 
