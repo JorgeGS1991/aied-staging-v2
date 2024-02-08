@@ -68,8 +68,9 @@ const Quiz = ({
 
   useEffect(() => {
     const updateQuizScoreState = async () => {
-      await axios.put(
+      await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/api/users/quiz`,
+        // `http://localhost:3001/api/users/quiz`,
         {
           quizScore,
           type,
@@ -98,7 +99,9 @@ const Quiz = ({
     } else if (type === "beyond") {
       setQuizType("beyondScore");
     }
-    updateQuizScore(score, quizType);
+    if (score > 0) {
+      updateQuizScore(score, quizType);
+    }
   }, [type, score, quizType, updateQuizScore]);
 
   useEffect(() => {
