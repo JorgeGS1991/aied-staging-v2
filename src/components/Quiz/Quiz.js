@@ -68,7 +68,7 @@ const Quiz = ({
 
   useEffect(() => {
     const updateQuizScoreState = async () => {
-      await axios.post(
+      await axios.put(
         `${process.env.REACT_APP_BACKEND_URL}/api/users/quiz`,
         // `http://localhost:3001/api/users/quiz`,
         {
