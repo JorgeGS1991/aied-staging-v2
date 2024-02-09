@@ -85,6 +85,8 @@ const Quiz = ({
     }
   }, [quizScore, type]);
 
+  console.log("submitted", submitted);
+
   useEffect(() => {
     if (type === "decomposition") {
       setQuizType("decompositionScore");
@@ -124,6 +126,7 @@ const Quiz = ({
 
       setNewQuestions(filteredData);
       setSelectedOptions(Array(filteredData.length).fill(null));
+      setSubmitted(false);
     };
 
     fetchQuestions();
