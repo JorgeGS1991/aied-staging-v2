@@ -116,7 +116,7 @@ const data = [
         points: 100,
         content: `
               <p style="margin-top:20px;">Completing this survey is worth $5.</p>
-              <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6l2Xy1csb3HF422' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+              <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
               `,
       },
       //       {
@@ -2682,6 +2682,16 @@ img {
             type: "quiz",
             points: 100,
           },
+          {
+            id: 2,
+            topic: "Qualtrics Survey",
+            author: "Hollie Rosser",
+            points: 100,
+            content: `
+              <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+              <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+              `,
+          },
         ],
       },
     ],
@@ -2699,6 +2709,17 @@ img {
         <h3 style="font-weight: 600; margin-top: 20px;">Class Code: 3gtbaty</h3>
         </div>
         `,
+      },
+      {
+        id: 2,
+        name: "Qualtrics Survey",
+        author: "Hollie Rosser",
+        creationDate: new Date(2023, 4, 28),
+        points: 100,
+        content: `
+              <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+              <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+              `,
       },
     ],
   },
