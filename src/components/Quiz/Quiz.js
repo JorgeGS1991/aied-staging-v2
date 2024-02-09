@@ -83,9 +83,7 @@ const Quiz = ({
     if (submitted) {
       updateQuizScoreState();
     }
-  }, [quizScore, type]);
-
-  console.log("submitted", submitted);
+  }, [submitted, quizScore, type]);
 
   useEffect(() => {
     if (type === "decomposition") {
@@ -126,9 +124,10 @@ const Quiz = ({
 
       setNewQuestions(filteredData);
       setSelectedOptions(Array(filteredData.length).fill(null));
-      setSubmitted(false);
     };
 
+    setSubmitted(false);
+    setScore(0);
     fetchQuestions();
   }, [id, topicId, contentId, type]);
 
