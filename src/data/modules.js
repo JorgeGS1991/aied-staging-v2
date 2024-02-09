@@ -670,9 +670,12 @@ const data = [
 <div class="decomp-example">
   <h3>EXAMPLE:</h3>
   <p>This video is a great example of breaking a program into smaller parts. </p>
-  <div class="youtube">
-  <iframe width="966" height="531" src="https://www.youtube.com/embed/EADcmeBgW8s" title="Procedural Decomposition on Existing Code Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
+  <div style="display: flex; justify-content: center">
+    <video controls width="700">
+      <source src="https://work-learn-bucket.s3.amazonaws.com/Procedural+Decomposition+on+Existing+Code+Example.mp4"
+      type="video/mp4">
+  </video>
+</div>
 
 
 
@@ -1229,14 +1232,18 @@ img {
     }
   </style>
 </head>
+
 <body>
   <div class="pattern">
   <div class="title-section">
     <h2 class="title">Building Background Knowledge</h2>
     <p class="subtitle">The process of finding similarities across different ideas and problems is called pattern recognition.</p>
-    <div class="youtube">
-    <iframe width="966" height="543" src="https://www.youtube.com/embed/SixLnIDV1yY" title="Computational Thinking: Pattern Recognition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+      <div style="display: flex; justify-content: center">
+      <video controls width="700">
+        <source src="https://work-learn-bucket.s3.amazonaws.com/Computational+Thinking_+Pattern+Recognition.mp4"
+        type="video/mp4">
+    </video>
+  </div>
     <p>Watch until around 7:30 in the video.</p>
     </div>
     <div class="pattern-defn">
@@ -1728,9 +1735,12 @@ img {
               <div class="decomp-title"> 
               <h2>Video Introduction</h2>
               </div>
-              <div class="youtube">
-              <iframe width="966" height="543" src="https://www.youtube.com/embed/jV-7Hy-PF2Q" title="Abstraction - Computational Thinking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
+                <div style="display: flex; justify-content: center">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Abstraction+-+Computational+Thinking.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
               </div>
               </body>
 <style>
@@ -1946,9 +1956,19 @@ img {
               <div class="decomp-title">
               <h2>Abstraction in Computer Programming</h2>
               <p>Start by watching this video about abstraction (stick with it if it gets confusing!):</p>
-              <div class="youtube"> 
-              <iframe width="966" height="543" src="https://www.youtube.com/embed/_y-5nZAbgt4" title="What Is Abstraction in Computer Science" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
+              <div style="display: flex; justify-content: center">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/What+Is+Abstraction+in+Computer+Science.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+
+
+            
+            
+
+
+
               </div>
               <div class="decomp-how">
               <h2>How Do We Use Abstraction in Computer Programming?</h2>
@@ -1977,9 +1997,12 @@ img {
               <p>It is getting rid of the unnecessary details of what the numbers themselves are and focusing solely on what the process is. We generalized the problem.</p>
               <h3>Video</h3>
               <p>This video does a great job about talking about abstraction, using a real word example, as well as showing abstraction in a coding language.</p>
-              <div class="youtube">
-              <iframe width="966" height="543" src="https://www.youtube.com/embed/Ui7Dca5Kbvw" title="Abstraction explained with real-life examples and code! - C++ OOP Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
+              <div style="display: flex; justify-content: center">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Abstraction+explained+with+real-life+examples+and+code!+-+C%2B%2B+OOP+Course.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
               </div>
               </div>
             
@@ -2500,9 +2523,12 @@ img {
   <img src="/images/contents/nested-diagram.png" />
   <div class="watch-video">
     <h3>Watch this video: </h3>
-    <div class="youtube">
-      <iframe width="966" height="543" src="https://www.youtube.com/embed/ixIoDYVfKA0" title="The ethical dilemma of self-driving cars - Patrick Lin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+    <div style="display: flex; justify-content: center">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/2015e-patrick-lin-cars-002-b9d824aa-d5f1-49a5-a9b2-5000k.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
     <p>As the video illustrates, learning algorithmic thinking is important because it allows you to navigate the very real complications of the ways that computers integrate into our daily lives.</p>
     <p>Remember, all of the pillars of computational thinking go into helping you find the best algorithm possible to solve a problem. As you move through the rest of this course, continue to think about the ways that technology and algorithms play a role in your everyday life. </p>
   </div>
