@@ -63,6 +63,11 @@ const data = [
         content: `
             <div class="troubleshooting">
             <p>This is where we will post about known errors (called bugs) on the page.</p>
+            <h3 style="font-weight: 700">Date: 8 Feb 2024</h3>
+            <p>Problem/bug: Quiz scores are incorrect in most of accounts.</p>
+            <p>Status: Resolved</p>
+            <p>Problem/bug: The site is down for some computers/laptops.</p>
+            <p>Status: Resolved</p>
             <hr/>
             <h3 style="font-weight: 700">Date: 6 Feb 2024</h3>
             <p>Problem/bug: Some accounts are unable to login, and the site is down for some computers/laptops.</p>
