@@ -68,20 +68,22 @@ const Quiz = ({
 
   useEffect(() => {
     const updateQuizScoreState = async () => {
-      await axios.put(
-        `${process.env.REACT_APP_BACKEND_URL}/api/users/quiz`,
-        // `http://localhost:3001/api/users/quiz`,
-        {
-          quizScore,
-          type,
-        },
-        { withCredentials: true }
-      );
+      if (score > 0) {
+        await axios.put(
+          `${process.env.REACT_APP_BACKEND_URL}/api/users/quiz`,
+          // `http://localhost:3001/api/users/quiz`,
+          {
+            quizScore,
+            type,
+          },
+          { withCredentials: true }
+        );
+      }
     };
     if (submitted) {
       updateQuizScoreState();
     }
-  }, [submitted, quizScore, type]);
+  }, [quizScore, type]);
 
   useEffect(() => {
     if (type === "decomposition") {
