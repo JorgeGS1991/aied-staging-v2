@@ -8,6 +8,7 @@ import thunk from "redux-thunk";
 import { userReducer } from "../redux/reducers/userReducer";
 import quizReducer from "./reducers/quizReducer";
 
+console.log("testing");
 const rootReducer = combineReducers({
   user: userReducer,
   quiz: quizReducer,
