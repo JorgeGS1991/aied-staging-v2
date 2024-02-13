@@ -83,10 +83,9 @@ function ManageStudentDetails({ user, getUser }) {
                   </Grid>
                   <Grid item xs={12}>
                     {renderScoreBar(
-                      currentUser.abstractionScore,
-                      "Abstraction"
+                      currentUser.introScore,
+                      "Introduction to Computational Thinking"
                     )}
-                    {renderScoreBar(currentUser.algorithmScore, "Algorithm")}
                     {renderScoreBar(
                       currentUser.decompositionScore,
                       "Decomposition"
@@ -96,17 +95,23 @@ function ManageStudentDetails({ user, getUser }) {
                       "Pattern Recognition"
                     )}
                     {renderScoreBar(
-                      currentUser.introScore,
-                      "Introduction to Computational Thinking"
+                      currentUser.abstractionScore,
+                      "Abstraction"
                     )}
+
+                    {renderScoreBar(currentUser.algorithmScore, "Algorithm")}
                     {renderScoreBar(
+                      currentUser.reviewScore,
+                      "Review Your Knowledge"
+                    )}
+                    {/* {renderScoreBar(
                       currentUser.emailScore,
                       "Writing Professional Email Assessment"
                     )}
                     {renderScoreBar(
                       currentUser.beyond,
                       "Beyond Email Assessment"
-                    )}
+                    )} */}
                   </Grid>
                 </>
               )}
