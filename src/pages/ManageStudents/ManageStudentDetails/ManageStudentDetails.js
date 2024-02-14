@@ -56,55 +56,51 @@ function ManageStudentDetails({ user, getUser }) {
 
   return (
     <div className="student-details">
-      {user ? (
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Typography variant="h4">Student Dashboard</Typography>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Typography variant="h4">Student Dashboard</Typography>
+        </Grid>
+        {loading ? (
+          <Grid
+            item
+            xs={12}
+            mt={5}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <CircularProgress />
           </Grid>
-          {loading ? (
-            <Grid
-              item
-              xs={12}
-              mt={5}
-              sx={{ display: "flex", justifyContent: "center" }}
-            >
-              <CircularProgress />
-            </Grid>
-          ) : (
-            <>
-              {currentUser && (
-                <>
-                  <Grid item xs={12}>
-                    <Typography variant="h5">
-                      {currentUser?.firstName + " " + currentUser?.lastName}
-                    </Typography>
-                    <Typography>Email: {currentUser.email}</Typography>
-                    <Typography>Role: {currentUser.role}</Typography>
-                  </Grid>
-                  <Grid item xs={12}>
-                    {renderScoreBar(
-                      currentUser.introScore,
-                      "Introduction to Computational Thinking"
-                    )}
-                    {renderScoreBar(
-                      currentUser.decompositionScore,
-                      "Decomposition"
-                    )}
-                    {renderScoreBar(
-                      currentUser.patternScore,
-                      "Pattern Recognition"
-                    )}
-                    {renderScoreBar(
-                      currentUser.abstractionScore,
-                      "Abstraction"
-                    )}
+        ) : (
+          <>
+            {currentUser && (
+              <>
+                <Grid item xs={12}>
+                  <Typography variant="h5">
+                    {currentUser?.firstName + " " + currentUser?.lastName}
+                  </Typography>
+                  <Typography>Email: {currentUser.email}</Typography>
+                  <Typography>Role: {currentUser.role}</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  {renderScoreBar(
+                    currentUser.introScore,
+                    "Introduction to Computational Thinking"
+                  )}
+                  {renderScoreBar(
+                    currentUser.decompositionScore,
+                    "Decomposition"
+                  )}
+                  {renderScoreBar(
+                    currentUser.patternScore,
+                    "Pattern Recognition"
+                  )}
+                  {renderScoreBar(currentUser.abstractionScore, "Abstraction")}
 
-                    {renderScoreBar(currentUser.algorithmScore, "Algorithm")}
-                    {renderScoreBar(
-                      currentUser.reviewScore,
-                      "Review Your Knowledge"
-                    )}
-                    {/* {renderScoreBar(
+                  {renderScoreBar(currentUser.algorithmScore, "Algorithm")}
+                  {renderScoreBar(
+                    currentUser.reviewScore,
+                    "Review Your Knowledge"
+                  )}
+                  {/* {renderScoreBar(
                       currentUser.emailScore,
                       "Writing Professional Email Assessment"
                     )}
@@ -112,15 +108,12 @@ function ManageStudentDetails({ user, getUser }) {
                       currentUser.beyond,
                       "Beyond Email Assessment"
                     )} */}
-                  </Grid>
-                </>
-              )}
-            </>
-          )}
-        </Grid>
-      ) : (
-        <Login />
-      )}
+                </Grid>
+              </>
+            )}
+          </>
+        )}
+      </Grid>
     </div>
   );
 }

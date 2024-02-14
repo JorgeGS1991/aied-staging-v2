@@ -52,59 +52,55 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.1)",
       }}
     >
-      {user ? (
-        <>
-          <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-            Manage Student Information
-          </Typography>
-          <TableContainer component={Paper}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Full Name</TableCell>
-                  <TableCell>Role</TableCell>
-                  <TableCell>Username</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {users.map((user, index) => {
-                  return user.role === "student" ? (
-                    <TableRow key={index}>
-                      <TableCell>
-                        <Typography variant="body1">
-                          <Link to={`/manage-students/${user._id}`}>
-                            {user.firstName + " " + user.lastName}
-                          </Link>
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography variant="body1">{user.role}</Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography variant="body1">{user.username}</Typography>
-                      </TableCell>
-                    </TableRow>
-                  ) : null;
-                })}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={users.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-          <Routes>
-            <Route path="/:userId" element={<ManageStudentDetails />} />
-          </Routes>
-        </>
-      ) : (
-        <Login />
-      )}
+      <>
+        <Typography variant="h4" sx={{ marginBottom: "20px" }}>
+          Manage Student Information
+        </Typography>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Full Name</TableCell>
+                <TableCell>Role</TableCell>
+                <TableCell>Username</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {users.map((user, index) => {
+                return user.role === "student" ? (
+                  <TableRow key={index}>
+                    <TableCell>
+                      <Typography variant="body1">
+                        <Link to={`/manage-students/${user._id}`}>
+                          {user.firstName + " " + user.lastName}
+                        </Link>
+                      </Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="body1">{user.role}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="body1">{user.username}</Typography>
+                    </TableCell>
+                  </TableRow>
+                ) : null;
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={users.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
+        <Routes>
+          <Route path="/:userId" element={<ManageStudentDetails />} />
+        </Routes>
+      </>
     </Box>
   );
 };
