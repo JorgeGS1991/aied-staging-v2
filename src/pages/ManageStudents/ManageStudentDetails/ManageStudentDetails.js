@@ -21,7 +21,7 @@ function ManageStudentDetails({ user, getUser }) {
   useEffect(() => {
     const fetchUser = async () => {
       await axios
-        .get(`${process.env.REACT_APP_BACKEND_URL}/api/users/${userId}`, {
+        .get(`${process.env.REACT_APP_BACKEND_DEV_URL}/api/users/${userId}`, {
           withCredentials: true,
         })
         .then((res) => setCurrentUser(res.data));
