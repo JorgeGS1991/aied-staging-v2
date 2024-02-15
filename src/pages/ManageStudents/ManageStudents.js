@@ -34,7 +34,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       await fetch(
-        `${process.env.REACT_APP_BACKEND_DEV_URL}/api/users`
+        `${process.env.REACT_APP_BACKEND_URL}/api/users`
         // "http://localhost:3001/api/users"
       )
         .then((res) => res.json())

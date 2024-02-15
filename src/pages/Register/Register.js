@@ -19,7 +19,7 @@ function Register({ role, setUserRole }) {
 
   const handleRegister = async () => {
     try {
-      await axios.post(`${process.env.REACT_APP_BACKEND_DEV_URL}/register`, {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, {
         firstName,
         lastName,
         username,

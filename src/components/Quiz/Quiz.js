@@ -70,7 +70,7 @@ const Quiz = ({
     const updateQuizScoreState = async () => {
       if (score > 0) {
         await axios.put(
-          `${process.env.REACT_APP_BACKEND_DEV_URL}/api/users/quiz`,
+          `${process.env.REACT_APP_BACKEND_URL}/api/users/quiz`,
           // `http://localhost:3001/api/users/quiz`,
           {
             quizScore,
@@ -113,7 +113,7 @@ const Quiz = ({
     // Replace this with your actual API call
     const fetchQuestions = async () => {
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND_DEV_URL}/api/questions`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/questions`,
         // "http://localhost:3001/api/questions",
         { credentials: "include" }
       );
