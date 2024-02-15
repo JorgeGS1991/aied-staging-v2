@@ -2723,6 +2723,59 @@ img {
       },
     ],
   },
+  {
+    id: 4,
+    topicName: "Unit 3: Python",
+    subTopics: [
+      {
+        id: 1,
+        name: "Computer Hardware, Binary Numbers, Beginning Python",
+        contents: [
+          {
+            id: 1,
+            topic: "Computer Hardware",
+            content: `
+            <div class='comp-hardware'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Computer Hardware</h2>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1+-+Binary+Numbers.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            </div>
+            `,
+          },
+          {
+            id: 2,
+            topic: "Scripting vs. Compiled Languages",
+            content: `
+                <h2 style='font-weight: 700; font-size: 1.25em'>Scripting vs. Compiled Languages</h2>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1+-+Scripted+Languages.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            `,
+          },
+          {
+            id: 3,
+            topic: "Introduction to Python",
+            content: `
+              <h2 style='font-weight: 700; font-size: 1.25em'>Introduction to Python</h2>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1+-+Intro+to+Python.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            `,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export default data;
