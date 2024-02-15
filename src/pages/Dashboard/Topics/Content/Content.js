@@ -8,10 +8,16 @@ import SubContent from "./SubContent/SubContent";
 function Content() {
   const { id, topicId } = useParams();
   const [subContent, setSubContent] = useState({});
+  const [hasNextContent, setHasNextContent] = useState(false);
 
   useEffect(() => {
     setSubContent(data[id - 1].subTopics[topicId - 1]);
   }, [subContent, id, topicId]);
+
+  useEffect(() => {
+    const hasNext = data[id - 1]?.subTopics[topicId];
+    setHasNextContent(!!hasNext);
+  }, [id, topicId, hasNextContent]);
   return (
     <div className="content-section">
       {subContent.content ? (
@@ -23,6 +29,16 @@ function Content() {
             className="content"
             dangerouslySetInnerHTML={{ __html: subContent.content }}
           />
+          {hasNextContent && (
+            <Link
+              className="next-button"
+              to={`http://localhost:3000/dashboard/${id}/${
+                parseInt(topicId) + 1
+              }`}
+            >
+              Next
+            </Link>
+          )}
         </>
       ) : (
         <>
