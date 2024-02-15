@@ -66,7 +66,7 @@ function SubContent() {
       {hasNextContent && (
         <Link
           className="next-button"
-          to={`http://localhost:3000/dashboard/${id}/${topicId}/${
+          to={`https://dev.worklearnproject.com/dashboard/${id}/${topicId}/${
             parseInt(contentId) + 1
           }`}
         >
