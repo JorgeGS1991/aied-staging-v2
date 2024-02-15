@@ -2729,7 +2729,7 @@ img {
     subTopics: [
       {
         id: 1,
-        name: "Computer Hardware, Binary Numbers, Beginning Python",
+        name: "Computer Hardware, Binary Numbers & Intro to Python",
         contents: [
           {
             id: 1,
