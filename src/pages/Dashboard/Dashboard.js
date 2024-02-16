@@ -257,26 +257,30 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
           );
         })}
       </div>
-      <div className="db-content">
-        <Notification
-          open={notificationOpen}
-          handleClose={handleNotificationClose}
-          message={notificationMessage}
-          severity={notificationSeverity}
-        />
-
-        <Routes>
-          <Route path="/" element={<DBContent />} />
-          <Route path=":id" element={<Topics />} />
-          <Route path=":id/:topicId" element={<Content />}>
-            <Route path=":contentId" element={<SubContent />}></Route>
-          </Route>
-          <Route
-            path=":id/:topicId/:contentId/:subContentId"
-            element={<NestedContent />}
+      {user ? (
+        <div className="db-content">
+          <Notification
+            open={notificationOpen}
+            handleClose={handleNotificationClose}
+            message={notificationMessage}
+            severity={notificationSeverity}
           />
-        </Routes>
-      </div>
+
+          <Routes>
+            <Route path="/" element={<DBContent />} />
+            <Route path=":id" element={<Topics />} />
+            <Route path=":id/:topicId" element={<Content />}>
+              <Route path=":contentId" element={<SubContent />}></Route>
+            </Route>
+            <Route
+              path=":id/:topicId/:contentId/:subContentId"
+              element={<NestedContent />}
+            />
+          </Routes>
+        </div>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }

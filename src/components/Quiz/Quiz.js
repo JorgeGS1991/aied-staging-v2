@@ -96,6 +96,8 @@ const Quiz = ({
       setQuizType("algorithmScore");
     } else if (type === "intro") {
       setQuizType("introScore");
+    } else if (type === "python1") {
+      setQuizType("pythonOneScore");
     } else if (type === "review") {
       setQuizType("reviewScore");
     } else if (type === "email") {
