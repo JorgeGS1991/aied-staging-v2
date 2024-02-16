@@ -56,68 +56,67 @@ function ManageStudentDetails({ user, getUser }) {
 
   return (
     <div className="student-details">
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography variant="h4">Student Dashboard</Typography>
-        </Grid>
-        {loading ? (
-          <Grid
-            item
-            xs={12}
-            mt={5}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            <CircularProgress />
+      {user ? (
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant="h4">Student Dashboard</Typography>
           </Grid>
-        ) : (
-          <>
-            {currentUser && (
-              <>
-                <Grid item xs={12}>
-                  <Typography variant="h5">
-                    {currentUser?.firstName + " " + currentUser?.lastName}
-                  </Typography>
-                  <Typography>Email: {currentUser.email}</Typography>
-                  <Typography>Role: {currentUser.role}</Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  {renderScoreBar(
-                    currentUser.introScore,
-                    "Introduction to Computational Thinking"
-                  )}
-                  {renderScoreBar(
-                    currentUser.decompositionScore,
-                    "Decomposition"
-                  )}
-                  {renderScoreBar(
-                    currentUser.patternScore,
-                    "Pattern Recognition"
-                  )}
-                  {renderScoreBar(currentUser.abstractionScore, "Abstraction")}
-
-                  {renderScoreBar(currentUser.algorithmScore, "Algorithm")}
-                  {renderScoreBar(
-                    currentUser.reviewScore,
-                    "Review Your Knowledge"
-                  )}
-                  {renderScoreBar(
-                    currentUser.pythonOneScore,
-                    "Python - Lesson 1"
-                  )}
-                  {/* {renderScoreBar(
-                      currentUser.emailScore,
-                      "Writing Professional Email Assessment"
+          {loading ? (
+            <Grid
+              item
+              xs={12}
+              mt={5}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <CircularProgress />
+            </Grid>
+          ) : (
+            <>
+              {currentUser && (
+                <>
+                  <Grid item xs={12}>
+                    <Typography variant="h5">
+                      {currentUser?.firstName + " " + currentUser?.lastName}
+                    </Typography>
+                    <Typography>Email: {currentUser.email}</Typography>
+                    <Typography>Role: {currentUser.role}</Typography>
+                  </Grid>
+                  <Grid item xs={12}>
+                    {renderScoreBar(
+                      currentUser.introScore,
+                      "Introduction to Computational Thinking"
                     )}
                     {renderScoreBar(
-                      currentUser.beyond,
-                      "Beyond Email Assessment"
-                    )} */}
-                </Grid>
-              </>
-            )}
-          </>
-        )}
-      </Grid>
+                      currentUser.decompositionScore,
+                      "Decomposition"
+                    )}
+                    {renderScoreBar(
+                      currentUser.patternScore,
+                      "Pattern Recognition"
+                    )}
+                    {renderScoreBar(
+                      currentUser.abstractionScore,
+                      "Abstraction"
+                    )}
+
+                    {renderScoreBar(currentUser.algorithmScore, "Algorithm")}
+                    {renderScoreBar(
+                      currentUser.reviewScore,
+                      "Review Your Knowledge"
+                    )}
+                    {renderScoreBar(
+                      currentUser.pythonOneScore,
+                      "Python - Lesson 1"
+                    )}
+                  </Grid>
+                </>
+              )}
+            </>
+          )}
+        </Grid>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }
