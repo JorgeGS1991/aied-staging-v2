@@ -70,7 +70,7 @@ function SubContent() {
             parseInt(contentId) + 1
           }`}
         >
-          Next
+          Next {">>"}
         </Link>
       )}
       {/* {nextContent !== "undefined" && (

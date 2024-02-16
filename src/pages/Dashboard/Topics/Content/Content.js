@@ -36,7 +36,7 @@ function Content() {
                 parseInt(topicId) + 1
               }`}
             >
-              Next
+              Next {">>"}
             </Link>
           )}
         </>
