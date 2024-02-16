@@ -2723,6 +2723,318 @@ img {
       },
     ],
   },
+  {
+    id: 4,
+    topicName: "Unit 3: Python",
+    subTopics: [
+      {
+        id: 1,
+        name: "Getting Started in Replit",
+        contents: [
+          {
+            id: 1,
+            topic: "Using Replit",
+            content: `
+            <div class='replit'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Using Replit</h2>
+            <p class='sub-topic' style='font-size: 1.35em'>Background</p>
+            <p>We will be using a cloud programming tool called Replit for this course. While Python can be installed on your home computer, using the online editor will ensure that all computers (Chromebook, Apple, Windows, etc.) will work without specific configurations. Replit also allows for collaborative programming and it is simple to send code for evaluation.</p>
+            <p class='sub-topic' style='font-size: 1.35em'>Create an Account</p>
+            <p>Go to <a style='text-decoration: underline' href='https://replit.com/signup' target='_blank'>https://replit.com/signup</a> and create an account. We suggest using your Google account but you can create a new login & password combo if you prefer. 
+            <img src='/images/replit/replit1.png' width='800' alt='create a replit account'/>
+            <p class='sub-topic' style='font-size: 1.35em'>Creating a Project</p>
+            <p>At the home screen for Replit, you will see a <strong>+ Create</strong> button at the top-left.</p>
+            <img src='/images/replit/replit2.png' width='800' alt='create a replit account'/>
+            <p>We will be using Python, though Replit does allow for many programming languages. There are also different configurations of Python you might use. We will generally use the standard Python configuration. </p>
+            <p>You can also give your project a meaningful name, it will give it a silly name by default.</p>
+            <img class='lg-img' src='/images/replit/replit3.png' width='800' alt='create a replit account'/>
+            <p class='sub-topic' style='font-size: 1.35em'>Navigating the Project</p>
+            <p>1 - At the top left, you will see the name of your project.</p>
+            <p>2 - You may have more than one file, but the default file is called <strong>main.py</strong>. This is the file that will run by default if you press the <strong>Run</strong> button in the top-center</p>
+
+            <p>3 - You can edit your file in the center pane. This is the code for <strong>main.py</strong> and will only run when you press the run button.</p>
+            <p>4 - The output from pressing run will appear in the <strong>Console</strong>. You can also write individual lines of Python code that will run. This is useful if you want to test a particular command to see what it does.</p>
+            <img class='xl-img' src='/images/replit/replit4.png' width='800' alt='create a replit account'/>
+            <p class='sub-topic' style='font-size: 1.35em'>Sharing your Code</p>
+            <p>After you have completed a project, or if you are needing help, submit your code by clicking the <strong>Invite</strong> button in the top-right of the project. </p>
+            <img class='lg-img' src='/images/replit/replit5.png' width='800' alt='create a replit account'/>
+            <p>Once you have clicked <strong>Generate a join link</strong>, you will copy the provided link and submit. This will allow anyone with the link to see your project, view & edit your code, and run your project.</p>
+            <p>This may have a different format. If it does, click the slider next to the private join link. Make sure that the slider is blue. Then you can click <strong>copy join link</strong>. This will save that link, and you can paste it to share it with anyone. It will look like this:</p>
+            <img class='lg-img' src='/images/replit/replit6.png' width='800' alt='create a replit account'/>
+            </div>
+            <style>
+            .replit p {
+              margin: 10px 0;
+            }
+            .replit img {
+              width: 50%;
+              height: auto;
+              text-align: center;
+              margin: 20px;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              border-radius: 5px;
+            }
+
+            .replit .lg-img {
+              width: 70%;
+            }
+
+            .replit .xl-img {
+              width: 100%;
+            }
+
+            .replit .sub-topic {
+              margin-top: 30px;
+            }
+
+            </style>
+
+            `,
+          },
+          {
+            id: 2,
+            topic: "Submit a Replit Link",
+            content: `
+            <div class='replit-submit'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Submit a Replit Link</h2>
+            <p>Create a Python project in Replit. Add the following line of code to your project.</p>
+            <pre>print("Hello World")</pre>
+            <p>Click <strong>Invite</strong> and generate a join link. Submit your join link.</p>
+
+            </div>
+            <style>
+            .replit-submit p {
+              margin: 10px 0;
+            }
+            .replit-submit pre {
+              font-size: 0.85em;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Introduction to Programming in Python",
+        type: "python1",
+        contents: [
+          {
+            id: 1,
+            topic: "Data Representation",
+            content: `
+            <div class='data-rep'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Data Representation</h2>
+              <p>
+              Before we get started with writing programs, it is helpful to understand a little bit about the computer and how it understands the programs we write. Computers use a lot of abstraction! At their core, they are machines, with various parts that do different tasks, including computation, storing data, and output (such as showing things on the screen).  Computers store data in binary, which is a system of numbering that uses only two digits: 0 and 1. When we use computers, we are interacting with an abstraction – rather than having to interact with the 0s and 1s, we can type letters, click images, and generally have a much better time! Images on the screen are an abstraction of the 1s and 0s stored in the computer.  
+              </p>
+              <p>This video will introduce you to computer hardware and binary numbers. This is NOT the most important thing you should know, so if you’re kind of confused, that’s okay. It is a thing that is not actually useful but is the kind of background knowledge that many computer scientists have. </p>
+              <p>The speaker uses a paper tool called the “Flippy Do” An online version of the Flippy Do is available here:</p>
+              <a target='_blank' href='https://studio.code.org/projects/applab/z6iQr137KHDvkIaz5UNCviWLVkkRnhyteDqWhWBJ56o'>Flippy Do Game</a>
+              <p>Video: </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1+-+Binary+Numbers.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+              <p>You can practice your understanding of binary numbers with this game:</p>
+              <a target='_blank' href='https://learningcontent.cisco.com/games/binary/index.html'>Binary Numbers Game</a>
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 2,
+            topic: "Scripting vs. Compiled Languages",
+            content: `
+            <div class='script-compiled'>
+                <h2 style='font-weight: 700; font-size: 1.25em'>Scripting vs. Compiled Languages</h2>
+                <p>There are a LOT of different programming languages. There are some differences in how the computer executes (that is, runs) programs run in different languages. One of the differences is between languages known as scripting languages and languages known as compiled languages. This video will explain the difference:</p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1+-+Scripted+Languages.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Compiled Languages </h3>
+            <ul class='list'>
+            <li>Written with strict syntax in high-level language</li>
+            <li>Converted to machine code by the compiler
+              <ul class='sublist'>
+                <li>All lines are evaluated </li>
+                <li>Syntax errors are flagged by compiler</li>
+              </ul>
+            </li>
+            <li>Compiled program is what actually runs </li>
+            <li>Used for major applications </li>
+            <li>Source code is not needed for execution </li>
+            </ul>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Scripting Languages </h3>
+            <ul class='list'>
+            <li>Written with strict syntax in high-level language </li>
+            <li>Each line is converted to machine code as it runs 
+              <ul class='sublist'>
+                <li>Syntax errors are not flagged until the individual line is executed  </li>
+                <li>Conversion as you go is slower than converting ahead of time </li>
+              </ul>
+            </li>
+            <li>Easier to begin a program  </li>
+            <li>Used for automation and simple tasks </li>
+            <li>Source code is needed to run </li>
+            </ul>
+            </div>
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes .sublist {
+              list-style-type: circle;
+              padding-left: 22px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 3,
+            topic: "Writing Python Code & Debugging",
+            content: `
+            <div class='debug'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Writing Python Code & Debugging </h2>
+              <p>Programming is just a process of telling the computer what to do. – creating an algorithm. The algorithms are called programs or code, and they are written in programming languages. Python is one programming language, and you will be learning to write Python programs.  </p>
+              <p>Most programmers use something called an “I.D.E.” which stands for Integrated Development Environment. Basically, an IDE is like a word processor (like Google Docs or Microsoft Word) but for programming. Programs have a lot of weird characters and their own syntax (the rules of grammar for the programming language), and IDEs are made to help with that, just like a word processor has tools like spell-check.  </p>
+              <p>This video has two parts. In the first part, you will learn how to write a little python code. The thing is, no one is perfect, and the computer is SUPER picky about what it understands. At some point you will write some code that the computer doesn’t understand and it will give you an error. This is known as having a bug in your code. You will have to debug your code – find the problem and fix it. The second half of the video has you write some code that is wrong, and learn about why, and what it looks like when you get an error. One thing to remember is that <span style='text-decoration: underline;'>the computer does not judge you</span>. It has no opinion, so you can just keep trying to fix it as many times as it takes. The error message is trying to help you know where it got confused so you can fix it. (Error messages are often confusing and unhelpful, but they’re trying.) Debugging is the most frustrating part of programming! In addition to learning technical skills for finding and fixing bugs, it is good to find emotional skills that work for you too, like taking a break if you get overly frustrated, or asking someone else for help if you’ve already tried to fix it and searched for help online. </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1+-+Intro+to+Python.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class='notes'>
+            <p>Notes as shown in the video: </p>
+          <h3 style='font-weight: 700; font-size: 1.25em'>Debugging Python</h3>
+          <p>We will use a IDE (Integrated Development Environment) in this class. However, with python, you can type commands directly into a command line and they will execute. This is useful if you have a small script that you want to run or a bit of code you want to test outside of a larger program. </p>
+          <p>In Replit, start a new Python Project. This is only for experimentation so the name of the project does not matter. </p>
+          <p>In the Replit main.py file, try typing and running each of the following commands. </p>
+          <div class='code'>
+          <pre>print("Hello Python") </pre>
+          <pre>print(2 + 3) </pre>
+          <pre>print("Hello" + "world") </pre>
+          <pre>print("Hello" + 5)</pre>
+          </div>
+
+            </div>
+             <div class='notes'>
+          <h3 style='font-weight: 700; font-size: 1.25em'>Practice Debugging</h3>
+          <p>Type the following commands into a Python program. Debug the errors to see how Python responds if it cannot run a command as typed.  </p>
+          <div class='code'>
+          <pre>Print("Hello world")  </pre>
+          <pre>print "Hello world" </pre>
+          <pre>print("Hello world)  </pre>
+          <pre>print("Hello world" </pre>
+          <pre>print(Hello world) </pre>
+          </div>
+
+            </div>
+            <div class='notes'>
+          <h3 style='font-weight: 700; font-size: 1.25em'>Documentation For Help</h3>
+          <p>There are many internet resources, your peers, texts, and your instructor you can get help from in this class. Python also has built-in help documentation if you need it. When you are using a command, a window will pop up with information about the command you are typing. Hover on the command to get additional information and usage examples. </p>
+          <div class='code'>
+          <pre>abs(5)  </pre>
+          <pre>chr(65)   </pre>
+          <pre>eval()</pre>
+          </div>
+
+            </div>
+            </div>
+            <style>
+            .debug p {
+              margin: 10px 0;
+            }
+            .notes pre {
+              font-size: 0.85em;
+              padding-left: 20px;
+              margin: 10px 0;
+            }
+
+            </style>
+            `,
+          },
+          {
+            id: 4,
+            topic: "Quiz",
+            type: "quiz",
+          },
+          {
+            id: 5,
+            topic: "Lab 1 - MadLib",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab 1 - MadLib</h2>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lab+1+-+Madlib.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Create a new Replit python project. Name the project Lab 1.</p>
+            <p>Create a <a style='text-decoration: underline;' href='https://en.wikipedia.org/wiki/Mad_Libs' target='_blank'>Mad Lib</a> where the user supplies key adjectives, nouns, verbs, adverbs, or other types of speech then constructs a full story with those words.</p>
+            <p>Your Mad Lib must:</p>
+            <ul class='list'>
+            <li>Ask for at least 6 words</li>
+            <li>Consider usability in design (be clear)</li>
+            <li>Create a story with the user supplied words.</li>
+            </ul>
+            <p>There are a few ways to join words in python:</p>
+            <div class='code'>
+            <pre>noun1 = "Bicycle"</pre>
+            <pre>print("I like to ride my " + noun1)</pre>
+            <pre>print("I like to ride my", noun1)</pre>
+            </div>
+            <p>Test which works best for you, note where the spaces fall using the different methods.</p>
+            <p>You will also need to get input from the user. This is done by using the input function and saving the response to a variable.</p>
+               <div class='code'>
+            <pre>noun1 = input("Enter a noun: ")</pre>
+            <pre>print("You said", noun1)</pre>
+            </div>
+            <p>Note that the variable is on the left side of the equal sign. Whatever you put in the quotes of the input function will display on screen.</p>
+            <p>When you are done, submit the “Join Link” to your Replit project. </p>
+            </div>
+            <style>
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export default data;

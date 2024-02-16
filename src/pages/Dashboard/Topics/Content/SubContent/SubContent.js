@@ -11,6 +11,7 @@ import "./SubContent.css";
 function SubContent() {
   const { id, topicId, contentId } = useParams();
   const [content, setContent] = useState("");
+  const [hasNextContent, setHasNextContent] = useState(false);
   const [contents, setContents] = useState(null);
   const [type, setType] = useState("");
   const [quizType, setQuizType] = useState("");
@@ -32,6 +33,10 @@ function SubContent() {
     setQuizType(data[id - 1].subTopics[topicId - 1].type);
   }, [id, topicId, contentId, content, quizType, contents]);
 
+  useEffect(() => {
+    const hasNext = data[id - 1]?.subTopics[topicId - 1]?.contents[contentId];
+    setHasNextContent(!!hasNext);
+  }, [id, topicId, contentId, hasNextContent]);
   return (
     <div className="subcontent-section">
       {contents && (
@@ -57,11 +62,16 @@ function SubContent() {
       {type === "quiz" && <Quiz type={quizType} />}
       {type === "upload" && <UploadDocument />}
       {type === "parsons" && <ParsonsProblem />}
-      {/* {nextContent !== "undefined" && (
-        <Link to={`/dashboard/${id}/${topicId}/${parseInt(contentId) + 1}`}>
-          Next
+      {hasNextContent && (
+        <Link
+          className="next-button"
+          to={`https://worklearnproject.com/dashboard/${id}/${topicId}/${
+            parseInt(contentId) + 1
+          }`}
+        >
+          Next {">>"}
         </Link>
-      )} */}
+      )}
     </div>
   );
 }

@@ -130,11 +130,13 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                 <p>{item.topicName}</p>
               </div>
               <div className="db-items">
-                <div className="db-item">
-                  <div className="db-link">
-                    {i === 0 && <Link to="/dashboard">Home</Link>}
+                {i === 0 && (
+                  <div className="db-item">
+                    <div className="db-link">
+                      <Link to="/dashboard">Home</Link>
+                    </div>
                   </div>
-                </div>
+                )}
                 {item.subTopics.map((subTopic, index) => {
                   return (
                     <>

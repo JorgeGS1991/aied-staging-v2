@@ -104,14 +104,10 @@ function ManageStudentDetails({ user, getUser }) {
                       currentUser.reviewScore,
                       "Review Your Knowledge"
                     )}
-                    {/* {renderScoreBar(
-                      currentUser.emailScore,
-                      "Writing Professional Email Assessment"
-                    )}
                     {renderScoreBar(
-                      currentUser.beyond,
-                      "Beyond Email Assessment"
-                    )} */}
+                      currentUser.pythonOneScore,
+                      "Python - Lesson 1"
+                    )}
                   </Grid>
                 </>
               )}
