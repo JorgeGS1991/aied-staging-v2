@@ -32,7 +32,7 @@ function Content() {
           {hasNextContent && (
             <Link
               className="next-button"
-              to={`https://dev.worklearnproject.com/dashboard/${id}/${
+              to={`https://worklearnproject.com/dashboard/${id}/${
                 parseInt(topicId) + 1
               }`}
             >

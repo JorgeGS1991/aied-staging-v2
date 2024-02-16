@@ -62,22 +62,16 @@ function SubContent() {
       {type === "quiz" && <Quiz type={quizType} />}
       {type === "upload" && <UploadDocument />}
       {type === "parsons" && <ParsonsProblem />}
-      {/* {data[id - 1].subTopics[topicId - 1].contents[contentId - 1] && ( */}
       {hasNextContent && (
         <Link
           className="next-button"
-          to={`https://dev.worklearnproject.com/dashboard/${id}/${topicId}/${
+          to={`https://worklearnproject.com/dashboard/${id}/${topicId}/${
             parseInt(contentId) + 1
           }`}
         >
           Next {">>"}
         </Link>
       )}
-      {/* {nextContent !== "undefined" && (
-        <Link to={`/dashboard/${id}/${topicId}/${parseInt(contentId) + 1}`}>
-          Next
-        </Link>
-      )} */}
     </div>
   );
 }
