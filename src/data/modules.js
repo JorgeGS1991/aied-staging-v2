@@ -2986,6 +2986,51 @@ img {
             topic: "Quiz",
             type: "quiz",
           },
+          {
+            id: 5,
+            topic: "Lab 1 - MadLib",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab 1 - MadLib</h2>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lab+1+-+Madlib.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Create a new Replit python project. Name the project Lab 1.</p>
+            <p>Create a <a style='text-decoration: underline;' href='https://en.wikipedia.org/wiki/Mad_Libs' target='_blank'>Mad Lib</a> where the user supplies key adjectives, nouns, verbs, adverbs, or other types of speech then constructs a full story with those words.</p>
+            <p>Your Mad Lib must:</p>
+            <ul class='list'>
+            <li>Ask for at least 6 words</li>
+            <li>Consider usability in design (be clear)</li>
+            <li>Create a story with the user supplied words.</li>
+            </ul>
+            <p>There are a few ways to join words in python:</p>
+            <div class='code'>
+            <pre>noun1 = "Bicycle"</pre>
+            <pre>print("I like to ride my " + noun1)</pre>
+            <pre>print("I like to ride my", noun1)</pre>
+            </div>
+            <p>Test which works best for you, note where the spaces fall using the different methods.</p>
+            <p>You will also need to get input from the user. This is done by using the input function and saving the response to a variable.</p>
+               <div class='code'>
+            <pre>noun1 = input("Enter a noun: ")</pre>
+            <pre>print("You said", noun1)</pre>
+            </div>
+            <p>Note that the variable is on the left side of the equal sign. Whatever you put in the quotes of the input function will display on screen.</p>
+            <p>When you are done, submit the “Join Link” to your Replit project. </p>
+            </div>
+            <style>
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+            </style>
+            `,
+          },
         ],
       },
     ],
