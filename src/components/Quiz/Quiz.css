@@ -3,3 +3,7 @@
     height: auto;
     margin: auto;
 }
+
+.question-card img.option {
+    width:300px;
+}
