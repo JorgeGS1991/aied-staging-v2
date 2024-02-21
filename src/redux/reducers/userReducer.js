@@ -23,6 +23,7 @@ const initialState = {
     algorithmScore: 0,
     introScore: 0,
     pythonOneScore: 0,
+    pythonTwoScore: 0,
     reviewScore: 0,
     emailScore: 0,
     beyondScore: 0,

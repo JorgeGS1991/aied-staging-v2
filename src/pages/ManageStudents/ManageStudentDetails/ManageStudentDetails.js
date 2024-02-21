@@ -106,7 +106,11 @@ function ManageStudentDetails({ user, getUser }) {
                     )}
                     {renderScoreBar(
                       currentUser.pythonOneScore,
-                      "Python - Lesson 1"
+                      "Python - Lesson 1 - Intro to Python"
+                    )}
+                    {renderScoreBar(
+                      currentUser.pythonTwoScore,
+                      "Python - Lesson 2 - Data Types"
                     )}
                   </Grid>
                 </>

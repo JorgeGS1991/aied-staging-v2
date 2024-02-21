@@ -98,6 +98,8 @@ const Quiz = ({
       setQuizType("introScore");
     } else if (type === "python1") {
       setQuizType("pythonOneScore");
+    } else if (type === "python2") {
+      setQuizType("pythonTwoScore");
     } else if (type === "review") {
       setQuizType("reviewScore");
     } else if (type === "email") {
@@ -321,7 +323,11 @@ const Quiz = ({
                                 },
                               }}
                             >
-                              {option}
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: option,
+                                }}
+                              />
                             </ListItemButton>
                           </ListItem>
                         ))

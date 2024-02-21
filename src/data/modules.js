@@ -3033,6 +3033,395 @@ img {
           },
         ],
       },
+      {
+        id: 2,
+        name: "Data Types",
+        type: "python2",
+        contents: [
+          {
+            id: 1,
+            topic: "Introduction to Data Types",
+            content: `
+            <div class='data-rep'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Introduction to Data Types </h2>
+              <p>
+You learned about variables in the last lab. Variables contain data. In the Mad Lib lab, the data was words like nouns, adjectives, and verbs. Sometimes the data is numbers, like a year or a quantity, like the number of learners who are participating in the Work-Learn project.                 
+</p>
+              <p>Unfortunately, computers are <span style='text-decoration: underline'>super</span> picky, so they care about what data type a variable is. Believe it or not, if you tried to get a computer to add “five” and “three,” it wouldn’t be able to, because to the computer, “five” and “three” are both words (which is known as a string data type). Instead, you would have to ask it to add 5 + 3 to get the right answer.   </p>
+              <p>In many ways, having to know about data types is the kind of thing that seems boring and like you shouldn’t have to worry about it. However, programming languages (often) can’t abstract away the details of data types to just figure it out. Knowing data types will help you write good code and debug code if you or another programmer makes a mistake. </p>
+              <p>In this video, you will learn about different data types, and about arithmetic operators, which is just the fancy programming way to say “how to tell the computer to do math.” You can follow along with the video by typing into your own replit program.  </p>
+              <p>Video: </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+2+-+Data+Types.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+              <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Objectives </h3>
+            <p>Discuss and demonstrate: </p>
+            <ul class='list'>
+            <li>The concept of data types </li>
+            <li>variables, assignments </li>
+            <li>numerical types  </li>
+            <li>arithmetic operators and expressions </li>
+            <li>comments in the program  </li>
+            <li>understanding error messages   </li>
+            </ul>
+            </div>
+
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Arithmetic Operators  </h3>
+            <p>Discuss and demonstrate: </p>
+            <table class='table'>
+                <tr>
+                  <th>Operator</th>
+                  <th>Description </th>
+                  <th>Notes</th>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>addition</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>subtraction</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>*</td>
+                  <td>multiplication</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>/</td>
+                  <td>division (float)</td>
+                  <td>5 / 2 -> 2.5 </td>
+                </tr>
+                <tr>
+                  <td>//</td>
+                  <td>division (floor)</td>
+                  <td>5 / 2 -> 2</td>
+                </tr>
+                <tr>
+                  <td>%</td>
+                  <td>modulus</td>
+                  <td>5 % 2 -> 1 </td>
+                </tr> 
+                <tr>
+                  <td>**</td>
+                  <td>exponent</td>
+                  <td>2 ** 5 -> 32</td>
+                </tr>
+              </table>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Data Types </h3>
+            <p>There are many different data types in python. You can always test what python a data type is using the following function: </p>
+            <pre style='font-size: 0.85em'>x = 5</pre>
+            <pre style='font-size: 0.85em'>type(x)</pre>
+            <pre style='font-size: 0.85em'>&lt;class 'int'&gt;</pre>
+            </div>
+            
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Integers  </h3>
+            <p>Integers are whole numbers without decimal values. In many languages, there is a "biggest" value that an integer can be. </p>
+            <p>In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has but beyond that you can represent a very large number.  </p>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Floating-Point Numbers  </h3>
+            <p>The float type in Python designates a floating-point number. float values are specified with a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation: </p>
+            <pre style='font-size: 0.85em'>x = 5.2</pre>
+            <pre style='font-size: 0.85em'>type(x)</pre>
+            <pre style='font-size: 0.85em'>&lt;class 'float'&gt;</pre>
+            </div>
+            
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Characters  </h3>
+            <p>Single letters are called characters or char. Characters align to the <span><a href='http://www.asciitable.com/' target='_blank'>ASCII standard</a></span> where every letter has a unique number. </p>
+            <ul class='list'>
+            <li>The concept of data types </li>
+            <li>variables, assignments </li>
+            </ul>
+            <p>These are examples of Characters, you can also convert a character from the letter representation to the numerical representation" </p>
+            <pre style='font-size: 0.85em'>ord('a')</pre>
+            <pre style='font-size: 0.85em'>97</pre>
+            <pre style='font-size: 0.85em'>ord('a')</pre>
+            <pre style='font-size: 0.85em'>65</pre>
+
+            <p>This conversion can go the other way too.  </p>
+            <pre style='font-size: 0.85em'>chr(65) </pre>
+            <pre style='font-size: 0.85em'>A</pre>
+            <pre style='font-size: 0.85em'>chr(66) </pre>
+            <pre style='font-size: 0.85em'>B</pre>
+            </div>
+            
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Special Characters  </h3>
+            <p>To represent keyboard actions that are difficult to type, several special characters are used. Here are a few common special characters. </p>
+            <table class='table'>
+                <tr>
+                  <th>Character</th>
+                  <th>Meaning </th>
+                </tr>
+                <tr>
+                  <td>&#92;n</td>
+                  <td>New Line (Enter) </td>
+                </tr>
+                <tr>
+                  <td>&#92;t</td>
+                  <td>Tab</td>
+                </tr>
+                <tr>
+                  <td>&#92;"</td>
+                  <td>Displays a quote </td>
+                </tr>
+                <tr>
+                  <td>&#92;&#92;</td>
+                  <td>Displays a backslash  </td>
+                </tr>
+                
+              </table>
+            </div>
+
+             <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Strings  </h3>
+            <p>Strings are one or more characters in a row, we show the beginning and end of a string by using quotations. Strings can be denoted in several methods: </p>
+            <ul class='list'>
+            <li>"I am a string"  </li>
+            <li>'I am also a string' </li>
+            <li>'''This is also a string'''  </li>
+
+            </ul>
+            <p>The key is to have the same beginning and ending quotation to show the matched pair. We will usually use double quotes ("") for strings since that is the standard in other programming languages. </p>
+            </div>
+            
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Boolean   </h3>
+            <p>Boolean types have two possible states: </p>
+            <ul class='list'>
+            <li>True  </li>
+            <li>False </li>
+
+            </ul>
+            <p>We use booleans to make decisions or evaluate a criteria. Anything that can be answered as a yes or no can be stored as a boolean value. </p>
+            </div>
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 2,
+            topic: "Converting Types",
+            content: `
+            <div class='script-compiled'>
+                <h2 style='font-weight: 700; font-size: 1.25em'>Converting types </h2>
+                <p>Since the computer is super picky about what type of data is in each variable, sometimes we will have to tell the computer, “no, don’t treat it like that, make it be something else!” For example, the number 5 is usually a number. But if you put it into quotes, the computer will treat it as a string – just like it would treat anything else in quotes.  </p>
+                <p>In this video, you’ll see some errors that happen when you try to do something the computer can’t do because the data is the “wrong” type, and how to convert data to different types. You’ll also learn how to use some data types together. You can follow along in your own replit if you’d like to practice. </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+2+-+Type+Conversion.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Converting types   </h3>
+            <p>Often when we get input, we accept whatever they type as a string. If the value they gave us was actually a number, we will have to convert the data type to do mathematical manipulation. </p>
+            <pre style='font-size: 0.85em'>
+          \nx = "5" \ny = x + 10 \n\nTraceback (most recent call last):\n File "<stdin>", line 1, in <module> \nTypeError: can only concatenate str (not "int") to str
+            </pre>
+            <p>To avoid this error we must first convert one of the data types to match. In this case, we want to convert the string "5" to the integer 5. </p>
+            <pre style='font-size: 0.85em'>
+          \nx = "5" \ny = int(x) + 10 \nprint(y) \n15 
+            </pre>
+
+             <p>You cannot convert a string to a number if the letters of the string are not actually numbers. You will get an error. </p>
+            <pre style='font-size: 0.85em'>
+          \nint("Hello")  \n\nTraceback (most recent call last):\nFile "<stdin>", line 1, in <module>  \nValueError: invalid literal for int() with base 10: 'Hello' 
+            </pre>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Combining Types - Numbers </h3>
+            <p>Data Types can sometimes be combined without a type change involved. If we do this, what would the resulting type be? </p>
+            <pre style='font-size: 0.85em'>
+            \nx = 5 \ny = 7.2 \nz = x + y  \nprint(z)\n12.2\n\ntype(z)\n&lt;class 'float'&gt;
+            </pre>
+            <p>Here we can see that an integer and a floating-point number are added. The result is a float. If we had converted the result to an integer, data would have been lost. An integer cannot hold the decimal portion of the floating-point number and that data would have been dropped. </p>
+            <p>Sometimes, it is okay to lose the decimal portion of a floating point number. </p>
+            <pre style='font-size: 0.85em'>
+            \nx = 7.2 \ny = int(x) \nprint(y)\n7
+            </pre>
+            <p>Note: the decimal portion is not rounded, it is just dropped. </p>
+            <pre style='font-size: 0.85em'>
+            \nprint( int(8.8) ) \n8
+            </pre>
+            </div>
+            
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Combining Types - Letters </h3>
+            <p>Two strings can be joined with the + operator. </p>
+            <pre style='font-size: 0.85em'>
+            \nprint("Hello " + "world")  \nHello world
+            </pre>
+            
+            <p>We can also join a string and a character with the same method. </p>
+            <pre style='font-size: 0.85em'>
+            \nprint("Hello " + '!') \nHello!
+            </pre>
+            
+            <p>You cannot join a number with a string, you will get an error.  </p>
+            <pre style='font-size: 0.85em'>
+            \nprint("Hello " + 1) \nTraceback (most recent call last):\n File "<stdin>", line 1, in <module> \nTypeError: can only concatenate str (not "int") to str 
+            </pre>
+            <p>If you want to do this, you can convert the number to become a string. This works with both literal numbers and with variables that are numbers. It also works with both integers and floating-point numbers. </p>
+            <pre style='font-size: 0.85em'>
+            \nprint("Hello" + str(1)) \nHello1
+            </pre>
+            
+            <pre style='font-size: 0.85em'>
+            \nx = 5 \nprint("Hello" + str(x)) \nHello5
+            </pre>
+            
+            <pre style='font-size: 0.85em'>
+            \ny = 2.8 \nprint("Hello" + str(y))\nHello2.8
+            </pre>
+            </div>
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+
+
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes .sublist {
+              list-style-type: circle;
+              padding-left: 22px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 3,
+            topic: "Quiz",
+            type: "quiz",
+          },
+          {
+            id: 4,
+            topic: "Lab 2 - Magic 8 Ball",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab 2 - Magic 8 Ball </h2>
+            <p>
+            In this module you learned about simple data types. There are some more complicated data types, such as when you want to store data in a list. In this lab, you’ll learn how to create and use a list, to make a program that is a model of the Magic 8 Ball. If you don’t know or remember about the Magic 8 Ball – a plastic sphere that would answer questions – you can read the Wikipedia page about it <span><a href='https://en.wikipedia.org/wiki/Magic_8_Ball' target='_blank'>https://en.wikipedia.org/wiki/Magic_8_Ball</a></span> or play someone else’s computer model <span><a href='https://www.horoscope.com/us/games/divination/game-magic-8-ball.aspx' target='_blank'>https://www.horoscope.com/us/games/divination/game-magic-8-ball.aspx</a></span>  </p>
+            <p>This video will get you started on the lab:</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lab+2+-+Magic+8+Ball.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <p>Create a program that will allow the user to ask a question, then provide a random response like a Magic 8 Ball. </p>
+            <p>A traditional Magic 8 Ball has 20 possible answers: </p>
+            <ul class='list'>
+            <li>As I see it, yes.</li>
+            <li>Ask again later.</li>
+            <li>Better not tell you now.</li>
+            <li>Cannot predict now.</li>
+            <li>Concentrate and ask again.</li>
+            <li>Don’t count on it.</li>
+            <li>It is certain.</li>
+            <li>It is decidedly so.</li>
+            <li>Most likely.</li>
+            <li>My reply is no.</li>
+            <li>My sources say no.</li>
+            <li>Outlook not so good.</li>
+            <li>Outlook good.</li>
+            <li>Reply hazy, try again.</li>
+            <li>Signs point to yes.</li>
+            <li>Very doubtful.</li>
+            <li>Without a doubt.</li>
+            <li>Yes.</li>
+            <li>Yes – definitely.</li>
+            <li>You may rely on it.</li>
+            </ul>
+            <p>You may select to use these or answers you have created. They key is that they are given a random answer to the question they ask. </p>
+            <p>How to create a list of possible answers: </p>
+            <pre style='font-size:0.85em'>answers = ["thing 1", "thing 2"] # Each item must be in quotes, separated by a comma.</pre>
+            <p>At the top of your code, you need to include the following line to get access to the random utilities. </p>
+            <pre style='font-size:0.85em'>import random </pre>
+            <p>Since we imported random at the top of our file, we can use the following code to select a random item from the list. </p>
+            <pre style='font-size:0.85em'>randomNum = random.randint(0, 2)\nresponse = answers[randomNum]   </pre>
+            <p>Your program should do the following: </p>
+            <ul class='list'>
+            <li>Ask the user a question</li>
+            <li>Randomly select an answer from your list of possible answers</li>
+            <li>Respond to the asked question with the random answer</li>
+            </ul>
+            <p>When you are done, submit the “join link” to your Replit project. </p>
+            </div>
+            <style>
+
+            .madlib a {
+              text-decoration: underline;
+            }
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+
+            .list {
+              list-style-type: disc;
+              padding: 0 20px;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
     ],
   },
 ];
