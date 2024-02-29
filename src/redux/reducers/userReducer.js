@@ -24,6 +24,7 @@ const initialState = {
     introScore: 0,
     pythonOneScore: 0,
     pythonTwoScore: 0,
+    pythonThreeScore: 0,
     reviewScore: 0,
     emailScore: 0,
     beyondScore: 0,

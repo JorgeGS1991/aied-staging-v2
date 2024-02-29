@@ -3034,7 +3034,7 @@ img {
         ],
       },
       {
-        id: 2,
+        id: 3,
         name: "Data Types",
         type: "python2",
         contents: [
@@ -3400,6 +3400,530 @@ You learned about variables in the last lab. Variables contain data. In the Mad 
             <li>Respond to the asked question with the random answer</li>
             </ul>
             <p>When you are done, submit the “join link” to your Replit project. </p>
+            </div>
+            <style>
+
+            .madlib a {
+              text-decoration: underline;
+            }
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+
+            .list {
+              list-style-type: disc;
+              padding: 0 20px;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+      {
+        id: 4,
+        name: "Control Structures",
+        type: "python3",
+        contents: [
+          {
+            id: 1,
+            topic: "Introduction to Control Structures",
+            content: `
+            <div class='data-rep'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Introduction to Control Structures </h2>
+              <p>
+So far, all of the programs you’ve written have just run each line of code in order. However, we often want more control over how a program runs. For example, when you log in to the Work-Learn website, it checks your username against the list of users and gives you the permission of a student, rather than the permissions of a teacher. In order to do this, we use something called Boolean Logic. In this video, you will learn how to get the computer to evaluate a variable (that is, look at the value of the variable) to tell you if a condition is true or false.  </p>
+              <p>Video: </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lesson+3+-+Control+Structures.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+              <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Objectives </h3>
+            <p>Discuss and demonstrate: </p>
+            <ul class='list'>
+            <li>Conditions, boolean logic, logical operators  </li>
+            <li>Ranges  </li>
+            <li>numerical types  </li>
+            <li>Control statements
+              <ul>
+                <li>if-else </li>
+                <li>for loops </li>
+                <li>while loops </li>
+              </ul>
+            </li>
+
+            <li>Short-circuit evaluation  </li>
+            </ul>
+            </div>
+
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Boolean Logic </h3>
+            <p>Boolean values can only be one of two states:  </p>
+            <ul>
+            <li>True</li>
+            <li>False</li>
+            </ul>
+            <p>Boolean values are used to make decisions in various control structures. The most common way to create a boolean value is through a comparison. </p>
+            <pre>10 < 15 </pre>
+            <pre>True</pre>
+            <pre style='margin-top: 20px'>10 < 15 </pre>
+            <pre>False</pre>
+            <pre style='margin-top: 20px'>age = 19 </pre>
+            <pre>age >= 21 </pre>
+            <pre>False </pre>
+
+            <p>Here are some common boolean comparison operators </p>
+
+            <table class='table'>
+                <tr>
+                  <th>Operator</th>
+                  <th>Description </th>
+                </tr>
+                <tr>
+                  <td>&lt;</td>
+                  <td>Strict less than </td>
+                </tr>
+                <tr>
+                  <td>&gt;</td>
+                  <td>Strict greater than </td>
+                </tr>
+                <tr>
+                  <td>&lt;=</td>
+                  <td>Less than OR equal </td>
+                </tr>
+                <tr>
+                  <td>&gt;=</td>
+                  <td>Greater than OR equal </td>
+                </tr>
+                <tr>
+                  <td>==</td>
+                  <td>Equal </td>
+                </tr>
+                <tr>
+                  <td>!=</td>
+                  <td>NOT equal</td>
+                </tr> 
+              </table>
+
+              <p>We also join two or more boolean expressions together with and and or operators. </p>
+
+
+              <table class='table'>
+                <tr>
+                  <th>Statement 1 </th>
+                  <th>Statement 2  </th>
+                  <th>AND </th>
+                  <th>OR  </th>
+                </tr>
+                <tr>
+                  <td>True</td>
+                  <td>True</td>
+                  <td>True</td>
+                  <td>True</td>
+                </tr>
+                
+                <tr>
+                  <td>True</td>
+                  <td>False</td>
+                  <td>False</td>
+                  <td>True</td>
+                </tr>
+                
+                <tr>
+                  <td>False</td>
+                  <td>True</td>
+                  <td>False</td>
+                  <td>True</td>
+                </tr>
+
+                <tr>
+                  <td>False</td>
+                  <td>False</td>
+                  <td>False</td>
+                  <td>False</td>
+                </tr>
+              </table>
+
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Examples </h3>
+            <pre>x = 5  </pre>
+            <pre>y = 10 </pre>
+            <pre>x &lt; 10 and y &gt; 5 </pre>
+            <pre>True  </pre>
+            <pre style='margin-top: 20px'>x &lt; 10 or y &lt; 0  </pre>
+            <pre>True </pre>
+            <pre style='margin-top: 20px'>x &lt; 10 and y &lt; 0  </pre>
+            <pre>age &gt;= 21 </pre>
+            <pre>False </pre>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Short-circuit evaluation   </h3>
+            <p>Since the result of an <strong>and</strong> statement is only True if both the first and second elements are True, for the sake of efficiency the second part of the statement is only evaluated if the first part is True. </p>
+            <pre style='font-size: 0.85em'>age = 19 </pre>
+            <pre style='font-size: 0.85em'>hour = 23 </pre>
+            <pre style='font-size: 0.85em'>age &lt; 18 and hour &gt; 22 </pre>
+            <pre style='font-size: 0.85em'>False </pre>
+            <p>The hour is not evaluated since the first statement is False. This is often used to avoid potential errors. </p>
+            <pre>import math </pre>
+            <pre>x = -20  </pre>
+            <pre>math.sqrt(x)  </pre>
+            <pre style='margin-top:20px'>Traceback (most recent call last):   </pre>
+            <pre>  File "<stdin>", line 1, in <module>   </pre>
+            <pre>ValueError: math domain error    </pre>
+            <pre style='margin-top:20px'>x &gt;= 0 and math.sqrt(x) &lt; 5    </pre>
+            <pre>False    </pre>
+            <pre style='margin-top:20px'>x = 16   </pre>
+            <pre style='margin-top:20px'>x &gt;= 0 and math.sqrt(x) &lt; 5    </pre>
+            <pre>True</pre>
+            <p>The same is true with <strong>or</strong> statements. This time, a True statement in the first position will result in a True result. As a result, the second expression is not evaluated if the first expression is True. </p>
+            <p>There are many reasons we may want to short circuit an operation, especially if it is a difficult or costly operation. </p>
+            </div>
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 2,
+            topic: "Conditional Statements",
+            content: `
+            <div class='script-compiled'>
+                <h2 style='font-weight: 700; font-size: 1.25em'>Conditional Statements</h2>
+                <p>Now you have learned how to evaluate one or more variables, but the reason to do that is so you can control whether or not a piece of code runs. In this video, you’ll learn one way to tell the computer to run or skip a piece of code, using something called a conditional (also known as if statements or if-else statements) </p>
+                <p>Video:</p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lesson+3+-+If+Statements.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>if-else statements   </h3>
+            <p>Note: Indentation matters </p>
+            <pre style='font-size: 0.85em'>if <condition>: </pre>
+            <pre style='font-size: 0.85em'>  statement1 </pre>
+            <pre style='font-size: 0.85em'>  statement2 </pre>
+            <pre style='font-size: 0.85em'>  etc... </pre>
+
+            <p>The indented statements will only execute if the condition is true. </p>
+            <pre style='font-size: 0.85em'>x = 5 </pre>
+            <pre style='font-size: 0.85em'>if x > 2: </pre>
+            <pre style='font-size: 0.85em'>  print ("The statement x > 2 is TRUE!") </pre>
+            <pre style='font-size: 0.85em'>print("This line happens either way.")  </pre>
+
+             <p>What do you do if the if condition is not true? </p>
+
+            <pre style='font-size: 0.85em'>
+grade = input("Enter your grade: ") 
+
+grade = int(grade) #convert from string to integer 
+
+
+if(grade >= 70): 
+  print("You passed!") 
+
+else: 
+  print("You need to study more.") 
+
+
+What if there are multiple options? 
+
+if(grade >= 90): 
+  print("You got an A") 
+
+elif(grade > 80): 
+  print("You got a B") 
+
+elif(grade > 70): 
+  print("You got a C") 
+
+elif(grade > 60): 
+  print("You got a D") 
+
+else: 
+  print("You got a F") 
+            </pre>
+            </div>
+            
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+
+
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .notes .sublist {
+              list-style-type: circle;
+              padding-left: 22px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 3,
+            topic: "Loops",
+            content: `
+            <div class='script-compiled'>
+                <h2 style='font-weight: 700; font-size: 1.25em'>Loops</h2>
+                <p>If statements are not the only control structure. Another way to control the program is by writing a loop where something happens over and over. In this video you will learn about two kinds of loops. You use a for loop when you need to run a piece of code some specific number of times. You use a while loop when you need the code to run while a condition is true. You will also hear about infinite loops, which never end (and are a problem – you always want your code to have an ending condition!) </p>
+                <p>Video:</p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lesson+3+-+Loops.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>for loops </h3>
+            <p>For loops in Python will iterate across a list. The variable you create for the loop will be each of the items in the list in order. </p>
+            <pre font-style='0.85em'>
+for i in ages: 
+    print(i) 
+
+19 
+18 
+22 
+20 
+            </pre>
+            </div>
+            
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Ranges </h3>
+            <p>The range function is an easy way to create a list for our loop to iterate over. </p>
+            <pre font-style='0.85em'>
+range(10) -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] 
+
+for i in range(10): 
+    print(i) 
+</pre> 
+            <p>You can also give the range function a start, stop, and increment amount. </p>
+            <pre font-style='0.85em'>
+#range(start, end, increment) 
+#Example 
+for i in range(10, 20, 2): 
+    print(i) 
+            </pre>
+
+            </div>
+            
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>while loops  </h3>
+            <p>A while loop works like an if statement where a boolean expression will determine if the loop continues. Every loop should have 3 important things. </p>
+            <ul class='list'>
+            <li>Initialize a variable </li>
+            <li>Check the variable </li>
+            <li>Change the variable... in a way that will eventually end. </li>
+            </ul>
+            <pre font-style='0.85em'>
+x = 10 #initialize 
+
+while (x > 0):  #check the variable 
+    print(x) 
+    x = x - 1   #change the variable 
+</pre> 
+            <p>Loops do not need to be determined by the value of a number, it could be a state that we are waiting to change.  </p>
+
+            <pre font-style='0.85em'>
+play = "Yes" # initialize 
+
+while (play == "Yes"): # check the variable 
+  <some game goes here> 
+  play = input("Play again? (Yes/No): ") #change the variable 
+
+print("End of the game.") 
+            </pre>
+
+            </div>
+            
+
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+
+
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .notes .sublist {
+              list-style-type: circle;
+              padding-left: 22px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 4,
+            topic: "Quiz",
+            type: "quiz",
+          },
+          {
+            id: 5,
+            topic: "Lab 3a - Temperature Conversion",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab 3a - Temperature Conversion </h2>
+            <p>
+            In this module, you learned about “control of flow” or how to control the way your program runs (that is, flows). Thinking back to the computational thinking module, you could create a flowchart to show how your program runs, with a diamond for each loop or conditional statement – that’s why it’s called control of flow. </p>
+            <p>In this lab, the first of two for this module,  you will create a program that asks the user for a temperature in Fahrenheit and converts it to Celsius. This will also give you practice thinking about number precision, that is, how to control how many decimal places a number has.  </p>
+            <p>The video will also show you how to comment your program – adding notes that a person can read and the computer will ignore. You will also see a function – a chunk of code with a name. You’ll learn more about functions in a future module, in this lab you will modify the starter code and just use the function that is already there.  </p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lab+3a+-+Temp+Convert.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <p>Precision</p>
+            <p>When dealing with decimal values, it is often useful to round data to make it more presentable to the user. Python has several methods to round, here are a few </p>
+            <pre style='font-size: 0.85em'>
+num = 3.1415926  
+num = num * 100 #Multiply by 100  
+num = int(num) #drop the decimal part  
+num = num / 100.0 #divide by 100 to get 2 decimal points back  
+print(num)
+            </pre>
+            <p>What are the problems with this method?</p>
+            <pre style='font-size: 0.85em'>
+num = 3.1415926  
+num = round(num, 2) # rounds to two places  
+print(num) 
+            </pre>
+            <p>Are there any issues with this method?</p>
+            <h3 style='font-weight: 700'>Lab Assignment</h3>
+            <p>Create a Replit project that asks the user for a temperature in Fahrenheit, convert to Celsius. 
+Copy/Paste the starter code linked: </p>
+            <a href='https://github.com/phuclinh9802/aied-staging-v2/blob/main/TempConvert.py' target='_blank'>https://github.com/phuclinh9802/aied-staging-v2/blob/main/TempConvert.py</a>
+            <p>You will need to look up the conversion factor online.</p>
+            </div>
+            <style>
+
+            .madlib a {
+              text-decoration: underline;
+            }
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+
+            .list {
+              list-style-type: disc;
+              padding: 0 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 6,
+            topic: "Lab 3b: Rock – Paper – Scissors",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab 3b: Rock – Paper – Scissors </h2>
+            <p>
+            You may have played Rock-Paper-Scissors when you needed to settle an argument with another person, such as children fighting over the last piece of cake. If you’ve never encountered this game before, there are instructions at WikiHow: <a href='https://www.wikihow.com/Play-Rock,-Paper,-Scissors' target='_blank'>https://www.wikihow.com/Play-Rock,-Paper,-Scissors</a> or you can play against the computer by clicking on the rock, paper, or scissors at this online version: <a href='https://www.rock-paper-scissors-game.com' target='_blank'>https://www.rock-paper-scissors-game.com</a>.  </p>
+            <p>To create this game, you’ll use your new knowledge of conditionals and loops.  </p>
+            <p>The video will also show you how to comment your program – adding notes that a person can read and the computer will ignore. You will also see a function – a chunk of code with a name. You’ll learn more about functions in a future module, in this lab you will modify the starter code and just use the function that is already there.  </p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lab+3b+-+RPS.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <p>We will be creating the class game of Rock, Paper, Scissors. </p>
+            <p>Copy/Paste the starter code (Github link attached) into a new Replit project.  </p>
+            <p>Example Game: </p>
+            <pre style='font-size: 0.85em'>
+Select Rock, Paper, or Scissors (R, P, S): R  
+Player chose: Rock  
+Computer chose: Scissors  
+You win!  
+Would you like to play again? (Y/N): Y  
+Select Rock, Paper, or Scissors (R, P, S): R 
+ 
+Player chose: Rock  
+Computer chose: Paper  
+You lose.  
+Would you like to play again? (Y/N): N  
+ 
+ 
+Final Stats: 
+ 
+Wins Ties Losses  
+---- ---- ------  
+ 1    0     1 
+            </pre>
+            <p>Starter Code: </p>
+            <a href='https://github.com/phuclinh9802/aied-staging-v2/blob/main/RPS.py' target='_blank'>https://github.com/phuclinh9802/aied-staging-v2/blob/main/RPS.py</a>
             </div>
             <style>
 
