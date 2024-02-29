@@ -112,6 +112,10 @@ function ManageStudentDetails({ user, getUser }) {
                       currentUser.pythonTwoScore,
                       "Python - Lesson 2 - Data Types"
                     )}
+                    {renderScoreBar(
+                      currentUser.pythonThreeScore,
+                      "Python - Lesson 3 - Control Structures"
+                    )}
                   </Grid>
                 </>
               )}

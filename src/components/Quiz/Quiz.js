@@ -100,6 +100,8 @@ const Quiz = ({
       setQuizType("pythonOneScore");
     } else if (type === "python2") {
       setQuizType("pythonTwoScore");
+    } else if (type === "python3") {
+      setQuizType("pythonThreeScore");
     } else if (type === "review") {
       setQuizType("reviewScore");
     } else if (type === "email") {
@@ -290,9 +292,14 @@ const Quiz = ({
           >
             {question.type === type && (
               <>
-                <Typography variant="h6" sx={{ marginBottom: "10px" }}>
-                  {question.question}
-                </Typography>
+                <Box sx={{ marginBottom: "10px" }}>
+                  <h6
+                    style={{ fontWeight: "600" }}
+                    dangerouslySetInnerHTML={{
+                      __html: question.question,
+                    }}
+                  />
+                </Box>
                 {question.imgURL && (
                   <img
                     class="img-url"
@@ -357,7 +364,13 @@ const Quiz = ({
                                   }
                                 />
                               }
-                              label={option}
+                              label={
+                                <div
+                                  dangerouslySetInnerHTML={{
+                                    __html: option,
+                                  }}
+                                />
+                              }
                             />
                           </ListItem>
                         ))}
