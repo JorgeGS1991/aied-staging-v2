@@ -64,6 +64,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
                   <TableCell>Full Name</TableCell>
                   <TableCell>Role</TableCell>
                   <TableCell>Username</TableCell>
+                  <TableCell>Last Activity</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -82,6 +83,11 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
                       </TableCell>
                       <TableCell>
                         <Typography variant="body1">{user.username}</Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="body1">
+                          {user.lastActivity}
+                        </Typography>
                       </TableCell>
                     </TableRow>
                   ) : null;
