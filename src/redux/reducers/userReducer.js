@@ -29,6 +29,19 @@ const initialState = {
     emailScore: 0,
     beyondScore: 0,
   },
+  totalScore: {
+    decompositionScore: 9,
+    patternScore: 6,
+    abstractionScore: 6,
+    algorithmScore: 6,
+    introScore: 15,
+    pythonOneScore: 6,
+    pythonTwoScore: 5,
+    pythonThreeScore: 7,
+    reviewScore: 15,
+    emailScore: 0,
+    beyondScore: 0,
+  },
 };
 
 export const userReducer = (state = initialState, action) => {

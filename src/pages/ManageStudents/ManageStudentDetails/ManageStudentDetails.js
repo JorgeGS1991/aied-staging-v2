@@ -13,7 +13,7 @@ import Login from "../../Login/Login";
 
 import "./ManageStudentDetails.css";
 
-function ManageStudentDetails({ user, getUser }) {
+function ManageStudentDetails({ user, getUser, totalScore }) {
   const { userId } = useParams();
   const [loading, setLoading] = useState(true);
 
@@ -34,8 +34,12 @@ function ManageStudentDetails({ user, getUser }) {
     return () => clearTimeout(delay);
   }, []);
 
-  const renderScoreBar = (score, attribute) => {
-    const scoreOutOfTen = score !== -1 ? (score / 10) * 100 : 0;
+  const renderScoreBar = (score, attribute, totalScore) => {
+    let scoreOutOfTen = score !== -1 ? (score / totalScore) * 100 : 0;
+
+    if (scoreOutOfTen > 100) {
+      scoreOutOfTen = 100;
+    }
 
     return (
       <Grid container spacing={2} alignItems="center">
@@ -47,7 +51,9 @@ function ManageStudentDetails({ user, getUser }) {
             <LinearProgress variant="determinate" value={scoreOutOfTen} />
           </Grid>
           <Grid item xs={2}>
-            <Typography>{score !== -1 ? score : "NA"}</Typography>
+            <Typography>
+              {score !== -1 ? `${score} / ${totalScore}` : "NA"}
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
@@ -84,37 +90,49 @@ function ManageStudentDetails({ user, getUser }) {
                   <Grid item xs={12}>
                     {renderScoreBar(
                       currentUser.introScore,
-                      "Introduction to Computational Thinking"
+                      "Introduction to Computational Thinking",
+                      totalScore.introScore
                     )}
                     {renderScoreBar(
                       currentUser.decompositionScore,
-                      "Decomposition"
+                      "Decomposition",
+                      totalScore.decompositionScore
                     )}
                     {renderScoreBar(
                       currentUser.patternScore,
-                      "Pattern Recognition"
+                      "Pattern Recognition",
+                      totalScore.patternScore
                     )}
                     {renderScoreBar(
                       currentUser.abstractionScore,
-                      "Abstraction"
+                      "Abstraction",
+                      totalScore.abstractionScore
                     )}
 
-                    {renderScoreBar(currentUser.algorithmScore, "Algorithm")}
+                    {renderScoreBar(
+                      currentUser.algorithmScore,
+                      "Algorithm",
+                      totalScore.algorithmScore
+                    )}
                     {renderScoreBar(
                       currentUser.reviewScore,
-                      "Review Your Knowledge"
+                      "Review Your Knowledge",
+                      totalScore.reviewScore
                     )}
                     {renderScoreBar(
                       currentUser.pythonOneScore,
-                      "Python - Lesson 1 - Intro to Python"
+                      "Python - Lesson 1 - Intro to Python",
+                      totalScore.pythonOneScore
                     )}
                     {renderScoreBar(
                       currentUser.pythonTwoScore,
-                      "Python - Lesson 2 - Data Types"
+                      "Python - Lesson 2 - Data Types",
+                      totalScore.pythonTwoScore
                     )}
                     {renderScoreBar(
                       currentUser.pythonThreeScore,
-                      "Python - Lesson 3 - Control Structures"
+                      "Python - Lesson 3 - Control Structures",
+                      totalScore.pythonThreeScore
                     )}
                   </Grid>
                 </>
@@ -131,6 +149,7 @@ function ManageStudentDetails({ user, getUser }) {
 
 const mapStateToProps = (state) => ({
   user: state.user.user,
+  totalScore: state.user.totalScore,
 });
 
 export default connect(mapStateToProps, { getUser })(ManageStudentDetails);
