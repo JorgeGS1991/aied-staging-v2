@@ -86,6 +86,9 @@ function ManageStudentDetails({ user, getUser, totalScore }) {
                     </Typography>
                     <Typography>Email: {currentUser.email}</Typography>
                     <Typography>Role: {currentUser.role}</Typography>
+                    <Typography>
+                      Last Activity: {currentUser.lastActivity}
+                    </Typography>
                   </Grid>
                   <Grid item xs={12}>
                     {renderScoreBar(
