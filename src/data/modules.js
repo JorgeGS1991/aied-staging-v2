@@ -621,6 +621,8 @@ const data = [
     <li>6.</li>
   </ol>
   <div>
+  <p>Try it here: <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScu_Iq6ojUC2qFrDt1I_dyR8LhWEhb1RxmGhcuZMHWILMvUfA/viewform">Google Forms</a></p>
+
 </div>
 <style>
 
@@ -631,7 +633,9 @@ const data = [
   margin-top: 20px;
 }
 
-.video-intro-section a {
+
+
+.decomp a, .video-intro-section a {
   text-decoration: underline;
 }
 
@@ -915,6 +919,8 @@ const data = [
     <li>4.</li>
     <li>5.</li>
   </ol>
+  <p>Describe it here: <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeFLnSEMNKyp8VmEmC7FybbxiiAuFtbMquz5cLf_UoA91QO5A/viewform">Google Forms</a></p>
+
   </div>
 
   </div>
@@ -931,6 +937,10 @@ const data = [
 }
 .decomp-subtitles p {
   padding: 10px 0;
+}
+
+.decomp a {
+  text-decoration: underline;
 }
 
 
@@ -1621,6 +1631,7 @@ img {
   <img src="/images/contents/vangogh1.png" />
   <img src="/images/contents/vangogh2.png" />
   </div>
+  <p>Answer it here: <a target='_blank' href="https://docs.google.com/forms/d/e/1FAIpQLSetcjjKU91oG2e8JiTEZnF-X_JRj47H70JwpOdZDKC9C9otKw/viewform">Google Forms</a></p>
 </div>
 
 
@@ -1633,6 +1644,10 @@ img {
 
 .abstraction p {
   color: black;
+}
+
+.abstraction a {
+  text-decoration: underline;
 }
 
 .monalisa, .vangogh {
@@ -1855,6 +1870,8 @@ img {
               <p>You are making peanut butter and jelly for lunch. Write an extremely detailed version of making peanut butter and jelly. Think of if you were describing it to a toddler for the first time ever. Then create a simplified/abstracted version that an adult would understand, leaving only key details.</p>
               <p>Detailed Version: ______________________</p>
               <p>Abstraction: ______________________</p>
+              <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfkVcTJkJD0-f1y89PDMMBvJK-WOVNEWfPMQZv2jH_yI1JoDg/viewform">Google Forms</a></p>
+
               </div>   
               
               <div class="decomp-example"> 
@@ -3924,6 +3941,474 @@ Wins Ties Losses 
             </pre>
             <p>Starter Code: </p>
             <a href='https://github.com/phuclinh9802/aied-staging-v2/blob/main/RPS.py' target='_blank'>https://github.com/phuclinh9802/aied-staging-v2/blob/main/RPS.py</a>
+            </div>
+            <style>
+
+            .madlib a {
+              text-decoration: underline;
+            }
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+
+            .list {
+              list-style-type: disc;
+              padding: 0 20px;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+      {
+        id: 5,
+        name: "Graphics & Functions",
+        type: "python3",
+        contents: [
+          {
+            id: 1,
+            topic: "Graphics and Functions",
+            content: `
+            <div class='data-rep'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Graphics and Functions </h2>
+              <p>
+In this video you will learn about something called turtle graphics, that is, how to program the computer to draw pictures. One way to think of this is thinking of the cursor as a tiny little turtle holding a pen. You tell the turtle where to go and it draws as it goes. You will see how to “import” the turtle package – a program someone else wrote that makes the turtle for you. You’ll also learn about how to create functions and practice loops. You should definitely read through the notes, because the video focuses on how to write the code but the notes also explain what these things (like functions) even are.</p>
+               <p>Video: </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Graphics/Lesson+4+-+Turtle+Graphics.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+              <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Objectives </h3>
+            <ul class='list'>
+            <li>Demonstrate Turtle Graphics </li>
+            <li>Create algorithms with Turtle </li>
+            </ul>
+            </div>
+
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Turtle Graphics  </h3>
+            <p>Drawing with a "turtle" is a popular way to visualize algorithms. It was part of the original Logo programming language developed in the 1960s by Wally Feruzig and Seymour Papert. Originally, a turtle was a robot that used a marker to make lines on a sheet of paper.   </p>
+<pre>import turtle 
+bob = turtle.Turtle() #bob is a Turtle 
+bob.forward(100) 
+</pre>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Turtle Graphics  </h3>
+            <p>What can you do with a turtle? Any of these methods work: </p>
+
+            <table class='table'>
+        <tr>
+            <th>Method</th>
+            <th>Parameter</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Turtle()</td>
+            <td>None</td>
+            <td>Creates and returns a new turtle object</td>
+        </tr>
+        <tr>
+            <td>forward()</td>
+            <td>amount</td>
+            <td>Moves the turtle forward by the specified amount</td>
+        </tr>
+        <tr>
+            <td>backward()</td>
+            <td>amount</td>
+            <td>Moves the turtle backward by the specified amount</td>
+        </tr>
+        <tr>
+            <td>right()</td>
+            <td>angle</td>
+            <td>Turns the turtle clockwise</td>
+        </tr>
+        <tr>
+            <td>left()</td>
+            <td>angle</td>
+            <td>Turns the turtle counter clockwise</td>
+        </tr>
+        <tr>
+            <td>penup()</td>
+            <td>None</td>
+            <td>Picks up the turtle’s Pen</td>
+        </tr>
+        <tr>
+            <td>pendown()</td>
+            <td>None</td>
+            <td>Puts down the turtle’s Pen</td>
+        </tr>
+        <tr>
+            <td>up()</td>
+            <td>None</td>
+            <td>Picks up the turtle’s Pen</td>
+        </tr>
+        <tr>
+            <td>down()</td>
+            <td>None</td>
+            <td>Puts down the turtle’s Pen</td>
+        </tr>
+        <tr>
+            <td>color()</td>
+            <td>Color name</td>
+            <td>Changes the color of the turtle’s pen</td>
+        </tr>
+        <tr>
+            <td>fillcolor()</td>
+            <td>Color name</td>
+            <td>Changes the color of the turtle will use to fill a polygon</td>
+        </tr>
+        <tr>
+            <td>heading()</td>
+            <td>None</td>
+            <td>Returns the current heading</td>
+        </tr>
+        <tr>
+            <td>position()</td>
+            <td>None</td>
+            <td>Returns the current position</td>
+        </tr>
+        <tr>
+            <td>goto()</td>
+            <td>x, y</td>
+            <td>Move the turtle to position x,y</td>
+        </tr>
+        <tr>
+            <td>begin_fill()</td>
+            <td>None</td>
+            <td>Remember the starting point for a filled polygon</td>
+        </tr>
+        <tr>
+            <td>end_fill()</td>
+            <td>None</td>
+            <td>Close the polygon and fill with the current fill color</td>
+        </tr>
+        <tr>
+            <td>dot()</td>
+            <td>None</td>
+            <td>Leave the dot at the current position</td>
+        </tr>
+        <tr>
+            <td>stamp()</td>
+            <td>None</td>
+            <td>Leaves an impression of a turtle shape at the current location</td>
+        </tr>
+        <tr>
+            <td>shape()</td>
+            <td>shapename</td>
+            <td>Should be ‘arrow’, ‘classic’, ‘turtle’ or ‘circle’</td>
+        </tr>
+    </table>
+
+  
+
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Algorithms with Turtles  </h3>
+            <p>How can we use these commands to make shapes? </p>
+            <p>An Algorithm is a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer. </p>
+
+            <pre>bob = turtle.Turtle() 
+
+for i in range(4): 
+  bob.forward(100) 
+  bob.right(90) </pre>
+<img src='/images/graphic1.png' alt='graphic' />
+<p>How could we make the following shape: </p>
+<img src='/images/graphic2.png' style='width: 350px' alt='graphic' />
+
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Functions  </h3>
+            <p>In python, we can define functions. This can be useful in removing code that is repeated in multiple places in your program and placing it in a function. Functions can be used multiple times throughout your code. </p>
+            <pre style='font-size: 0.85em'>def drawSquare(myTurtle): 
+  for i in range(4): 
+    myTurtle.forward(100) 
+    myTurtle.right(90)</pre>
+            <p>Notice in this function that the myTurtle is in the parenthesis. This is an argument, you will have to put the name of your turtle in the parenthesis when you call this function. </p>
+            <pre>bob = turtle.Turtle() 
+drawSquare(bob) </pre>
+            <p>Finally, we can add parameters to make the drawSquare function more general. In this case, we will add a second parameter for the size of the sides. </p>
+            <pre>def drawSquare(myTurtle, size): 
+  for i in range(4): 
+    myTurtle.forward(size) 
+    myTurtle.right(90)</pre>
+            </div>
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          //           {
+          //             id: 2,
+          //             topic: "Conditional Statements",
+          //             content: `
+          //             <div class='script-compiled'>
+          //                 <h2 style='font-weight: 700; font-size: 1.25em'>Conditional Statements</h2>
+          //                 <p>Now you have learned how to evaluate one or more variables, but the reason to do that is so you can control whether or not a piece of code runs. In this video, you’ll learn one way to tell the computer to run or skip a piece of code, using something called a conditional (also known as if statements or if-else statements) </p>
+          //                 <p>Video:</p>
+          //                <div style="display: flex; justify-content: center;margin: 20px 0">
+          //                <video controls width="700">
+          //                   <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lesson+3+-+If+Statements.mp4"
+          //                   type="video/mp4">
+          //               </video>
+          //             </div>
+          //             <div class='notes'>
+          //             <p>Notes as shown in the video: </p>
+          //             <h3 style='font-weight: 700; font-size: 1.25em'>if-else statements   </h3>
+          //             <p>Note: Indentation matters </p>
+          //             <pre style='font-size: 0.85em'>if <condition>: </pre>
+          //             <pre style='font-size: 0.85em'>  statement1 </pre>
+          //             <pre style='font-size: 0.85em'>  statement2 </pre>
+          //             <pre style='font-size: 0.85em'>  etc... </pre>
+
+          //             <p>The indented statements will only execute if the condition is true. </p>
+          //             <pre style='font-size: 0.85em'>x = 5 </pre>
+          //             <pre style='font-size: 0.85em'>if x > 2: </pre>
+          //             <pre style='font-size: 0.85em'>  print ("The statement x > 2 is TRUE!") </pre>
+          //             <pre style='font-size: 0.85em'>print("This line happens either way.")  </pre>
+
+          //              <p>What do you do if the if condition is not true? </p>
+
+          //             <pre style='font-size: 0.85em'>
+          // grade = input("Enter your grade: ")
+
+          // grade = int(grade) #convert from string to integer
+
+          // if(grade >= 70):
+          //   print("You passed!")
+
+          // else:
+          //   print("You need to study more.")
+
+          // What if there are multiple options?
+
+          // if(grade >= 90):
+          //   print("You got an A")
+
+          // elif(grade > 80):
+          //   print("You got a B")
+
+          // elif(grade > 70):
+          //   print("You got a C")
+
+          // elif(grade > 60):
+          //   print("You got a D")
+
+          // else:
+          //   print("You got a F")
+          //             </pre>
+          //             </div>
+
+          //             </div>
+          //             <style>
+          //             .script-compiled p {
+          //               margin: 10px 0;
+          //             }
+
+          //             .notes .list {
+          //               list-style-type: disc;
+          //               padding: 10px 20px;
+          //             }
+
+          //             .notes pre {
+          //               font-size: 0.85em;
+          //             }
+
+          //             .notes .sublist {
+          //               list-style-type: circle;
+          //               padding-left: 22px;
+          //             }
+          //             </style>
+          //             `,
+          //           },
+          //           {
+          //             id: 3,
+          //             topic: "Loops",
+          //             content: `
+          //             <div class='script-compiled'>
+          //                 <h2 style='font-weight: 700; font-size: 1.25em'>Loops</h2>
+          //                 <p>If statements are not the only control structure. Another way to control the program is by writing a loop where something happens over and over. In this video you will learn about two kinds of loops. You use a for loop when you need to run a piece of code some specific number of times. You use a while loop when you need the code to run while a condition is true. You will also hear about infinite loops, which never end (and are a problem – you always want your code to have an ending condition!) </p>
+          //                 <p>Video:</p>
+          //                <div style="display: flex; justify-content: center;margin: 20px 0">
+          //                <video controls width="700">
+          //                   <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lesson+3+-+Loops.mp4"
+          //                   type="video/mp4">
+          //               </video>
+          //             </div>
+          //             <div class='notes'>
+          //             <p>Notes as shown in the video: </p>
+          //             <h3 style='font-weight: 700; font-size: 1.25em'>for loops </h3>
+          //             <p>For loops in Python will iterate across a list. The variable you create for the loop will be each of the items in the list in order. </p>
+          //             <pre font-style='0.85em'>
+          // for i in ages:
+          //     print(i)
+
+          // 19
+          // 18
+          // 22
+          // 20
+          //             </pre>
+          //             </div>
+
+          //             <div class='notes'>
+          //             <h3 style='font-weight: 700; font-size: 1.25em'>Ranges </h3>
+          //             <p>The range function is an easy way to create a list for our loop to iterate over. </p>
+          //             <pre font-style='0.85em'>
+          // range(10) -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+          // for i in range(10):
+          //     print(i)
+          // </pre>
+          //             <p>You can also give the range function a start, stop, and increment amount. </p>
+          //             <pre font-style='0.85em'>
+          // #range(start, end, increment)
+          // #Example
+          // for i in range(10, 20, 2):
+          //     print(i)
+          //             </pre>
+
+          //             </div>
+
+          //             <div class='notes'>
+          //             <h3 style='font-weight: 700; font-size: 1.25em'>while loops  </h3>
+          //             <p>A while loop works like an if statement where a boolean expression will determine if the loop continues. Every loop should have 3 important things. </p>
+          //             <ul class='list'>
+          //             <li>Initialize a variable </li>
+          //             <li>Check the variable </li>
+          //             <li>Change the variable... in a way that will eventually end. </li>
+          //             </ul>
+          //             <pre font-style='0.85em'>
+          // x = 10 #initialize
+
+          // while (x > 0):  #check the variable
+          //     print(x)
+          //     x = x - 1   #change the variable
+          // </pre>
+          //             <p>Loops do not need to be determined by the value of a number, it could be a state that we are waiting to change.  </p>
+
+          //             <pre font-style='0.85em'>
+          // play = "Yes" # initialize
+
+          // while (play == "Yes"): # check the variable
+          //   <some game goes here>
+          //   play = input("Play again? (Yes/No): ") #change the variable
+
+          // print("End of the game.")
+          //             </pre>
+
+          //             </div>
+
+          //             </div>
+          //             <style>
+          //             .script-compiled p {
+          //               margin: 10px 0;
+          //             }
+
+          //             .notes .list {
+          //               list-style-type: disc;
+          //               padding: 10px 20px;
+          //             }
+
+          //             .notes pre {
+          //               font-size: 0.85em;
+          //             }
+
+          //             .notes .sublist {
+          //               list-style-type: circle;
+          //               padding-left: 22px;
+          //             }
+          //             </style>
+          //             `,
+          //           },
+          //           {
+          //             id: 4,
+          //             topic: "Quiz",
+          //             type: "quiz",
+          //           },
+          {
+            id: 2,
+            topic: "Lab: Turtle Graphics",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab: Turtle Graphics</h2>
+            <p>
+            In this assignment, you will use turtle graphics to write a function and use it to draw a generalized polygon. A polygon is a closed shape with at least three sides. For example, a triangle is a polygon with exactly three sides and a rectangle is a polygon with four sides. Your goal is to write the function with a parameter that is a number, and draw a polygon with that many sides. This will involve a little bit of math, and you are welcome to use the internet to figure out how to calculate the angles between the lines. </p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Graphics/Lab+4+-+Turtle+Graphics.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <p>Turtle Graphics</p>
+            <p>Create a new Python project (with Turtle graphics) in Replit.</p>
+            <p>Create a function that will draw a shape with a given turtle (needed to draw) as well as the number of sides. You'll need to calculate the amount to turn based on the number of sides</p>
+            <p>Copy/Paste the code below to get started. You may need to adjust spacing to ensure that it works. </p>
+            <pre style='font-size: 0.85em'>
+import turtle 
+ 
+def drawSquare(myTurtle, size): 
+  for i in range(4): 
+    myTurtle.forward(size) 
+    myTurtle.right(90) 
+ 
+ 
+def drawPolygon(turtle, sides): 
+  #TODO - Implement function 
+ 
+def main(): 
+  myTurtle = turtle.Turtle() 
+  drawPolygon(myTurtle, 5) #draws a pentagon 
+  drawPolygon(myTurtle, 8) #draws an octogon 
+            </pre>
             </div>
             <style>
 
