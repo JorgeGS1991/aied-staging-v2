@@ -271,8 +271,6 @@ const Quiz = ({
           if (sortedArr1.every((value, index) => value === sortedArr2[index])) {
             newScore++;
           }
-          console.log(questions[index]);
-          console.log(questions[index]._id);
         }
         setTimeout(async () => {
           await axios.put(
