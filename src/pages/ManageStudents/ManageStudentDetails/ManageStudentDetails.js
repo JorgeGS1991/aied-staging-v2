@@ -74,7 +74,7 @@ function ManageStudentDetails({ user, getUser, totalScore }) {
               mt={5}
               sx={{ display: "flex", justifyContent: "center" }}
             >
-              <CircularProgress />
+              <CircularProgress color="error" />
             </Grid>
           ) : (
             <>

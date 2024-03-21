@@ -253,14 +253,42 @@ const Quiz = ({
         if (response === correctAnswers[index]) {
           newScore++; // Increment the score when the response is correct
         }
+        setTimeout(async () => {
+          await axios.put(
+            `${process.env.REACT_APP_BACKEND_URL}/api/questions`,
+            // `http://localhost:3001/api/users/quiz`,
+            {
+              _id: questions[index]._id,
+              rightOrWrong: response === correctAnswers[index] ? true : false,
+            },
+            { withCredentials: true }
+          );
+        }, 3000);
       } else {
+        const sortedArr1 = response.slice().sort();
+        const sortedArr2 = correctAnswers[index].slice().sort();
         if (response.length === correctAnswers[index].length) {
-          const sortedArr1 = response.slice().sort();
-          const sortedArr2 = correctAnswers[index].slice().sort();
           if (sortedArr1.every((value, index) => value === sortedArr2[index])) {
             newScore++;
           }
+          console.log(questions[index]);
+          console.log(questions[index]._id);
         }
+        setTimeout(async () => {
+          await axios.put(
+            `${process.env.REACT_APP_BACKEND_URL}/api/questions`,
+            // `http://localhost:3001/api/users/quiz`,
+            {
+              _id: questions[index]._id,
+              rightOrWrong:
+                response.length === correctAnswers[index].length &&
+                sortedArr1.every((value, index) => value === sortedArr2[index])
+                  ? true
+                  : false,
+            },
+            { withCredentials: true }
+          );
+        }, 3000);
       }
     });
 
@@ -387,7 +415,7 @@ const Quiz = ({
           mt={5}
           sx={{ display: "flex", justifyContent: "center" }}
         >
-          <CircularProgress />
+          <CircularProgress color="error" />
         </Grid>
       )}
       <Button
