@@ -38,7 +38,7 @@ function CircularProgressWithLabel(props) {
   return (
     <Box>
       <Box sx={{ position: "relative", display: "inline-flex" }}>
-        <CircularProgress variant="determinate" {...props} />
+        <CircularProgress color="error" variant="determinate" {...props} />
         <Box
           sx={{
             top: 0,
