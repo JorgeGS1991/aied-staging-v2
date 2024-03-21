@@ -17,7 +17,7 @@ const QuizAnalytics = () => {
   useEffect(() => {
     // Fetch data from backend API
     axios
-      .get("/api/questions")
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/questions`)
       .then((response) => {
         setQuestions(response.data);
         setLoading(false); // Set loading to false when data is fetched
