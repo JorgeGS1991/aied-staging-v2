@@ -8,7 +8,11 @@ import {
   List,
   ListItem,
   ListItemText,
+  Box,
 } from "@mui/material";
+import DangerousIcon from "@mui/icons-material/Dangerous";
+import CheckIcon from "@mui/icons-material/Check";
+import InfoIcon from "@mui/icons-material/Info";
 
 const QuizAnalytics = () => {
   const [questions, setQuestions] = useState([]);
@@ -77,15 +81,26 @@ const QuizAnalytics = () => {
                   </ListItem>
                 ))}
               </List>
-              <Typography variant="body1">
-                Correct Answer: {JSON.stringify(question.correctAnswer)}
-              </Typography>
-              <Typography variant="body1">
-                Right Answers: {question.rightAnswer ?? 0}
-              </Typography>
-              <Typography variant="body1">
-                Wrong Answers: {question.wrongAnswer ?? 0}
-              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                }}
+              >
+                <Typography variant="body1">
+                  <InfoIcon /> Correct Answer:{" "}
+                  {JSON.stringify(question.correctAnswer)}
+                </Typography>
+                <Typography sx={{ color: "green" }} variant="body1">
+                  <CheckIcon /># of Right Answers: {question.rightAnswer ?? 0}
+                </Typography>
+                <Typography sx={{ color: "red" }} variant="body1">
+                  <DangerousIcon /> # of Wrong Answers:{" "}
+                  {question.wrongAnswer ?? 0}
+                </Typography>
+              </Box>
             </Paper>
           </Grid>
         ))
