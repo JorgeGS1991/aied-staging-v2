@@ -8,7 +8,10 @@ import {
   List,
   ListItem,
   ListItemText,
+  Checkbox,
   Box,
+  FormGroup,
+  FormControlLabel,
 } from "@mui/material";
 import DangerousIcon from "@mui/icons-material/Dangerous";
 import CheckIcon from "@mui/icons-material/Check";
@@ -17,6 +20,7 @@ import InfoIcon from "@mui/icons-material/Info";
 const QuizAnalytics = () => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedTypes, setSelectedTypes] = useState([]);
 
   useEffect(() => {
     // Fetch data from backend API
@@ -32,14 +36,53 @@ const QuizAnalytics = () => {
       });
   }, []);
 
+  const handleTypeChange = (type) => {
+    if (selectedTypes.includes(type)) {
+      setSelectedTypes(selectedTypes.filter((t) => t !== type));
+    } else {
+      setSelectedTypes([...selectedTypes, type]);
+    }
+  };
+
+  const filteredQuestions =
+    selectedTypes.length === 0
+      ? questions
+      : questions.filter((question) => selectedTypes.includes(question.type));
+
   return (
     <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <Typography variant="h6">Filter by Type</Typography>
+        <FormGroup
+          sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
+        >
+          {Array.from(new Set(questions.map((question) => question.type))).map(
+            (type, index) => (
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    key={index}
+                    checked={selectedTypes.includes(type)}
+                    onChange={() => handleTypeChange(type)}
+                    label={type}
+                  />
+                }
+                label={
+                  type.includes("python")
+                    ? type.replace("python", "python-lesson-")
+                    : type
+                }
+              />
+            )
+          )}
+        </FormGroup>
+      </Grid>
       {loading ? (
         <Grid item xs={12} sx={{ textAlign: "center" }}>
           <CircularProgress />
         </Grid>
       ) : (
-        questions.map((question, index) => (
+        filteredQuestions.map((question, index) => (
           <Grid
             item
             xs={36}
@@ -64,7 +107,6 @@ const QuizAnalytics = () => {
                   <ListItem
                     key={optionIndex}
                     sx={{
-                      //   width: "auto",
                       marginRight: "10px",
                       marginBottom: "10px",
                     }}
