@@ -102,6 +102,8 @@ const Quiz = ({
       setQuizType("pythonTwoScore");
     } else if (type === "python3") {
       setQuizType("pythonThreeScore");
+    } else if (type === "python5") {
+      setQuizType("pythonFiveScore");
     } else if (type === "review") {
       setQuizType("reviewScore");
     } else if (type === "email") {

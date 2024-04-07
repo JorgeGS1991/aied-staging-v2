@@ -3964,7 +3964,7 @@ Wins Ties Losses 
         ],
       },
       {
-        id: 5,
+        id: 3,
         name: "Graphics & Functions",
         type: "python3",
         contents: [
@@ -4186,193 +4186,6 @@ drawSquare(bob) </pre>
             </style>
             `,
           },
-          //           {
-          //             id: 2,
-          //             topic: "Conditional Statements",
-          //             content: `
-          //             <div class='script-compiled'>
-          //                 <h2 style='font-weight: 700; font-size: 1.25em'>Conditional Statements</h2>
-          //                 <p>Now you have learned how to evaluate one or more variables, but the reason to do that is so you can control whether or not a piece of code runs. In this video, you’ll learn one way to tell the computer to run or skip a piece of code, using something called a conditional (also known as if statements or if-else statements) </p>
-          //                 <p>Video:</p>
-          //                <div style="display: flex; justify-content: center;margin: 20px 0">
-          //                <video controls width="700">
-          //                   <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lesson+3+-+If+Statements.mp4"
-          //                   type="video/mp4">
-          //               </video>
-          //             </div>
-          //             <div class='notes'>
-          //             <p>Notes as shown in the video: </p>
-          //             <h3 style='font-weight: 700; font-size: 1.25em'>if-else statements   </h3>
-          //             <p>Note: Indentation matters </p>
-          //             <pre style='font-size: 0.85em'>if <condition>: </pre>
-          //             <pre style='font-size: 0.85em'>  statement1 </pre>
-          //             <pre style='font-size: 0.85em'>  statement2 </pre>
-          //             <pre style='font-size: 0.85em'>  etc... </pre>
-
-          //             <p>The indented statements will only execute if the condition is true. </p>
-          //             <pre style='font-size: 0.85em'>x = 5 </pre>
-          //             <pre style='font-size: 0.85em'>if x > 2: </pre>
-          //             <pre style='font-size: 0.85em'>  print ("The statement x > 2 is TRUE!") </pre>
-          //             <pre style='font-size: 0.85em'>print("This line happens either way.")  </pre>
-
-          //              <p>What do you do if the if condition is not true? </p>
-
-          //             <pre style='font-size: 0.85em'>
-          // grade = input("Enter your grade: ")
-
-          // grade = int(grade) #convert from string to integer
-
-          // if(grade >= 70):
-          //   print("You passed!")
-
-          // else:
-          //   print("You need to study more.")
-
-          // What if there are multiple options?
-
-          // if(grade >= 90):
-          //   print("You got an A")
-
-          // elif(grade > 80):
-          //   print("You got a B")
-
-          // elif(grade > 70):
-          //   print("You got a C")
-
-          // elif(grade > 60):
-          //   print("You got a D")
-
-          // else:
-          //   print("You got a F")
-          //             </pre>
-          //             </div>
-
-          //             </div>
-          //             <style>
-          //             .script-compiled p {
-          //               margin: 10px 0;
-          //             }
-
-          //             .notes .list {
-          //               list-style-type: disc;
-          //               padding: 10px 20px;
-          //             }
-
-          //             .notes pre {
-          //               font-size: 0.85em;
-          //             }
-
-          //             .notes .sublist {
-          //               list-style-type: circle;
-          //               padding-left: 22px;
-          //             }
-          //             </style>
-          //             `,
-          //           },
-          //           {
-          //             id: 3,
-          //             topic: "Loops",
-          //             content: `
-          //             <div class='script-compiled'>
-          //                 <h2 style='font-weight: 700; font-size: 1.25em'>Loops</h2>
-          //                 <p>If statements are not the only control structure. Another way to control the program is by writing a loop where something happens over and over. In this video you will learn about two kinds of loops. You use a for loop when you need to run a piece of code some specific number of times. You use a while loop when you need the code to run while a condition is true. You will also hear about infinite loops, which never end (and are a problem – you always want your code to have an ending condition!) </p>
-          //                 <p>Video:</p>
-          //                <div style="display: flex; justify-content: center;margin: 20px 0">
-          //                <video controls width="700">
-          //                   <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lesson+3+-+Loops.mp4"
-          //                   type="video/mp4">
-          //               </video>
-          //             </div>
-          //             <div class='notes'>
-          //             <p>Notes as shown in the video: </p>
-          //             <h3 style='font-weight: 700; font-size: 1.25em'>for loops </h3>
-          //             <p>For loops in Python will iterate across a list. The variable you create for the loop will be each of the items in the list in order. </p>
-          //             <pre font-style='0.85em'>
-          // for i in ages:
-          //     print(i)
-
-          // 19
-          // 18
-          // 22
-          // 20
-          //             </pre>
-          //             </div>
-
-          //             <div class='notes'>
-          //             <h3 style='font-weight: 700; font-size: 1.25em'>Ranges </h3>
-          //             <p>The range function is an easy way to create a list for our loop to iterate over. </p>
-          //             <pre font-style='0.85em'>
-          // range(10) -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-          // for i in range(10):
-          //     print(i)
-          // </pre>
-          //             <p>You can also give the range function a start, stop, and increment amount. </p>
-          //             <pre font-style='0.85em'>
-          // #range(start, end, increment)
-          // #Example
-          // for i in range(10, 20, 2):
-          //     print(i)
-          //             </pre>
-
-          //             </div>
-
-          //             <div class='notes'>
-          //             <h3 style='font-weight: 700; font-size: 1.25em'>while loops  </h3>
-          //             <p>A while loop works like an if statement where a boolean expression will determine if the loop continues. Every loop should have 3 important things. </p>
-          //             <ul class='list'>
-          //             <li>Initialize a variable </li>
-          //             <li>Check the variable </li>
-          //             <li>Change the variable... in a way that will eventually end. </li>
-          //             </ul>
-          //             <pre font-style='0.85em'>
-          // x = 10 #initialize
-
-          // while (x > 0):  #check the variable
-          //     print(x)
-          //     x = x - 1   #change the variable
-          // </pre>
-          //             <p>Loops do not need to be determined by the value of a number, it could be a state that we are waiting to change.  </p>
-
-          //             <pre font-style='0.85em'>
-          // play = "Yes" # initialize
-
-          // while (play == "Yes"): # check the variable
-          //   <some game goes here>
-          //   play = input("Play again? (Yes/No): ") #change the variable
-
-          // print("End of the game.")
-          //             </pre>
-
-          //             </div>
-
-          //             </div>
-          //             <style>
-          //             .script-compiled p {
-          //               margin: 10px 0;
-          //             }
-
-          //             .notes .list {
-          //               list-style-type: disc;
-          //               padding: 10px 20px;
-          //             }
-
-          //             .notes pre {
-          //               font-size: 0.85em;
-          //             }
-
-          //             .notes .sublist {
-          //               list-style-type: circle;
-          //               padding-left: 22px;
-          //             }
-          //             </style>
-          //             `,
-          //           },
-          //           {
-          //             id: 4,
-          //             topic: "Quiz",
-          //             type: "quiz",
-          //           },
           {
             id: 2,
             topic: "Lab: Turtle Graphics",
@@ -4409,6 +4222,468 @@ def main():
   drawPolygon(myTurtle, 5) #draws a pentagon 
   drawPolygon(myTurtle, 8) #draws an octogon 
             </pre>
+            </div>
+            <style>
+
+            .madlib a {
+              text-decoration: underline;
+            }
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+
+            .list {
+              list-style-type: disc;
+              padding: 0 20px;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+      {
+        id: 6,
+        name: "Strings",
+        type: "python5",
+        contents: [
+          {
+            id: 1,
+            topic: "Introduction to Strings",
+            content: `
+            <div class='data-rep'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Introduction to Strings</h2>
+              <p>
+In the lesson on data types, you were briefly introduced to strings. There are special things you can do with a string that you can’t do with other variables. In this video, you will learn several ways to work with strings. you will learn how to access single letters by using the index position. That’s the place in the word where the letter is. The numbering starts from 0, so the first letter in a word is letter number 0, the second letter is number 1, and so on. You will also learn how to access several letters, by slicing a string into parts.               
+              </p>
+              <p>Video: </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Strings/Lesson+5+-+Strings.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+              <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Objectives </h3>
+            <ul class='list'>
+            <li>Discuss & demonstrate string manipulations:  
+              <ul class='sublist>
+              <li>subscript operator </li>
+              <li>indexing </li>
+              <li>slicing a string </li>
+              </ul>
+            
+            </li>
+            <li>Converting strings to numbers </li>
+            <li>Converting numbers to strings </li>
+            </ul>
+            </div>
+
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Strings   </h3>
+            <p>In Python, Strings are lists of bytes representing Unicode characters. However, Python does not have a character data type, a single character is simply a string with a length of 1.</p>
+<pre>
+print("Hello") 
+word = "Hello" 
+print(word) 
+</pre>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Indexing </h3>
+            <p>Square brackets can be used to access elements of the string. Since a string is a list of individual letters, we can look at a spot in the list using the index position in a square bracket. This list is zero-indexed, meaning that the first spot is str[0].  </p>
+<pre>
+word = "hello" 
+print(word[1]) 
+print("hello"[1]) 
+</pre>
+</div><div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Slicing  </h3>
+            <p>Beyond looking at a single letter of a string, we can look at a selected range of the string. This range is denoted by a square bracket with the starting index (inclusive) and the ending index (exclusive). </p>
+<pre>
+word = "strawberry" 
+print(word[2:5]) 
+</pre>
+  
+
+            </div>
+           
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 2,
+            topic: "Looping in Strings",
+            content: `
+            <div class='notes'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Looping in Strings</h2>
+            <p>
+            You already learned about loops in the lesson about control structures. In this lesson you will learn how to loop through a string. This is a nice reminder about how loops work. It is also useful because sometimes we need to work with each character in a string. It also will prepare you for the next unit on lists, because a string is a list of characters.</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Strings/Lesson+5+-+Looping+in+Strings.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Looping in Strings    </h3>
+            <p>Since a string is a list of characters, we can iterate across this list. One method is to use the index positions from zero to the length of the string. </p>
+<pre>
+word = "Hello" 
+index = 0 
+while(index < len(word)): 
+    print(word[index]) 
+</pre>
+<p>In python, the for-loop iterates across a list, we can use the string as a list. </p>
+<pre>
+sentence = "This is a test" 
+for ch in sentence: 
+    print(ch)
+</pre>
+<p>We can use the index position to test elements of the word... in this case we are trying to determine if a word is a palindrome. A palindrome is a word (or phrase) that is the same forward and backward. </p>
+<pre>
+def isPalendrome(word): 
+  # check that the first letter is the same as the last 
+  # continue checking 2nd letter to 2nd from end, etc. 
+
+  return False 
+
+def main(): 
+  word = input("Enter a word: ") 
+
+  if isPalendrome(word): 
+    print("It is a palindrome") 
+  else: 
+    print("It is not a palindrome") 
+
+main() 
+</pre>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>String Methods  </h3>
+            <table class='table'>
+        <tr>
+            <th>Function </th>
+            <th>Meaning </th>
+        </tr>
+        <tr>
+            <td>str.capitalize() </td>
+            <td>Copy of str with only the first character capitalized </td>
+        </tr>
+        <tr>
+            <td>str.capwords() </td>
+            <td>Copy of str; first character of each word capitalized </td>
+        </tr>
+        <tr>
+            <td>str.center(width) </td>
+            <td>Center str in a field of given width </td>
+        </tr>
+        <tr>
+            <td>str.count(sub) </td>
+            <td>Count the number of occurrences of sub in str </td>
+        </tr>
+        <tr>
+            <td>str.find(sub) </td>
+            <td>Find the first position where sub occurs in str </td>
+        </tr>
+        <tr>
+            <td>str.join(list) </td>
+            <td>Concatenate list of strings into one large string </td>
+        </tr>
+        <tr>
+            <td>str.ljust(width) </td>
+            <td>Like center, but str is left-justified </td>
+        </tr>
+        <tr>
+            <td>str.lower() </td>
+            <td>Copy of str in all lowercase characters </td>
+        </tr>
+        <tr>
+            <td>str.lstrip() </td>
+            <td>Copy of str with leading whitespace removed </td>
+        </tr>
+        <tr>
+            <td>str.replace(oldsub, newsub) </td>
+            <td>Replace occurrences of oldsub in str with newsub </td>
+        </tr>
+        <tr>
+            <td>str.rfind(sub) </td>
+            <td>Like find, but returns the rightmost position </td>
+        </tr>
+        <tr>
+            <td>str.rjust(width) </td>
+            <td>Like center, but str is right-justified </td>
+        </tr>
+        <tr>
+            <td>str.rstrip() </td>
+            <td>Copy of str with trailing whitespace removed </td>
+        </tr>
+        <tr>
+            <td>str.split() </td>
+            <td>Split str into a list of substrings </td>
+        </tr>
+        <tr>
+            <td>str.upper() </td>
+            <td>Copy of str - all characters converted to uppercase </td>
+        </tr>
+    </table>
+  
+
+            </div>
+           
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 3,
+            topic: "Formatting output: controlling the print statement ",
+            content: `
+            <div class='notes'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Formatting output: controlling the print statement </h2>
+            <p>
+            Often we want to combine multiple kinds of data when we display it on the screen. For example, we might want to print someone’s name and age – a string and a number. The print function only prints strings, but in this video you’ll learn some ways to control the output so you can print all kinds of data. You’ll also see how to convert between different kinds of data.</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Strings/Lesson+5+-+Formatted+Print.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Formatted Print   </h3>
+            <p>Formatted print statements are often useful, especially when you want to have a mix of numbers with decimals that need to be inserted in a larger string.  </p>
+<pre>
+name = "Jen" 
+temp = 22 
+print("Hello %s. The temperature today is %d degrees." %(name, temp)) 
+</pre>
+<p>Placeholder types: </p>
+            <table class='table'>
+        <tr>
+            <th>Symbol  </th>
+            <th>Type  </th>
+        </tr>
+        <tr>
+            <td>%s </td>
+            <td>string </td>
+        </tr>
+        <tr>
+            <td>%d </td>
+            <td>integer  </td>
+        </tr>
+        <tr>
+            <td>%f  </td>
+            <td>float  </td>
+        </tr>
+        <tr>
+            <td>%x  </td>
+            <td>hexadecimal </td>
+        </tr>
+        <tr>
+            <td>%c </td>
+            <td>character </td>
+        </tr>
+    </table>
+    <p>With numeric values, padding can be used to ensure that the values have uniform size. </p>
+    <pre>
+for i in range(10): 
+    num = random.random() * 100 
+    print("%2.2f" %(num)) 
+    </pre>
+        </div>
+         <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Converting types    </h3>
+            <p>In programming languages, numbers and words are different data types. The number 5 is not the same as the string "5". To use math, we need to make sure that the values are numeric. To print, we need to make sure that values are strings. </p>
+<pre>
+age_str = input("Enter your age: ") 
+age_int = int(age_str) 
+age_in_five = age_int + 5 
+print("In five years you will be " + str(age_in_five))
+</pre>
+            </div>
+        
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 4,
+            topic: "Quiz",
+            type: "quiz",
+          },
+          {
+            id: 5,
+            topic: "Lab: Word Game",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab: Word Game  </h2>
+            <p>
+            In this lab, you will program your own version of a popular word game. In the game, the player guesses 5-letter words and gets feedback on each guess. You can play a version of this game here: <span><a href='https://www.nytimes.com/games/wordle/index.html  ' target='_blank'>https://www.nytimes.com/games/wordle/index.html</a></span>  </p>
+            <p>This video will get you started on the lab:</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Strings/Lab+5+-+Word+Game.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>The word list can be found here: <span><a href='https://github.com/UNO-Babb/Lab5/blob/master/words.txt?authuser=1  ' target='_blank'>https://github.com/UNO-Babb/Lab5/blob/master/words.txt?authuser=1</a></span>  </p>
+            <p>The starter code is here: <span><a href='https://github.com/UNO-Babb/Lab5/blob/master/WordGame.py?authuser=1' target='_blank'>https://github.com/UNO-Babb/Lab5/blob/master/WordGame.py?authuser=1</a></span>  </p>
+            <p>Here are the notes as shown in the video: </p>
+            <p>Word Game (not a NYT property) </p>
+            <p>We will be re-creating a (currently) popular word game where a user guesses 5-letter words and gets feedback on their guess. <p>
+<p>You will finish the word game in a few important ways. There are three helper functions we will look at completing. </p>
+<pre>inWord(letter, word) </pre>
+<p>This function returns True or False depending on the state of the given letter being anywhere in the word. </p>
+<pre>inSpot(letter, word, spot) </pre>
+<p>This function returns True or False if the letter is in the word at the given spot. </p>
+<pre>rateGuess(myGuess, word) </pre>
+<p>Rates your guess and returns a word with the following features.  </p>
+            <ul class='list'>
+            <li>Capital letter if the letter is in the right spot </li>
+            <li>Lower case letter if the letter is in the word but in the wrong spot </li>
+            <li>if the letter is not in the word at all </li>
+            </ul>
+<pre>main()</pre>
+            <p>Your main function should randomly select a word from the list of all possible words. You will give the user 6 tries to get the correct word If they get it early, end the loop and congratulate. Use the helper methods to determine if the user got any letters correct. </p>
+            <p>Copy/Paste the word game from the starter code (linked) in your Replit repository. </p>
+            <p>You will also need to create a new file in your Replit project called <strong>words.txt</strong> that contains all of the possible 5-letter word. You can copy the one provided (link) or create your own.  </p>
             </div>
             <style>
 
