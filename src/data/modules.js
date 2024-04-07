@@ -3964,7 +3964,7 @@ Wins Ties Losses 
         ],
       },
       {
-        id: 3,
+        id: 5,
         name: "Graphics & Functions",
         type: "python3",
         contents: [
