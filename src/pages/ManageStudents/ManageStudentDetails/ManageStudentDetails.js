@@ -142,6 +142,11 @@ function ManageStudentDetails({ user, getUser, totalScore }) {
                       "Python - Lesson 5 - Strings",
                       totalScore.pythonFiveScore
                     )}
+                    {renderScoreBar(
+                      currentUser.pythonFiveScore,
+                      "Python - Lesson 6 - Lists & Dictionary",
+                      totalScore.pythonSixScore
+                    )}
                   </Grid>
                 </>
               )}
