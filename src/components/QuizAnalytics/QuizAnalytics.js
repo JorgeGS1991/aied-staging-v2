@@ -97,7 +97,11 @@ const QuizAnalytics = () => {
                   dangerouslySetInnerHTML={{
                     __html: question.question,
                   }}
-                  style={{ padding: "0 20px", textAlign: "left" }}
+                  style={{
+                    padding: "0 20px",
+                    textAlign: "left",
+                    overflow: "scroll",
+                  }}
                 />
               </Typography>
               <List
