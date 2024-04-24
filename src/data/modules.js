@@ -8,7 +8,7 @@ const data = [
         name: "Link to Slack Channel",
         content: `
             <p>This is the link to the Slack Channel:</p>
-            <a style="margin-top: 20px; text-decoration: underline;" target="_blank" href="https://join.slack.com/t/worklearn-workspace/shared_invite/zt-2bztctjoz-eWdMmylcL91X6e9FNJKuKg">Slack Channel</a>
+            <a style="margin-top: 20px; text-decoration: underline;" target="_blank" href="https://join.slack.com/t/worklearn-workspace/shared_invite/zt-2hdhnx202-e3e_Ms3tsaroo7uyBOA_7Q">Slack Channel</a>
             `,
       },
       {
@@ -4720,6 +4720,406 @@ print("In five years you will be " + str(age_in_five))
               <p>
 A list is a set of consecutive items. You saw lists in the strings lesson, since a string is just a list of letters. This lesson focuses on lists more generally, including lists with any kind of data not just letters.              
 </p>
+              <p>Video: </p>
+               <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lesson+6+-+Lists.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+              <div class='notes'>
+            <p>Notes as shown in the video: </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Objectives </h3>
+            <ul class='list'>
+            <li>Lists, tuples, and dictionaries </li>
+            <li>Basic list operators, replacing, inserting, removing an element;  </li>
+            <li>Dictionary literals
+            <ul class='sublist'>
+            <li>adding and removing keys </li>
+            <li>accessing and replacing values </li>
+            </ul>
+            
+            </li>
+            <li>Traversing dictionaries. </li>
+            </ul>
+            </div>
+
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Lists</h3>
+            <p>A list is a sequence of values. In a string, the values are all characters; in a list, they can be any type. The values in a list are called elements or items. There are several ways to create a list but the easiest is to create values, separated by a comma, inside of square braces [] </p>
+<pre>
+list1 = [2, 3, 5, 6] 
+print(list1[2]) 
+list2 = ["Alice", "Bob", "Catherine", "Doug"] 
+print(list2[2]) 
+</pre>
+<p>Unlike other languages, the elements of a list do not need to be the same type. </p>
+<pre>
+list3 = ["apple", 5, "grapes", 23.7] 
+for element in list3: 
+  print(element) 
+</pre>
+<p>Lists can also be changed, we can update the value at a position. </p>
+<pre>
+print(list1) 
+list1[2] = 17 
+print(list1)
+</pre>
+            </div>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Traversing a List  </h3>
+            <p>There are multiple ways to use loops with a list. Similar to the way strings can be traversed, we will look at visiting each element in a list by its numerical position and by iterating using a for loop. </p>
+<pre>
+list1 = [3, 1, 4, 1, 5, 9, 2, 6] 
+position = 0 
+while position < len(list1): 
+  print(list1[position]) 
+  position = position + 1 
+</pre>
+<p>This method is the best option if you need to know where you are in a list. For example, if your goal is to remove elements, or search for the location of an item in a list. </p>
+<p>Using a for loop, we can iterate across each element of a list. This is useful if we want to print the contents of a list, find the sum of a list, or determine if an element exists in a list (but not where). </p>
+<pre>
+for item in list1: 
+  print(item) 
+</pre>
+<p>This allows us to easily traverse a list without ever knowing how long the list is, or keep track of our position in the list. </p>
+</div>
+           
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 2,
+            topic: "List Operations ",
+            content: `
+            <div class='notes'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>List Operations </h2>
+            <p>
+            There are many more actions you may want to take with lists. Some of these, like slicing (cutting out a part of a list), you’ve already seen in the Strings list. Others, such as adding or deleting an item from the list, are new. In this video, you’ll see several operations (actions) you can use with lists.</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lesson+6+-+List+Operations.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>List operations  </h3>
+            <p>There are several operations you can do to a list. The first operation is joining two lists with the + operator. </p>
+<pre>
+a = [1, 2, 3] 
+b = [7, 8, 9] 
+c = a + b 
+print (c) 
+</pre>
+<p>In this operation, the two lists are appended to each other and the result is saved to the variable c. The * operator repeats a list a number of times. </p>
+<pre>
+[0] * 5 
+[1, 2, 3] * 3 
+</pre>
+<p>Another useful operation is to add a new element to a list. This can be done in a few ways. </p>
+<div class='list-method'>
+<p>append (element) </p>
+<pre>
+t = ['a', 'b', 'c'] 
+t.append('d') 
+print(t)  
+</pre>
+</div>
+<div class='list-method'>
+<p>delete (position)  </p>
+<pre>
+t = ['a', 'b', 'c'] 
+del t[1] 
+print(t) 
+</pre>
+</div>
+<div class='list-method'>
+<p>delete (value)  </p>
+<pre>
+t = ['a', 'b', 'c'] 
+t.remove('a') 
+print(t)
+</pre>
+</div>
+<div class='list-method'>
+<p>slicing[start: end]  </p>
+<p>Slicing a list is very similar to slicing a string, this is because python treats strings as a list of characters. </p>
+<pre>
+t = ['a', 'b', 'c', 'd', 'e', 'f'] 
+t[1:3] 
+t[:4] 
+t[3:] 
+</pre>
+</div>
+<div class='list-method'>
+<p>Strings -> Lists   </p>
+<p>While a string is a list of characters, it is possible to make a list of individual words or even a list of individual sentences.  </p>
+<pre>
+s = "This is a sentence." 
+words = s.split() 
+print(words) 
+</pre>
+</div>
+            </div>
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+
+            .list-method {
+              padding: 15px 0;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 3,
+            topic: "Dictionaries ",
+            content: `
+            <div class='notes'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Dictionaries</h2>
+            <p>
+            This video begins by showing you how to convert a string into a regular list. It then continues by introducing you to a special kind of list called a dictionary. In a dictionary, you can define what the index is, rather than using the numbered position like lists do.  
+</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lesson+6+-+Dictionaries.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <p>Strings -> Lists   </p>
+<p>While a string is a list of characters, it is possible to make a list of individual words or even a list of individual sentences.  </p>
+<pre>
+s = "This is a sentence." 
+words = s.split() 
+print(words) 
+</pre>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Dictionaries    </h3>
+            <p>Dictionaries are similar to lists but the index is not necessarily an integer. Dictionaries are denoted with braces { } rather than brackets [ ] like a list. The position is still in the brackets.  </p>
+<pre>
+colors = {'red' : 'rojo', 'green' : 'verde', 'blue' : 'azul', 'yellow': 'amarillo'} 
+colors['blue'] 
+colors['rojo'] 
+colors[3] 
+</pre>
+         <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Traversing Dictionaries   </h3>
+            <p>What do we get if we wanted to print all the elements in a dictionary? </p>
+<pre>
+for c in colors: 
+  print(c) 
+</pre>
+<p>How could we use that to get all the elements? </p>
+            </div>
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 4,
+            topic: "Quiz",
+            type: "quiz",
+          },
+          {
+            id: 5,
+            topic: "Lab: Word Count ",
+            content: `
+            <div class='madlib'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab: Word Count  </h2>
+            <p>
+            Sometimes it is useful to find out how many words, lines, or characters are in a file, such as if you have a word limit on a form. You may have seen the “word count” tool in a word processor. In this lab, you will create a small program that counts the words, lines, and characters in a file.  </p>
+            <p>This video will get you started on the lab:</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+            <video controls width="700">
+            <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lab+6+-+Word+Count.mp4"
+            type="video/mp4">
+            </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+                        <h3 style='font-weight: 700; font-size: 1.25em'>Word Count    </h3>
+            <p>A common utility on Unix/Linux systems is a small program called "wc". This program analyzes a file to determine the number of lines, words, and characters contained therein. Write your own version of wc. The program should accept a file name as input and then print three numbers showing the count of lines, words, and characters in the file. 
+</p>
+<p>SAMPLE OUTPUT </p>
+<pre>
+Enter a File Name: text.txt  
+Lines: 12  
+Words: 48  
+Characters:249 
+</pre>
+<p>Copy/Paste the linked starter code and create a new document in your Replit for the <strong>gettysberg.txt</strong> or create your own text file. </p>
+            <p>The starter code is here: <span><a href='https://github.com/UNO-Babb/Lab6/blob/master/WordCount.py  ' target='_blank'>https://github.com/UNO-Babb/Lab6/blob/master/WordCount.py</a></span>  </p>
+            <p>The gettysberg.txt file is here: <span><a href='https://github.com/UNO-Babb/Lab6/blob/master/gettysberg.txt' target='_blank'>https://github.com/UNO-Babb/Lab6/blob/master/gettysberg.txt</a></span>  </p>
+
+            </div>
+            <style>
+
+            .madlib a {
+              text-decoration: underline;
+            }
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+
+            .list {
+              list-style-type: disc;
+              padding: 0 20px;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+      {
+        id: 8,
+        name: "Functions",
+        type: "python7",
+        contents: [
+          {
+            id: 1,
+            topic: "Introduction to Functions",
+            content: `
+            <div class='data-rep'>
+              <h2 style='font-weight: 700; font-size: 1.25em'>Introduction to Functions</h2>
+              <p>
+              The final topic in the Python unit is about functions. You have already used functions in your programs, but now you will learn how to write your own functions.  
+              A function is an abstraction, where you can use one word to mean something more complex. That is, you call the function using just the function name, 
+              and then it does whatever it has been programmed to do. Rather than having to write the same code over and over again, you can just use the function name! 
+              In this video, you will learn how to define a function.
+              </p>
               <p>Video: </p>
                <div style="display: flex; justify-content: center;margin: 20px 0">
                <video controls width="700">
