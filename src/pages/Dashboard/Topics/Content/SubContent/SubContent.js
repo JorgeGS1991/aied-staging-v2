@@ -72,7 +72,7 @@ function SubContent() {
       {hasNextContent ? (
         <Link
           className="next-button"
-          to={`https://w1o.78d.mywebsitetransfer.com//dashboard/${id}/${topicId}/${
+          to={`https://worklearnproject.com/dashboard/${id}/${topicId}/${
             parseInt(contentId) + 1
           }`}
         >
