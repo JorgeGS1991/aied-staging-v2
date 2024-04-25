@@ -72,7 +72,7 @@ function SubContent() {
       {hasNextContent ? (
         <Link
           className="next-button"
-          to={`https://worklearnproject.com/dashboard/${id}/${topicId}/${
+          to={`https://w1o.78d.mywebsitetransfer.com//dashboard/${id}/${topicId}/${
             parseInt(contentId) + 1
           }`}
         >
@@ -93,7 +93,7 @@ function SubContent() {
             sx={{ fontSize: 20, marginRight: "8px", color: "#fff" }}
           />
           <Typography variant="body1" component="span" sx={{ color: "#fff" }}>
-            This is the final section of this module
+            This is the final section of this module.
           </Typography>
         </Box>
       )}
