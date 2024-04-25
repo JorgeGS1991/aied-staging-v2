@@ -143,9 +143,14 @@ function ManageStudentDetails({ user, getUser, totalScore }) {
                       totalScore.pythonFiveScore
                     )}
                     {renderScoreBar(
-                      currentUser.pythonFiveScore,
+                      currentUser.pythonSixScore,
                       "Python - Lesson 6 - Lists & Dictionary",
                       totalScore.pythonSixScore
+                    )}
+                    {renderScoreBar(
+                      currentUser.pythonSevenScore,
+                      "Python - Lesson 7 - Functions",
+                      totalScore.pythonSevenScore
                     )}
                   </Grid>
                 </>

@@ -5123,7 +5123,7 @@ Characters:249
               <p>Video: </p>
                <div style="display: flex; justify-content: center;margin: 20px 0">
                <video controls width="700">
-                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lesson+6+-+Lists.mp4"
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Functions/Lesson+7+-+Functions.mp4"
                   type="video/mp4">
               </video>
             </div>
@@ -5131,60 +5131,40 @@ Characters:249
             <p>Notes as shown in the video: </p>
             <h3 style='font-weight: 700; font-size: 1.25em'>Objectives </h3>
             <ul class='list'>
-            <li>Lists, tuples, and dictionaries </li>
-            <li>Basic list operators, replacing, inserting, removing an element;  </li>
-            <li>Dictionary literals
+            <li>Design with functions: 
             <ul class='sublist'>
-            <li>adding and removing keys </li>
-            <li>accessing and replacing values </li>
+            <li>hiding redundancy, complexity </li>
+            <li>arguments and return values  </li>
+            <li>formal vs actual arguments, named arguments.  </li>
             </ul>
             
             </li>
-            <li>Traversing dictionaries. </li>
+            <li>Program structure and design. </li>
             </ul>
             </div>
 
             <div class='notes'>
-            <h3 style='font-weight: 700; font-size: 1.25em'>Lists</h3>
-            <p>A list is a sequence of values. In a string, the values are all characters; in a list, they can be any type. The values in a list are called elements or items. There are several ways to create a list but the easiest is to create values, separated by a comma, inside of square braces [] </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Functions </h3>
+            <p>In Python, a function is a named sequence of statements that belong together. Their primary purpose is to help us organize programs into chunks that match how we think about the solution to the problem. </p>
+            <p>The syntax for a function definition is: </p>
 <pre>
-list1 = [2, 3, 5, 6] 
-print(list1[2]) 
-list2 = ["Alice", "Bob", "Catherine", "Doug"] 
-print(list2[2]) 
+def name( parameters ): 
+    statements 
 </pre>
-<p>Unlike other languages, the elements of a list do not need to be the same type. </p>
+<p>The parameters we give to a function are values that are passed into the function when it is called. For example, when we had a turtle, we made a function called drawSquare() that took two parameters, a turtle and a size. </p>
 <pre>
-list3 = ["apple", 5, "grapes", 23.7] 
-for element in list3: 
-  print(element) 
+def drawSquare(myTurtle, size): 
+  myTurtle.penDown() 
+
+  for i in range(4): 
+    myTurtle.forward(size) 
+    myTurtle.right(90) 
+
+  myTurtle.penUp() 
 </pre>
-<p>Lists can also be changed, we can update the value at a position. </p>
-<pre>
-print(list1) 
-list1[2] = 17 
-print(list1)
-</pre>
-            </div>
-            <div class='notes'>
-            <h3 style='font-weight: 700; font-size: 1.25em'>Traversing a List  </h3>
-            <p>There are multiple ways to use loops with a list. Similar to the way strings can be traversed, we will look at visiting each element in a list by its numerical position and by iterating using a for loop. </p>
-<pre>
-list1 = [3, 1, 4, 1, 5, 9, 2, 6] 
-position = 0 
-while position < len(list1): 
-  print(list1[position]) 
-  position = position + 1 
-</pre>
-<p>This method is the best option if you need to know where you are in a list. For example, if your goal is to remove elements, or search for the location of an item in a list. </p>
-<p>Using a for loop, we can iterate across each element of a list. This is useful if we want to print the contents of a list, find the sum of a list, or determine if an element exists in a list (but not where). </p>
-<pre>
-for item in list1: 
-  print(item) 
-</pre>
-<p>This allows us to easily traverse a list without ever knowing how long the list is, or keep track of our position in the list. </p>
+<p>In this case, a turtle and a number are passed to the function as parameters. These values can now be used by the function. </p>
+<p>Note: any changes made to a parameter passed to a function, will not change the original value that called it. </p>
 </div>
-           
 
             </div>
             <style>
@@ -5235,77 +5215,29 @@ for item in list1:
           },
           {
             id: 2,
-            topic: "List Operations ",
+            topic: "Docstrings: Documenting your function ",
             content: `
             <div class='notes'>
-            <h2 style='font-weight: 700; font-size: 1.25em'>List Operations </h2>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Docstrings: Documenting your function </h2>
             <p>
-            There are many more actions you may want to take with lists. Some of these, like slicing (cutting out a part of a list), you’ve already seen in the Strings list. Others, such as adding or deleting an item from the list, are new. In this video, you’ll see several operations (actions) you can use with lists.</p>
+            In this video, you’ll learn about something called docstrings. A docstring is a string used to document Python code. You first learned about documentation in the Introduction to Programming in Python unit. Documentation is the explanation of how things work. Documentation is a specific kind of comments. Comments are notes that the computer ignores, that are there for people reading the code. They are often an explanation of what the code does or should do. In this case, you will learn to write a docstring to explain your function.  </p>
             <div style="display: flex; justify-content: center;margin: 20px 0">
                <video controls width="700">
-                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lesson+6+-+List+Operations.mp4"
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Functions/Lesson+7+-+Docstrings.mp4"
                   type="video/mp4">
               </video>
             </div>
             <p>Here are the notes as shown in the video: </p>
             <div class='notes'>
-            <h3 style='font-weight: 700; font-size: 1.25em'>List operations  </h3>
-            <p>There are several operations you can do to a list. The first operation is joining two lists with the + operator. </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>docstrings </h3>
+            <p>If the first thing after the function header is a string (some tools insist that it must be a triple-quoted string), it is called a docstring and gets special treatment in Python and in some of the programming tools. </p>
+            <p>Another way to retrieve this information is to use the interactive interpreter, and enter the expression <function_name>.doc, which will retrieve the docstring for the function. So the string you write as documentation at the start of a function is retrievable by python tools at runtime. This is different from comments in your code, which are completely eliminated when the program is parsed. </p>
+            <p>By convention, Python programmers use docstrings for the key documentation of their functions. </p>
 <pre>
-a = [1, 2, 3] 
-b = [7, 8, 9] 
-c = a + b 
-print (c) 
+def checkPrime(num): 
+  """Check to see if the given number is prime. Returns True or False""" 
+  statements 
 </pre>
-<p>In this operation, the two lists are appended to each other and the result is saved to the variable c. The * operator repeats a list a number of times. </p>
-<pre>
-[0] * 5 
-[1, 2, 3] * 3 
-</pre>
-<p>Another useful operation is to add a new element to a list. This can be done in a few ways. </p>
-<div class='list-method'>
-<p>append (element) </p>
-<pre>
-t = ['a', 'b', 'c'] 
-t.append('d') 
-print(t)  
-</pre>
-</div>
-<div class='list-method'>
-<p>delete (position)  </p>
-<pre>
-t = ['a', 'b', 'c'] 
-del t[1] 
-print(t) 
-</pre>
-</div>
-<div class='list-method'>
-<p>delete (value)  </p>
-<pre>
-t = ['a', 'b', 'c'] 
-t.remove('a') 
-print(t)
-</pre>
-</div>
-<div class='list-method'>
-<p>slicing[start: end]  </p>
-<p>Slicing a list is very similar to slicing a string, this is because python treats strings as a list of characters. </p>
-<pre>
-t = ['a', 'b', 'c', 'd', 'e', 'f'] 
-t[1:3] 
-t[:4] 
-t[3:] 
-</pre>
-</div>
-<div class='list-method'>
-<p>Strings -> Lists   </p>
-<p>While a string is a list of characters, it is possible to make a list of individual words or even a list of individual sentences.  </p>
-<pre>
-s = "This is a sentence." 
-words = s.split() 
-print(words) 
-</pre>
-</div>
             </div>
             </div>
             <style>
@@ -5360,45 +5292,46 @@ print(words)
           },
           {
             id: 3,
-            topic: "Dictionaries ",
+            topic: "Return values  ",
             content: `
             <div class='notes'>
-            <h2 style='font-weight: 700; font-size: 1.25em'>Dictionaries</h2>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Return values </h2>
             <p>
-            This video begins by showing you how to convert a string into a regular list. It then continues by introducing you to a special kind of list called a dictionary. In a dictionary, you can define what the index is, rather than using the numbered position like lists do.  
+            You now know how to call a function in your program (such as telling the computer to draw a square), and how to give the function information, called parameters (such as telling the computer the string to manipulate). Sometimes you also want to have a function give you some information back after it is done – returning the answer to you (such as telling you the answer to a math problem). The information returned from a function is called a return value. In this video, you will learn how to write a function that returns a value when it is done running. 
 </p>
             <div style="display: flex; justify-content: center;margin: 20px 0">
                <video controls width="700">
-                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lesson+6+-+Dictionaries.mp4"
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Functions/Lesson+7+-+Return+Values.mp4"
                   type="video/mp4">
               </video>
             </div>
             <p>Here are the notes as shown in the video: </p>
-            <p>Strings -> Lists   </p>
-<p>While a string is a list of characters, it is possible to make a list of individual words or even a list of individual sentences.  </p>
-<pre>
-s = "This is a sentence." 
-words = s.split() 
-print(words) 
-</pre>
             <div class='notes'>
-            <h3 style='font-weight: 700; font-size: 1.25em'>Dictionaries    </h3>
-            <p>Dictionaries are similar to lists but the index is not necessarily an integer. Dictionaries are denoted with braces { } rather than brackets [ ] like a list. The position is still in the brackets.  </p>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Return Values     </h3>
+            <p>A function can send a value back to the code that called it. We have been using this type of function in python for a while. </p>
+            <p>Example:</p>
 <pre>
-colors = {'red' : 'rojo', 'green' : 'verde', 'blue' : 'azul', 'yellow': 'amarillo'} 
-colors['blue'] 
-colors['rojo'] 
-colors[3] 
+abs(10) 
+abs(-15) 
+
+import math 
+
+math.pow(2, 5) 
 </pre>
-         <div class='notes'>
-            <h3 style='font-weight: 700; font-size: 1.25em'>Traversing Dictionaries   </h3>
-            <p>What do we get if we wanted to print all the elements in a dictionary? </p>
+<p>When you are defining your own functions, the return statement will be the last thing that happens in your function. As soon as a return statement is reached, the function ends and any lines that happen after the return statement will not be executed. </p>
 <pre>
-for c in colors: 
-  print(c) 
+def hasValue(myList, value): 
+  for e in myList: 
+    if e == value: 
+      return True 
+
+  return False 
+
+nums = [5, 10, 15, 20] 
+
+print( hasValue(nums, 8) ) 
 </pre>
-<p>How could we use that to get all the elements? </p>
-            </div>
+</div>
             </div>
             <style>
             .data-rep a {
@@ -5448,38 +5381,295 @@ for c in colors:
           },
           {
             id: 4,
+            topic: "Problem deconstruction and abstraction ",
+            content: `
+            <div class='notes'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Problem deconstruction and abstraction </h2>
+            <p>
+            In the unit on computational thinking, you learned about decomposition (breaking problems into parts) and abstraction (taking details away). Both of these ways of thinking about problems make the problems simpler, and therefore easier to solve. In programming, functions are a way to decompose problems. That is, each function can do a small thing, and then you can put them together to solve the whole problem. This video will show you how to decompose a problem into smaller functions. It will also explain how to make sure you’re in the right file when you call a function.  
+</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Functions/Lesson+7+-+Abstraction.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Problem deconstruction (abstraction)   </h3>
+            <p>One of the big ideas in computer science is taking a large problem and breaking it down into smaller, more manageable parts. For example, imagine that we have the problem of finding the sum of many squares. We can begin by breaking this down into the smallest possible problem. </p>
+<pre>
+def square(x): 
+  y = x * x 
+  return y 
+</pre>
+<p>Then, we can use this small solution as part of the larger solution. </p>
+<pre>
+def sumOfSquares(start, end): 
+  total = 0 
+  for num in range(start, end + 1): 
+    total = total + square(num) 
+
+  return total 
+</pre>
+<p>Then finally, we could call this in the context of our program. Perhaps after we have some data or user input. </p>
+<pre>
+def main(): 
+  tot = sumOfSquares(4, 7) 
+  print(tot) 
+
+main() 
+</pre>
+</div>
+
+<div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Using a Main Function   </h3>
+            <p>Most of the work we have done so far involves code that has a main() function. This function is the one we tend to call as a first step. Sometimes, your code will be imported by another python file so automatically calling a main function becomes unnecessary or undesired. </p>
+            <p>Before the Python interpreter executes your program, it defines a few special variables. One of those variables is called name and it is automatically set to the string value "main" when the program is being executed by itself in a standalone fashion. On the other hand, if the program is being imported by another program, then the name variable is set to the name of that module. This means that we can know whether the program is being run by itself or whether it is being used by another program and based on that observation, we may or may not choose to execute some of the code that we have written. </p>
+            <p>For example, assume that we have written a collection of functions to do some simple math. We can include a main function to invoke these math functions. It is much more likely, however, that these functions will be imported by another program for some other purpose. In that case, we would not want to execute our main function. </p>
+<pre>
+def squareit(n): 
+  return n * n 
+
+ 
+def cubeit(n): 
+  return n*n*n 
+
+ 
+def main(): 
+  anum = int(input("Please enter a number")) 
+  print(squareit(anum)) 
+  print(cubeit(anum)) 
+
+if __name__ == "__main__": 
+  main() 
+</pre>
+</div>
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 5,
+            topic: "Composition ",
+            content: `
+            <div class='notes'>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Composition </h2>
+            <p>
+            The opposite of decomposition is composition – putting things together. You can compose the solution to a complex problem by creating one function which uses other functions. This video shows you how to create a complex function step by step, testing your work at each step.  
+</p>
+            <div style="display: flex; justify-content: center;margin: 20px 0">
+               <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Functions/Lesson+7+-+Composition.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <p>Here are the notes as shown in the video: </p>
+            <div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Program Development </h3>
+            <p>At this point, you should be able to look at complete functions and tell what they do. Also, if you have been doing the exercises, you have written some small functions. As you write larger functions, you might start to have more difficulty, especially with runtime and semantic errors. </p>
+            <p>To deal with increasingly complex programs, we are going to suggest a technique called incremental development. The goal of incremental development is to avoid long debugging sessions by adding and testing only a small amount of code at a time. 
+
+As an example, suppose you want to find the distance between two points, given by the coordinates (x1, y1) and (x2, y2). By the Pythagorean theorem, the distance is: </p>
+
+<pre>
+<span style="white-space: nowrap; display: flex; justify-content:center; margin: 10px;">
+&radic;<span style="text-decoration:overline;">&nbsp;(x2 - x1)^2 + (y2 - y1)^2&nbsp;</span>
+</span>
+</pre>
+<p>The first step is to consider what a distance function should look like in Python. In other words, what are the inputs (parameters) and what is the output (return value)? 
+
+In this case, the two points are the inputs, which we can represent using four parameters. The return value is the distance, which is a floating-point value. 
+
+Already we can write an outline of the function that captures our thinking so far. </p>
+<pre>
+def distance(x1, y1, x2, y2): 
+  return 0.0 
+</pre>
+<p>Obviously, this version of the function doesn’t compute distances; it always returns zero. But it is syntactically correct, and it will run, which means that we can test it before we make it more complicated.  </p>
+<p>For the second test the horizontal distance equals 3 and the vertical distance equals 4; that way, the result is 5 (the hypotenuse of a 3-4-5 triangle). For the third test, we have a 1-1-sqrt(2) triangle.  </p>
+<p>At this point we have confirmed that the function is syntactically correct, and we can start adding lines of code. After each incremental change, we test the function again. If an error occurs at any point, we know where it must be — in the last line we added.  </p>
+<p>A logical first step in the computation is to find the differences x2- x1 and y2- y1. We will store those values in temporary variables named dx and dy.   </p>
+<pre>
+def distance(x1, y1, x2, y2): 
+  dx = x2 - x1 
+  dy = y2 - y1 
+
+  return 0.0  
+</pre>
+<p>Next we compute the sum of squares of dx and dy. </p>
+<pre>
+def distance(x1, y1, x2, y2): 
+  dx = x2 - x1 
+  dy = y2 - y1 
+  dsquared = dx**2 + dy**2 
+  return 0.0 
+</pre>
+<p>Finally, we have our working function we can test. </p>
+<pre>
+def distance(x1, y1, x2, y2): 
+  dx = x2 - x1 
+  dy = y2 - y1 
+  dsquared = dx**2 + dy**2 
+  result = dsquared**0.5 
+  return result  
+</pre>
+
+</div>
+
+<div class='notes'>
+            <h3 style='font-weight: 700; font-size: 1.25em'>Composition   </h3>
+            <p>As we have already seen, you can call one function from within another. This ability to build functions by using other functions is called composition. </p>
+            <p>As an example, we’ll write a function that takes two points, the center of the circle and a point on the perimeter, and computes the area of the circle. </p>
+            <p>Assume that the center point is stored in the variables xc and yc, and the perimeter point is in xp and yp. The first step is to find the radius of the circle, which is the distance between the two points. Fortunately, we’ve just written a function, distance, that does just that, so now all we have to do is use it: </p>
+<pre>
+radius = distance(xc, yc, xp, yp) 
+</pre>
+<p>The second step is to find the area of a circle with that radius and return it. Again we will use one of our earlier functions: </p>
+<pre>
+result = area(radius) 
+return result 
+</pre>
+<p>Wrapping that up in a function, we get: </p>
+<pre>
+def distance(x1, y1, x2, y2): 
+  dx = x2 - x1 
+  dy = y2 - y1 
+  dsquared = dx**2 + dy**2 
+  result = dsquared**0.5 
+  return result 
+
+def area(radius): 
+  b = 3.14159 * radius**2 
+  return b 
+
+def area2(xc, yc, xp, yp): 
+  radius = distance(xc, yc, xp, yp) 
+  result = area(radius) 
+  return result 
+
+print(area2(0,0,1,1)) 
+</pre>
+<p>We called this function area2 to distinguish it from the area function defined earlier. There can only be one function with a given name within a module. 
+
+Note that we could have written the composition without storing the intermediate results. </p>
+<pre>
+def area2(xc, yc, xp, yp): 
+  return area(distance(xc, yc, xp, yp)) 
+</pre>
+</div>
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .sublist {
+              padding: 10px 20px;
+            }
+            .notes .list ul {
+              list-style-type: circle;
+              padding: 10px 20px;
+            }
+
+            .notes pre {
+              font-size: 0.85em;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 6,
             topic: "Quiz",
             type: "quiz",
           },
           {
-            id: 5,
-            topic: "Lab: Word Count ",
+            id: 7,
+            topic: "Lab: Coding Bat ",
             content: `
             <div class='madlib'>
-            <h2 style='font-weight: 700; font-size: 1.25em'>Lab: Word Count  </h2>
+            <h2 style='font-weight: 700; font-size: 1.25em'>Lab: Coding Bat </h2>
             <p>
-            Sometimes it is useful to find out how many words, lines, or characters are in a file, such as if you have a word limit on a form. You may have seen the “word count” tool in a word processor. In this lab, you will create a small program that counts the words, lines, and characters in a file.  </p>
-            <p>This video will get you started on the lab:</p>
+            Coding Bat (<a href='https://codingbat.com/python' target='_blank'>https://codingbat.com/python</a>) is a website that prompts with a problem to solve, then tests several cases to see if your solution actually solves all cases. Each problem uses value-returning functions, where a function takes in some parameters (input), and returns some result (output).   </p>
+            <p>Here is a video that shows you how to use coding bat:</p>
             <div style="display: flex; justify-content: center;margin: 20px 0">
             <video controls width="700">
-            <source src="https://work-learn-bucket.s3.amazonaws.com/Lists/Lab+6+-+Word+Count.mp4"
+            <source src="https://work-learn-bucket.s3.amazonaws.com/Functions/Lab+7+-+Codingbat.mp4"
             type="video/mp4">
             </video>
             </div>
-            <p>Here are the notes as shown in the video: </p>
-                        <h3 style='font-weight: 700; font-size: 1.25em'>Word Count    </h3>
-            <p>A common utility on Unix/Linux systems is a small program called "wc". This program analyzes a file to determine the number of lines, words, and characters contained therein. Write your own version of wc. The program should accept a file name as input and then print three numbers showing the count of lines, words, and characters in the file. 
-</p>
-<p>SAMPLE OUTPUT </p>
-<pre>
-Enter a File Name: text.txt  
-Lines: 12  
-Words: 48  
-Characters:249 
-</pre>
-<p>Copy/Paste the linked starter code and create a new document in your Replit for the <strong>gettysberg.txt</strong> or create your own text file. </p>
-            <p>The starter code is here: <span><a href='https://github.com/UNO-Babb/Lab6/blob/master/WordCount.py  ' target='_blank'>https://github.com/UNO-Babb/Lab6/blob/master/WordCount.py</a></span>  </p>
-            <p>The gettysberg.txt file is here: <span><a href='https://github.com/UNO-Babb/Lab6/blob/master/gettysberg.txt' target='_blank'>https://github.com/UNO-Babb/Lab6/blob/master/gettysberg.txt</a></span>  </p>
+            <p>To begin, create an account on <a href='https://codingbat.com/python' target='_blank'>CodingBat</a>. Make sure you're in the Python section. Solve the problems for Warmup-1 and Warmup-2. </p>
+<p>When completed, you can click the "done" tab in the top-right portion of the screen. Screenshot this page and submit that as your "proof of completion". Feel free to continue on to the other problems not assigned as part of your python journey. </p>
 
             </div>
             <style>

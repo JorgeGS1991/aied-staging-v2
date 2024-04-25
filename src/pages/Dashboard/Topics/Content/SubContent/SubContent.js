@@ -93,7 +93,7 @@ function SubContent() {
             sx={{ fontSize: 20, marginRight: "8px", color: "#fff" }}
           />
           <Typography variant="body1" component="span" sx={{ color: "#fff" }}>
-            This is the final section of this module
+            This is the final section of this module.
           </Typography>
         </Box>
       )}
