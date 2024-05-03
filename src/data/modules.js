@@ -2691,7 +2691,7 @@ img {
       {
         id: 6,
         name: "Review Your Knowledge",
-        type: "intro",
+        type: "review",
         contents: [
           {
             id: 1,
@@ -5689,6 +5689,20 @@ def area2(xc, yc, xp, yp):
               padding: 0 20px;
             }
             </style>
+            `,
+          },
+        ],
+      },
+      {
+        id: 9,
+        name: "Qualtrics Survey",
+        contents: [
+          {
+            id: 1,
+            topic: "Qualtrics Survey",
+            content: `
+            <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+            <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
             `,
           },
         ],
