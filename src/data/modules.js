@@ -5694,7 +5694,7 @@ def area2(xc, yc, xp, yp):
         ],
       },
       {
-        id: 9,
+        id: 8,
         name: "Qualtrics Survey",
         contents: [
           {
@@ -5703,6 +5703,233 @@ def area2(xc, yc, xp, yp):
             content: `
             <p style="margin-top:20px;">Completing this survey is worth $5.</p>
             <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+            `,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    topicName: "Unit 4: COBOL",
+    subTopics: [
+      {
+        id: 1,
+        name: "Lesson 1",
+        contents: [
+          {
+            id: 1,
+            topic: "Coming soon...",
+            content: `
+            <div class='replit'>
+            Coming Soon...!
+            </div>
+            <style>
+            .replit p {
+              margin: 10px 0;
+            }
+            .replit img {
+              width: 50%;
+              height: auto;
+              text-align: center;
+              margin: 20px;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              border-radius: 5px;
+            }
+
+            .replit .lg-img {
+              width: 70%;
+            }
+
+            .replit .xl-img {
+              width: 100%;
+            }
+
+            .replit .sub-topic {
+              margin-top: 30px;
+            }
+
+            </style>
+
+            `,
+          },
+          {
+            id: 2,
+            topic: "Coming Soon...",
+            content: `
+            <div class='replit-submit'>
+            Coming Soon...
+            </div>
+            <style>
+            .replit-submit p {
+              margin: 10px 0;
+            }
+            .replit-submit pre {
+              font-size: 0.85em;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Lesson 2",
+        type: "python1",
+        contents: [
+          {
+            id: 1,
+            topic: "Coming Soon...",
+            content: `
+            <div class='data-rep'>
+              Coming Soon...
+
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 2,
+            topic: "Coming Soon...",
+            content: `
+            <div class='script-compiled'>
+                Coming Soon...
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes .sublist {
+              list-style-type: circle;
+              padding-left: 22px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 3,
+            topic: "Coming Soon...",
+            content: `
+            <div class='debug'>
+             Coming Soon...
+            </div>
+            <style>
+            .debug p {
+              margin: 10px 0;
+            }
+            .notes pre {
+              font-size: 0.85em;
+              padding-left: 20px;
+              margin: 10px 0;
+            }
+
+            </style>
+            `,
+          },
+          {
+            id: 4,
+            topic: "Coming Soon...",
+            content: `
+            <div class='madlib'>
+            Coming Soon...
+            </div>
+            <style>
+            .madlib p {
+              margin: 20px 0;
+            }
+            .code pre {
+              font-size: 0.85em;
+            }
+            </style>
+            `,
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "Lesson 3",
+        type: "python2",
+        contents: [
+          {
+            id: 1,
+            topic: "Coming Soon...",
+            content: `
+            <div class='data-rep'>
+              Coming Soon...
+            </div>
+            <style>
+            .data-rep a {
+              text-decoration: underline;
+            }
+            .data-rep p {
+              margin: 10px 0;
+            }
+
+
+            .notes {
+              margin-top: 20px;
+            }
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .table {
+              display: flex;
+              justify-content: center;
+              padding: 20px;
+            }
+
+            .table th, .table td {
+              border: 1px solid;
+            }
+
+            .table th, .table td {
+              padding: 20px;
+            }
+            </style>
+            `,
+          },
+          {
+            id: 2,
+            topic: "Coming Soon...",
+            content: `
+            <div class='script-compiled'>
+               Coming Soon...
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+
+
+
+            .notes .list {
+              list-style-type: disc;
+              padding: 10px 20px;
+            }
+
+            .notes .sublist {
+              list-style-type: circle;
+              padding-left: 22px;
+            }
+            </style>
             `,
           },
         ],
