@@ -5721,14 +5721,14 @@ def area2(xc, yc, xp, yp):
             id: 1,
             topic: "Coming soon...",
             content: `
-            <div class='replit'>
+            <div class='cobol1'>
             Coming Soon...!
             </div>
             <style>
-            .replit p {
+            .cobol1 p {
               margin: 10px 0;
             }
-            .replit img {
+            .cobol1 img {
               width: 50%;
               height: auto;
               text-align: center;
@@ -5737,15 +5737,15 @@ def area2(xc, yc, xp, yp):
               border-radius: 5px;
             }
 
-            .replit .lg-img {
+            .cobol1 .lg-img {
               width: 70%;
             }
 
-            .replit .xl-img {
+            .cobol1 .xl-img {
               width: 100%;
             }
 
-            .replit .sub-topic {
+            .cobol1 .sub-topic {
               margin-top: 30px;
             }
 
