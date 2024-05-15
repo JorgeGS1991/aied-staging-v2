@@ -26,6 +26,78 @@
 - ...
 
 ## Codebase Structure (in components folder): 
+```bash
+
+components
+│
+├── CobolCodeColumn
+│   ├── CobolCodeColumn.js
+│   └── CobolCodeColumn.css
+│
+├── CodeEditorWindow
+│   ├── CodeEditorWindow.js
+│   └── CodeEditorWindow.css
+│
+├── CustomInput
+│   ├── CustomInput.js
+│   └── CustomInput.css
+│
+├── LanguagesDropdown
+│   ├── LanguagesDropdown.js
+│   └── LanguagesDropdown.css
+│
+├── Loader
+│   ├── Loader.js
+│   └── Loader.css
+│
+├── Navbar
+│   ├── Navbar.js
+│   └── Navbar.css
+│
+├── OutputDetails
+│   ├── OutputDetails.js
+│   └── OutputDetails.css
+│
+├── OutputWindow
+│   ├── OutputWindow.js
+│   └── OutputWindow.css
+│
+├── Parsons
+│   ├── Parsons.js
+│   └── Parsons.css
+│
+├── Quiz
+│   ├── Quiz.js
+│   └── Quiz.css
+│
+├── QuizAnalytics
+│   ├── QuizAnalytics.js
+│   └── QuizAnalytics.css
+│
+├── RoleSelectionForm
+│   ├── RoleSelectionForm.js
+│   └── RoleSelectionForm.css
+│
+├── SequentialNumberColumn
+│   ├── SequentialNumberColumn.js
+│   └── SequentialNumberColumn.css
+│
+├── SnackBar
+│   ├── SnackBar.js
+│   └── SnackBar.css
+│
+├── ThemeDropdown
+│   ├── ThemeDropdown.js
+│   └── ThemeDropdown.css
+│
+└── UploadDocument
+    ├── UploadDocument.js
+    └── UploadDocument.css
+
+
+
+```
+
 - CobolCodeColumn (doing nothing at the moment)
 - CodeEditorWindow:
   - The CodeEditorWindow component in React is a code editor window that leverages the Monaco Editor (the editor that powers Visual Studio Code) to provide a sophisticated code editing experience. This component allows for syntax highlighting, code editing, and customizable themes, among other features.  
