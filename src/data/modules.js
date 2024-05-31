@@ -5725,7 +5725,7 @@ def area2(xc, yc, xp, yp):
             
 <body>
 
-    <h1> Chapter 1 Introduction to COBOL programming.</h1>
+    <h1 style="font-weight: bold;"> Chapter 1 Introduction to COBOL programming.</h1>
     <p>  
 
         In this chapter, we take look at the Given a COBOL listing for a simple interactive program like the ones in this chapter, explain what each statement in the program does. While distinguishing between a set of COBOL standards and a COBOL compiler, as well as Identifying the location and use of these portions of a line of COBOL code: indicator column, A margin, B margin. Finally, we will take a look on the three rules for forming any name in a standard COBOL program.
@@ -5737,7 +5737,7 @@ The most widely used COBOL programming is the IBM mainframe running under the OS
         </p>
 
 
-    <h2> Cobol standard </h2>
+    <h2 style="font-weight: bold;"> Cobol standard </h2>
     <p>
         In 1968 the standards were limited, they showed that language could be standardized from one type of computer to another. Then in 1974 those standards were more complete than in 1998 standrds. Which lead the high degree of COBOL standards from one computer to another. Those standands didn’t stop there, in 1985, those standards provided the enchance languave for developing strucrured programs and in 1987 they addendum added intrinsic functions to those stands. Finally, in 2002, those stands were added a number if deatures ti the priviuos stabds, including objective-oriendted and interactive programming features.  
     </p>
@@ -5748,102 +5748,102 @@ The most widely used COBOL programming is the IBM mainframe running under the OS
      </P>
 
 
-     <h2> The divisions of a Cobol project </h2>
+     <h2 style="font-weight: bold;"> The divisions of a Cobol project </h2>
 
      <p>
         Normally, the division name is given by a project name. the Environment devition include input and output sections and idently which file will be ued by the program. The data division include the File Section, which describes the identify output and output section, and the working-stolage sction. This section helps other data iites uded by the program. Additionally, producce Divisions contains the  program’s logic. It is Typical divided into procedures that has required statements to perform the functions of the program
      </p>
 
-     <h2> Basic coding rules </h2>
+     <h2 style="font-weight: bold;"> Basic coding rules </h2>
      <p>
         You can either use capital ot lowercase letters in the COBOL program. The Double quotes(“) are required for most compilers.  But Single quotes (‘) are commonly used of most compliers and the complier can change that option. Finally, one space is treated the same as any other number of the space in the sequence. This give us the option to code more than one space whenever we wat to indent or align portions of code. 
         
      </p>
 
-     <h2>The rules for forming the program name in standard COBOL </h2>
+     <h2 style="font-weight: bold;">The rules for forming the program name in standard COBOL </h2>
      <p> Use letters, the digits 0 to 9, and te hyphen. Also, don’t start or end the name with a hyphen. Finally, use a maximum of 30 characters. </p>
 
-     <p2> The rules for forming a program name on a mainframe compiler</p2>
+     <p2 style="font-weight: bold;"> The rules for forming a program name on a mainframe compiler</p2>
 
      <p> Start the name with the letter, use letter and digits only, and use maximum of eight characters. </p>
 
 
-     <p2>Typical comment entries in the identification division.  </p2>
+     <p2 style="font-weight: bold;">Typical comment entries in the identification division.  </p2>
       <p> 
         Normally the info about who created the program and when it was completed. It could be about who maintained the program and when that maintenance was completed. The purpose of the program. Or any notes that will make the program easier to understand.
       </p>
 
-      <h2> The rules for forming a data name </h2>
+      <h2 style="font-weight: bold;"> The rules for forming a data name </h2>
       <p> 
         Use letters, the digit 0 through 9, and hyphens only. As well as do not start or end the name with a hyphen. Use a maximum of 39 characters. You must use at least one letter in the name. Importantly, don’t use the same name as a COBOL reserved word.
       </p>
 
-      <h2> How to code picture clauses</h2>
+      <h2 style="font-weight: bold;"> How to code picture clauses</h2>
       <p>
         The Picture (Pic) clause defines the format of the data that can be stored in the field. When coding a Picture clause, a number in parentheses means that the preceding character is repeated that number of times. When data is stored in an alphanumeric item, unused positions to the right are set to blanks. When data is stored in a numeric item, unused positions to the left are set to zeros.
       </p>
 
-      <h2>How to code value clauses </h2>
+      <h2 style="font-weight: bold;">How to code value clauses </h2>
       <p>
         The Value clause defines the value that is stored in the field when the program starts. The value should be consistent with the type of item that’s defined by the Picture. The characters between the quotation marks in an alphanumeric literal are case sensitive. If the Value clause defines a value that is smaller than the field defined by the Picture clause, an alphanumeric field is filled out with spaces on the right; a numeric field is filled out with zeroes on the left. If the Value clause defines a value that is larger than can be stored in the field defined by the Picture clause, a compiler error will occur. Because a numeric edited item usually receives a value as the result of a Move statement, it usually is not defined with a Value clause. 
       </p>
 
 
-      <h2> How to code group items </h2>
+      <h2 style="font-weight: bold;"> How to code group items </h2>
       <p>
         Use the level numbers 01 through 49. Level 01 items must begin in the A margin. Other level numbers can begin in either the A or B margin. Whenever one data item has higher level numbers beneath it, it is a group item and the items beneath it are elementary items. You can’t code a Picture clause for a group item, but you must code a Picture clause for an elementary item.  A group item is always treated as an alphanumeric item, no matter how the elementary items beneath it are defined. To make the structure of the data items easy to read and understand, you should align the levels. 
       </p>
 
-      <h2>Period use </h2>
+      <h2 style="font-weight: bold;">Period use </h2>
       <p>Although it isn’t required with COBOL-85 or later compilers, we recommend that you end each statement with a period.
         
       </p>
 
-      <h2> The rules for forming a procedure name </h2>
+      <h2 style="font-weight: bold;"> The rules for forming a procedure name </h2>
 
       <p> Use letters, the digits 0 through 9, and hyphens only, don’t start or end the name with a hyphen and use the maximum of 30 characters.  </p>
 
 
 
-      <h2> How to code the procedure division</h2>
+      <h2 style="font-weight: bold;"> How to code the procedure division</h2>
       <p> 
         The Procedure Division of a program should be divided into paragraphs. Each paragraph in the Procedure Division represents one procedure of the program. The name of each paragraph can be referred to as either a paragraph name or a procedure name. The name of the first procedure should represent the function of the entire program. The names of the procedures called by the first procedure should represent the functions performed by those procedures.
       </p>
 
-      <h2> The syntax of the accept statement  </h2>
+      <h2 style="font-weight: bold;"> The syntax of the accept statement  </h2>
       <p> ACCEPT data-name 
 
       example: ACCEPT SAKES-AMOUNT  </p>
 
 
-      <h2> How the Accept Statement works </h2>
+      <h2 style="font-weight: bold;"> How the Accept Statement works </h2>
 
       <p> When the Accept statement is run, the computer waits for the user to type an entry on the keyboard and press the Enter key. When the user presses the Enter key, the entry is stored in the variable identified on the Accept statement, and the cursor moves to the next line on the screen. The user entry should be consistent with the Picture of the variable. If it isn’t, it will be truncated or adjusted </p>
 
-    <h2> Mainframe notes </h2>
+    <h2 style="font-weight: bold;"> Mainframe notes </h2>
     <p>
         On an IBM mainframe, the Accept statement gets its data from the SYSIN device. As a result, this device must be set to the terminal keyboard. You must enter the data more precisely when you use a mainframe than you do when you use a PC 
     </p>
 
-    <h2>How to code Display statements  </h2>
+    <h2 style="font-weight: bold;">How to code Display statements  </h2>
 
     <p> 
         The Display statement displays one or more literal or variable values on the screen of a monitor or terminal. After it displays these values, the cursor moves to the next line on the screen. After the word DISPLAY, you can code one or more literals or variable names. If you code more than one literal or variable name after the word DISPLAY, you must separate them by one or more spaces.
     </p>
 
-    <h2> Mianfraame notes </h2>
+    <h2 style="font-weight: bold;"> Mianfraame notes </h2>
     <p>
         On an IBM mainframe, the Display statement sends its data to the SYSOUT device. As a result, this device must be set to the terminal screen.
     </p>
 
 
-    <h2> How to code Move statements </h2>
+    <h2 style="font-weight: bold;"> How to code Move statements </h2>
 
     <p>
         The Move statement moves data from a literal or a sending field to a receiving field. However, the original data is retained in the sending field. If the sending field is a numeric item and the receiving field is numeric edited, the Move statement converts the data from one form to the other. If the receiving field is larger than the sending field, the receiving field is filled with trailing blanks in an alphanumeric move or leading zeros in a numeric move. If the receiving field is smaller than the sending field, the data that’s moved may be truncated.
     </p>
 
-    <h2> The Syntax of the compute statement  </h2>
+    <h2 style="font-weight: bold;"> The Syntax of the compute statement  </h2>
 
     <p> 
         COMPUTE data-name [ROUNDED] = arithmetic-expression <br /> 
@@ -5854,7 +5854,7 @@ The arithmetic Operation  <br />
 
     </p>
 
-    <h2>  How to code Compute statements  </h2>
+    <h2 style="font-weight: bold;">  How to code Compute statements  </h2>
 
     <p>
         The Compute statement calculates the arithmetic expression to the right of the equals sign and stores the result in the variable to the left of the equals’ sign. Within the expression, you use the arithmetic operators for addition, subtraction, multiplication (*), division, and exponentiation (**). All variables in the arithmetic expression must be numeric items. The variable that will contain the result of the arithmetic expression can be a numeric edited item if that variable isn’t used in the arithmetic expression. Otherwise, it must be numeric. You can code the Rounded clause whenever the result has more decimal places than specified by the result field. If you don’t use the Rounded clause, the extra decimal places are truncated. You can code the On Size Error clause when there’s a chance that the result may be larger than the receiving field.
@@ -5866,7 +5866,7 @@ The arithmetic Operation  <br />
 
     </p>
 
-    <h2> The use of Parentheses </h2>
+    <h2 style="font-weight: bold;"> The use of Parentheses </h2>
     
     <p> 
         If parentheses aren’t used, the operations in an expression take place from left to right in the order of precedence. If parentheses are used, the operations in the inner sets of parentheses are done first, followed by the operations in the outer sets of parentheses. You can use parentheses to clarify or override the sequence of operations.
@@ -5874,13 +5874,13 @@ The arithmetic Operation  <br />
     </p>
 
 
-    <h2> How to code Add statements </h2>
+    <h2 style="font-weight: bold;"> How to code Add statements </h2>
 
     <p>
         When you use format 1, the value in data-name-1 or a literal value is added to the value in data-name-2, and the result is stored in data-name-2. As a result, data-name-2 must be defined as a numeric item. When you use format 2, two or more values are added together, and the result is stored in the data item that’s named in the Giving clause. As a result, that item can be defined as either a numeric or numeric edited item. You can code the Rounded clause whenever the result has more decimal places than is specified in the picture of the result field. You can code the On Size Error clause when there’s a chance that the result may be larger than the receiving field.
     </p>
 
-    <h2>  The Syntax of If statement  </h2>
+    <h2 style="font-weight: bold;">  The Syntax of If statement  </h2>
 
     <p>  IF Condition <br /> </p>
         <p style="margin-left: 25px;"> statement-group-1 </p> 
@@ -5892,14 +5892,14 @@ The arithmetic Operation  <br />
     
 
 
-    <h2> The Syntax of a Simple condition </h2>
+    <h2 style="font-weight: bold;"> The Syntax of a Simple condition </h2>
     <p>
         {data-name-1 | literal} relational-operator {data-name-2 | literal} 
 
          </p>
 
 
-    <h2> Nested if statements  </h2>
+    <h2 style="font-weight: bold;"> Nested if statements  </h2>
 
     <p>
         IF SALES-AMAOUNT >= 10000 <br />  </p>
@@ -5912,33 +5912,33 @@ The arithmetic Operation  <br />
 
     </p>
 
-    <h2> How to code of statements  </h2>
+    <h2 style="font-weight: bold;"> How to code of statements  </h2>
     <p>
         The If statement executes one group of statements if the condition it contains is true, another group of statements if the condition is false and the Else clause is coded. When you code an If statement within an If statement, you are coding nested If statements. The End-If delimiter can be used to mark the end of an If statement 
     </p>
     
-    <h2> The syntax of the Perform statement   </h2>
+    <h2 style="font-weight: bold;"> The syntax of the Perform statement   </h2>
     <p>  PERFORM procedure-name </p>
     
-    <h2> An example of a Perform statement   </h2>
+    <h2 style="font-weight: bold;"> An example of a Perform statement   </h2>
     <p> PERFORM 100-GET-USER-ENTRIES </p>
 
-    <h2> The operation of the Perform statement   </h2>
+    <h2 style="font-weight: bold;"> The operation of the Perform statement   </h2>
     <p>  The Perform statement skips to the procedure that’s named and executes the statements in that procedure. Then, it returns to the statement after the Perform, and the program continues.</p>
 
 
-    <h2>  The syntax if the Perform Until statement  </h2>
+    <h2 style="font-weight: bold;">  The syntax if the Perform Until statement  </h2>
 
     <p> PERFORM procedure-name <br /> 
         UNTIL condition 
     </p> 
 
-    <h2> An example of a Perform Until statement  </h2>
+    <h2 style="font-weight: bold;"> An example of a Perform Until statement  </h2>
     <p>  PERFORM 100-CALCULATE-ONE-SALES-TAX
         UNTIL END-OF-SESSION-SWITCH = “Y” 
     </p>   
 
-    <h2> The operation of the Perform Until statement </h2>
+    <h2 style="font-weight: bold;"> The operation of the Perform Until statement </h2>
 
     <p> 
         The Perform Until statement tests if a condition is true. If it isn’t true, the statement performs the procedure that it names until the condition becomes true. Then, the program continues with the statement after the Perform Until statement. The execution of a Perform Until statement is often referred to as a processing loop, or simply a loop.  The condition in a Perform Until statement is formed the same way it is formed in an If statement.  
