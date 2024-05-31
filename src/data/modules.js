@@ -5934,7 +5934,7 @@ The arithmetic Operation  <br />
     </p> 
 
     <h2 style="font-weight: bold;"> An example of a Perform Until statement  </h2>
-    <p>  PERFORM 100-CALCULATE-ONE-SALES-TAX
+    <p>  PERFORM 100-CALCULATE-ONE-SALES-TAX <br />
         UNTIL END-OF-SESSION-SWITCH = “Y” 
     </p>   
 
