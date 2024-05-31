@@ -5751,7 +5751,7 @@ The most widely used COBOL programming is the IBM mainframe running under the OS
      <h2 style="font-weight: bold;"> The divisions of a Cobol project </h2>
 
      <p>
-        Normally, the division name is given by a project name. the Environment devition include input and output sections and idently which file will be ued by the program. The data division include the File Section, which describes the identify output and output section, and the working-stolage sction. This section helps other data iites uded by the program. Additionally, producce Divisions contains the  program’s logic. It is Typical divided into procedures that has required statements to perform the functions of the program
+        Normally, the division name is given by a project name. The Environment devition include input and output sections and idently which file will be ued by the program. The data division include the File Section, which describes the identify output and output section, and the working-stolage sction. This section helps other data iites uded by the program. Additionally, producce Divisions contains the  program’s logic. It is Typical divided into procedures that has required statements to perform the functions of the program
      </p>
 
      <h2 style="font-weight: bold;"> Basic coding rules </h2>
