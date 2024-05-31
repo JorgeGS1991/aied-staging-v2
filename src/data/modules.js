@@ -5719,7 +5719,7 @@ def area2(xc, yc, xp, yp):
         contents: [
           {
             id: 1,
-            topic: "Coming soon...",
+            topic: "Chapter 1",
             content: `
             <div class='cobol1'>
             
