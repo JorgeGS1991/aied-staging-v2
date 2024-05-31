@@ -5742,7 +5742,7 @@ The most widely used COBOL programming is the IBM mainframe running under the OS
         In 1968 the standards were limited, they showed that language could be standardized from one type of computer to another. Then in 1974 those standards were more complete than in 1998 standrds. Which lead the high degree of COBOL standards from one computer to another. Those standands didn’t stop there, in 1985, those standards provided the enchance languave for developing strucrured programs and in 1987 they addendum added intrinsic functions to those stands. Finally, in 2002, those stands were added a number if deatures ti the priviuos stabds, including objective-oriendted and interactive programming features.  
     </p>
 
-    <h2> Cobol standards and mainframe compilers </h2>
+    <h2 style="font-weight: bold;"> Cobol standards and mainframe compilers </h2>
      <P>
         Before a COBOL program can be run on a computer, it must firt br compliled using a COBOL complier. Also, when a COBOL program in complied, the COBOL language is converted to machine language. If a complied meets the specifications of a specific stads such COBOL-85, this is colled COBOL complier. This COBOL complier can include nin-standard extensions. The current IBM compilers are based on the 1985 standards, although many of the 2002 standards are implemented as extensions in their compilers for OS/390. The two of the major limitations of the 1985 standards are the lack of standards for database and interactive processing. As a result, most COBOL programs can’t be easily moved from one platform to another
      </P>
