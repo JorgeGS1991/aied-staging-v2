@@ -6004,13 +6004,12 @@ The arithmetic Operation  <br />
             </style>
             `,
 
-		  },
           {
             id: 3,
             topic: "Coming Soon!!!",
             content: `
             <div class='script-compiled'>
-                Coming Soon...
+                Coming Soon... Yes, very soon!!!
             </div>
             <style>
             .script-compiled p {
