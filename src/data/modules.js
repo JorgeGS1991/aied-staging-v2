@@ -5789,7 +5789,50 @@ The most widely used COBOL programming is the IBM mainframe running under the OS
       </p>
 
 
-      <h2 style="font-weight: bold;"> How to code group items </h2>
+
+
+
+</body>
+            </div>
+            <style>
+            .cobol1 p {
+              margin: 10px 0;
+            }
+            .cobol1 img {
+              width: 50%;
+              height: auto;
+              text-align: center;
+              margin: 20px;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              border-radius: 5px;
+            }
+
+            .cobol1 .lg-img {
+              width: 70%;
+            }
+
+            .cobol1 .xl-img {
+              width: 100%;
+            }
+
+            .cobol1 .sub-topic {
+              margin-top: 30px;
+            }
+
+            </style>
+
+            `,
+          },
+          {
+            id: 2,
+            topic: "Chapter one Continues",
+            content: `
+            <div class='replit-submit'>
+
+     
+
+<body>
+    <h2 style="font-weight: bold;"> How to code group items </h2>
       <p>
         Use the level numbers 01 through 49. Level 01 items must begin in the A margin. Other level numbers can begin in either the A or B margin. Whenever one data item has higher level numbers beneath it, it is a group item and the items beneath it are elementary items. You can’t code a Picture clause for a group item, but you must code a Picture clause for an elementary item.  A group item is always treated as an alphanumeric item, no matter how the elementary items beneath it are defined. To make the structure of the data items easy to read and understand, you should align the levels. 
       </p>
@@ -5946,42 +5989,10 @@ The arithmetic Operation  <br />
 
 
 </body>
-            </div>
-            <style>
-            .cobol1 p {
-              margin: 10px 0;
-            }
-            .cobol1 img {
-              width: 50%;
-              height: auto;
-              text-align: center;
-              margin: 20px;
-              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-              border-radius: 5px;
-            }
 
-            .cobol1 .lg-img {
-              width: 70%;
-            }
 
-            .cobol1 .xl-img {
-              width: 100%;
-            }
 
-            .cobol1 .sub-topic {
-              margin-top: 30px;
-            }
-
-            </style>
-
-            `,
-          },
-          {
-            id: 2,
-            topic: "Coming Soon...",
-            content: `
-            <div class='replit-submit'>
-            Coming Soon...
+     
             </div>
             <style>
             .replit-submit p {
