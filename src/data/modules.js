@@ -5831,7 +5831,7 @@ The most widely used COBOL programming is the IBM mainframe running under the OS
         The Display statement displays one or more literal or variable values on the screen of a monitor or terminal. After it displays these values, the cursor moves to the next line on the screen. After the word DISPLAY, you can code one or more literals or variable names. If you code more than one literal or variable name after the word DISPLAY, you must separate them by one or more spaces.
     </p>
 
-    <h2 style="font-weight: bold;"> Mianfraame notes </h2>
+    <h2 style="font-weight: bold;"> Mianframe notes </h2>
     <p>
         On an IBM mainframe, the Display statement sends its data to the SYSOUT device. As a result, this device must be set to the terminal screen.
     </p>
