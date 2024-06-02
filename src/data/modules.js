@@ -6003,10 +6003,10 @@ The arithmetic Operation  <br />
             }
             </style>
             `,
-
+	  },
           {
             id: 3,
-            topic: "Coming Soon!!!",
+            topic: "Coming Soon...",
             content: `
             <div class='script-compiled'>
                 Coming Soon... Yes, very soon!!!
@@ -6014,17 +6014,10 @@ The arithmetic Operation  <br />
             <style>
             .script-compiled p {
               margin: 10px 0;
-            }
-
-
-            .notes .list {
-              list-style-type: disc;
-              padding: 10px 20px;
-            }
-
-            .notes .sublist {
-              list-style-type: circle;
-              padding-left: 22px;
+            } 
+	    .replit-submit pre { 
+     		font-size: 0.84em;
+           
             }
             </style>
             `,
