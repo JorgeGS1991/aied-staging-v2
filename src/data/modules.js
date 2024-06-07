@@ -6074,7 +6074,7 @@ The arithmetic Operation  <br />
           },
           {
             id: 2,
-            topic: "Coming Soon...",
+            topic: "Coming Soon!...",
             content: `
             <div class='script-compiled'>
                 Coming Soon...
@@ -6099,7 +6099,7 @@ The arithmetic Operation  <br />
           },
           {
             id: 3,
-            topic: "Coming Soon...",
+            topic: "Coming Soon!...",
             content: `
             <div class='debug'>
              Coming Soon...
@@ -6119,7 +6119,7 @@ The arithmetic Operation  <br />
           },
           {
             id: 4,
-            topic: "Coming Soon...",
+            topic: "Coming Soon!...",
             content: `
             <div class='madlib'>
             Coming Soon...
@@ -6143,7 +6143,7 @@ The arithmetic Operation  <br />
         contents: [
           {
             id: 1,
-            topic: "Coming Soon...",
+            topic: "Coming Soon!...",
             content: `
             <div class='data-rep'>
               Coming Soon...
@@ -6184,7 +6184,7 @@ The arithmetic Operation  <br />
           },
           {
             id: 2,
-            topic: "Coming Soon...",
+            topic: "Coming Soon!...",
             content: `
             <div class='script-compiled'>
                Coming Soon...
