@@ -6028,10 +6028,6 @@ The arithmetic Operation  <br />
 
 
 
-
-
-
-
 		  
           },
         ],
@@ -6047,7 +6043,26 @@ The arithmetic Operation  <br />
             topic: "Coming Soon...",
             content: `
             <div class='data-rep'>
-              Coming Soon...
+
+	      <head>
+    <title>Mainframe Basics</title>
+</head>
+
+
+
+<body>
+
+
+    <h1 style="font-weight: bold;"> Introduction to Mainframe Systems </h1>
+
+    <p> 
+        Welcome to our comprehensive guide on Mainframe systems. Mainframes are powerful computers primarily used by large organizations for critical applications, bulk data processing, and enterprise resource planning. In this lesson, you'll learn about the architecture, functionalities, and the pivotal role mainframes play in today's computing landscape. Dive into the PDF below to start your journey into mastering Mainframe technologies
+    </p>
+
+
+
+    <embed src="lesson_1.pdf" type="application/pdf" width="100%" height="600px">
+</body>
 
             </div>
             <style>
