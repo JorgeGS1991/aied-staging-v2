@@ -6029,7 +6029,7 @@ The arithmetic Operation  <br />
     <h2 style="font-weight: bold;"> Introduction to Mainframe Systems </h2>
 
     <p> 
-        Welcome to our comprehensive guide on Mainframe systems. Mainframes are powerful computers primarily used by large organizations for critical applications, bulk data processing, and enterprise resource planning. In this lesson, you'll learn about the architecture, functionalities, and the pivotal role mainframes play in today's computing landscape. Dive into the PDF below to start your journey into mastering Mainframe technologies
+        Welcome to our comprehensive guide on Mainframe systems. Mainframes are powerful computers primarily used by large organizations for critical applications, bulk data processing, and enterprise resource planning. In this lesson, you'll learn about the architecture, functionalities, and the pivotal role mainframes play in today's computing landscape. Dive into the PDF below to start your journey into mastering Mainframe technologies. 
     </p>
 
 
