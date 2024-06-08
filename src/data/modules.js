@@ -5987,7 +5987,7 @@ The arithmetic Operation  <br />
         The Perform Until statement tests if a condition is true. If it isn’t true, the statement performs the procedure that it names until the condition becomes true. Then, the program continues with the statement after the Perform Until statement. The execution of a Perform Until statement is often referred to as a processing loop, or simply a loop.  The condition in a Perform Until statement is formed the same way it is formed in an If statement.  
     </p>
 
-
+</body>
 
 
      
@@ -6002,31 +6002,7 @@ The arithmetic Operation  <br />
             </style>
             `,
 	  },
-          {
-            id: 3,
-            topic: "Coming Soon...",
-            content: `
-            <div class='script-compiled'>
-                Coming Soon... Yes, very soon!!!
-            </div>
-            <style>
-            .script-compiled p {
-              margin: 10px 0;
-            } 
-	    .replit-submit pre { 
-     		font-size: 0.84em;
-           
-            }
-            </style>
-            `,
-          },
-
-		
-
-
-
-
-		  
+          {  
           },
         ],
       },
