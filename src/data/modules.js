@@ -6029,8 +6029,28 @@ The arithmetic Operation  <br />
     <h2 style="font-weight: bold;"> Introduction to Mainframe Systems </h2>
 
     <p> 
-        Welcome to our comprehensive guide on Mainframe systems. Mainframes are powerful computers primarily used by large organizations for critical applications, bulk data processing, and enterprise resource planning. In this lesson, you'll learn about the architecture, functionalities, and the pivotal role mainframes play in today's computing landscape. Dive into the PDF below to start your journey into mastering Mainframe technologies. 
+        
+    The presentation begins with an introduction to Chapter 1, "The New Mainframe," emphasizing the modern landscape of mainframe computing. The chapter's objectives include challenging traditional views on centralized versus distributed computing, explaining the business applications of mainframes, describing workloads best suited for mainframes, identifying related jobs, and listing mainframe operating systems. Key terms are introduced, such as application programmer, batch processing, e-Business, and scalability. <br />
+
+    The IBM System/360 was announced on April 7, 1964, marking a significant shift in computer design and application. The Mainframe Charter outlines goals for innovation, enhancing the value proposition, and supporting the mainframe community. The evolution of IBM mainframes over five decades is highlighted, showcasing various models and technological advancements. <br />
+    
+    Mainframes, although prevalent, are often unnoticed due to their stability and reliability. They present numerous career opportunities in the technical field. A mainframe is described as a central data hub capable of supporting thousands of users and applications, emphasizing its role in secure, high-availability environments. The balanced system design of mainframes is optimized for high input/output operations and robust data processing. <br />
+    
+    Mainframes are widely used by Fortune 1000 companies, with 60% of all internet data stored on them. They handle large-scale transaction processing and extensive databases. The presentation briefly overviews Business Class and Enterprise Class mainframe models, providing a detailed look into the components and functionalities of an Enterprise Class mainframe. <br />
+    
+    Factors contributing to mainframe use include reliability, security, scalability, centralized control, workload management, and cost-effectiveness. Typical workloads for mainframes involve large-scale transaction processing and extensive data management. Batch processing tasks such as data updates, backups, and report generation are common, as are online processing tasks including real-time transactions and database queries. <br />
+    
+    Various roles in the mainframe world are discussed, including operators, system administrators, system programmers, application developers, and end-users. The evolution of mainframe operating systems is traced from OS/360 to z/OS and others like z/VSE and z/VM. The summary emphasizes the central role of mainframes in large organizations, their reliability, security, processing capabilities, and the skilled support staff required to manage them, as well as the variety of operating systems they run. <br />
+
+
     </p>
+
+
+
+    <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1_+The+New+Mainframe+Video.mp4"
+                  type="video/mp4">
+              </video>
 
 
 
