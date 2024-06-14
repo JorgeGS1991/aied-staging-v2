@@ -6001,12 +6001,12 @@ const data = [
   
         {
           id: 2,
-          name: "Lesson 2",
+          name: "Introduction to COBOL",
           type: "python1",
           contents: [
             {
               id: 1,
-              topic: "Mainframe Systems",
+              topic: "Why Should I learn COBOL",
               content: `
               <div class='data-rep'>
   
@@ -6018,31 +6018,7 @@ const data = [
   
   <body>
   
-      <h2 style="font-weight: bold;"> Introduction to Mainframe Systems </h2>
-  
-      <p> 
-          
-      The presentation begins with an introduction to Chapter 1, "The New Mainframe," emphasizing the modern landscape of mainframe computing. The chapter's objectives include challenging traditional views on centralized versus distributed computing, explaining the business applications of mainframes, describing workloads best suited for mainframes, identifying related jobs, and listing mainframe operating systems. Key terms are introduced, such as application programmer, batch processing, e-Business, and scalability. <br />
-  
-      The IBM System/360 was announced on April 7, 1964, marking a significant shift in computer design and application. The Mainframe Charter outlines goals for innovation, enhancing the value proposition, and supporting the mainframe community. The evolution of IBM mainframes over five decades is highlighted, showcasing various models and technological advancements. <br />
-      
-      Mainframes, although prevalent, are often unnoticed due to their stability and reliability. They present numerous career opportunities in the technical field. A mainframe is described as a central data hub capable of supporting thousands of users and applications, emphasizing its role in secure, high-availability environments. The balanced system design of mainframes is optimized for high input/output operations and robust data processing. <br />
-      
-      Mainframes are widely used by Fortune 1000 companies, with 60% of all internet data stored on them. They handle large-scale transaction processing and extensive databases. The presentation briefly overviews Business Class and Enterprise Class mainframe models, providing a detailed look into the components and functionalities of an Enterprise Class mainframe. <br />
-      
-      Factors contributing to mainframe use include reliability, security, scalability, centralized control, workload management, and cost-effectiveness. Typical workloads for mainframes involve large-scale transaction processing and extensive data management. Batch processing tasks such as data updates, backups, and report generation are common, as are online processing tasks including real-time transactions and database queries. <br />
-      
-      Various roles in the mainframe world are discussed, including operators, system administrators, system programmers, application developers, and end-users. The evolution of mainframe operating systems is traced from OS/360 to z/OS and others like z/VSE and z/VM. The summary emphasizes the central role of mainframes in large organizations, their reliability, security, processing capabilities, and the skilled support staff required to manage them, as well as the variety of operating systems they run. <br />
-  
-  
-      </p>
-  
-  <br /> 
-  
-      <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1_+The+New+Mainframe+Video.mp4"
-                    type="video/mp4">
-                </video>
+      <P> Coming Soon!!
   
   </body>
   
@@ -6059,36 +6035,11 @@ const data = [
             },
             {
               id: 2,
-              topic: "Hardware Systems and LPARS",
+              topic: "Setting up COBOL Libraries",
               content: `
               <div class='script-compiled'>
-              
-  <body>
-  <h1 style="font-weight: bold;">Introduction to Hardware Systems and LPARs</h1>
-  <p>
-      This presentation provides an in-depth overview of hardware systems, with a particular emphasis on mainframe technologies and their evolution. It begins by examining the design and terminology associated with the S/360 and zSeries hardware, explaining the intricacies of mainframe componentry, including processing units and disk hardware.
-  </p>
-  <p>
-      The presentation highlights how mainframes differ from personal computers in terms of data encoding and explores various typical hardware configurations. It delves into the complexity and modular architecture of modern Central Electronic Complex (CEC) designs, comparing historical and current systems, and discusses the sophisticated partitioning of resources enabled by Logical Partitions (LPARs).
-  </p>
-  <h2 style="font-weight: bold;">Key elements include:</h2>
-  <ul>
-      <li>Historical context and evolution of mainframe hardware, starting from the S/360 systems of the 1960s.</li>
-      <li>Detailed explanation of channels, control units, and I/O connectivity, focusing on technologies like ESCON and FICON.</li>
-      <li>The logical and physical structure of contemporary mainframes, including innovations in the System z10 series.</li>
-      <li>The concept of channel spanning and its role in enhancing connectivity and resource sharing across logical partitions.</li>
-  </ul>
-  <p>
-      By the end of the presentation, learners will have a comprehensive understanding of mainframe hardware systems, their unique characteristics, and their operational advantages over standard PC systems.
-  </p>
-  
-  <br />
-       <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Mainframe/Lesson+2_+Hardware+Systems+and+LPARS+Video.mp4"
-                    type="video/mp4">
-                </video>
-  
-  </body>
+              coming Soon! 
+
   
   
     
@@ -6113,7 +6064,7 @@ const data = [
             },
             {
               id: 3,
-              topic: "Coming Soon!...",
+              topic: "Lab - Getting on the system",
               content: `
               <div class='debug'>
                Coming Soon...
