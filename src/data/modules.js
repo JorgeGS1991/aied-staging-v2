@@ -5837,10 +5837,10 @@ def area2(xc, yc, xp, yp):
               font-size: 0.85em;
             }
             </style>
-            `,
+            `
 	  }, 
 	  {
-			{
+	
               id: 3,
               topic: "Coming Soon soon!...",
               content: `
