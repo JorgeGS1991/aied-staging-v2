@@ -5715,11 +5715,11 @@ def area2(xc, yc, xp, yp):
     subTopics: [
       {
         id: 1,
-        name: "Lesson 1",
+        name: "Introduction to mainframes",
         contents: [
           {
             id: 1,
-            topic: "Chapter 1",
+            topic: "Introduction to Mainframes",
             content: `
             <div class='cobol1'>
             
@@ -5825,7 +5825,7 @@ The most widely used COBOL programming is the IBM mainframe running under the OS
           },
           {
             id: 2,
-            topic: "Chapter one Continues",
+            topic: "Lab - Getting on the System",
             content: `
             <div class='replit-submit'>
 
