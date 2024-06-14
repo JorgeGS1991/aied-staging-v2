@@ -5847,7 +5847,7 @@ const data = [
               content: `
               <div class='debug'>
 
-                <p> Please Take the Quiz  <a target="_blank" href=" https://docs.google.com/forms/d/e/1FAIpQLSfi4DmSSqeAfRj4v_1zgmgg9H6gpAOjxQ30XE7lRsKPjLscDA/viewform?usp=sf_link  "> Here </a></p>
+                <p> Please Take the Quiz  <a target="_blank" href=" https://docs.google.com/forms/d/e/1FAIpQLSfi4DmSSqeAfRj4v_1zgmgg9H6gpAOjxQ30XE7lRsKPjLscDA/viewform?usp=sf_link  " style="color: red;"> Here! </a></p>
 
 
               </div>
