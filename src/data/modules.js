@@ -5843,7 +5843,7 @@ const data = [
         },
               {
               id: 3,
-              topic: "Coming Soon!...",
+              topic: "Quiz",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -5864,7 +5864,7 @@ const data = [
 
               {
               id: 4,
-              topic: "Coming Soon!...",
+              topic: "Hardware Systems and LPARS",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -5890,7 +5890,7 @@ const data = [
   
           
               id: 5,
-              topic: "Quiz!!...",
+              topic: "z/OS Overview",
               content: `
               <div class='script-compiled'>
                  Coming Soon...
