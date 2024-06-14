@@ -5725,71 +5725,31 @@ def area2(xc, yc, xp, yp):
             
 <body>
 
-    <h1 style="font-weight: bold;"> Chapter 1 Introduction to COBOL programming.</h1>
-    <p>  
+    <h2 style="font-weight: bold;"> Introduction to Mainframe Systems </h2>
 
-        In this chapter, we take look at the Given a COBOL listing for a simple interactive program like the ones in this chapter, explain what each statement in the program does. While distinguishing between a set of COBOL standards and a COBOL compiler, as well as Identifying the location and use of these portions of a line of COBOL code: indicator column, A margin, B margin. Finally, we will take a look on the three rules for forming any name in a standard COBOL program.
+    <p> 
+        
+    The presentation begins with an introduction to Chapter 1, "The New Mainframe," emphasizing the modern landscape of mainframe computing. The chapter's objectives include challenging traditional views on centralized versus distributed computing, explaining the business applications of mainframes, describing workloads best suited for mainframes, identifying related jobs, and listing mainframe operating systems. Key terms are introduced, such as application programmer, batch processing, e-Business, and scalability. <br />
 
-COBOL Platforms include IBM mainframe, IBM AS/400 (or iSeries) systems, Unix systems, and PC networks. 
-There are two types of COBOL programming which are Structured COBOL programming and Object-oriented and NET COBOL programming. 
-The most widely used COBOL programming is the IBM mainframe running under the OS/390 o z/OS operating system. Also, Mainframe programs are typically written in traditional structured COBOL, and they account for more than 90% of all the COBOL code in use
+    The IBM System/360 was announced on April 7, 1964, marking a significant shift in computer design and application. The Mainframe Charter outlines goals for innovation, enhancing the value proposition, and supporting the mainframe community. The evolution of IBM mainframes over five decades is highlighted, showcasing various models and technological advancements. <br />
+    
+    Mainframes, although prevalent, are often unnoticed due to their stability and reliability. They present numerous career opportunities in the technical field. A mainframe is described as a central data hub capable of supporting thousands of users and applications, emphasizing its role in secure, high-availability environments. The balanced system design of mainframes is optimized for high input/output operations and robust data processing. <br />
+    
+    Mainframes are widely used by Fortune 1000 companies, with 60% of all internet data stored on them. They handle large-scale transaction processing and extensive databases. The presentation briefly overviews Business Class and Enterprise Class mainframe models, providing a detailed look into the components and functionalities of an Enterprise Class mainframe. <br />
+    
+    Factors contributing to mainframe use include reliability, security, scalability, centralized control, workload management, and cost-effectiveness. Typical workloads for mainframes involve large-scale transaction processing and extensive data management. Batch processing tasks such as data updates, backups, and report generation are common, as are online processing tasks including real-time transactions and database queries. <br />
+    
+    Various roles in the mainframe world are discussed, including operators, system administrators, system programmers, application developers, and end-users. The evolution of mainframe operating systems is traced from OS/360 to z/OS and others like z/VSE and z/VM. The summary emphasizes the central role of mainframes in large organizations, their reliability, security, processing capabilities, and the skilled support staff required to manage them, as well as the variety of operating systems they run. <br />
 
-        </p>
 
-
-    <h2 style="font-weight: bold;"> Cobol standard </h2>
-    <p>
-        In 1968 the standards were limited, they showed that language could be standardized from one type of computer to another. Then in 1974 those standards were more complete than in 1998 standrds. Which lead the high degree of COBOL standards from one computer to another. Those standands didn’t stop there, in 1985, those standards provided the enchance languave for developing strucrured programs and in 1987 they addendum added intrinsic functions to those stands. Finally, in 2002, those stands were added a number if deatures ti the priviuos stabds, including objective-oriendted and interactive programming features.  
     </p>
 
-    <h2 style="font-weight: bold;"> Cobol standards and mainframe compilers </h2>
-     <P>
-        Before a COBOL program can be run on a computer, it must firt br compliled using a COBOL complier. Also, when a COBOL program in complied, the COBOL language is converted to machine language. If a complied meets the specifications of a specific stads such COBOL-85, this is colled COBOL complier. This COBOL complier can include nin-standard extensions. The current IBM compilers are based on the 1985 standards, although many of the 2002 standards are implemented as extensions in their compilers for OS/390. The two of the major limitations of the 1985 standards are the lack of standards for database and interactive processing. As a result, most COBOL programs can’t be easily moved from one platform to another
-     </P>
+<br /> 
 
-
-     <h2 style="font-weight: bold;"> The divisions of a Cobol project </h2>
-
-     <p>
-        Normally, the division name is given by a project name. The Environment devition include input and output sections and idently which file will be ued by the program. The data division include the File Section, which describes the identify output and output section, and the working-stolage sction. This section helps other data iites uded by the program. Additionally, producce Divisions contains the  program’s logic. It is Typical divided into procedures that has required statements to perform the functions of the program
-     </p>
-
-     <h2 style="font-weight: bold;"> Basic coding rules </h2>
-     <p>
-        You can either use capital ot lowercase letters in the COBOL program. The Double quotes(“) are required for most compilers.  But Single quotes (‘) are commonly used of most compliers and the complier can change that option. Finally, one space is treated the same as any other number of the space in the sequence. This give us the option to code more than one space whenever we wat to indent or align portions of code. 
-        
-     </p>
-
-     <h2 style="font-weight: bold;">The rules for forming the program name in standard COBOL </h2>
-     <p> Use letters, the digits 0 to 9, and te hyphen. Also, don’t start or end the name with a hyphen. Finally, use a maximum of 30 characters. </p>
-
-     <p2 style="font-weight: bold;"> The rules for forming a program name on a mainframe compiler</p2>
-
-     <p> Start the name with the letter, use letter and digits only, and use maximum of eight characters. </p>
-
-
-     <p2 style="font-weight: bold;">Typical comment entries in the identification division.  </p2>
-      <p> 
-        Normally the info about who created the program and when it was completed. It could be about who maintained the program and when that maintenance was completed. The purpose of the program. Or any notes that will make the program easier to understand.
-      </p>
-
-      <h2 style="font-weight: bold;"> The rules for forming a data name </h2>
-      <p> 
-        Use letters, the digit 0 through 9, and hyphens only. As well as do not start or end the name with a hyphen. Use a maximum of 39 characters. You must use at least one letter in the name. Importantly, don’t use the same name as a COBOL reserved word.
-      </p>
-
-      <h2 style="font-weight: bold;"> How to code picture clauses</h2>
-      <p>
-        The Picture (Pic) clause defines the format of the data that can be stored in the field. When coding a Picture clause, a number in parentheses means that the preceding character is repeated that number of times. When data is stored in an alphanumeric item, unused positions to the right are set to blanks. When data is stored in a numeric item, unused positions to the left are set to zeros.
-      </p>
-
-      <h2 style="font-weight: bold;">How to code value clauses </h2>
-      <p>
-        The Value clause defines the value that is stored in the field when the program starts. The value should be consistent with the type of item that’s defined by the Picture. The characters between the quotation marks in an alphanumeric literal are case sensitive. If the Value clause defines a value that is smaller than the field defined by the Picture clause, an alphanumeric field is filled out with spaces on the right; a numeric field is filled out with zeroes on the left. If the Value clause defines a value that is larger than can be stored in the field defined by the Picture clause, a compiler error will occur. Because a numeric edited item usually receives a value as the result of a Move statement, it usually is not defined with a Value clause. 
-      </p>
-
-
-
+    <video controls width="700">
+                  <source src="https://work-learn-bucket.s3.amazonaws.com/Lesson+1_+The+New+Mainframe+Video.mp4"
+                  type="video/mp4">
+              </video>
 
 
 </body>
