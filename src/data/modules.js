@@ -5840,6 +5840,25 @@ def area2(xc, yc, xp, yp):
             `,
 	  },
           {  
+
+		
+            id: 3,
+            topic: "Quiz!...",
+            content: `
+            <div class='script-compiled'>
+               Coming Soon...
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+
+
+		  
+
+
+
+		  
           },
         ],
       },
