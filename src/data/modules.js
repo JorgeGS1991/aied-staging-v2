@@ -5867,7 +5867,38 @@ const data = [
               topic: "Hardware Systems and LPARS",
               content: `
               <div class='debug'>
-               Coming Soon...
+
+                <body>
+  <h1 style="font-weight: bold;">Introduction to Hardware Systems and LPARs</h1>
+  <p>
+      This presentation provides an in-depth overview of hardware systems, with a particular emphasis on mainframe technologies and their evolution. It begins by examining the design and terminology associated with the S/360 and zSeries hardware, explaining the intricacies of mainframe componentry, including processing units and disk hardware.
+  </p>
+  <p>
+      The presentation highlights how mainframes differ from personal computers in terms of data encoding and explores various typical hardware configurations. It delves into the complexity and modular architecture of modern Central Electronic Complex (CEC) designs, comparing historical and current systems, and discusses the sophisticated partitioning of resources enabled by Logical Partitions (LPARs).
+  </p>
+  <h2 style="font-weight: bold;">Key elements include:</h2>
+  <ul>
+      <li>Historical context and evolution of mainframe hardware, starting from the S/360 systems of the 1960s.</li>
+      <li>Detailed explanation of channels, control units, and I/O connectivity, focusing on technologies like ESCON and FICON.</li>
+      <li>The logical and physical structure of contemporary mainframes, including innovations in the System z10 series.</li>
+      <li>The concept of channel spanning and its role in enhancing connectivity and resource sharing across logical partitions.</li>
+  </ul>
+  <p>
+      By the end of the presentation, learners will have a comprehensive understanding of mainframe hardware systems, their unique characteristics, and their operational advantages over standard PC systems.
+  </p>
+  
+  <br />
+       <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.amazonaws.com/Mainframe/Lesson+2_+Hardware+Systems+and+LPARS+Video.mp4"
+                    type="video/mp4">
+                </video>
+  
+  </body>
+
+
+
+
+               
               </div>
               <style>
               .debug p {
