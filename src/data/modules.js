@@ -5862,9 +5862,26 @@ const data = [
               `,
             },
 
-
-
-
+              {
+              id: 4,
+              topic: "Coming Soon!...",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
 
 
 
@@ -5872,7 +5889,7 @@ const data = [
             {  
   
           
-              id: 4,
+              id: 5,
               topic: "Quiz!!...",
               content: `
               <div class='script-compiled'>
