@@ -5840,7 +5840,7 @@ def area2(xc, yc, xp, yp):
             `,
 	  },
 
-		{  
+	{  
 
 		
             id: 3,
@@ -5874,13 +5874,9 @@ def area2(xc, yc, xp, yp):
      </style>
      `
 
-
 		  
           },
-
-
-
-		
+	
           {  
 
 		
@@ -5919,7 +5915,7 @@ def area2(xc, yc, xp, yp):
 		  
           },
 	{
-	    id: 4,
+	    id: 5,
             topic: "Hardware Systems and LPARS",
             content: `
             <div class='script-compiled'>
