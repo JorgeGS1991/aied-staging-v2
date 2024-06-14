@@ -5715,7 +5715,7 @@ def area2(xc, yc, xp, yp):
     subTopics: [
       {
         id: 1,
-        name: "Introduction to mainframes",
+        name: "Introduction to Mainframes",
         contents: [
           {
             id: 1,
@@ -5796,13 +5796,13 @@ def area2(xc, yc, xp, yp):
 
 <p>
 
-    Welcome to the System Lab! In this lab, you'll embark on an exciting journey into the world of COBOL mainframes, a crucial technology that underpins many of today's enterprise systems. Whether you're a beginner or looking to deepen your expertise, our lab provides hands-on experience with real-world mainframe environments. You'll learn how to navigate the mainframe system, understand COBOL syntax and structure, and develop essential skills for maintaining and enhancing mainframe applications. Get ready to unlock the potential of one of the most enduring and powerful computing platforms in the industry.
+    Welcome to the Mainframes Lab! In this lab, you'll embark on an exciting journey into the world of COBOL mainframes, a crucial technology that underpins many of today's enterprise systems. Whether you're a beginner or looking to deepen your expertise, our lab provides hands-on experience with real-world mainframe environments. You'll learn how to navigate the mainframe system, understand COBOL syntax and structure, and develop essential skills for maintaining and enhancing mainframe applications. Get ready to unlock the potential of one of the most enduring and powerful computing platforms in the industry.
 
 
 </p>
 
 
-<p> HERE'S Part One </p>
+<h2 style="font-weight: bold;"> HERE'S Part One </h2>
 
 
 <video controls width="700">
@@ -5815,7 +5815,7 @@ def area2(xc, yc, xp, yp):
 <br /> 
 
 
-<p> Here's Part Two </p>
+<h2 style="font-weight: bold;"> Here's Part Two </h2>
 
 
 
