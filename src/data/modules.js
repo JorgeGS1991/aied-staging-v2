@@ -5839,9 +5839,9 @@ def area2(xc, yc, xp, yp):
             </style>
             `,
 	  },
-		{
+	{
 	    id: 3,
-            topic: "Quiz.....",
+            topic: "Quiz!!!!!!!!.....",
             content: `
             <div class='script-compiled'>
                Coming very Soon...
@@ -5870,10 +5870,8 @@ def area2(xc, yc, xp, yp):
 }
      </style>
      `
-
-		  
+	  
           },
-            },
 		{
 	     id: 4,
             topic: "Quiz.....",
