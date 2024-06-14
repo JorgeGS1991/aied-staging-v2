@@ -5840,44 +5840,74 @@ def area2(xc, yc, xp, yp):
             `,
 	  },
 		{
-	      id: 3,
-              topic: "Coming Soon!...",
-              content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
+	    id: 3,
+            topic: "Quiz.....",
+            content: `
+            <div class='script-compiled'>
+               Coming very Soon...
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+	    .replit img {
+     		width: 50%
+       		height: auto;
+	 	text-align: center;
+   		margins: 20px;
+     		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       		border-radius: 5px; 
+	 }
+  	 .replit .lg-img {
+    		window: 70%; 
+      	}
+
+       .replit .xl-img {
+       		windth: 100%; 
+	 }
+  	.replit .sub-topic {
+   		margin-top: 30px;
+}
+     </style>
+     `
+
+		  
+          },
             },
-		{ 
-	       id: 4,
-              topic: "Coming  very Soon!...",
-              content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
+		{
+	     id: 4,
+            topic: "Quiz.....",
+            content: `
+            <div class='script-compiled'>
+               Coming very Soon...
+            </div>
+            <style>
+            .script-compiled p {
+              margin: 10px 0;
+            }
+	    .replit img {
+     		width: 50%
+       		height: auto;
+	 	text-align: center;
+   		margins: 20px;
+     		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       		border-radius: 5px; 
+	 }
+  	 .replit .lg-img {
+    		window: 70%; 
+      	}
+
+       .replit .xl-img {
+       		windth: 100%; 
+	 }
+  	.replit .sub-topic {
+   		margin-top: 30px;
+}
+     </style>
+     `
+
+		  
+          },
             },
 	
 
@@ -5926,10 +5956,6 @@ def area2(xc, yc, xp, yp):
 		  
           },
 	
-
-
-		
-
 		
         ],
       },
