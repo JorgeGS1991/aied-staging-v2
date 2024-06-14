@@ -5876,7 +5876,7 @@ def area2(xc, yc, xp, yp):
 
 		  
           },
-		{
+	{
 	    id: 4,
             topic: "Hardware Systems and LPARS",
             content: `
@@ -5910,17 +5910,6 @@ def area2(xc, yc, xp, yp):
 
 
 		
-
-
-
-
-
-
-
-
-
-
-
 
 		
         ],
