@@ -5924,7 +5924,45 @@ const data = [
               topic: "z/OS Overview",
               content: `
               <div class='script-compiled'>
-                 Coming Soon...
+
+                <body>
+    <h1 style="font-weight: bold;" >Comprehensive Overview of z/OS</h1>
+    <p>
+        The slides provide a comprehensive overview of z/OS, a widely used mainframe operating system renowned for its ability to handle large workloads and support numerous concurrent users. Key distinctions from single-user operating systems include advanced virtual storage management and robust multiprocessing capabilities. z/OS is designed to serve critical applications with high reliability and security, processing large and varied workloads efficiently.
+    </p>
+    <p>
+        z/OS manages multiple types of storage, including real, auxiliary, and virtual storage. Virtual storage, a fundamental concept, allows the system to use more memory than physically available by managing data between real and auxiliary storage, ensuring efficient use of resources. Address spaces are a critical feature, providing isolated environments for each user and application, thus ensuring data integrity and security.
+    </p>
+    <p>
+        The system employs advanced techniques such as dynamic address translation, page stealing, and swapping to manage memory efficiently. Storage protection is implemented through multiple mechanisms, including private address spaces and storage protection keys, ensuring data security and integrity.
+    </p>
+    <p>
+        Workload Management (WLM) is a crucial component, optimizing the use of system resources to achieve business goals by balancing throughput and response times. It dynamically adjusts resources based on the workload and system demands.
+    </p>
+    <p>
+        z/OS supports a vast array of middleware and additional software products, making it versatile and capable of integrating various applications and services. Its ability to manage large I/O configurations and support multiple communications subsystems highlights its robustness.
+    </p>
+    <p>
+        The system is also designed for scalability and flexibility, capable of managing mixed workloads and ensuring high availability and reliability, making it suitable for mission-critical applications. Comparisons with UNIX systems reveal commonalities and differences, emphasizing z/OS's unique capabilities in managing extensive and complex computing environments.
+    </p>
+    <p>
+        Overall, z/OS is a powerful, flexible, and secure operating system, ideally suited for environments requiring high performance, reliability, and the ability to handle large-scale, diverse workloads.
+    </p>
+
+
+    <br />
+    <video controls width="700">
+                 <source src="https://work-learn-bucket.s3.amazonaws.com/Mainframe/Lesson+3_+z_OS+Overview+Video.mp4"
+                 type="video/mp4">
+             </video>
+
+
+
+</body>
+
+
+
+                 
               </div>
               <style>
               .script-compiled p {
