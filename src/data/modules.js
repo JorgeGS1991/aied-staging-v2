@@ -5838,16 +5838,58 @@ def area2(xc, yc, xp, yp):
             }
             </style>
             `,
-	  },
-		}, 
-	    },
+	  }, 
+	  {
+			{
+              id: 3,
+              topic: "Coming Soon soon!...",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+		{
+			{
+              id: 4,
+              topic: "Coming Soon soon!...",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+
+
 	}, 
 	{
-	    id: 3,
+	    id: 5,
             topic: "Quiz!!!!!!!!.....",
             content: `
             <div class='script-compiled'>
-               Coming very Soon...
+               Coming very Soon soon...
             </div>
             <style>
             .script-compiled p {
@@ -5874,7 +5916,7 @@ def area2(xc, yc, xp, yp):
      </style>
      `,
 	   
-          
+	},      
         ],
       },
 
