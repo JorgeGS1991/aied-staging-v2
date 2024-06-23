@@ -6009,7 +6009,7 @@ const data = [
           contents: [
             {
               id: 1,
-              topic: "Why Should I learn COBOL",
+              topic: "Setting up COBOL Libraries",
               content: `
               <div class='data-rep'>
   
@@ -6038,7 +6038,7 @@ const data = [
             },
             {
               id: 2,
-              topic: "Setting up COBOL Libraries",
+              topic: "Lab - Getting on the system",
               content: `
               <div class='script-compiled'>
               coming Soon! 
@@ -6067,7 +6067,7 @@ const data = [
             },
             {
               id: 3,
-              topic: "Lab - Getting on the system",
+              topic: "Comming Soon",
               content: `
               <div class='debug'>
                Coming Soon...
