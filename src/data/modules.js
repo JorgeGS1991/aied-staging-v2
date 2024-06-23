@@ -6020,10 +6020,75 @@ const data = [
   
   
   <body>
-  
-      <P> Coming Soon!!
-  
-  </body>
+
+
+          
+
+<h1 style="font-weight: bold;">Module: Setting Up COBOL Libraries</h1>
+    <p>Welcome to the module on Setting Up COBOL Libraries. This module is designed to help you get started with COBOL libraries, understand how to use multiple screens effectively, and troubleshoot common issues that may arise. The module is divided into three key sections, each presented through a separate video. Let’s take a closer look at what each video covers:</p>
+
+
+    <h2 style="font-weight: bold;">1. Setting Up COBOL Libraries</h2>
+    <p>This video will guide you through the initial steps of setting up your COBOL libraries. You'll learn how to install and configure the necessary tools, as well as how to organize your libraries for optimal performance and ease of use.</p>
+
+    
+<div style="display: flex; justify-content: center">
+    <video controls width="700">
+       <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/3150+Setting+up+Our+COBOL+Libraries.mp4"
+       type="video/mp4">
+   </video>
+ </div>
+
+
+
+ <h2 style="font-weight: bold;">2. Using Multiple Screens</h2>
+    <p>In this video, we’ll explore the benefits of using multiple screens when working with COBOL. You’ll learn techniques for managing multiple windows, navigating between screens efficiently, and enhancing your productivity through effective screen management.</p>
+ 
+    <div style="display: flex; justify-content: center">
+    <video controls width="700">
+       <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Using+multiple+screens.mp4"
+       type="video/mp4">
+   </video>
+ </div>
+
+
+
+
+ <h2 style="font-weight: bold;">3. Troubleshooting COBOL</h2>
+ <p>The final video focuses on troubleshooting common issues that you might encounter while working with COBOL. We'll cover error diagnosis, debugging strategies, and solutions to typical problems, ensuring you have the skills to resolve issues quickly and effectively.</p>
+ <div style="display: flex; justify-content: center">
+    <video controls width="700">
+       <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Troubleshooting+COBOL.mp4"
+       type="video/mp4">
+   </video>
+ </div>
+
+
+
+ <p>By the end of this module, you will have a solid understanding of how to set up and manage COBOL libraries, utilize multiple screens to enhance your workflow, and troubleshoot common COBOL issues with confidence.</p>
+
+
+
+
+    <p>Feel free to ask any questions or seek further assistance as you progress through the module. Happy learning!</p>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
   
               </div>
               <style>
