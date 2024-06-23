@@ -6024,7 +6024,7 @@ const data = [
 
           
 
-<h1 style="font-weight: bold;">Module: Setting Up COBOL Libraries</h1>
+<h1 style="font-weight: bold;"> Setting Up COBOL Libraries</h1>
     <p>Welcome to the module on Setting Up COBOL Libraries. This module is designed to help you get started with COBOL libraries, understand how to use multiple screens effectively, and troubleshoot common issues that may arise. The module is divided into three key sections, each presented through a separate video. Let’s take a closer look at what each video covers:</p>
 
 
