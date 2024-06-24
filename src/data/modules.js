@@ -6110,7 +6110,7 @@ const data = [
 
 
              <body>
-            <h1>Getting on the System</h1>
+            <h1 style="font-weight: bold;" >Getting on the System</h1>
     <embed src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/COBOL-Lab1_ICTN_3210_getting_on_the_system_V2.pdf" type="application/pdf" width="100%" height="800">
     </body>
 
