@@ -6161,6 +6161,142 @@ const data = [
             },
             {
               id: 4,
+              topic: "Comming Soon",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+            {
+              id: 5,
+              topic: "Comming Soon",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+
+            {
+              id: 6,
+              topic: "Comming Soon",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+
+            {
+              id: 7,
+              topic: "Comming Soon",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+
+            {
+              id: 8,
+              topic: "Comming Soon",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+
+            {
+              id: 9,
+              topic: "Comming Soon",
+              content: `
+              <div class='debug'>
+               Coming Soon...
+              </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>
+              `,
+            },
+
+
+
+
+
+
+
+
+
+
+
+              
+            {
+              id: 10,
               topic: "Coming Soon!...",
               content: `
               <div class='madlib'>
