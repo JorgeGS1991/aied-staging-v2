@@ -6196,8 +6196,8 @@ const data = [
 <div class="resources">
     <h2 style="font-weight: bold;">Additional Resources</h2>
     <p>For more information and additional learning materials, visit the following websites:</p>
-    <p><a href="https://filezilla-project.org/" target="_blank"> FileZilla</a></p>
-    <p><a href="https://mochasoft.dk/download.htm" target="_blank"> Downlad the Software Here</a></p>
+    <p><a href="https://filezilla-project.org/" target="_red"> FileZilla</a></p>
+    <p><a href="https://mochasoft.dk/download.htm" target="_red"> Downlad the Software Here</a></p>
 </div>
 
 <br />
