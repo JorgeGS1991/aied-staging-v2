@@ -6144,7 +6144,74 @@ const data = [
               topic: "Mocha, FileZilla, and ISPF Tour",
               content: `
               <div class='debug'>
-               Coming Soon...
+
+                <body>
+
+    <h1 style="font-weight: bold;">Explore the Essentials: Mocha, FileZilla, and ISPF Tour</h1>
+
+    <p>Welcome to our comprehensive tutorial series where we dive into three essential tools for developers and IT professionals. Explore our detailed videos to learn everything you need to know about Mocha, FileZilla, and ISPF Tour.</p>
+
+
+
+    <h2 style="font-weight: bold;">Introduction to Mocha</h2>
+    <p>Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Our video will guide you through the basics and help you get started.</p>
+
+<br />
+    
+    <div style="display: flex; justify-content: center">
+        <video controls width="700">
+           <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Mocha+installation.mp4"
+           type="video/mp4">
+       </video>
+     </div>
+<br />
+
+    <h2 style="font-weight: bold;">Getting Started with FileZilla</h2>
+    <p>FileZilla is a powerful, free FTP solution. Whether you are a web developer or just need to transfer files, our tutorial will help you understand how to use FileZilla efficiently.</p>
+
+<br />
+     <div style="display: flex; justify-content: center">
+        <video controls width="700">
+           <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/FileZilla.mp4"
+           type="video/mp4">
+       </video>
+     </div>
+
+
+<br />
+     <h2 style="font-weight: bold;">ISPF Tour Overview</h2>
+            <p>ISPF (Interactive System Productivity Facility) is a mainframe development environment. This video will introduce you to its capabilities and show you how to navigate and use ISPF effectively.</p>
+
+<br />
+     <div style="display: flex; justify-content: center">
+        <video controls width="700">
+           <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/ISPF+tour.mp4"
+           type="video/mp4">
+       </video>
+     </div>
+
+
+<br />
+
+<div class="resources">
+    <h2 style="font-weight: bold;">Additional Resources</h2>
+    <p>For more information and additional learning materials, visit the following websites:</p>
+    <p><a href="https://filezilla-project.org/" target="_blank"> FileZilla</a></p>
+    <p><a href="https://mochasoft.dk/download.htm" target="_blank"> Downlad the Software Here</a></p>
+</div>
+
+<br />
+
+
+
+</body>
+
+
+
+
+
+
+               
               </div>
               <style>
               .debug p {
