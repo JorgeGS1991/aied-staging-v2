@@ -6141,7 +6141,7 @@ const data = [
             },
             {
               id: 3,
-              topic: "Comming Soon",
+              topic: "Mocha, FileZilla, and ISPF Tour",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -6161,7 +6161,7 @@ const data = [
             },
             {
               id: 4,
-              topic: "Comming Soon",
+              topic: "Compile Lab",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -6181,7 +6181,7 @@ const data = [
             },
             {
               id: 5,
-              topic: "Comming Soon",
+              topic: "Sort Lab",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -6202,7 +6202,7 @@ const data = [
 
             {
               id: 6,
-              topic: "Comming Soon",
+              topic: "DB2 Lab, Parts 1 & 2",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -6223,7 +6223,7 @@ const data = [
 
             {
               id: 7,
-              topic: "Comming Soon",
+              topic: "Lab 1: Getting on the System",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -6244,7 +6244,7 @@ const data = [
 
             {
               id: 8,
-              topic: "Comming Soon",
+              topic: "Lab 2: TSO Pratice",
               content: `
               <div class='debug'>
                Coming Soon...
@@ -6263,41 +6263,12 @@ const data = [
               `,
             },
 
-            {
-              id: 9,
-              topic: "Comming Soon",
-              content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
-            },
-
-
-
-
-
-
-
-
-
-
+           
 
               
             {
-              id: 10,
-              topic: "Coming Soon!...",
+              id: 9,
+              topic: "Lab 3: Move/Copy (Libraries)",
               content: `
               <div class='madlib'>
               Coming Soon...
