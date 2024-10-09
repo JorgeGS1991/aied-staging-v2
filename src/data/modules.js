@@ -6429,84 +6429,119 @@ const data = [
       ],
     },
     {
-      id:6,
-      topicName: "Unit 5: How to write a Cover Letter",
-      subTopics:[
+      id: 6,
+      topicName: "Unit 5: How to write a CV",
+      subTopics: [
         {
-        id: 1,
+          id: 1,
+          name: "How to write a Cover Letter",
+          type: "intro",
+          contents: [
+            {
+              id: 1,
               topic: "Introduction to Write a Cover Letter for a Job or Career Change",
+              type: "content",         
               content:`<body>
+              <h2>Introduction to Write a Cover Letter for a Job or Career Change</h2>
               <video controls width="700">
                     <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Introduction+to+Write+a+Cover+Letter+for+a+Job+or+Career+Change.mp4"
                     type="video/mp4">
                 </video>
                 </body>`
-
                 
-        },{
-          id:2,
-          topic: "Research the Job and Company",
-          content: `<body>
+            },
+            {
+              id: 2,
+              topic: "Research the Job and Company",
+              type: "content",         
+              content:`<body>
+              <h2>Research the Job and Company</h2>
               <video controls width="700">
                     <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Research+job+and+company.mp4"
                     type="video/mp4">
                 </video>
                 </body>`
-        },
-        {
-          id:3,
-          topic: "Start Your Letter",
-          content: `<body>
+                
+            },
+            {
+              id: 3,
+
+              topic: "Start Your Letter",
+              type: "content",         
+              content:`<body>
+              <h2>Start Your Letter</h2>
               <video controls width="700">
                     <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Start+Your+Letter.mp4"
                     type="video/mp4">
                 </video>
                 </body>`
+                
+            },
+            {
+              id:4,
+              topic: "Write Your First Paragraph",
+              content: `<body>
+                  <h2>Write Your First Paragraph</h2>
+                  <video controls width="700">
+                        <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+First+Paragraph.mp4"
+                        type="video/mp4">
+                    </video>
+                    </body>`
+            },
+            {
+              id:5,
+              topic: "Write Your Second Paragraph",
+              content: `<body>
+                  <h2>Write Your Second Paragraph</h2>
+                  <video controls width="700">
+                        <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+Second+Paragraph.mp4"
+                        type="video/mp4">
+                    </video>
+                    </body>`
+            },
+            {
+              id:6,
+              topic: "Finish Your Letter and Sign Off",
+              content: `<body>
+                  <h2>Finish Your Letter and Sign Off</h2>
+                  <video controls width="700">
+                        <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Finish+Your+Letter+and+Sign+Off.mp4"
+                        type="video/mp4">
+                    </video>
+                    </body>`
+            },
+            {
+              id:7,
+              topic: "Write a Cover Letter for a Job or Career Change Wrap-Up",
+              content: `<body>
+                  <h2>Write a Cover Letter for a Job or Career Change Wrap-Up</h2>
+                  <video controls width="700">
+                        <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+a+Cover+Letter+for+a+Job+or+Career+Change+Wrap-Up.mp4"
+                        type="video/mp4">
+                    </video>
+                    </body>`
+            },
+         
+          ],
         },
-        {
-          id:4,
-          topic: "Write Your First Paragraph",
-          content: `<body>
-              <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+First+Paragraph.mp4"
-                    type="video/mp4">
-                </video>
-                </body>`
-        },
-        {
-          id:5,
-          topic: "Write Your Second Paragraph",
-          content: `<body>
-              <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+Second+Paragraph.mp4"
-                    type="video/mp4">
-                </video>
-                </body>`
-        },
-        {
-          id:6,
-          topic: "Finish Your Letter and Sign Off",
-          content: `<body>
-              <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Finish+Your+Letter+and+Sign+Off.mp4"
-                    type="video/mp4">
-                </video>
-                </body>`
-        },
-        {
-          id:7,
-          topic: "Write a Cover Letter for a Job or Career Change Wrap-Up",
-          content: `<body>
-              <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+a+Cover+Letter+for+a+Job+or+Career+Change+Wrap-Up.mp4"
-                    type="video/mp4">
-                </video>
-                </body>`
-        },
+       
 
       ]
-    }
-  ];
+      }
+       
+          
+        
+       
+      
+        
+        
+      
+  
+     
+      
+    ]
+   
+  
   
   export default data;
   
