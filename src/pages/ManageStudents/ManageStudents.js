@@ -84,6 +84,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
                       <TableCell>Role</TableCell>
                       <TableCell>Username</TableCell>
                       <TableCell>Last Activity</TableCell>
+                      <TableCell>Python One Score</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -108,6 +109,11 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
                           <TableCell>
                             <Typography variant="body1">
                               {user.lastActivity}
+                            </Typography>
+                          </TableCell>
+                          <TableCell>
+                            <Typography variant="body1">
+                              {user.pythonOneScore}
                             </Typography>
                           </TableCell>
                         </TableRow>
