@@ -517,22 +517,6 @@ const data = [
             },
           ],
         },
-      ]
-    },
-    {
-      id: 3,
-      topicName: "Unit 2: Professional Skills",
-      subTopics: [
-        {
-          id: 1,
-          name: "Professional Skills",
-          content: `
-          <div class="prof-skills">
-          <p>Please go through this professional skills units provided by Dr. Magie Hall from this links: <a target="_blank" style="text-decoration: underline;" href="https://classroom.google.com/u/3/c/NjQ4MTU1MTIwMTYz">Professional Skills Units</a></p>
-          <h3 style="font-weight: 600; margin-top: 20px;">Class Code: 3gtbaty</h3>
-          </div>
-          `,
-        },
         {
           id: 2,
           name: "Qualtrics Survey",
