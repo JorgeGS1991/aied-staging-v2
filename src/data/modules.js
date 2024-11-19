@@ -7,6 +7,31 @@ const data = [
       subTopics: [
         {
           id: 1,
+          name: "Getting to Know You",
+          author: "Hollie Rosser",
+          creationDate: new Date(2023, 4, 28),
+          points: 100,
+          content: `
+          <div class="gtk">
+          <p>Welcome from all of us at Work-Learn!</p>
+          <p>We are interested in helping people like you gain new skills and expanding the opportunities you have entering (or re-entering) careers in computer and information technology. To accomplish this goal, we need to learn about who you are and what your experiences are while you are in the program.</p>
+          <p>This will happen in a couple of ways:</p>
+          <p>We will be on campus at SFH weekly and will make every effort to schedule a time to meet with you in person while we're here. If this isn't possible, one of our team members will be available on the Slack Channel that is set up for you.</p>
+          <p>Complete the Qualtrics Survey linked on the next page to provide us with some background information about you and your past education experiences. The answers to this survey are confidential. Your name will not be used so no one will know who you are. All information about you will be kept in locked offices of the research team and information kept on computers will be password protected.</p>
+          <p>We will also interview you several times. You have already completed the first of the interviews. We will be using the same email address you logged into the Work-Learn Classroom to contact you for scheduling.</p>
+          <p>Finally, we know that your time is valuable, and we truly appreciate all of your efforts as you work your way through the program. For this reason, you will be given $15 for each of the interviews you have with us.</p>
+          <p>If you have any questions before you get started, please direct those questions by email to <a style="text-decoration: underline;" target="_blank" href='mailto:worklearnprojects@gmail.com'>worklearnprojects@gmail.com</a>.
+          </p>
+          </div>
+          <style>
+          .gtk p {
+            margin-top: 20px;
+          }
+          </style>
+          `,
+        },
+        {
+          id: 2,
           name: "Link to Slack Channel",
           content: `
               <p>This is the link to the Slack Channel:</p>
@@ -14,7 +39,7 @@ const data = [
               `,
         },
         {
-          id: 2,
+          id: 3,
           name: "Payment",
           content: `
               <div class="payment">
@@ -48,7 +73,7 @@ const data = [
               `,
         },
         {
-          id: 3,
+          id: 4,
           name: "Tutorial on How to Navigate in Work-Learn Application",
           content: `
               <div style="display: flex; justify-content: center">
@@ -60,7 +85,7 @@ const data = [
               `,
         },
         {
-          id: 4,
+          id: 5,
           name: "Troubleshooting",
           content: `
               <div class="troubleshooting">
@@ -83,31 +108,6 @@ const data = [
               }
               </style>
               `,
-        },
-        {
-          id: 5,
-          name: "Getting to Know You",
-          author: "Hollie Rosser",
-          creationDate: new Date(2023, 4, 28),
-          points: 100,
-          content: `
-          <div class="gtk">
-          <p>Welcome from all of us at Work-Learn!</p>
-          <p>We are interested in helping people like you gain new skills and expanding the opportunities you have entering (or re-entering) careers in computer and information technology. To accomplish this goal, we need to learn about who you are and what your experiences are while you are in the program.</p>
-          <p>This will happen in a couple of ways:</p>
-          <p>We will be on campus at SFH weekly and will make every effort to schedule a time to meet with you in person while we're here. If this isn't possible, one of our team members will be available on the Slack Channel that is set up for you.</p>
-          <p>Complete the Qualtrics Survey linked on the next page to provide us with some background information about you and your past education experiences. The answers to this survey are confidential. Your name will not be used so no one will know who you are. All information about you will be kept in locked offices of the research team and information kept on computers will be password protected.</p>
-          <p>We will also interview you several times. You have already completed the first of the interviews. We will be using the same email address you logged into the Work-Learn Classroom to contact you for scheduling.</p>
-          <p>Finally, we know that your time is valuable, and we truly appreciate all of your efforts as you work your way through the program. For this reason, you will be given $15 for each of the interviews you have with us.</p>
-          <p>If you have any questions before you get started, please direct those questions by email to <a style="text-decoration: underline;" target="_blank" href='mailto:worklearnprojects@gmail.com'>worklearnprojects@gmail.com</a>.
-          </p>
-          </div>
-          <style>
-          .gtk p {
-            margin-top: 20px;
-          }
-          </style>
-          `,
         },
         {
           id: 6,
@@ -1307,7 +1307,7 @@ const data = [
   <div class="decomp-exercise"> 
     <h3>Exercise One:</h3>
     <p>Everyday, we are faced with recognizing patterns, for example, whether an animal is a cat or a dog, whether they are friendly or unfriendly, whether or not we should approach and pet them. What are the patterns we notice that help us make these choices? Take a few moments to look at the pictures below. What patterns do you see across the images? Describe the patterns that help you determine which you want to approach and which to stay away from? If you had to draw a cat, what are the key components you would use in your drawing?  (All images open source from pixabay)</p>
-    <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd9lorcPzE-NxqaIH7G7Q_phyixI_RKg1b7h2P2wo00Yb5uTQ/viewform">Exercise One</a></p>
+    <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdDVM9xSc6fVe9vwFyUzWE19JFTeEDFnvCY1IVB8tQcmm31vw/viewform?usp=sf_link">Exercise One</a></p>
     <div class="img-grid">
     <img src="/images/contents/animal1.png" />
     <img src="/images/contents/animal2.png" />
@@ -1884,7 +1884,7 @@ const data = [
                 <div class="decomp-example"> 
                 <h3>Exercise Three:</h3>
                 <p>In the video you watched about abstraction, the narrator discusses the power of maps because every map is built with a purpose in mind. Think of your daily life. What kinds of maps are useful to you? Design a map that provides an abstraction of your general week day. First, choose the purpose of the map; what information would someone need to complete the kind of day you generally have during the week? Next, decide what data you need to include. Finally, sketch a map either on paper or with a digital tool and upload a screenshot or picture of it below. </p>
-                <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeQDoNnpyQEAlb4cRpZV04z0bbfdQtt8U0WUZXSNaq5Y06OvQ/viewform?authuser=0">Google Forms</a></p>
+                <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf414zzfa_cWPsbVtTnwiTkWDJuYZLLlIEqIPyvjv9bVFKGmw/viewform?usp=sf_link">Google Forms</a></p>
                 <ul>
                   <li>What was the purpose of your map?</li>
                   <li>What data did you choose to include? What do you leave out?</li>
@@ -2720,97 +2720,828 @@ const data = [
       subTopics: [
         {
           id: 1,
-          name: "Introduction to Write a Cover Letter for a Job or Career Change",
-          content: `
+          name: "Cover Letter Practice",
+          type: "intro",
+          contents: [
+            {
+              id: 1,
+              topic: "Introduction to Write a Cover Letter for a Job or Career Change",
+              type: "content",
+              content: `
           <body>
-            <h2>Introduction to Write a Cover Letter for a Job or Career Change</h2>
+            <h2>Introduction to Write a Cover Letter for a Job or Career Change</h2><br>
             <video controls width="700">
                   <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Introduction+to+Write+a+Cover+Letter+for+a+Job+or+Career+Change.mp4"
                   type="video/mp4">
               </video>
-              </body>`,
+              </body>
+        </div>`,
+            },
+            {
+              id: 2,
+              topic: "Research the Job and Company",
+              type: "content",
+              content:`
+              <body>
+                <h2>Research the Job and Company</h2><br>
+                <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Research+job+and+company.mp4"
+                      type="video/mp4">
+                  </video>
+                  </body>`,
+            },
+            {
+              id: 3,
+              topic: "Start Your Letter",
+              content: `
+              <body>
+                <h2>Start Your Letter</h2><br>
+                <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Start+Your+Letter.mp4"
+                      type="video/mp4">
+                  </video>
+                  </body>`,
+            },
+            {
+              id: 4,
+              topic: "Write Your First Paragraph",
+              content: `
+              <body>
+                    <h2>Write Your First Paragraph</h2><br>
+                    <video controls width="700">
+                          <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+First+Paragraph.mp4"
+                          type="video/mp4">
+                      </video>
+                      </body>`,
+            },
+            {
+              id: 5,
+              topic: "Write Your Second Paragraph",
+              content: `
+              <body>
+                    <h2>Write Your Second Paragraph</h2><br>
+                    <video controls width="700">
+                          <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+Second+Paragraph.mp4"
+                          type="video/mp4">
+                      </video>
+                      </body>`,
+            },
+            {
+              id: 6,
+              topic: "Finish Your Letter and Sign Off",
+              content: `<body>
+                    <h2>Finish Your Letter and Sign Off</h2><br>
+                    <video controls width="700">
+                          <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Finish+Your+Letter+and+Sign+Off.mp4"
+                          type="video/mp4">
+                      </video>
+                      </body>`,
+            },
+            {
+              id: 7,
+              topic: "Write a Cover Letter for a Job or Career Change Wrap-Up",
+              content: `<body>
+                    <h2>Write a Cover Letter for a Job or Career Change Wrap-Up</h2><br>
+                    <video controls width="700">
+                          <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+a+Cover+Letter+for+a+Job+or+Career+Change+Wrap-Up.mp4"
+                          type="video/mp4">
+                      </video>
+                      </body>`,
+            },
+          ],
         },
         {
           id: 2,
-          name: "Research the Job and Company",
-          content: `
-          <body>
-            <h2>Research the Job and Company</h2>
-            <video controls width="700">
-                  <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Research+job+and+company.mp4"
-                  type="video/mp4">
-              </video>
-              </body>`,
+          name: "Try a Career in Data Analytics",
+          points: 100,
+          contents: [
+            {
+              id: 1,
+              topic: "Introduction to Try a Career in Data Analytics",
+              type: "content",
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Introduction to Try a Career in Data Analytics</h2><br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Try+a+Career+in+Data+Analytics/Try+a+Career+in+Data+Analytics/Introduction+to+Try+a+Career+in+Data+Analytics.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 2,
+              topic: "Understand How to Analyze User Data in Google Sheets",
+              content: `<div class="video-intro-section">
+                        <h2 class="video-intro">Understand How to Analyze User Data in Google Sheets</h2><br>
+                        <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Try+a+Career+in+Data+Analytics/Try+a+Career+in+Data+Analytics/Understand+How+to+Analyze+User+Data+in+Google+Sheets.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 3,
+              topic: "Sort by Most Listened to Music Genre",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Sort by Most Listened to Music Genre</h2><br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Try+a+Career+in+Data+Analytics/Try+a+Career+in+Data+Analytics/Sort+by+Most+Listened+to+Music+Genre.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 4,
+              topic: "Calculate the Average Age of Users Based on Music Genre",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Calculate the Average Age of Users Based on Music Genre</h2> <br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Try+a+Career+in+Data+Analytics/Try+a+Career+in+Data+Analytics/Calculate+the+Average+Age+of+Users+Based+on+Music+Genre.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 5,
+              topic: "Chart the Average Age of Users for Each Music Genre",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Chart the Average Age of Users for Each Music Genre</h2> <br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Try+a+Career+in+Data+Analytics/Try+a+Career+in+Data+Analytics/Chart+the+Average+Age+of+Users+for+Each+Music+Genre.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 6,
+              topic: "Try a Career in Data Analytics Wrap-Up",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Try a Career in Data Analytics Wrap-Up</h2><br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Try+a+Career+in+Data+Analytics/Try+a+Career+in+Data+Analytics/Try+a+Career+in+Data+Analytics+Wrap-Up.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+          ],
         },
         {
           id: 3,
-          name: "Start Your Letter",
-          content: `
-          <body>
-            <h2>Start Your Letter</h2>
-            <video controls width="700">
-                  <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Start+Your+Letter.mp4"
-                  type="video/mp4">
-              </video>
-              </body>`,
+          name: "Use Google to Get a New Job",
+          type: "Use Google to Get a New Job",
+          points: 100,
+          contents: [
+            {
+              id: 1,
+              topic: "Use Google to Get a New Job Unit Introduction",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Use Google to Get a New Job Unit Introduction</h2> <br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Use+Google+to+Get+a+New+Job+Unit+Introduction.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 2,
+              topic: "Create a Job guide",
+              points: 100,
+              content: `<div class="video-intro-section">
+                       <h2 class="video-intro">1.Create a Job Guide</h2><br>
+                       <p>In this video we will Learn how to create a job guide using Google Slides. </p>
+                       <div style="display: flex; justify-content: center">
+                      <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Create+a+Job+Guide.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+                       <h2 class="video-intro">2.Create a Title Slide</h2><br>
+                       <p>In this video we will Learn how to create a title slide for your job guide. </p>
+                       <div style="display: flex; justify-content: center">
+                      <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Create+a+Title+Slide.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+                       <h2 class="video-intro">3.Create a New Slide: Searching for a Job in Your Area</h2><br>
+                       <p>In this video we will Learn how to create a new slide for searching for a job in your area. </p>
+                       <div style="display: flex; justify-content: center">
+                      <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Create+a+New+Slide+Searching+for+a+Job+in.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+                       <h2 class="video-intro">4.Add More Slides: Job Goals</h2><br>
+                       <p>In this video we will Learn how to add more slides for job goals. </p
+                       <div style="display: flex; justify-content: center">
+                      <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Add+More+Slides+Job+Goals.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+     <div class="video-intro-section">
+                       <h2 class="video-intro">5.Share Your Guide With A Partner</h2><br>
+                       <p>In this video we will Learn how to share your guide with a partner. </p
+                       <div style="display: flex; justify-content: center">
+                      <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Share+Your+Guide+With+A+Partner.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+     <div class="video-intro-section">
+                       <h2 class="video-intro">6.Create a Job Guide Activity Wrap Up</h2><br>
+                       <p>In this video we will Learn how to create a job guide activity wrap up. </p>
+                       <div style="display: flex; justify-content: center">
+                      <video controls width="700">
+                      <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Create+a+Job+Guide+Activity+Wrap+Up.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    `,
+
+            },
+            {
+              id: 3,
+              topic: "Create a Job Search Plan",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Create a Job Search Plan</h2> <br>
+    <p>In this video we will Learn how to create a job search plan using Google Slides. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Create+a+Job+Search+Plan/Create+a+Job+Search+Plan.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">2.Add Columns to Your Plan</h2> <br>
+    <p>In this video we will Learn how to add columns to your job search plan. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Create+a+Job+Search+Plan/Add+Columns+to+Your+Plan.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">3.Add Tasks to Your Plan</h2> <br>
+    <p>In this video we will Learn how to add tasks to your job search plan. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Create+a+Job+Search+Plan/Add+Tasks+to+Your+Plan.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">4.Add Tasks to Your Plan</h2> <br>
+    <p>In this video we will Learn how to add tasks to your job search plan. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Create+a+Job+Search+Plan/Create+a+Job+Search+Plan+Activity+Wrap+Up.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 4,
+              topic: "Search for Jobs",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Introduction to Search for Jobs</h2> <br>
+    <p>In this video we will Learn how to search for jobs using Google. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Using+google+to+get+new+job/Use+Google+to+Get+a+New+Job+Unit+Introduction.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">2.Search for Jobs</h2> <br>
+    <p>In this video we will Learn how to search for jobs using Google. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Search+for+jobs/Search+for+Jobs.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">3.Set Up Applications Spreadsheet</h2> <br>
+    <p>In this video we will Learn how to set up an applications spreadsheet. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Search+for+jobs/Set+Up+Applications+Spreadsheet.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">4.Add Jobs to Your Spreadsheet</h2> <br>
+    <p>In this video we will Learn how to add jobs to your spreadsheet. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Search+for+jobs/Add+Jobs+to+Your+Spreadsheet.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">5.Add Data Validation to Track Your Progress</h2> <br>
+    <p>In this video we will Learn how to add data validation to track your progress. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Search+for+jobs/Add+Data+Validation+to+Track+Your+Progress.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">6.Set Up an Email Alert for New Listings</h2> <br>
+    <p>In this video we will Learn how to set up an email alert for new listings. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Search+for+jobs/Set+Up+an+Email+Alert+for+New+Listings.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">7.Search for Jobs Activity Wrap Up</h2> <br>
+    <p>In this video we will Learn how to search for jobs using Google. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Search+for+jobs/Search+for+Jobs+Activity+Wrap+Up.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`
+    ,
+            },
+            {
+              id: 5,
+              topic: "Craft Your Resume",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Introduction to Resumes</h2> <br>
+    <p>In this video we will Learn how to craft your resume. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Introduction+to+Resumes+.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">2.Write the First Draft</h2> <br>
+    <p>In this video we will Learn how to write the first draft of your resume. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Write+the+First+Draft.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">3.Brainstorm for One Job</h2> <br>
+    <p>In this video we will Learn how to brainstorm for one job. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Brainstorm+for+One+Job.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">4.Tailor Your Resume</h2> <br>
+    <p>In this video we will Learn how to tailor your resume. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Tailor+Your+Resume.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">5.Make Your Resume Stand Out</h2> <br>
+    <p>In this video we will Learn how to make your resume stand out. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Make+Your+Resume+Stand+Out.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">6.Share Your Resume with a Partner</h2> <br>
+    <p>In this video we will Learn how to share your resume with a partner. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Share+Your+Resume+with+a+Partner.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">7.Revise and Save Your Resume</h2> <br>
+    <p>In this video we will Learn how to revise and save your resume. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Revise+and+Save+Your+Resume.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">8.Resume Writing Wrap Up</h2> <br>
+    <p>In this video we will Learn how to resume writing wrap up. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Craft+Your+Resume/Resume+Writing+Wrap+Up.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+            {
+              id: 6,
+              topic: "Practice Interview Techniques",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Interviewing Introduction</h2> <br>
+    <p>In this video we will Learn how to practice interview techniques. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Practice+Interview+Techniques/Interviewing+Introduction+.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">2.Research the Workplace and Brainstorm Questions</h2> <br>
+    <p> In this video we will learn how to research the workplace and brainstorm questions. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Practice+Interview+Techniques/Research+the+Workplace+and+Brainstorm+Questions.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">3.Search for Interview Questions</h2> <br>
+    <p> In this video we will learn how to search for interview questions. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Practice+Interview+Techniques/Search+for+Interview+Questions.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">4.Practice Interviewing by Yourself</h2> <br>
+    <p> In this video we will learn how to practice interviewing by yourself. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Practice+Interview+Techniques/Practice+Interviewing+by+Yourself.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">5.Hold a Practice Interview with a Partner</h2> <br>
+    <p> In this video we will learn how to hold a practice interview with a partner. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Practice+Interview+Techniques/Hold+a+Practice+Interview+with+a+Partner.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+    
+            },
+            {
+              id: 7,
+              topic: "Use Google to Get a New Job Unit Wrap Up",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Use Google to Get a New Job Unit Wrap Up</h2> <br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Use+Google+to+Get+a+New+Job+Unit+Wrap+Up/Use+Google+to+Get+a+New+Job+Unit+Wrap+Up.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>`,
+            },
+          ],
         },
         {
           id: 4,
-          name: "Write Your First Paragraph",
-          content: `
-          <body>
-                <h2>Write Your First Paragraph</h2>
-                <video controls width="700">
-                      <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+First+Paragraph.mp4"
-                      type="video/mp4">
-                  </video>
-                  </body>`,
-        },
-        {
-          id: 5,
-          name: "Write Your Second Paragraph",
-          content: `
-          <body>
-                <h2>Write Your Second Paragraph</h2>
-                <video controls width="700">
-                      <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+Your+Second+Paragraph.mp4"
-                      type="video/mp4">
-                  </video>
-                  </body>`,
-        },
-        {
-          id: 6,
-          name: "Finish Your Letter and Sign Off",
-          content: `<body>
-                <h2>Finish Your Letter and Sign Off</h2>
-                <video controls width="700">
-                      <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Finish+Your+Letter+and+Sign+Off.mp4"
-                      type="video/mp4">
-                  </video>
-                  </body>`,
-        },
-        {
-          id: 7,
-          name: "Write a Cover Letter for a Job or Career Change Wrap-Up",
-          content: `<body>
-                <h2>Write a Cover Letter for a Job or Career Change Wrap-Up</h2>
-                <video controls width="700">
-                      <source src="https://work-learn-bucket.s3.amazonaws.com/Unit%3A6-How+to+Write+a+Cover+Letter/Write+a+Cover+Letter+for+a+Job+or+Career+Change+Wrap-Up.mp4"
-                      type="video/mp4">
-                  </video>
-                  </body>`,
-        },
-        {
-          id: 8,
-          name: "Qualtrics Survey",
-          author: "Hollie Rosser",
-          creationDate: new Date(2023, 4, 28),
+          name: "Communicate Effectively at Work Introduction",
+          type: "abstraction",
           points: 100,
-          content: `
-                <p style="margin-top:20px;">Completing this survey is worth $5.</p>
-                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
-                `,
+          contents: [
+            {
+              id: 1,
+              topic: "Information Sharing at Work",
+              points: 100,
+              content: `<div class="video-intro-section">
+              <p> In this video we will learn how to share information at work. </p>
+    <h2 class="video-intro">Information Sharing at Work</h2> <br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Information+Sharing+at+Work.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> `,
+            },
+            {
+              id: 2,
+              topic: "Facilitate a Team Meeting",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Virtual Meetings as Communication Tools</h2> <br>
+    <p> In this video we will learn how to use virtual meetings as communication tools. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Facilitate+a+Team+Meeting/Virtual+Meetings+as+Communication+Tools.mp4"
+                    type="video/mp4"> <br>
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">2.Create and Share an Agenda</h2> <br>
+    <p> In this video we will learn how to create and share an agenda. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Facilitate+a+Team+Meeting/Create+and+Share+an+Agenda.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">3.Use Calendar to Schedule a Meeting</h2> <br>
+    <p> In this video we will learn how to use calendar to schedule a meeting. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Facilitate+a+Team+Meeting/Use+Calendar+to+Schedule+a+Meeting.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">4.Facilitate Your Meeting in Google Meet</h2> <br>
+    <p> In this video we will learn how to facilitate your meeting in google meet. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Facilitate+a+Team+Meeting/Facilitate+Your+Meeting+in+Google+Meet.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">5.Activity Wrap-Up: Making Meetings More Efficient</h2> <br>
+    <p> In this video we will learn how to make meetings more efficient. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Facilitate+a+Team+Meeting/Activity+Wrap-Up+Making+Meetings+More+Efficient.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> `,
+            },
+            {
+              id: 3,
+              topic: "Collect Feedback with Google Forms",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Gather Information Using Digital Tools</h2> <br>
+    <p> In this video we will learn how to gather information using digital tools. </p
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Collect+Feedback+with+Google+Forms/Gather+Information+Using+Digital+Tools.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">Add a Title, Description, and Questions</h2> <br>
+    <p> In this video we will learn how to add a title, description, and questions
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Collect+Feedback+with+Google+Forms/Add+a+Title%2C+Description%2C+and+Questions.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">Insert Images and Apply a Theme</h2> <br>
+    <p> In this video we will learn how to insert images and apply a theme. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Collect+Feedback+with+Google+Forms/Insert+Images+and+Apply+a+Theme.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">Send the Survey</h2> <br>
+    <p> In this video we will learn how to send the survey. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Collect+Feedback+with+Google+Forms/Send+the+Survey.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">Monitor and Export Responses</h2> <br>
+    <p> In this video we will learn how to monitor and export responses. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Collect+Feedback+with+Google+Forms/Monitor+and+Export+Responses.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">Activity Wrap-Up: Gather Feedback to Make Informed Decisions</h2> <br>
+    <p> In this video we will learn how to gather feedback to make informed decisions. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Collect+Feedback+with+Google+Forms/Activity+Wrap-Up+Gather+Feedback+to+Make+Informed+Decisions.mp4"
+                    type="video/mp4">
+                </video>
+              </div>`,
+            },
+            {
+              id: 4,
+              topic: "Communicate Ideas in a Proposal",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Use a Proposal to Share Information and Get Support</h2> <br>
+    <p> In this video we will learn how to use a proposal to share information and get
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Information+Sharing+at+Work.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">2.Add Details to Your Proposal</h2> <br>
+    <p> In this video we will learn how to add details to your proposal. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Communicate+Ideas+in+a+Proposal/Add+Details+to+Your+Proposal.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">3.Add Visual Interest to Your Proposal</h2> <br>
+    <p> In this video we will learn how to add visual interest to your proposal. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Communicate+Ideas+in+a+Proposal/Add+Visual+Interest+to+Your+Proposal.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">4.Collaborate Using Comments and Suggestions</h2> <br>
+    <p> In this video we will learn how to collaborate using comments and suggestions. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Communicate+Ideas+in+a+Proposal/Collaborate+Using+Comments+and+Suggestions.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">5.Manage Permissions and Publish Proposal</h2> <br>
+    <p> In this video we will learn how to manage permissions and publish proposal. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Communicate+Ideas+in+a+Proposal/Manage+Permissions+and+Publish+Proposal.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">6.Use Documents to Collaborate and Communicate</h2> <br>
+    <p> In this video we will learn how to use documents to collaborate and communicate. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Communicate+Ideas+in+a+Proposal/Use+Documents+to+Collaborate+and+Communicate.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>  `,
+            },
+            {
+              id: 5,
+              topic: "Present Information About Your Job",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">1.Use Google Slides to Communicate What You Do</h2> <br>
+    <p> In this video we will learn how to use google slides to communicate what you do. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Present+Information+About+Your+Job/+Use+Google+Slides+to+Communicate+What+You+Do.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div><br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">2.Add a Title and Slides to Your Presentation</h2> <br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Present+Information+About+Your+Job/Add+a+Title+and+Slides+to+Your+Presentation.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div>  <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">3.Add and Format Text</h2> <br>
+    <p> In this video we will learn how to add and format text. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Present+Information+About+Your+Job/Add+and+Format+Text.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">4.Create Visual Appeal with a Theme and Images</h2> <br>
+    <p> In this video we will learn how to create visual appeal with a theme and images. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Present+Information+About+Your+Job/Create+Visual+Appeal+with+a+Theme+and+Images.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> <br>
+    <div class="video-intro-section">
+    <h2 class="video-intro">5.Add Speaker Notes and Present</h2> <br>
+    <p> In this video we will learn how to add speaker notes and present. </p>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Present+Information+About+Your+Job/Add+Speaker+Notes+and+Present.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> `,
+            },
+            {
+              id: 6,
+              topic: "Communicate Effectively at Work Wrap-Up",
+              points: 100,
+              content: `<div class="video-intro-section">
+    <h2 class="video-intro">Communicate Effectively at Work Wrap-Up</h2> <br>
+    <div style="display: flex; justify-content: center">
+                 <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Communicate+Effectively+at+Work+Introduction/Communicate+Effectively+at+Work+Wrap-Up/Communicate+Effectively+at+Work+Wrap-Up.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+    </div> `,
+            },
+          ],
         },
+        // ],
+        // },
       ],
     },
     {
