@@ -3562,7 +3562,12 @@ const data = [
               <p>We will be using a powerful code editor called <strong>Visual Studio Code (VS Code)</strong> for this course. Using VS Code will allow you to write and run code seamlessly across different systems, including Windows, Mac, and Linux. VS Code also provides various extensions that support Python and collaborative programming.</p><br>
               <p class='sub-topic' style='font-size: 1.35em'><strong>Install VS Code</strong></p>
               <p>To get started, download and install VS Code from the official website: <a style='text-decoration: underline' href='https://code.visualstudio.com/download' target='_blank'>https://code.visualstudio.com/</a>.</p>  
-              <br>
+              <br> 
+               <p> In this tutorial, we walk you through setting up Visual Studio Code and give an overview of the basic features.</p>
+              <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Vs-code/Vscode+gettingstarted.mp4"
+                    type="video/mp4">
+                </video>
               <p class='sub-topic' style='font-size: 1.35em'><strong>Step 1: Open a folder in VS Code</strong></p>
               In VS Code, you can work with individual files seamlessly, for example for quick edits or to view a file. Alternatively, by opening a folder, also known as a workspace, you unlock more features, such as folder-specific configuration settings, restoring the UI state for that folder, debug configurations, and more. 
               Let's start by creating a folder and opening it in VS Code.
@@ -3572,6 +3577,8 @@ const data = [
               <p>3. On the Welcome page, select Open Folder..., and then select the folder you created.</p> 
                The VS Code window reloads and you should see the folder name at the top of the Explorer view. You'll use the Explorer view to view and manage the files and folders in your workspace.
               <img src='/images/open-folder.png' style="width: 100%;height: 100%;" alt="Open-folder"/>
+              
+              
               </div>
               <style>
               .VS Code p {
@@ -4002,7 +4009,7 @@ const data = [
               <h2 style='font-weight: 700; font-size: 1.25em'>Lab 1 - MadLib</h2>
               <div style="display: flex; justify-content: center;margin: 20px 0">
                  <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Lab+1+-+Madlib.mp4"
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/python+lab+videos/Lab-1---Madlib.mp4"
                     type="video/mp4">
                 </video>
               </div>
@@ -4365,7 +4372,7 @@ const data = [
               <p>This video will get you started on the lab:</p>
               <div style="display: flex; justify-content: center;margin: 20px 0">
                  <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Lab+2+-+Magic+8+Ball.mp4"
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/python+lab+videos/Lab-2---Magic-8-Ball.mp4"
                     type="video/mp4">
                 </video>
               </div>
@@ -4844,7 +4851,7 @@ const data = [
               <p>The video will also show you how to comment your program – adding notes that a person can read and the computer will ignore. You will also see a function – a chunk of code with a name. You’ll learn more about functions in a future module, in this lab you will modify the starter code and just use the function that is already there.  </p>
               <div style="display: flex; justify-content: center;margin: 20px 0">
                  <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lab+3a+-+Temp+Convert.mp4"
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/python+lab+videos/Lab-3a---Temp-Convert.mp4"
                     type="video/mp4">
                 </video>
               </div>
@@ -4902,7 +4909,7 @@ const data = [
               <p>The video will also show you how to comment your program – adding notes that a person can read and the computer will ignore. You will also see a function – a chunk of code with a name. You’ll learn more about functions in a future module, in this lab you will modify the starter code and just use the function that is already there.  </p>
               <div style="display: flex; justify-content: center;margin: 20px 0">
                  <video controls width="700">
-                    <source src="https://work-learn-bucket.s3.amazonaws.com/Control+Structures/Lab+3b+-+RPS.mp4"
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/python+lab+videos/Lab-3b---RPS.mp4"
                     type="video/mp4">
                 </video>
               </div>
