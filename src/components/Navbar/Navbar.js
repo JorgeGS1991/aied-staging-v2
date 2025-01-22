@@ -40,6 +40,14 @@ function Navbar({ user, role, logOut }) {
           <div className="navbar-item">
             <Link to="/playground">Playground</Link>
           </div>
+          {user ?(<>
+            <div className="navbar-item">
+  <Link to={`/student-details/${localStorage.getItem('userID')}`}>
+    My Progress
+  </Link>
+</div></>):null}
+         
+
           <div className="navbar-item">
             {user ? (
               <>
