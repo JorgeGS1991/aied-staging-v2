@@ -28,6 +28,9 @@ function Login({ setUser, setUserRole }) {
       const { token, user } = response.data;
       setUser(user.firstName + " " + user.lastName);
       setUserRole(user.role);
+      localStorage.setItem("userID",user._id)
+      console.log(user);
+      console.log(token);
       localStorage.setItem("token", token);
       history("/dashboard");
     } catch (error) {

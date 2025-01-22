@@ -17,6 +17,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login/Login";
 import Playground from "./pages/Playground/Playground";
 import ManageStudents from "./pages/ManageStudents/ManageStudents";
+import StudentDetails from "./pages/ManageStudents/Studentdetails/StudentDetails";
 import ManageStudentDetails from "./pages/ManageStudents/ManageStudentDetails/ManageStudentDetails";
 import { Navigate, Redirect } from "react-router";
 import Register from "./pages/Register/Register";
@@ -53,6 +54,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/student-details/:userId" element={<StudentDetails />} />
         <Route path="/manage-students" element={<ManageStudents />} />
         <Route
           path="/manage-students/:userId"
