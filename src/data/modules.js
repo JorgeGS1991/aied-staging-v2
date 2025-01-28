@@ -118,6 +118,8 @@ const data = [
           content: `
                 <p style="margin-top:20px;">Completing this survey is worth $5.</p>
                 <a target="_blank"  style='text-decoration: underline' href='https://smu.az1.qualtrics.com/jfe/form/SV_bPLjuVE1N21OLYy' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+                <p style="margin-top:20px;">Completing this survey is worth $15.</p>
+                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_0wXrZjeZJ6OMYAK' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
                 `,
         },
         //       {
