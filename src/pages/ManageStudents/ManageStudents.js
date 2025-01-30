@@ -55,54 +55,47 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
       alert("Failed to hide user.");
     }
   };
-  
-
-  const columns = [
-    {
-      name: "fullName",
-      label: "Full Name",
-      options: {
-        customBodyRender: (value, tableMeta) => {
-          const userId = tableMeta.rowData[6]; // Assuming the user ID is the 7th column
-          return <Link to={`/manage-students/${userId}`}>{value}</Link>;
-        },
-      },
-    },
-    { name: "role", label: "Role" },
-    { name: "username", label: "Username" },
-    { name: "lastActivity", label: "Last Activity" },
-    { name: "pythonOneScore", label: "Python One Score" },
-    {
-      name: "actions",
-      label: "Actions",
-      options: {
-        customBodyRender: (value, tableMeta) => {
-          const userId = tableMeta.rowData[6]; // Assuming the user ID is the 7th column
-          return (
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => handleHideUser(userId)}
-            >
-              Hide User
-            </Button>
-          );
-        },
-      },
-    },
-    { name: "id", label: "ID", options: { display: false } }, // Hidden user ID
-  ];
-
   const data = users
-    .filter((user) => user.role === "student")
-    .map((user) => ({
+  .filter((user) => user.role === "student")
+  .map((user) => {
+    const lastActivityDate = new Date(user.lastActivity);
+    const today = new Date();
+    const inactiveDays = Math.floor((today - lastActivityDate) / (1000 * 60 * 60 * 24)); // Convert ms to days
+
+    return {
       fullName: `${user.firstName} ${user.lastName}`,
       role: user.role,
       username: user.username,
       lastActivity: user.lastActivity,
+      inactiveDays: isNaN(inactiveDays) ? "N/A" : inactiveDays, // Handle invalid dates
       pythonOneScore: user.pythonOneScore,
       id: user._id,
-    }));
+    };
+  });
+
+const columns = [
+  { name: "fullName", label: "Full Name" },
+  { name: "role", label: "Role" },
+  { name: "username", label: "Username" },
+  { name: "lastActivity", label: "Last Activity" },
+  { name: "inactiveDays", label: "Inactive Days" }, // New Column
+  { name: "pythonOneScore", label: "Python One Score" },
+  {
+    name: "actions",
+    label: "Actions",
+    options: {
+      customBodyRender: (value, tableMeta) => {
+        const userId = tableMeta.rowData[6]; // Assuming the user ID is in the 7th column
+        return (
+          <Button variant="contained" color="primary" onClick={() => handleHideUser(userId)}>
+            Hide User
+          </Button>
+        );
+      },
+    },
+  },
+  { name: "id", label: "ID", options: { display: false } },
+];
 
   const options = {
     filterType: "dropdown",
