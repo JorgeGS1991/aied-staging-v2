@@ -1,58 +1,112 @@
-import {
-  Box,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TablePagination,
-  TableRow,
-  Typography,
-} from "@mui/material";
-import Tab from "@mui/material/Tab";
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { Typography, Box, Tab, Paper, Button } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { Route, Routes } from "react-router";
-import { Link } from "react-router-dom";
+import MUIDataTable from "mui-datatables";
 import QuizAnalytics from "../../components/QuizAnalytics/QuizAnalytics";
 import { fetchAllUsers } from "../../redux/actions/userActions";
 import Login from "../Login/Login";
-import ManageStudentDetails from "./ManageStudentDetails/ManageStudentDetails";
+import axios from "axios"; // For API calls
 import "./ManageStudents.css";
 
 const ManageStudents = ({ user, users, fetchAllUsers }) => {
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [value, setValue] = useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
-
   useEffect(() => {
     const fetchUsers = async () => {
-      await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/api/users`
-        // "http://localhost:3001/api/users"
-      )
+      await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
         .then((res) => res.json())
         .then((data) => fetchAllUsers(data));
     };
     fetchUsers();
-  }, []);
+  }, [fetchAllUsers]);
+
+  const handleHideUser = async (id) => {
+    // Show confirmation dialog before proceeding
+    const confirmHide = window.confirm("Are you sure you want to hide this user?");
+    
+    if (!confirmHide) {
+      return; // If user cancels, do nothing
+    }
+  
+    try {
+      const response = await axios.put(
+        `${process.env.REACT_APP_BACKEND_URL}/api/users/hide`,
+        { user_id: id } // Pass user ID in the request body
+      );
+      alert(response.data.message); // Notify the user
+  
+      // Refresh the users list after hiding the user
+      const fetchUsers = async () => {
+        await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
+          .then((res) => res.json())
+          .then((data) => fetchAllUsers(data));
+      };
+      fetchUsers(); // Re-fetch users list
+    } catch (error) {
+      console.error("Error hiding user:", error);
+      alert("Failed to hide user.");
+    }
+  };
+  const data = users
+  .filter((user) => user.role === "student")
+  .map((user) => {
+    const lastActivityDate = new Date(user.lastActivity);
+    const today = new Date();
+    const inactiveDays = Math.floor((today - lastActivityDate) / (1000 * 60 * 60 * 24)); // Convert ms to days
+
+    return {
+      fullName: `${user.firstName} ${user.lastName}`,
+      role: user.role,
+      username: user.username,
+      lastActivity: user.lastActivity,
+      inactiveDays: isNaN(inactiveDays) ? "N/A" : inactiveDays, // Handle invalid dates
+      pythonOneScore: user.pythonOneScore,
+      id: user._id,
+    };
+  });
+
+const columns = [
+  { name: "fullName", label: "Full Name" },
+  { name: "role", label: "Role" },
+  { name: "username", label: "Username" },
+  { name: "lastActivity", label: "Last Activity" },
+  { name: "inactiveDays", label: "Inactive Days" }, // New Column
+  { name: "pythonOneScore", label: "Python One Score" },
+  {
+    name: "actions",
+    label: "Actions",
+    options: {
+      customBodyRender: (value, tableMeta) => {
+        const userId = tableMeta.rowData[6]; // Assuming the user ID is in the 7th column
+        return (
+          <Button variant="contained" color="primary" onClick={() => handleHideUser(userId)}>
+            Hide User
+          </Button>
+        );
+      },
+    },
+  },
+  { name: "id", label: "ID", options: { display: false } },
+];
+
+  const options = {
+    filterType: "dropdown",
+    responsive: "standard",
+    selectableRows: "none", // Disable row selection
+    rowsPerPage: 5,
+    rowsPerPageOptions: [5, 10, 25],
+    download: true,
+    print: true,
+    search: true,
+  };
 
   return (
     <TabContext value={value}>
@@ -76,58 +130,14 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
               <Typography variant="h4" sx={{ marginBottom: "20px" }}>
                 Manage Student Information
               </Typography>
-              <TableContainer component={Paper}>
-                <Table>
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Full Name</TableCell>
-                      <TableCell>Role</TableCell>
-                      <TableCell>Username</TableCell>
-                      <TableCell>Last Activity</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {users.map((user, index) => {
-                      return user.role === "student" ? (
-                        <TableRow key={index}>
-                          <TableCell>
-                            <Typography variant="body1">
-                              <Link to={`/manage-students/${user._id}`}>
-                                {user.firstName + " " + user.lastName}
-                              </Link>
-                            </Typography>
-                          </TableCell>
-                          <TableCell>
-                            <Typography variant="body1">{user.role}</Typography>
-                          </TableCell>
-                          <TableCell>
-                            <Typography variant="body1">
-                              {user.username}
-                            </Typography>
-                          </TableCell>
-                          <TableCell>
-                            <Typography variant="body1">
-                              {user.lastActivity}
-                            </Typography>
-                          </TableCell>
-                        </TableRow>
-                      ) : null;
-                    })}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-              <TablePagination
-                rowsPerPageOptions={[5, 10, 25]}
-                component="div"
-                count={users.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-              />
-              <Routes>
-                <Route path="/:userId" element={<ManageStudentDetails />} />
-              </Routes>
+              <Paper>
+                <MUIDataTable
+                  title={"Student List"}
+                  data={data}
+                  columns={columns}
+                  options={options}
+                />
+              </Paper>
             </>
           ) : (
             <Login />

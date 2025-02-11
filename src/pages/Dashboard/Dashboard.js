@@ -67,7 +67,7 @@ function CircularProgressWithLabel(props) {
 
 function Dashboard({ user, role, progress, setUser, setProgress }) {
   const [isActive, setIsActive] = useState([]);
-  const [isActive2, setIsActive2] = useState([]);
+  const [isActive2, setIsActive2] = useState(Array(data.length).fill(false));
   const [content, setContent] = useState(localStorage.getItem("content") || "");
   const [topic, setTopic] = useState("");
   const [notificationOpen, setNotificationOpen] = useState(false);
@@ -102,14 +102,14 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
   const toggleDropdown = (index, length) => {
     setIsActive(Array(length).fill(false));
     const newIsActive = [...isActive];
-    newIsActive[index] = !newIsActive[index];
+      newIsActive[index] = !newIsActive[index];
     setIsActive(newIsActive);
   };
-
+  
   const toggleDropdown2 = (index, length) => {
     setIsActive2(Array(length).fill(false));
     const newIsActive2 = [...isActive2];
-    newIsActive2[index] = !newIsActive2[index];
+      newIsActive2[index] = !newIsActive2[index];
     setIsActive2(newIsActive2);
   };
 
@@ -140,7 +140,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                 {item.subTopics.map((subTopic, index) => {
                   return (
                     <>
-                      {i !== 0 && i !== 2 ? (
+                      {i !== 0 && i !== 5 ? (
                         <>
                           <div className="db-item">
                             <div className="db-link">

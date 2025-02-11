@@ -6,16 +6,18 @@ import "./QuizAnalytics.css";
 
 
 
-const QuizAnalytics = () => {
-  const [questions, setQuestions] = useState([]);
+const StudentScores = () => {
+  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [totalQuestions, setTotalQuestions] = useState(5); // Default value
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
+    // Fetch user data from backend API
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
       .then((response) => {
         setUsers(response.data);
-        setLoading(false);
+        setLoading(false); // Set loading to false when data is fetched
       })
       .catch((error) => {
         console.error("Error fetching users:", error);
@@ -108,35 +110,9 @@ const QuizAnalytics = () => {
   }));
 
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <Typography variant="h6">Filter by Type</Typography>
-        <FormGroup
-          sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
-        >
-          {Array.from(new Set(questions.map((question) => question.type))).map(
-            (type, index) => (
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    key={index}
-                    checked={selectedTypes.includes(type)}
-                    onChange={() => handleTypeChange(type)}
-                    label={type}
-                  />
-                }
-                label={
-                  type.includes("python")
-                    ? type.replace("python", "python-lesson-")
-                    : type
-                }
-              />
-            )
-          )}
-        </FormGroup>
-      </Grid>
+    <Box sx={{ padding: "20px" }}>
       {loading ? (
-        <Grid item xs={12} sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "center" }}>
           <CircularProgress />
           <Typography variant="h6" sx={{ marginTop: "10px" }}>
             Loading student data...
@@ -155,4 +131,4 @@ const QuizAnalytics = () => {
   );
 };
 
-export default QuizAnalytics;
+export default StudentScores;

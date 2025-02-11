@@ -75,6 +75,7 @@ const Quiz = ({
           {
             quizScore,
             type,
+            user_id: localStorage.getItem("userID"),
           },
           { withCredentials: true }
         );

@@ -54,6 +54,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/student-details/:userId" element={<StudentDetails />} />
         <Route path="/manage-students" element={<ManageStudents />} />
         <Route
           path="/manage-students/:userId"
