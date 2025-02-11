@@ -1,53 +1,111 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {
-  Grid,
-  Paper,
-  Typography,
-  CircularProgress,
-  List,
-  ListItem,
-  ListItemText,
-  Checkbox,
-  Box,
-  FormGroup,
-  FormControlLabel,
-} from "@mui/material";
-import DangerousIcon from "@mui/icons-material/Dangerous";
-import CheckIcon from "@mui/icons-material/Check";
-import InfoIcon from "@mui/icons-material/Info";
+import MUIDataTable from "mui-datatables";
+import { CircularProgress, Box, Typography } from "@mui/material";
+import "./QuizAnalytics.css";  
+
+
 
 const QuizAnalytics = () => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedTypes, setSelectedTypes] = useState([]);
+  const [totalQuestions, setTotalQuestions] = useState(5); // Default value
 
   useEffect(() => {
-    // Fetch data from backend API
-    axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/api/questions`)
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
       .then((response) => {
-        setQuestions(response.data);
-        setLoading(false); // Set loading to false when data is fetched
+        setUsers(response.data);
+        setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching questions:", error);
-        setLoading(false); // Set loading to false in case of error
+        console.error("Error fetching users:", error);
+        setLoading(false);
       });
+
+    // Fetch total questions if API provides it
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/quiz-info`)
+      .then((response) => {
+        if (response.data.totalQuestions) {
+          setTotalQuestions(response.data.totalQuestions);
+        }
+      })
+      .catch((error) => console.error("Error fetching total questions:", error));
   }, []);
 
-  const handleTypeChange = (type) => {
-    if (selectedTypes.includes(type)) {
-      setSelectedTypes(selectedTypes.filter((t) => t !== type));
-    } else {
-      setSelectedTypes([...selectedTypes, type]);
-    }
+  const replaceNegativeScores = (score) => (score < 0 ? 0 : score);
+
+  const calculatePercentage = (score, total) => {
+    if (!score || score < 0) score = 0;
+    if (!total || total <= 0) return "0%";
+
+    let percentage = (score / total) * 100;
+    if (percentage < 0) percentage = 0;
+    if (percentage > 100) percentage = 100;
+
+    return percentage.toFixed(2) + "%";
   };
 
-  const filteredQuestions =
-    selectedTypes.length === 0
-      ? questions
-      : questions.filter((question) => selectedTypes.includes(question.type));
+  const columns = [
+    { name: "username", label: "Username", options: { filter: false, sort: true } },
+    { name: "firstName", label: "First Name", options: { filter: false, sort: true } },
+    { name: "lastName", label: "Last Name", options: { filter: false, sort: true } },
+    { name: "introScore", label: "Intro Score", options: { filter: true, sort: true } },
+    { name: "introPercentage", label: "Intro Percentage", options: { filter: true, sort: true } },
+    { name: "beyondScore", label: "Beyond Score", options: { filter: true, sort: true } },
+    { name: "beyondPercentage", label: "Beyond Percentage", options: { filter: true, sort: true } },
+    { name: "decompositionScore", label: "Decomposition Score", options: { filter: true, sort: true } },
+    { name: "decompositionPercentage", label: "Decomposition Percentage", options: { filter: true, sort: true } },
+    { name: "algorithmScore", label: "Algorithm Score", options: { filter: true, sort: true } },
+    { name: "algorithmPercentage", label: "Algorithm Percentage", options: { filter: true, sort: true } },
+    { name: "pythonOneScore", label: "pythonOne Score",  options: { filter: false, sort: true } },
+    { name: "pythonOnePercentage", label: "pythonOne Percentage",  options: { filter: false, sort: true } },
+    { name: "pythonTwoScore", label: "pythonTwoScore",  options: { filter: false, sort: true } },
+    { name: "pythonTwoPercentage", label: "pythonTwo Percentage",  options: { filter: false, sort: true } },
+    { name: "pythonThreeScore", label: "pythonThreeScore",  options: { filter: false, sort: true } },
+    { name: "pythonThreePercentage", label: "pythonThree Percentage",  options: { filter: false, sort: true } },
+    { name: "pythonFiveScore", label: "pythonFiveScore",  options: { filter: false, sort: true } },
+    { name: "pythonFivePercentage", label: "pythonFive Percentage",  options: { filter: false, sort: true } },
+    { name: "pythonSixScore", label: "pythonSixScore",  options: { filter: false, sort: true } },
+    { name: "pythonSixPercentage", label: "pythonSix Percentage",  options: { filter: false, sort: true } },
+    { name: "pythonSevenScore", label: "pythonSevenScore",  options: { filter: false, sort: true } },
+    { name: "pythonSevenPercentage", label: "pythonSeven Percentage",  options: { filter: false, sort: true } },
+
+  ];
+
+  const options = {
+    filterType: "checkbox",
+    responsive: "standard",
+    rowsPerPage: 10,
+    pagination: true,
+    selectableRows: "none",
+  };
+
+  const data = users.map((user) => ({
+    username: user.username,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    introScore: replaceNegativeScores(user.introScore),
+    introPercentage: calculatePercentage(user.introScore, totalQuestions),
+    beyondScore: replaceNegativeScores(user.beyondScore),
+    beyondPercentage: calculatePercentage(user.beyondScore, totalQuestions),
+    decompositionScore: replaceNegativeScores(user.decompositionScore),
+    decompositionPercentage: calculatePercentage(user.decompositionScore, totalQuestions),
+    algorithmScore: replaceNegativeScores(user.algorithmScore),
+    algorithmPercentage: calculatePercentage(user.algorithmScore, totalQuestions),
+    pythonOneScore: replaceNegativeScores(user.pythonOneScore),
+    pythonOnePercentage: calculatePercentage(user.pythonOneScore, totalQuestions),
+    pythonTwoScore: replaceNegativeScores(user.pythonTwoScore),
+    pythonTwoPercentage: calculatePercentage(user.pythonTwoScore, totalQuestions ),
+    pythonThreeScore: replaceNegativeScores(user.pythonThreeScore),
+    pythonThreePercentage: calculatePercentage(user.pythonThreeScore, totalQuestions),
+    pythonFiveScore: replaceNegativeScores(user.pythonFiveScore),
+    pythonFivePercentage: calculatePercentage(user.pythonFiveScore, totalQuestions ),
+    pythonSixScore: replaceNegativeScores(user.pythonSixScore),
+    pythonSixPercentage: calculatePercentage(user.pythonSixScore, totalQuestions ),
+    pythonSevenScore: replaceNegativeScores(user.pythonSevenScore),
+    pythonSevenPercentage: calculatePercentage(user.pythonSevenScore, totalQuestions ),
+
+  }));
 
   return (
     <Grid container spacing={2}>
@@ -80,78 +138,20 @@ const QuizAnalytics = () => {
       {loading ? (
         <Grid item xs={12} sx={{ textAlign: "center" }}>
           <CircularProgress />
-        </Grid>
+          <Typography variant="h6" sx={{ marginTop: "10px" }}>
+            Loading student data...
+          </Typography>
+        </Box>
       ) : (
-        filteredQuestions.map((question, index) => (
-          <Grid
-            item
-            xs={36}
-            sm={18}
-            md={6}
-            key={index}
-            sx={{ padding: "10px" }}
-          >
-            <Paper elevation={3} sx={{ padding: "20px", height: "100%" }}>
-              <Typography sx={{ fontWeight: "bold" }} variant="h5">
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: question.question,
-                  }}
-                  style={{
-                    padding: "0 20px",
-                    textAlign: "left",
-                    overflow: "scroll",
-                  }}
-                />
-              </Typography>
-              <List
-                sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
-              >
-                {question.options.map((option, optionIndex) => (
-                  <ListItem
-                    key={optionIndex}
-                    sx={{
-                      marginRight: "10px",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    <span style={{ textDecoration: "underline" }}>
-                      Option {optionIndex}:
-                    </span>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: option,
-                      }}
-                      style={{ padding: "0 20px" }}
-                    />
-                  </ListItem>
-                ))}
-              </List>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "flex-start",
-                }}
-              >
-                <Typography variant="body1">
-                  <InfoIcon /> Correct Answer:{" "}
-                  {JSON.stringify(question.correctAnswer)}
-                </Typography>
-                <Typography sx={{ color: "green" }} variant="body1">
-                  <CheckIcon /># of Right Answers: {question.rightAnswer ?? 0}
-                </Typography>
-                <Typography sx={{ color: "red" }} variant="body1">
-                  <DangerousIcon /> # of Wrong Answers:{" "}
-                  {question.wrongAnswer ?? 0}
-                </Typography>
-              </Box>
-            </Paper>
-          </Grid>
-        ))
+        <MUIDataTable
+          title={"Student Scores and Percentages"}
+          data={data}
+          columns={columns}
+          options={options}
+          style={{ textAlign: "center" }}
+        />
       )}
-    </Grid>
+    </Box>
   );
 };
 

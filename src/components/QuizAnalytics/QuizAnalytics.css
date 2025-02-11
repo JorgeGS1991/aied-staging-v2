@@ -1,0 +1,24 @@
+/* Center align text in table headers */
+.MuiTableHead-root .MuiTableCell-root {
+    text-align: center !important;
+    font-weight: bold;
+  }
+  
+  /* Center align text in table body cells */
+  .MuiTableBody-root .MuiTableCell-root {
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+  
+  /* Ensure table header text is in the middle */
+  .MuiTableCell-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Make sure the table has enough padding */
+  .MuiTableCell-root {
+    padding: 10px !important;
+  }
+  
