@@ -17,7 +17,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login/Login";
 import Playground from "./pages/Playground/Playground";
 import ManageStudents from "./pages/ManageStudents/ManageStudents";
-import StudentDetails from "./pages/ManageStudents/StudentDetails/StudentDetails";
+import StudentDetails from "./pages/ManageStudents/Studentdetails/StudentDetails";
 import ManageStudentDetails from "./pages/ManageStudents/ManageStudentDetails/ManageStudentDetails";
 import { Navigate, Redirect } from "react-router";
 import Register from "./pages/Register/Register";
