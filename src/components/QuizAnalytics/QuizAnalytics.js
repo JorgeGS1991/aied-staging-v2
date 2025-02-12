@@ -48,29 +48,98 @@ const StudentScores = () => {
   };
 
   const columns = [
-    { name: "username", label: "Username", options: { filter: false, sort: true } },
-    { name: "firstName", label: "First Name", options: { filter: false, sort: true } },
-    { name: "lastName", label: "Last Name", options: { filter: false, sort: true } },
-    { name: "introScore", label: "Intro Score", options: { filter: true, sort: true } },
-    { name: "introPercentage", label: "Intro Percentage", options: { filter: true, sort: true } },
-    { name: "beyondScore", label: "Beyond Score", options: { filter: true, sort: true } },
-    { name: "beyondPercentage", label: "Beyond Percentage", options: { filter: true, sort: true } },
-    { name: "decompositionScore", label: "Decomposition Score", options: { filter: true, sort: true } },
-    { name: "decompositionPercentage", label: "Decomposition Percentage", options: { filter: true, sort: true } },
-    { name: "algorithmScore", label: "Algorithm Score", options: { filter: true, sort: true } },
-    { name: "algorithmPercentage", label: "Algorithm Percentage", options: { filter: true, sort: true } },
-    { name: "pythonOneScore", label: "pythonOne Score",  options: { filter: false, sort: true } },
-    { name: "pythonOnePercentage", label: "pythonOne Percentage",  options: { filter: false, sort: true } },
-    { name: "pythonTwoScore", label: "pythonTwoScore",  options: { filter: false, sort: true } },
-    { name: "pythonTwoPercentage", label: "pythonTwo Percentage",  options: { filter: false, sort: true } },
-    { name: "pythonThreeScore", label: "pythonThreeScore",  options: { filter: false, sort: true } },
-    { name: "pythonThreePercentage", label: "pythonThree Percentage",  options: { filter: false, sort: true } },
-    { name: "pythonFiveScore", label: "pythonFiveScore",  options: { filter: false, sort: true } },
-    { name: "pythonFivePercentage", label: "pythonFive Percentage",  options: { filter: false, sort: true } },
-    { name: "pythonSixScore", label: "pythonSixScore",  options: { filter: false, sort: true } },
-    { name: "pythonSixPercentage", label: "pythonSix Percentage",  options: { filter: false, sort: true } },
-    { name: "pythonSevenScore", label: "pythonSevenScore",  options: { filter: false, sort: true } },
-    { name: "pythonSevenPercentage", label: "pythonSeven Percentage",  options: { filter: false, sort: true } },
+    { name: "username", label: "Username", options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },} },
+    { name: "firstName", label: "First Name", options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },} },
+    { name: "lastName", label: "Last Name", options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },} },
+    { name: "introScore", label: "Intro Score", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },} },
+    { name: "introPercentage", label: "Intro Percentage", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "beyondScore", label: "Beyond Score", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },} },
+    { name: "beyondPercentage", label: "Beyond Percentage", options: { filter: true, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },  } },
+    { name: "decompositionScore", label: "Decomposition Score", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "decompositionPercentage", label: "Decomposition Percentage", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "algorithmScore", label: "Algorithm Score", options: { filter: true, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "algorithmPercentage", label: "Algorithm Percentage", options: { filter: true, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonOneScore", label: "pythonOne Score",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },  } },
+    { name: "pythonOnePercentage", label: "pythonOne Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonTwoScore", label: "pythonTwoScore",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },} },
+    { name: "pythonTwoPercentage", label: "pythonTwo Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonThreeScore", label: "pythonThreeScore",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonThreePercentage", label: "pythonThree Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonFiveScore", label: "pythonFiveScore",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonFivePercentage", label: "pythonFive Percentage",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },  } },
+    { name: "pythonSixScore", label: "pythonSixScore",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    },} },
+    { name: "pythonSixPercentage", label: "pythonSix Percentage",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonSevenScore", label: "pythonSevenScore",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
+    { name: "pythonSevenPercentage", label: "pythonSeven Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
+      const username = tableMeta.rowData[0]; // Get the username from the first column
+      return <span title={`User: ${username}`}>{value}</span>;
+    }, } },
 
   ];
 
@@ -78,8 +147,18 @@ const StudentScores = () => {
     filterType: "checkbox",
     responsive: "standard",
     rowsPerPage: 10,
+    page: 4, // Start from page 5 (index starts at 0)
     pagination: true,
     selectableRows: "none",
+    customTableBodyStyle: { textAlign: "center", padding: "12px" }, // Proper row spacing
+    customHeadLabelRender: (columnMeta) => (
+      <div style={{ textAlign: "center", fontWeight: "bold", fontSize: "14px" }}>
+        {columnMeta.label}
+      </div>
+    ),
+    setTableProps: () => ({
+      style: { borderCollapse: "separate", borderSpacing: "10px 5px" }, // Adjusts row spacing
+    }),
   };
 
   const data = users.map((user) => ({
