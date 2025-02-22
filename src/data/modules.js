@@ -6711,7 +6711,7 @@ const data = [
     },
     {
       id: 5,
-      topicName: "Unit 4: COBOL",
+      topicName: "Unit 4: Mainframes",
       subTopics: [
         {
           id: 1,
@@ -6788,10 +6788,7 @@ const data = [
               topic: "Lab - Getting on the System",
               content: `
               <div class='Getting on the System-submit'>
-  
-       
-  
-  <body>
+              <body>
       
   
   <p>
@@ -6838,16 +6835,13 @@ const data = [
               }
               </style>
               `,
-        },
-              {
+            },
+            {
               id: 3,
               topic: "Quiz",
               content: `
               <div class='debug'>
-
                 <p> Please Take the Quiz  <a target="_blank" href=" https://docs.google.com/forms/d/e/1FAIpQLSfi4DmSSqeAfRj4v_1zgmgg9H6gpAOjxQ30XE7lRsKPjLscDA/viewform?usp=sf_link  " style="color: red;"> Here! </a></p>
-
-
               </div>
               <style>
               .debug p {
@@ -6858,14 +6852,18 @@ const data = [
                 padding-left: 20px;
                 margin: 10px 0;
               }
-  
               </style>
               `,
             },
-
-              {
-              id: 4,
-              topic: "Hardware Systems and LPARS",
+          ],
+        },
+        {
+          id: 2,
+          name: "Hardware Systems and LPARS",
+          contents: [
+            {
+              id: 1,
+              topic: "Introduction to Hardware Systems and LPARs",
               content: `
               <div class='debug'>
 
@@ -6895,12 +6893,54 @@ const data = [
                 </video>
   
   </body>
+   </div>
+              <style>
+              .debug p {
+                margin: 10px 0;
+              }
+              .notes pre {
+                font-size: 0.85em;
+                padding-left: 20px;
+                margin: 10px 0;
+              }
+  
+              </style>`,
+            },
+          ],
+        },
+        {
+          id: 3,
+          name: "Z/OS Overview",
+          contents: [
+            {
+              id: 1,
+              topic: "Comprehensive Overview of z/OS",
+              content: `
+              <div class='debug'>
 
-
-
-
-               
-              </div>
+                <body>
+  <h1 style="font-weight: bold;">Comprehensive Overview of z/OS </h1>
+  <p>
+The slides provide a comprehensive overview of z/OS, a widely used mainframe operating system renowned for its ability to handle large workloads and support numerous concurrent users. Key distinctions from single-user operating systems include advanced virtual storage management and robust multiprocessing capabilities. z/OS is designed to serve critical applications with high reliability and security, processing large and varied workloads efficiently. </p>
+  <p>
+z/OS manages multiple types of storage, including real, auxiliary, and virtual storage. Virtual storage, a fundamental concept, allows the system to use more memory than physically available by managing data between real and auxiliary storage, ensuring efficient use of resources. Address spaces are a critical feature, providing isolated environments for each user and application, thus ensuring data integrity and security. </p>
+<p>
+Workload Management (WLM) is a crucial component, optimizing the use of system resources to achieve business goals by balancing throughput and response times. It dynamically adjusts resources based on the workload and system demands. 
+</p>
+<p>
+z/OS supports a vast array of middleware and additional software products, making it versatile and capable of integrating various applications and services. Its ability to manage large I/O configurations and support multiple communications subsystems highlights its robustness. </p>
+<p>
+The system is also designed for scalability and flexibility, capable of managing mixed workloads and ensuring high availability and reliability, making it suitable for mission-critical applications. Comparisons with UNIX systems reveal commonalities and differences, emphasizing z/OS's unique capabilities in managing extensive and complex computing environments. </p>
+<p>
+Overall, z/OS is a powerful, flexible, and secure operating system, ideally suited for environments requiring high performance, reliability, and the ability to handle large-scale, diverse workloads. </p>
+  <br />
+       <video controls width="700">
+                    <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Comprehensive+Overview+of+ZOS/ICTN+3210+Enterprise+Server+Technology+Fall+2021-20210913+2159-1+(1).mp4"
+                    type="video/mp4">
+                </video>
+  
+  </body>
+  </div>
               <style>
               .debug p {
                 margin: 10px 0;
@@ -6914,91 +6954,431 @@ const data = [
               </style>
               `,
             },
-              
-            {  
-  
-          
-              id: 5,
-              topic: "z/OS Overview",
+       {
+        id: 2,
+        topic: "Lab",
+        content: `
+        <div class='Apprentice Lab 3, Move/Copy'>
+        <body>
+
+
+<p>
+This lab, focuses on key COBOL dataset operations. The lab guides users through copying essential libraries such as LANG.SOURCE, LANG.LOAD, and LANG.CNTL from a shared dataset into their personal workspace using ISPF utilities. It details the process of creating, editing, and verifying dataset members, including adding new members (e.g., NEWMEM1, NEWMEM2, NEWMEM3) and saving their content. 
+</p>
+<br />
+<video controls width="700">
+<source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/New-Mainframes/+Apprentice+Lab+3.mp4"
+type="video/mp4">
+</video>
+</body>
+ 
+        </div>
+        <style>
+        .Getting on the System-submit p {
+          margin: 10px 0;
+        }
+        .Getting on the System-submit pre {
+          font-size: 0.85em;
+        }
+        </style>
+        `,
+      },
+      
+          ],
+        },
+        {
+          id: 4,
+          name: "Interactive facilities of z/OS: TSO/E, ISPF, & UNIX",
+          contents: [
+            {
+              id: 1,
+              topic: "Interactive facilities of z/OS: TSO/E, ISPF, & UNIX",
               content: `
-              <div class='script-compiled'>
-
-                <body>
-    <h1 style="font-weight: bold;" >Comprehensive Overview of z/OS</h1>
-    <p>
-        The slides provide a comprehensive overview of z/OS, a widely used mainframe operating system renowned for its ability to handle large workloads and support numerous concurrent users. Key distinctions from single-user operating systems include advanced virtual storage management and robust multiprocessing capabilities. z/OS is designed to serve critical applications with high reliability and security, processing large and varied workloads efficiently.
-    </p>
-    <p>
-        z/OS manages multiple types of storage, including real, auxiliary, and virtual storage. Virtual storage, a fundamental concept, allows the system to use more memory than physically available by managing data between real and auxiliary storage, ensuring efficient use of resources. Address spaces are a critical feature, providing isolated environments for each user and application, thus ensuring data integrity and security.
-    </p>
-    <p>
-        The system employs advanced techniques such as dynamic address translation, page stealing, and swapping to manage memory efficiently. Storage protection is implemented through multiple mechanisms, including private address spaces and storage protection keys, ensuring data security and integrity.
-    </p>
-    <p>
-        Workload Management (WLM) is a crucial component, optimizing the use of system resources to achieve business goals by balancing throughput and response times. It dynamically adjusts resources based on the workload and system demands.
-    </p>
-    <p>
-        z/OS supports a vast array of middleware and additional software products, making it versatile and capable of integrating various applications and services. Its ability to manage large I/O configurations and support multiple communications subsystems highlights its robustness.
-    </p>
-    <p>
-        The system is also designed for scalability and flexibility, capable of managing mixed workloads and ensuring high availability and reliability, making it suitable for mission-critical applications. Comparisons with UNIX systems reveal commonalities and differences, emphasizing z/OS's unique capabilities in managing extensive and complex computing environments.
-    </p>
-    <p>
-        Overall, z/OS is a powerful, flexible, and secure operating system, ideally suited for environments requiring high performance, reliability, and the ability to handle large-scale, diverse workloads.
-    </p>
-
-
-    <br />
+              <div class='data-rep'>
+  
+            <head>
+      <title>Interactive facilities of z/OS: TSO/E, ISPF, & UNIX</title>
+  </head>
+  <body>
+    <p>This chapter introduces you to the core interactive tools of z/OS—TSO/E, ISPF, and z/OS UNIX—and their functionalities. </p>
+    <p>We begin with Time Sharing Option/Extensions (TSO/E), which allows users to log into the system, execute commands at the READY prompt, and manage data sets in native mode. Building on this, the Interactive System Productivity Facility (ISPF) provides a powerful, menu-driven interface to perform common tasks such as data set editing, browsing, allocation, and system management.
+     You’ll learn how to navigate the ISPF menus, use its text editor, and customize settings to enhance efficiency. </p>
+     <p>The lesson also covers z/OS UNIX System Services, which integrates UNIX functionalities within z/OS. You’ll explore the UNIX shell, execute shell commands, and create shell scripts, providing a familiar environment for users with UNIX experience. We’ll also compare the z/OS UNIX command shell and the ISHELL interface, a menu-driven alternative tailored for TSO/ISPF users. </p>
+<div style="display: flex; justify-content: center">
     <video controls width="700">
-                 <source src="https://work-learn-bucket.s3.amazonaws.com/Mainframe/Lesson+3_+z_OS+Overview+Video.mp4"
-                 type="video/mp4">
-             </video>
+       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Lesson+4%3A+Interactive+facilities+/ICTN+3210+Enterprise+Server+Technology+Fall+2021-20210920+2203-1.mp4"
+       type="video/mp4">
+   </video>
+</body>
+              </div>
+              <style>
+              .data-rep a {
+                text-decoration: underline;
+              }
+              .data-rep p {
+                margin: 10px 0;
+              }
+              </style>
+              `,
+            },
+            {
+              id: 2,
+              topic: "Lab ",
+              content: `
+              <title>Apprentice Lab 4</title>
+              <div class='script-compiled'>
+              <body>
+            <h1 style="font-weight: bold;" >Create a dataset</h1>
+            <br />
+            <p>Welcome to LAB 4! This lab introduces the fundamental process of creating and managing datasets in a mainframe environment using ISPF utilities. The lab emphasizes the efficient data management capabilities of the mainframe and provides step-by-step instructions for allocating a new dataset, defining parameters such as space units, record format, and directory blocks, and ensuring optimal configuration. </p>
+            <br />
+    <video controls width="700">
+       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Lesson+4%3A+Interactive+facilities+/Lab+(create+a+data+set).mp4"
+       type="video/mp4">
+   </video>
+    </body>
+    </div>
+              <style>
+              .script-compiled p {
+                margin: 10px 0;
+              }
+  
+  
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .notes .sublist {
+                list-style-type: circle;
+                padding-left: 22px;
+              }
+              </style>
+              `,
+            },
+          ],
+        },
+        {
+          id: 5,
+          name: "Working with Data Sets",
+          contents: [
+            {
+              id: 1,
+              topic: "Working with Data Sets",
+              content: `
+              <title>Chapter 5: Data Management on Mainframe</title>
+     <style>
+              .script-compiled p {
+                margin: 10px 0;
+              }
+  
+  
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .notes .sublist {
+                list-style-type: circle;
+                padding-left: 22px;
+              }
+              </style>
+</head>
+<body>
+    <p>This chapter covers the definition, types, and structure of data sets, such as sequential, partitioned, and VSAM data sets, and highlights their differences compared to UNIX file systems. Key topics include:</p>
 
-
+    <ul>
+        <li><strong>Data Set Characteristics:</strong> <p>Explanation of naming conventions, record formats, and access methods.</p></li>
+        <li><strong>Allocation and Storage:</strong> <p>Detailed guidance on allocating data sets, including space requirements and usage of DASD volumes.</p></li>
+        <li><strong>Management Tools:</strong> <p>Use of ISPF panels, JCL, and DFSMS for creating, modifying, and cataloging data sets.</p></li>
+        <li><strong>z/OS UNIX Integration:</strong><p> Comparison of z/OS data sets and UNIX file systems, emphasizing hierarchical structures and byte-stream files.</p></li>
+        <li><strong>Exercises:</strong> <p>The chapter also includes exercises for hands-on experience with ISPF utilities, exploring options for managing data sets, and creating libraries for storing program data. It is a valuable resource for understanding the fundamentals of mainframe data management.</p></li>
+    </ul>
 
 </body>
+<br />
+<video controls width="700">
+       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Working+with+Data+Sets/ICTN+3210+Enterprise+Server+Technology+Fall+2021-20210913+2159-1.mp4"
+       type="video/mp4">
+   </video>
+              `,
+            },
+            {
+              id: 2,
+              topic: "Lab ",
+              content: `
+              <title>Apprentice Lab 4</title>
+              <div class='script-compiled'>
+              <body>
+            <h1 style="font-weight: bold;" >Create a dataset</h1>
+            <br />
+            <p>Welcome to LAB 4! This lab introduces the fundamental process of creating and managing datasets in a mainframe environment using ISPF utilities. The lab emphasizes the efficient data management capabilities of the mainframe and provides step-by-step instructions for allocating a new dataset, defining parameters such as space units, record format, and directory blocks, and ensuring optimal configuration. </p>
+            <br />
+    <video controls width="700">
+       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Lesson+4%3A+Interactive+facilities+/Lab+(create+a+data+set).mp4"
+       type="video/mp4">
+   </video>
+    </body>
+    </div>
+               <style>
+              .script-compiled p {
+                margin: 10px 0;
+              }
+  
+  
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .notes .sublist {
+                list-style-type: circle;
+                padding-left: 22px;
+              }
+              </style>`,
+            },
+          ],
+        },
+        {
+          id: 6,
+          name: "Using JCL and SDSF",
+          contents: [
+            {
+              id: 1,
+              topic: "Using JCL and SDSF ",
+              content: `<title><strong>Managing and Executing Jobs in z/OS</strong></title>
+   <style>
+              .script-compiled p {
+                margin: 10px 0;
+              }
+  
+  
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .notes .sublist {
+                list-style-type: circle;
+                padding-left: 22px;
+              }
+              </style>
+</head>
+<body>
 
+    <h1><strong>Managing and Executing Jobs in a z/OS Environment</strong></h1>
+    
+    <p>This lecture provides an essential overview of managing and executing jobs in a z/OS environment. The presentation covers:</p>
+    <div class="lecture-content"><br />
+        <h2><strong>Introduction to JCL</strong></h2>
+        <p>Explains the purpose of JCL, its structure with JOB, EXEC, and DD statements, and demonstrates examples for defining job inputs, outputs, and system controls. </p>
+    </div>
+    <div class="lecture-content">
+        <h2><strong>Advanced JCL Concepts</strong></h2>
+        <p>Discusses creating new data sets, continuation and concatenation, and using cataloged procedures for efficient job management. </p>
+    </div>
+    <div class="lecture-content">
+        <h2><strong>Introduction to SDSF</strong></h2>
+        <p>Guides users on monitoring and managing jobs, viewing logs, and controlling system resources using SDSF panels.</p>
+    </div>
 
+    <div class="lecture-content">
+        <h2><strong>Utilities Overview</strong></h2>
+        <p>Highlights key z/OS utilities, such as IEBGENER for data set operations and IEBCOPY for library management.</p>
+    </div>
 
-                 
+</body>
+<video controls width="700">
+       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Using+JCL+and+SDSF/ICTN+3210+Enterprise+Server+Technology+Fall+2021-20211004+2200-1.mp4"
+       type="video/mp4">
+   </video> ` },
+            {
+              id: 2,
+              topic: "Lab ",
+              content: `<title>JCL Lab - Pt 1, Pt 2.</title>
+   <style>
+              .script-compiled p {
+                margin: 10px 0;
+              }
+  
+  
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .notes .sublist {
+                list-style-type: circle;
+                padding-left: 22px;
+              }
+              </style>
+</head>
+<body>
+
+    <h1><strong>JCL Lab - Part 1 and Part 2 </strong></h1>
+    
+    <p>In this video, you'll learn step-by-step how to work with Job Control Language (JCL) to create and manage data sets in a mainframe environment.
+    The tutorial provides hands-on practice with JCL, guiding you through the process of editing JCL scripts and running jobs to create data sets using utilities
+     like IEFBR14 (to create an empty data set) and IEBGENER (to create a data set with a member). The tutorial covers:</p>
+    <div class="lecture-content"><br/>
+        <p>1.Copying job members (LAB4A and LAB4B) to your data set. </p>
+    </div>
+    <div class="lecture-content">
+        <p>2.Editing JCL scripts and understanding the use of IEFBR14 and IEBGENER utilities. </p>
+    </div>
+    <div class="lecture-content">
+        <p>3.Running jobs to create data sets—one empty and one with a member. </p>
+    </div>
+
+    <div class="lecture-content">
+        <p>4.Capturing and documenting results. </p>
+    </div><br/>
+<p> The lab emphasizes understanding job hierarchy, executing commands, and documenting results effectively. You'll gain practical experience by taking screenshots and summarizing your findings,
+ ensuring a comprehensive understanding of JCL and its applications in data set management.</p>
+</body>
+<video controls width="700">
+       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Using+JCL+and+SDSF/JCL+Lab+1%2C+Pt+1.mp4"
+       type="video/mp4">
+   </video>`,
+            },
+          ],
+        },
+        {
+          id: 7,
+          name: "Batch processing and job entry subsystem",
+          contents: [
+            {
+              id: 1,
+              topic: "Batch processing and job entry subsystem",
+              content: `
+              <div class='data-rep'>
+                <p>This chapter explores the foundational concepts of batch processing in a z/OS environment. It covers: </p>
+                <p>1. <strong> Batch Processing Bascis:</strong> Understanding how jobs are executed sequentially with minimal user interaction. </p>
+                <p>2.<strong> Job Entry Subsytem(JES):</strong> Explains JES2 and JES3, their roles in job submission, scheduling, execution, and output management. 
+                <p> 3. <strong> Initiator Functionality:</strong> Describes how initiators manage job resources, ensure data set integrity, and prevent conflicts.</p>
+                <p>4. <strong> Spooling and Job Flow:</strong> Introduces spooling mechanisms for efficient input/output handling and the phases of job processing.</p>
+              </div>
+              <video controls width="700">
+        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Batch+processing+and+job+entry+subsystem/ICTN+3210+Enterprise+Server+Technology+Fall+2021-20211018+2203-1.mp4"
+        type="video/mp4">
+              <style>
+              .data-rep a {
+                text-decoration: underline;
+              }
+              .data-rep p {
+                margin: 10px 0;
+              }
+  
+  
+              .notes {
+                margin-top: 20px;
+              }
+  
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .table {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+              }
+  
+              .table th, .table td {
+                border: 1px solid;
+              }
+  
+              .table th, .table td {
+                padding: 20px;
+              }
+              </style>
+              `,
+            },
+          ],
+        },
+        {
+          id: 8,
+          name: "Designing and developing applications for z/OS ",
+          type: "python2",
+          contents: [
+            {
+              id: 1,
+              topic: "Coming Soon!...",
+              content: `
+              <div class='data-rep'>
+                Coming Soon...
+              </div>
+              <style>
+              .data-rep a {
+                text-decoration: underline;
+              }
+              .data-rep p {
+                margin: 10px 0;
+              }
+  
+  
+              .notes {
+                margin-top: 20px;
+              }
+  
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .table {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+              }
+  
+              .table th, .table td {
+                border: 1px solid;
+              }
+  
+              .table th, .table td {
+                padding: 20px;
+              }
+              </style>
+              `,
+            },
+            {
+              id: 2,
+              topic: "Coming Soon!...",
+              content: `
+              <div class='script-compiled'>
+                 Coming Soon...
               </div>
               <style>
               .script-compiled p {
                 margin: 10px 0;
               }
-          .script-compiled img {
-               width: 50%
-                 height: auto;
-           text-align: center;
-             margins: 20px;
-               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                 border-radius: 5px; 
-       }
-         .script-compiled .lg-img {
-              window: 70%; 
-            }
-  
-         .script-compiled .xl-img {
-                 windth: 100%; 
-       }
-        .script-compiled .sub-topic {
-             margin-top: 30px;
-  
-       </style>
-       `
-  
-  
-            
   
   
   
-            
+              .notes .list {
+                list-style-type: disc;
+                padding: 10px 20px;
+              }
+  
+              .notes .sublist {
+                list-style-type: circle;
+                padding-left: 22px;
+              }
+              </style>
+              `,
             },
           ],
         },
-  
+      ],
+    },
+    {
+      id: 6,
+      topicName: "Unit 5: Cobol",
+      subTopics: [
         {
-          id: 2,
+          id: 1,
           name: "Introduction to COBOL",
           type: "python1",
           contents: [
@@ -7261,7 +7641,6 @@ const data = [
               </style>
               `,
             },
-
             {
               id: 6,
               topic: "DB2 Lab, Parts 1 & 2",
@@ -7282,7 +7661,6 @@ const data = [
               </style>
               `,
             },
-
             {
               id: 7,
               topic: "Lab 1: Getting on the System",
@@ -7303,7 +7681,6 @@ const data = [
               </style>
               `,
             },
-
             {
               id: 8,
               topic: "Lab 2: TSO Pratice",
@@ -7324,10 +7701,6 @@ const data = [
               </style>
               `,
             },
-
-           
-
-              
             {
               id: 9,
               topic: "Lab 3: Move/Copy (Libraries)",
@@ -7348,8 +7721,8 @@ const data = [
           ],
         },
         {
-          id: 3,
-          name: "Lesson 3",
+          id: 4,
+          name: "Lesson 2",
           type: "python2",
           contents: [
             {

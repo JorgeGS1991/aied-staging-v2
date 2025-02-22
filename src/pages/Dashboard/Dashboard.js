@@ -140,7 +140,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                 {item.subTopics.map((subTopic, index) => {
                   return (
                     <>
-                      {i !== 0 && i !== 5 ? (
+                      {i !== 0 && i !== 8 ? (
                         <>
                           <div className="db-item">
                             <div className="db-link">
