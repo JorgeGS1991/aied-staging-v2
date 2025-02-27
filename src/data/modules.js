@@ -6721,8 +6721,7 @@ const data = [
               id: 1,
               topic: "Introduction to Mainframes",
               content: `
-              <div class='cobol1'>
-              
+              <div class='cobol1'>       
   <body>
   
       <h2 style="font-weight: bold;"> Introduction to Mainframe Systems </h2>
@@ -7379,350 +7378,344 @@ type="video/mp4">
       subTopics: [
         {
           id: 1,
-          name: "Introduction to COBOL",
-          type: "python1",
+          name: "Lesson 1: Introduction to COBOL programming",
+          type: "Introduction to COBOL programming",
           contents: [
             {
               id: 1,
               topic: "Setting up COBOL Libraries",
               content: `
               <div class='data-rep'>
+  <p>Welcome to the module on Setting Up COBOL Libraries. This session provides a beginner-friendly introduction to COBOL, a foundational programming language for business and financial applications. 
+    You’ll learn about COBOL’s structure, data handling, and integration with mainframe systems like CICS and DB2. Through clear explanations and practical examples, we’ll explore how COBOL processes data, handles numeric conversions, and supports enterprise-level applications. 
+    Let’s take a closer look at what each video covers:</p>
+
+  <div style="display: flex; justify-content: center">
+    <video controls width="700">
+      <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+1%3A+Introduction+to+COBOL+programming+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220110+2300-1.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <h2 style="font-weight: bold;">Lab</h2>
+  <p>These lab sessions provide a practical introduction to COBOL programming on mainframes. You’ll learn how to write, compile, and execute COBOL programs while understanding key concepts such as data types, file handling, and numeric conversions. 
+    Through step-by-step guidance, these labs will help you build a strong foundation in COBOL development, preparing you for real-world applications in enterprise systems. </p>
+
+  <h2 style="font-weight: bold;">1. Setting Up COBOL Libraries</h2>
+  <p>This video will guide you through the initial steps of setting up your COBOL libraries. You'll learn how to install and configure the necessary tools, as well as how to organize your libraries for optimal performance and ease of use.</p>
   
-            <head>
-      <title>Mainframe Basics</title>
-  </head>
+  <div style="display: flex; justify-content: center">
+    <video controls width="700">
+      <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/3150+Setting+up+Our+COBOL+Libraries.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <h2 style="font-weight: bold;">2. Using Multiple Screens</h2>
+  <p>In this video, we’ll explore the benefits of using multiple screens when working with COBOL. You’ll learn techniques for managing multiple windows, navigating between screens efficiently, and enhancing your productivity through effective screen management.</p>
   
+  <div style="display: flex; justify-content: center">
+    <video controls width="700">
+      <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Using+multiple+screens.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <h2 style="font-weight: bold;">3. Troubleshooting COBOL</h2>
+  <p>The final video focuses on troubleshooting common issues that you might encounter while working with COBOL. We'll cover error diagnosis, debugging strategies, and solutions to typical problems, ensuring you have the skills to resolve issues quickly and effectively.</p>
   
-  
+  <div style="display: flex; justify-content: center">
+    <video controls width="700">
+      <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Troubleshooting+COBOL.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <p>By the end of this module, you will have a solid understanding of how to set up and manage COBOL libraries, utilize multiple screens to enhance your workflow, and troubleshoot common COBOL issues with confidence.</p>
+  <p>Feel free to ask any questions or seek further assistance as you progress through the module. Happy learning!</p>
+</div>
+<style>
+  .data-rep a {
+    text-decoration: underline;
+  }
+  .data-rep p {
+    margin: 10px 0;
+  }
+</style>
+`,
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: "Lesson 2: How to compile, test, and debug a COBOL program",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: "How to compile, test, and debug a COBOL program",
+              content: `
+              <div class='data-rep'>
+            <head><title>How to compile, test, and debug a COBOL program</title></head>  
   <body>
+    <p>Welcome to chapter 2, This chapter will guide you through the key concepts of COBOL programming, focusing on its structure, syntax, and debugging methods used in a mainframe environment.</p>
+ <div class="cobol-learning-objectives"><br/>
+  <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
 
+  <h3 style="font-weight: bold; color: black;">COBOL Program Structure:</h3>
+  <p>Understanding the different divisions and how they work together.</p>
 
-          
+  <h3 style="font-weight: bold; color: black;">Coding & Editing:</h3>
+  <p>How to write and modify COBOL programs using mainframe editors.</p>
 
-<h1 style="font-weight: bold;"> Setting Up COBOL Libraries</h1>
-    <p>Welcome to the module on Setting Up COBOL Libraries. This module is designed to help you get started with COBOL libraries, understand how to use multiple screens effectively, and troubleshoot common issues that may arise. The module is divided into three key sections, each presented through a separate video. Let’s take a closer look at what each video covers:</p>
+  <h3 style="font-weight: bold; color: black;">Compiling & Running Programs:</h3>
+  <p>Steps to execute COBOL programs in a mainframe.</p>
 
+  <h3 style="font-weight: bold; color: black;">Error Handling with SDSF:</h3>
+  <p>Identifying and debugging errors using System Display and Search Facility (SDSF).</p>
 
-    <h2 style="font-weight: bold;">1. Setting Up COBOL Libraries</h2>
-    <p>This video will guide you through the initial steps of setting up your COBOL libraries. You'll learn how to install and configure the necessary tools, as well as how to organize your libraries for optimal performance and ease of use.</p>
+  <h3 style="font-weight: bold; color: black;">Debugging Techniques:</h3>
+  <p>Using display statements and breakpoints to troubleshoot logic errors.</p>
 
-    
-<div style="display: flex; justify-content: center">
-    <video controls width="700">
-       <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/3150+Setting+up+Our+COBOL+Libraries.mp4"
-       type="video/mp4">
-   </video>
- </div>
-
-
-
- <h2 style="font-weight: bold;">2. Using Multiple Screens</h2>
-    <p>In this video, we’ll explore the benefits of using multiple screens when working with COBOL. You’ll learn techniques for managing multiple windows, navigating between screens efficiently, and enhancing your productivity through effective screen management.</p>
- 
-    <div style="display: flex; justify-content: center">
-    <video controls width="700">
-       <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Using+multiple+screens.mp4"
-       type="video/mp4">
-   </video>
- </div>
-
-
-
-
- <h2 style="font-weight: bold;">3. Troubleshooting COBOL</h2>
- <p>The final video focuses on troubleshooting common issues that you might encounter while working with COBOL. We'll cover error diagnosis, debugging strategies, and solutions to typical problems, ensuring you have the skills to resolve issues quickly and effectively.</p>
- <div style="display: flex; justify-content: center">
-    <video controls width="700">
-       <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Troubleshooting+COBOL.mp4"
-       type="video/mp4">
-   </video>
- </div>
-
-
-
- <p>By the end of this module, you will have a solid understanding of how to set up and manage COBOL libraries, utilize multiple screens to enhance your workflow, and troubleshoot common COBOL issues with confidence.</p>
-
-
-
-
-    <p>Feel free to ask any questions or seek further assistance as you progress through the module. Happy learning!</p>
-
-
-
-
-
-
-</body>
-
-
-
-
-
-
-
-
-
-
-
-  
-              </div>
-              <style>
-              .data-rep a {
-                text-decoration: underline;
-              }
-              .data-rep p {
-                margin: 10px 0;
-              }
-              </style>
-              `,
-            },
-            {
-              id: 2,
-              topic: "Lab - Getting on the system",
-              content: `
-              <div class='script-compiled'>
-                
-
-
-             <body>
-            <h1 style="font-weight: bold;" >Getting on the System</h1>
-            <br />
-    <embed src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/COBOL-Lab1_ICTN_3210_getting_on_the_system_V2.pdf" type="application/pdf" width="100%" height="800">
-    </body>
-
-              
-
-  
-  
-    
-              </div>
-              <style>
-              .script-compiled p {
-                margin: 10px 0;
-              }
-  
-  
-              .notes .list {
-                list-style-type: disc;
-                padding: 10px 20px;
-              }
-  
-              .notes .sublist {
-                list-style-type: circle;
-                padding-left: 22px;
-              }
-              </style>
-              `,
-            },
-            {
-              id: 3,
-              topic: "Mocha, FileZilla, and ISPF Tour",
-              content: `
-              <div class='debug'>
-
-                <body>
-
-    <h1 style="font-weight: bold;">Explore the Essentials: Mocha, FileZilla, and ISPF Tour</h1>
-
-    <p>Welcome to our comprehensive tutorial series where we dive into three essential tools for developers and IT professionals. Explore our detailed videos to learn everything you need to know about Mocha, FileZilla, and ISPF Tour.</p>
-
-
-
-    <h2 style="font-weight: bold;">Introduction to Mocha</h2>
-    <p>Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Our video will guide you through the basics and help you get started.</p>
-
-<br />
-    
-    <div style="display: flex; justify-content: center">
-        <video controls width="700">
-           <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/Mocha+installation.mp4"
-           type="video/mp4">
-       </video>
-     </div>
-<br />
-
-    <h2 style="font-weight: bold;">Getting Started with FileZilla</h2>
-    <p>FileZilla is a powerful, free FTP solution. Whether you are a web developer or just need to transfer files, our tutorial will help you understand how to use FileZilla efficiently.</p>
-
-<br />
-     <div style="display: flex; justify-content: center">
-        <video controls width="700">
-           <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/FileZilla.mp4"
-           type="video/mp4">
-       </video>
-     </div>
-
-
-<br />
-     <h2 style="font-weight: bold;">ISPF Tour Overview</h2>
-            <p>ISPF (Interactive System Productivity Facility) is a mainframe development environment. This video will introduce you to its capabilities and show you how to navigate and use ISPF effectively.</p>
-
-<br />
-     <div style="display: flex; justify-content: center">
-        <video controls width="700">
-           <source src="https://work-learn-bucket.s3.amazonaws.com/Cobol_2/ISPF+tour.mp4"
-           type="video/mp4">
-       </video>
-     </div>
-
-
-<br />
-
-<div class="resources">
-    <h2 style="font-weight: bold;">Additional Resources</h2>
-    <p>For more information and additional learning materials, visit the following websites:</p>
-    <p><a href="https://filezilla-project.org/" style="color: red;"> FileZilla</a></p>
-    <p><a href="https://mochasoft.dk/download.htm" style="color: red;"> Downlad the Software Here</a></p>
+  <h3 style="font-weight: bold; color: black;">Advanced Tools:</h3>
+  <p>A preview of GUI-based debugging tools available beyond SDSF.</p>
 </div>
 
-<br />
+<style>
+  .cobol-learning-objectives h2, .cobol-learning-objectives h3 {
+    color: black;
+  }
+  .cobol-learning-objectives p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+</style>
+<br/>
+<video controls width="700">
+        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+2%3A+How+to+compile%2C+test%2C+and+debug+a+COBOL+program+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220131+2302-1.mp4"</source>
+        type="video/mp4">
+      </video><br/>
+      <h2 style="font-weight: bold;">Lab</h2>
+  <p>This lab introduces COBOL programming through a classic "Hello, World!" program. It provides a step-by-step approach to coding, compiling, and executing a COBOL program on a mainframe system.</p>
+ </div><br/>
+  <div class="cobol-learning-objectives">
+  <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
 
+  <h3 style="font-weight: bold; color: black;">Understanding COBOL Structure:</h3>
+  <p>Learn about the IDENTIFICATION DIVISION, PROCEDURE DIVISION, and modular programming in COBOL.</p>
 
+  <h3 style="font-weight: bold; color: black;">Writing Your First COBOL Program:</h3>
+  <p>Manually code the HELLO program, ensuring comprehension of each line.</p>
 
-</body>
+  <h3 style="font-weight: bold; color: black;">Compiling & Running on a Mainframe:</h3>
+  <p>Modify JCL (Job Control Language) to compile, link, and execute the program.</p>
 
+  <h3 style="font-weight: bold; color: black;">Using SDSF for Output Validation:</h3>
+  <p>Learn to debug and verify execution results using SDSF (System Display and Search Facility).</p>
 
+  <h3 style="font-weight: bold; color: black;">Executing with REXX Script:</h3>
+  <p>Run the program via REXX and capture successful execution output.</p>
+</div>
 
-
-
-
-               
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
+<style>
+  .cobol-learning-objectives h2, .cobol-learning-objectives h3 {
+    color: black;
+  }
+  .cobol-learning-objectives p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+</style>
+<br/>
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Lesson+2%3A+How+to+compile%2C+test%2C+and+debug+a+COBOL+program+/COBOL-Lab_Hello_3220_V2.pdf" type="application/pdf" width="100%" height="800">`,
             },
+          ],
+        },
+        {
+          id: 3,
+          name: "Lesson 3: How to write a program that prepares a report ",
+          type: "python1",
+          contents: [
             {
-              id: 4,
-              topic: "Compile Lab",
+              id: 1,
+              topic: "How to write a program that prepares a report",
               content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
-            },
-            {
-              id: 5,
-              topic: "Sort Lab",
-              content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
-            },
-            {
-              id: 6,
-              topic: "DB2 Lab, Parts 1 & 2",
-              content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
-            },
-            {
-              id: 7,
-              topic: "Lab 1: Getting on the System",
-              content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
-            },
-            {
-              id: 8,
-              topic: "Lab 2: TSO Pratice",
-              content: `
-              <div class='debug'>
-               Coming Soon...
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-  
-              </style>
-              `,
-            },
-            {
-              id: 9,
-              topic: "Lab 3: Move/Copy (Libraries)",
-              content: `
-              <div class='madlib'>
-              Coming Soon...
-              </div>
-              <style>
-              .madlib p {
-                margin: 20px 0;
-              }
-              .code pre {
-                font-size: 0.85em;
-              }
-              </style>
-              `,
+              <div class='data-rep'>
+            <head><title>How to write a program that prepares a report</title></head>  
+  <body>
+    <p>This lesson focuses on how to write a COBOL program that generates a structured report using sequential file processing in a mainframe environment.</p>
+ <div class="cobol-learn-objectives"><br/>
+  <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Handling Sequential Files:</h3>
+  <p>Understanding how COBOL reads, processes, and formats data from a file.</p>
+
+  <h3 style="font-weight: bold; color: black;">Data Formatting for Reports:</h3>
+  <p>Structuring output to fit a 132-byte line printer or adjusting for 80-byte formats.</p>
+
+  <h3 style="font-weight: bold; color: black;">Working with PRINT-AREA:</h3>
+  <p>Defining PRINT-AREA for formatted report output.</p>
+
+  <h3 style="font-weight: bold; color: black;">Managing Numeric Data:</h3>
+  <p>Handling signed numbers and ensuring proper alignment in reports.</p>
+
+  <h3 style="font-weight: bold; color: black;">Using Fillers & Print Charts:</h3>
+  <p>Understanding FILLER fields and using print charts to map report layouts.</p>
+
+  <h3 style="font-weight: bold; color: black;">Writing and Executing the COBOL Program:</h3>
+  <p>Coding a simple program to read from a customer master file (CUSTMAST) and print a formatted report.</p>
+</div>
+
+<style>
+  .cobol-learn-objectives h2, .cobol-learn-objectives h3 {
+    color: black;
+  }
+  .cobol-learn-objectives p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+</style><br/>
+<video controls width="700">
+        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+3%3A+How+to+write+a+program+that+prepares+a+report+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220207+2302-1.mp4" type="video/mp4">
+      </video><br/>
+  <h2 style="font-weight: bold;">Lab:</h2>
+  <p>This lab focuses on creating a COBOL program that generates a structured report from a customer data file (CUSTMAST) using sequential file processing in a mainframe environment. </p>
+ </div>
+  <div class="cobol-key-learning-objectives">
+  <h2 style="font-weight: bold; color: black;">Key Learning Objectives:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Defining Input & Output Files:</h3>
+  <p>Using SELECT and ASSIGN TO statements to designate CUSTMAST as input and SALESRPT as output.</p>
+
+  <h3 style="font-weight: bold; color: black;">Understanding File & Data Structure:</h3>
+  <p>Using FILE SECTION in DATA DIVISION to define structured records, FILLER fields, and numeric vs. alphanumeric data.</p>
+
+  <h3 style="font-weight: bold; color: black;">Formatting a Report:</h3>
+  <p>Using PRINT-AREA to control spacing, headers, and numeric-edited fields for proper display.</p>
+
+  <h3 style="font-weight: bold; color: black;">Implementing the PROCEDURE DIVISION:</h3>
+  <ul>
+    <li>Read customer records.</li>
+    <li>Format and print report headers and customer data.</li>
+    <li>Accumulate and display grand totals.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Executing the COBOL Program:</h3>
+  <p>Running the program using JCL, verifying the report output in SDSF, and debugging as needed.</p>
+</div>
+
+<style>
+  .cobol-key-learning-objectives h2, .cobol-key-learning-objectives h3 {
+    color: black;
+  }
+  .cobol-key-learning-objectives p, .cobol-key-learning-objectives ul {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .cobol-key-learning-objectives ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+</style>
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Lesson+3%3A+How+to+write+a+program+that+prepares+a+report+/COBOL-RPT1000.pdf" type="application/pdf" width="100%" height="800">`,
             },
           ],
         },
         {
           id: 4,
-          name: "Lesson 2",
+          name: "Lesson 4: How to design, code, and test a structured program ",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: "How to design, code, and test a structured program",
+              content: `
+              <div class='data-rep'>
+            <head><title>How to design, code, and test a structured program</title></head>  
+  <body>
+    <p>This lesson focuses on the principles of structured programming in COBOL, guiding learners on how to design, write, and test modular programs effectively in a mainframe environment. </p>
+ <div class="cobol-programming-learning-objectives"><br/>
+  <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Understanding Structured Programming:</h3>
+  <p>Breaking down programs into independent, reusable modules for better readability and maintainability.</p>
+
+  <h3 style="font-weight: bold; color: black;">Control Break Logic:</h3>
+  <p>Implementing branch control to handle grouped data efficiently.</p>
+
+  <h3 style="font-weight: bold; color: black;">Program Design Techniques:</h3>
+  <p>Using structured listings instead of flowcharts to organize and visualize program logic.</p>
+
+  <h3 style="font-weight: bold; color: black;">Modular Independence:</h3>
+  <p>Exploring the challenges of true module independence and how modules interact within a program.</p>
+
+  <h3 style="font-weight: bold; color: black;">Testing & Debugging:</h3>
+  <p>Best practices for testing COBOL programs, including:</p>
+  <ul>
+    <li>Commenting out untested sections.</li>
+    <li>Using SDSF and debugging tools to verify execution.</li>
+    <li>Handling interactive and batch processing, including CICS-based transactional programs.</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-programming-learning-objectives h2, .cobol-programming-learning-objectives h3 {
+    color: black;
+  }
+  .cobol-programming-learning-objectives ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-programming-learning-objectives ul li {
+    margin: 5px 0;
+  }
+  .cobol-programming-learning-objectives p {
+    font-size: 16px;
+  }
+</style>
+<br/>
+<video controls width="700">
+        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+4%3A+How+to+design%2C+code%2C+and+test+a+structured+program+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220214+2317-1.mp4" type="video/mp4">
+      </video><br/>
+  <h2 style="font-weight: bold;">Lab</h2><br/>
+  <p>This lab focuses on designing, coding, and testing a structured COBOL program that interactively calculates sales tax based on user input. </p>
+<div class="interactive-cobol-learning-objectives">
+  <h2 style="font-weight: bold; color: black;">Key Learning Objectives:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Understanding Interactive COBOL Programs:</h3>
+  <p>Accepting user input and processing values dynamically.</p>
+
+  <h3 style="font-weight: bold; color: black;">Using WORKING-STORAGE Variables:</h3>
+  <p>Learning about 77 level variables, which are independent and efficient.</p>
+
+  <h3 style="font-weight: bold; color: black;">Converting Alphanumeric to Numeric Data:</h3>
+  <p>Using FUNCTION NUMVAL to convert user input for calculations.</p>
+
+  <h3 style="font-weight: bold; color: black;">Performing Arithmetic in COBOL:</h3>
+  <p>Computing sales tax and rounding results.</p>
+
+  <h3 style="font-weight: bold; color: black;">Executing and Debugging in SDSF:</h3>
+  <p>Running the program using JCL, handling errors, and validating output.</p>
+
+  <h3 style="font-weight: bold; color: black;">Using REXX for Execution:</h3>
+  <p>Running the COBOL program interactively via a REXX script.</p>
+</div>
+
+<style>
+  .interactive-cobol-learning-objectives h2, .interactive-cobol-learning-objectives h3 {
+    color: black;
+  }
+  .interactive-cobol-learning-objectives p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+</style> 
+<br/>
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+4%3A+How+to+design%2C+code%2C+and+test+a+structured+program+/COBOL-CALC1000_Sp22_ECU.pdf" type="application/pdf" width="100%" height="800">`,
+            },
+          ],
+        },
+        {
+          id: 5,
+          name: "Lesson 5: How to use the COBOL features for structured programming",
           type: "python2",
           contents: [
             {
@@ -7791,6 +7784,576 @@ type="video/mp4">
               }
               </style>
               `,
+            },
+          ],
+        },
+        {
+          id: 6,
+          name: "Lesson 6: Other ways to define, move, and initialize fields ",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: "Other ways to define, move, and initialize fields",
+              content: `
+              <div class='data-rep'>
+            <head><title>Other ways to define, move, and initialize fields</title></head>  
+  <body>
+    <p>This lesson explores alternative ways to define, manipulate, and initialize fields in COBOL, focusing on efficient memory usage and data handling. </p><br/>
+ <div class="cobol-data-storage">
+  <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+
+  <h3 style="font-weight: bold; color: black;">FILLER Fields:</h3>
+  <p>Understanding when and why <strong>FILLER</strong> fields are optional and how they save storage.</p>
+
+  <h3 style="font-weight: bold; color: black;">Working with Constants:</h3>
+  <p>Using reserved words to define constant values for efficiency.</p>
+
+  <h3 style="font-weight: bold; color: black;">Data Storage Methods:</h3>
+  <ul>
+    <li><strong>Display Format:</strong> The most commonly used storage type.</li>
+    <li><strong>Binary & Packed Decimal:</strong> Handling numeric data efficiently.</li>
+    <li><strong>Understanding Floating Point and Signed Numbers:</strong> Storing sign information correctly.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Using the MOVE Statement:</h3>
+  <p>Techniques to transfer data between fields.</p>
+
+  <h3 style="font-weight: bold; color: black;">Field Initialization Strategies:</h3>
+  <ul>
+    <li><strong>Setting values using VALUE ALL:</strong> (e.g., <code>PIC X(40) VALUE ALL "*"</code>).</li>
+    <li><strong>Handling numeric conversions:</strong> Avoiding computation errors using <code>NUMVAL</code>.</li>
+  </ul>
+</div>
+<style>
+  .cobol-data-storage h2, .cobol-data-storage h3 {
+    color: black;
+  }
+  .cobol-data-storage ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-data-storage ul li {
+    margin: 5px 0;
+  }
+  .cobol-data-storage p {
+    font-size: 16px;
+  }
+  .cobol-data-storage code {
+    font-family: monospace;
+    font-size: 16px;
+  }
+</style>
+<br/>
+<video controls width="700">
+        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220228+2302-1.mp4" type="video/mp4">
+      </video><br/>
+  <h3 style="font-weight: bold;"> Lab 6a: Average Calculation Program (AVG1000)</h2>
+  <br/>
+  <p>This lab focuses on defining, moving, and initializing fields in COBOL by building a program that reads a series of numbers, calculates the sum and average, and outputs the results.</p><br/>
+<h2 style="font-weight: bold;">What You’ll Learn:</h2>
+  <div class="cobol-module">
+  <ul>
+    <li><strong>Using Working-Storage Variables</strong> – Defining and initializing:
+      <ul>
+        <li>A counter for the number of entries.</li>
+        <li>A sum variable to store the total.</li>
+        <li>An average variable for computation.</li>
+      </ul>
+    </li>
+    <li><strong>Reading and Converting Data</strong> – Accepting numeric input as text and converting it using <code>NUMVAL</code> for calculations.</li>
+    <li><strong>Modular Program Structure:</strong>
+      <ul>
+        <li><strong>Main Module</strong> – Controls the program flow.</li>
+        <li><strong>Calculation Module</strong> – Computes the sum and average.</li>
+        <li><strong>Output Module</strong> – Displays the results.</li>
+      </ul>
+    </li>
+    <li><strong>Handling Interactive Input</strong> – Prompting users for multiple inputs and defining a stopping condition.</li>
+    <li><strong>Executing and Debugging:</strong>
+      <ul>
+        <li>Running the program with JCL (modified from <code>CALC1000</code>).</li>
+        <li>Executing using a REXX script.</li>
+        <li>Checking for SDSF output errors (<code>ABEND S000</code> is acceptable).</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<br/>
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_7_AVG1000_ECU.pdf" type="application/pdf" width="100%" height="800">`,
+            },
+            {
+              id: 2,
+              topic: "LAB 6b: Student Information Report (STUDENTS) ",
+              content: `
+              <div class='data-rep'>
+            <head><title>Student Information Report (STUDENTS)</title></head>  
+  <body>
+    <p>This lab focuses on processing and formatting a structured student report using COBOL, based on concepts from the MYEMPS program. </p><br/>
+ <div class="cobol-key-learning-objectives">
+  <h2 style="font-weight: bold; color: black;">Key Learning Objectives:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Using Working-Storage Variables – Defining and Initializing:</h3>
+  <ul>
+    <li>A counter for the number of entries.</li>
+    <li>A sum variable to store the total.</li>
+    <li>An average variable for computation.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Reading and Converting Data:</h3>
+  <p>Accepting numeric input as text and converting it using <code>NUMVAL</code> for calculations.</p>
+
+  <h3 style="font-weight: bold; color: black;">Modular Program Structure:</h3>
+  <ul>
+    <li><strong>Main Module:</strong> Controls the program flow.</li>
+    <li><strong>Calculation Module:</strong> Computes the sum and average.</li>
+    <li><strong>Output Module:</strong> Displays the results.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Handling Interactive Input:</h3>
+  <p>Prompting users for multiple inputs and defining a stopping condition.</p>
+
+  <h3 style="font-weight: bold; color: black;">Executing and Debugging:</h3>
+  <ul>
+    <li>Running the program with JCL (modified from CALC1000).</li>
+    <li>Executing using a REXX script.</li>
+    <li>Checking for SDSF output errors (ABEND S000 is acceptable).</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-key-learning-objectives h2, .cobol-key-learning-objectives h3 {
+    color: black;
+  }
+  .cobol-key-learning-objectives ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-key-learning-objectives ul li {
+    margin: 5px 0;
+  }
+  .cobol-key-learning-objectives p {
+    font-size: 16px;
+  }
+  .cobol-key-learning-objectives code {
+    font-family: monospace;
+    font-size: 16px;
+  }
+</style>
+<br/>
+  <h2 style="font-weight: bold;">Lab 6b: Student Information Report (STUDENTS)</h2><br/>
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_8_+STUDENTS.pdf" type="application/pdf" width="100%" height="800">`,
+            },
+            {
+              id: 3,
+              topic: "LAB 6c: Interactive User Input Program (HELLOINT)",
+              content: `
+              <div class='data-rep'>
+            <head><title>Interactive User Input Program (HELLOINT)</title></head>  
+  <body>
+    <p>This lab focuses on writing an interactive COBOL program that collects and displays user input, applying techniques learned in CALC1000 and HELLO. </p><br/>
+ <div class="cobol-key-learning-objectives">
+  <h2 style="font-weight: bold; color: black;">Key Learning Objectives:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Defining and Structuring Data Fields – Creating a STUDENT-RECORD with:</h3>
+  <ul>
+    <li>First Name (15 bytes)</li>
+    <li>Last Name (15 bytes)</li>
+    <li>Major (20 bytes)</li>
+    <li>Student ID (5 bytes)</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Creating and Reading Data Files:</h3>
+  <p>Using a STDATA file with at least three student records.</p>
+
+  <h3 style="font-weight: bold; color: black;">Working with COBOL File Handling:</h3>
+  <p>Defining FILE SECTION and using structured record processing.</p>
+
+  <h3 style="font-weight: bold; color: black;">Using Modular Programming:</h3>
+  <p>Implementing reusable sections for reading records, formatting output, and writing to a report.</p>
+
+  <h3 style="font-weight: bold; color: black;">Executing the Program in a Mainframe Environment:</h3>
+  <ul>
+    <li>Modifying JCL from MYEMPS for execution.</li>
+    <li>Running the program using a REXX script.</li>
+    <li>Checking SDSF output to ensure successful execution.</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-key-learning-objectives h2, .cobol-key-learning-objectives h3 {
+    color: black;
+  }
+  .cobol-key-learning-objectives ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-key-learning-objectives ul li {
+    margin: 5px 0;
+  }
+  .cobol-key-learning-objectives p {
+    font-size: 16px;
+  }
+</style>
+
+<br/>
+<h2 style="font-weight: bold;">LAB 6c: Interactive User Input Program (HELLOINT)</h2><br/>
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_4_Hello_interactive.pdf" type="application/pdf" width="100%" height="800">`,
+            },
+          ],
+        }, 
+        {
+          id: 7,
+          name: "Lesson 7: How to arithmetic statements and intrinsic functions ",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: " How to arithmetic statements and intrinsic functions",
+              content: `
+              <div class='data-rep'>
+            <head><title> How to arithmetic statements and intrinsic functions</title></head>  
+  <body>
+    <p>This lesson focuses on performing arithmetic operations and using built-in functions in COBOL for efficient data processing. </p>
+ <div class="cobol-arithmetic"><br/>
+  <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Arithmetic Statements in COBOL:</h3>
+  <ul>
+    <li><strong>ADD:</strong> Adds values to an identifier.</li>
+    <li><strong>SUBTRACT:</strong> Subtracts values from an identifier.</li>
+    <li><strong>MULTIPLY / DIVIDE:</strong> Multiplies or divides values (though <em>COMPUTE</em> is preferred).</li>
+    <li><strong>COMPUTE:</strong> The recommended method for complex calculations.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Using Intrinsic Functions:</h3>
+  <ul>
+    <li><strong>MOD vs. REM:</strong> MOD returns the integer quotient, while REM gives the remainder.</li>
+    <li><strong>MATHEMATICAL OPERATIONS:</strong> Using functions inside <em>MOVE</em> or <em>COMPUTE</em> statements.</li>
+    <li><strong>Business-Oriented Functions:</strong> Trigonometric functions are rarely used in business applications.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Best Practices in COBOL Arithmetic:</h3>
+  <ul>
+    <li>Understanding precision, rounding, and data movement for accurate calculations.</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-arithmetic h2, .cobol-arithmetic h3 {
+    color: black;
+  }
+  .cobol-arithmetic ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-arithmetic ul li {
+    margin: 5px 0;
+  }
+  .cobol-arithmetic ul ul {
+    list-style-type: circle;
+  }
+</style>
+<br/>
+  <video controls width="700">
+        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+7%3A+How+to+arithmetic+statements+and+intrinsic+functions+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220314+2200-1.mp4" type="video/mp4">
+        </video>`,
+            },
+          ],
+        },
+        {
+          id: 8,
+          name: "Lesson 8: How to work with dates ",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: " How to work with dates",
+              content: `
+              <div class='data-rep'>
+            <head><title>How to work with dates</title></head>  
+  <body>
+    <p>This lesson covers date handling techniques in COBOL, including date formats, conversions, and calculations. </p><br/>
+ <div class="cobol-date-handling">
+  <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+
+  <h3 style="font-weight: bold; color: black;">Understanding Date Systems in COBOL</h3>
+  <ul>
+    <li><strong>Date Formatting and Conversions:</strong></li>
+    <ul>
+      <li>Handling 2-digit vs. 4-digit years to avoid logical errors.</li>
+      <li>Using REDEFINES to transform year fields into 4-digit values.</li>
+    <li><strong>Windowing Techniques:</strong> Managing century transitions in date logic.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Performing Date Calculations:</h3>
+  <ul>
+    <li>Determining the <strong>number of days between two dates</strong>.</li>
+    <li>Ensuring correct date arithmetic for business applications.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Best Practices for Date Handling:</h3>
+  <ul>
+    <li>Avoiding <strong>incorrect IF conditions</strong> due to century mismatches.</li>
+    <li>Understanding how <strong>date windowing</strong> works in financial applications.</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-date-handling h2, .cobol-date-handling h3 {
+    color: black;
+  }
+  .cobol-date-handling ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-date-handling ul li {
+    margin: 5px 0;
+  }
+  .cobol-date-handling ul ul {
+    list-style-type: circle;
+  }
+</style>
+<br/>
+<video controls width="700">
+       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+8%3A+How+to+work+with+dates+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220328+2202-1.mp4"</source>
+       type="video/mp4">`,
+            },
+          ],
+        },
+        {
+          id: 9,
+          name: "Lesson 9: How to work with characters ",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: "How to work with characters",
+              content: `
+              <div class='data-rep'>
+            <head><title>How to work with characters</title></head>  
+  <body>
+    <p>In this lesson, we explore how COBOL handles character data and string manipulation. You’ll learn how to reference specific parts of a field, manage name structures, and process character data effectively. Key topics include: </p><br/>
+<div class="cobol-module">
+  <ul>
+    <li><strong>Referring to Part of a Field</strong> – Understanding how to extract and manipulate sections of a string.</li>
+    <li><strong>String Formatting and Editing</strong> – Handling name fields with spaces, punctuation, and special characters.</li>
+    <li><strong>Using COUNT Variables</strong> – Tracking and adjusting character counts for processing.</li>
+    <li><strong>Editing ZIP Codes and Other Inputs</strong> – Formatting numerical and textual data to match business requirements.</li>
+  </ul>
+</div>
+<br/>
+<h2 style="font-weight: bold;">LAB: CALC2000 Program </h2><br/>
+<p>This COBOL lab focuses on calculating the future value of an investment based on user input. It expands upon CALC1000 by introducing a complete financial computation process. </p><br/>
+<h3 style="font-weight: bold;">Key Components of the Lab: </h3><br/>
+<div class="cobol-procedure">
+  <h2 style="font-weight: bold; color: black;">1. IDENTIFICATION & DATA DIVISION</h2>
+  <ul>
+    <li>Define program details, author information.</li>
+    <li>Setup <strong>WORKING-STORAGE SECTION</strong> to hold input values and computed results.</li>
+    <li>Use <strong>NUMVAL</strong> function to convert alphanumeric input into numeric values.</li>
+  </ul>
+<br/>
+  <h2 style="font-weight: bold; color: black;">2. PROCEDURE DIVISION:</h2>
+  <h3 style="font-weight: bold; color: black;">A. Main Module (000-CALCULATE-FUTURE-VALUES)</h3>
+  <p>Repeatedly executes <strong>100-CALCULATE-FUTURE-VALUE</strong> until user inputs zero.</p>
+<br/>
+  <h3 style="font-weight: bold; color: black;">B. 100-CALCULATE-FUTURE-VALUE</h3>
+  <ul>
+    <li>Prompts user for an action.</li>
+    <li>Accepts input and converts it into a numeric value.</li>
+    <li>If <strong>NUMBER-ENTERED = 1</strong>, calls <strong>110-GET-USER-VALUES</strong>.</li>
+    <li>Loops through <strong>120-CALCULATE-NEXT-FV</strong> until the final value is computed.</li>
+  </ul>
+<br/>
+  <h3 style="font-weight: bold; color: black;">C. 110-GET-USER-VALUES</h3>
+  <ul>
+    <li>Collects investment amount, number of years, and yearly interest rate.</li>
+  </ul>
+<br/>
+  <h3 style="font-weight: bold; color: black;">D. 120-CALCULATE-NEXT-FV</h3>
+  <ul>
+    <li>Computes future value using financial formulas.</li>
+    <li>Increments <strong>YEAR-COUNTER</strong> until reaching the final year.</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-procedure h2, .cobol-procedure h3 {
+    color: black;
+  }
+  .cobol-procedure ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-procedure ul li {
+    margin: 5px 0;
+  }
+</style>
+<br/>
+<div class="cobol-jcl">
+  <h2 style="font-weight: bold; color: black;">3. JCL & Execution</h2>
+  <ul>
+    <li>Copy the necessary <strong>CALC2000</strong> file from <strong>KC02071.ECUJCL</strong> to personal <strong>ECUJCL</strong>.</li>
+    <li>Modify execution scripts.</li>
+    <li>Handle expected <strong>ABEND</strong> message due to lack of user input.</li>
+    <li>Use <strong>SDSF</strong> output to verify execution.</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-jcl h2 {
+    color: black;
+  }
+  .cobol-jcl ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-jcl ul li {
+    margin: 5px 0;
+  }
+</style>
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+9%3A+How+to+work+with+characters+/COBOL-CALC2000_ECU.pdf" type="application/pdf" width="100%" height="800">,
+`,
+            },
+          ],
+        },
+        {
+          id: 10,
+          name: "Lesson 10: How to work with tables ",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: "How to work with tables",
+              content: `
+              <div class='data-rep'>
+            <head><title>How to work with tables</title></head>  
+  <body>
+    <p>In this lesson, we explore how COBOL handles tables (arrays) for storing and processing multiple values efficiently. Tables are fundamental in COBOL for managing structured data.</p><br/>
+ <h2 style="font-weight: bold;">Key Topics Covered:</h2><br/>
+<div class="cobol-tables">
+  <h2 style="font-weight: bold; color: black;">Defining Tables in COBOL</h2>
+  <ul>
+    <li><strong>Using the OCCURS clause</strong> to define an array.</li>
+    <li><strong>Structuring data efficiently</strong> in the WORKING-STORAGE SECTION.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Accessing Table Elements</h3>
+  <ul>
+    <li><strong>Using subscripts</strong> (numeric variables) to reference specific entries.</li>
+    <li><strong>Understanding indexed tables</strong> for optimized processing.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Subscripts vs. Indexing</h3>
+  <ul>
+    <li><strong>Subscripts:</strong> Numeric values representing position; require additional calculations.</li>
+    <li><strong>Indexes:</strong> More efficient as they store displacement directly in memory.</li>
+    <li><strong>INDEXED BY clause:</strong> Improves table navigation and performance.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Multi-Dimensional Tables</h3>
+  <ul>
+    <li><strong>Handling tables with multiple levels of OCCURS.</strong></li>
+    <li><strong>Organizing data with nested tables.</strong></li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Table Redefinition & Data Manipulation</h3>
+  <ul>
+    <li><strong>Using REDEFINES</strong> to manage different views of table data.</li>
+    <li><strong>Updating, searching, and modifying tables dynamically.</strong></li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Performance Considerations</h3>
+  <ul>
+    <li><strong>Efficiently looping through tables</strong> using PERFORM VARYING.</li>
+    <li><strong>Minimizing system overhead</strong> with indexing instead of subscripting.</li>
+  </ul>
+</div>
+<video controls width="700">
+        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+10%3A+How+to+work+with+tables+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220418+2205-1.mp4" type="video/mp4">
+      </video>
+
+<style>
+  .cobol-tables h2, .cobol-tables h3 {
+    color: black;
+  }
+  .cobol-tables ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-tables ul li {
+    margin: 5px 0;
+  }
+</style>
+`,
+            },
+          ],
+        },
+        {
+          id: 11,
+          name: "Lesson 11: How to use copy members and subprograms ",
+          type: "python1",
+          contents: [
+            {
+              id: 1,
+              topic: "How to use copy members and subprograms",
+              content: `
+              <div class='data-rep'>
+            <head><title>How to use copy members and subprograms</title></head>  
+  <body>
+    <p>In this lesson, we explore how COBOL modularizes code using copy members and subprograms for reusability and maintainability. </p><br/>
+ <h2 style="font-weight: bold;">Key Topics Covered: </h2><br/>
+<div class="cobol-modular-programming">
+  <h2 style="font-weight: bold; color: black;">Using COPY Members</h2>
+  <ul>
+    <li><strong>The COPY statement</strong> allows reusable code sections (e.g., data definitions) to be included in multiple programs.</li>
+    <li><strong>Reduces redundancy</strong> and simplifies maintenance.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Working with Subprograms</h3>
+  <ul>
+    <li><strong>CALL Statement:</strong> Enables COBOL programs to invoke subprograms dynamically.</li>
+    <li><strong>Passing Parameters:</strong> Uses USING to send data between programs.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Static vs. Dynamic Linking</h3>
+  <ul>
+    <li><strong>Static Call:</strong> Subprograms are linked at compile-time.</li>
+    <li><strong>Dynamic Call:</strong> Subprograms are loaded at runtime, allowing for flexibility.</li>
+  </ul>
+
+  <h3 style="font-weight: bold; color: black;">Advantages of Modular Programming</h3>
+  <ul>
+    <li><strong>Enhances code reusability</strong> and scalability.</li>
+    <li><strong>Simplifies debugging</strong> by separating logic into smaller components.</li>
+    <li><strong>Improves collaborative development</strong> in large COBOL applications.</li>
+  </ul>
+</div>
+
+<style>
+  .cobol-modular-programming h2, .cobol-modular-programming h3 {
+    color: black;
+  }
+  .cobol-modular-programming ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .cobol-modular-programming ul li {
+    margin: 5px 0;
+  }
+</style>
+
+`,
             },
           ],
         },
