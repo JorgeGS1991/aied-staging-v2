@@ -25,7 +25,7 @@ import Content from "./Topics/Content/Content";
 import SubContent from "./Topics/Content/SubContent/SubContent";
 import axios from "axios";
 import Notification from "../../components/SnackBar/SnackBar";
-import DBContent from "./DBContent/DBContent";
+import DBContent from "./DBContent/DBCont ent";
 import NestedContent from "./Topics/Content/SubContent/NestedContent/NestedContent";
 import { HashLink } from "react-router-hash-link";
 
