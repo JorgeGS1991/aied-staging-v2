@@ -2,162 +2,154 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MUIDataTable from "mui-datatables";
 import { CircularProgress, Box, Typography } from "@mui/material";
-import "./QuizAnalytics.css";  
-
-
+import "./QuizAnalytics.css";
 
 const StudentScores = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [totalQuestions, setTotalQuestions] = useState(5); // Default value
+  const [quizTotals, setQuizTotals] = useState({});
+
+  //  Correct Mapping Based on Given Quiz Types
+  const quizNameMapping = {
+    intro: "intro",
+    decomposition: "decomposition",
+    abstraction: "abstraction",
+    pattern:"patternRecognition",
+    beyond: "beyond",
+    algorithm: "algorithms",
+    review: "review",
+    pythonone: "python1",
+    pythontwo: "python2",
+    pythonthree: "python3",
+    pythonfive: "python5",
+    pythonsix: "python6",
+    pythonseven: "python7",
+  };
+
+  console.log("Quiz Name Mapping:", quizNameMapping);
+
+  const fetchQuestions = async () => {
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/questions`, {
+        credentials: "include",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch questions");
+      }
+
+      const questions = await response.json();
+
+      // Log raw quiz types received from backend
+      console.log("Raw quiz types from backend:", [...new Set(questions.map(q => q.type))]);
+
+      // Normalize and store correct quiz types
+      const quizQuestionCounts = questions.reduce((acc, question) => {
+        let quizType = question.type?.trim().toLowerCase();
+        if (!quizType) return acc; // Skip if type is missing
+
+        if (!acc[quizType]) {
+          acc[quizType] = 0;
+        }
+        acc[quizType] += 1;
+        return acc;
+      }, {});
+
+      console.log("Normalized quiz totals after processing:", quizQuestionCounts);
+      setQuizTotals(quizQuestionCounts);
+    } catch (error) {
+      console.error("Error fetching questions:", error);
+    }
+  };
 
   useEffect(() => {
-    // Fetch user data from backend API
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
       .then((response) => {
+        console.log("Fetched user data:", response.data);
         setUsers(response.data);
-        setLoading(false); // Set loading to false when data is fetched
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching users:", error);
         setLoading(false);
       });
 
-    // Fetch total questions if API provides it
-    axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/quiz-info`)
-      .then((response) => {
-        if (response.data.totalQuestions) {
-          setTotalQuestions(response.data.totalQuestions);
-        }
-      })
-      .catch((error) => console.error("Error fetching total questions:", error));
+    fetchQuestions();
   }, []);
 
-  const replaceNegativeScores = (score) => (score < 0 ? 0 : score);
+  useEffect(() => {
+    console.log("Final quizTotals after fetching:", quizTotals);
+  }, [quizTotals]);
 
-  const calculatePercentage = (score, total) => {
-    if (!score || score < 0) score = 0;
-    if (!total || total <= 0) return "0%";
+  const replaceNegativeScores = (score) => (score < 0 || score === null || score === undefined ? 0 : score);
 
-    let percentage = (score / total) * 100;
-    if (percentage < 0) percentage = 0;
-    if (percentage > 100) percentage = 100;
+  const calculatePercentage = (score, quizType) => {
+    if (score == null || isNaN(score) || score < 0) score = 0;
+
+    let normalizedQuizType = quizType.trim().toLowerCase();
+
+    // Map quiz name if it exists in our known mapping
+    if (quizNameMapping[normalizedQuizType]) {
+      normalizedQuizType = quizNameMapping[normalizedQuizType];
+    }
+
+    const totalQuestions = quizTotals[normalizedQuizType];
+
+    if (!totalQuestions || totalQuestions <= 0) {
+      console.warn(`Missing or zero questions for quiz type "${normalizedQuizType}". Available quiz totals:`, quizTotals);
+      return "0%";
+    }
+
+    let percentage = (score * 100) / totalQuestions;
+    percentage = Math.min(100, Math.max(0, percentage));
+
+    console.log(` Quiz: ${normalizedQuizType}, Score: ${score}, Total Questions: ${totalQuestions}, Percentage: ${percentage.toFixed(2)}%`);
 
     return percentage.toFixed(2) + "%";
   };
 
   const columns = [
-    { name: "username", label: "Username", options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },} },
-    { name: "firstName", label: "First Name", options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },} },
-    { name: "lastName", label: "Last Name", options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },} },
-    { name: "introScore", label: "Intro Score", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },} },
-    { name: "introPercentage", label: "Intro Percentage", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "beyondScore", label: "Beyond Score", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },} },
-    { name: "beyondPercentage", label: "Beyond Percentage", options: { filter: true, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },  } },
-    { name: "decompositionScore", label: "Decomposition Score", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "decompositionPercentage", label: "Decomposition Percentage", options: { filter: true, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "algorithmScore", label: "Algorithm Score", options: { filter: true, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "algorithmPercentage", label: "Algorithm Percentage", options: { filter: true, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonOneScore", label: "pythonOne Score",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },  } },
-    { name: "pythonOnePercentage", label: "pythonOne Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonTwoScore", label: "pythonTwoScore",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },} },
-    { name: "pythonTwoPercentage", label: "pythonTwo Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonThreeScore", label: "pythonThreeScore",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonThreePercentage", label: "pythonThree Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonFiveScore", label: "pythonFiveScore",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonFivePercentage", label: "pythonFive Percentage",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },  } },
-    { name: "pythonSixScore", label: "pythonSixScore",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    },} },
-    { name: "pythonSixPercentage", label: "pythonSix Percentage",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonSevenScore", label: "pythonSevenScore",  options: { filter: false, sort: true, customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-    { name: "pythonSevenPercentage", label: "pythonSeven Percentage",  options: { filter: false, sort: true,customBodyRender: (value, tableMeta) => {
-      const username = tableMeta.rowData[0]; // Get the username from the first column
-      return <span title={`User: ${username}`}>{value}</span>;
-    }, } },
-
+    { name: "username", label: "Username" },
+    { name: "firstName", label: "First Name" },
+    { name: "lastName", label: "Last Name" },
+    { name: "introScore", label: "Intro Score" },
+    { name: "introPercentage", label: "Intro Percentage" },
+    { name: "decompositionScore", label: "Decomposition Score" },
+    { name: "decompositionPercentage", label: "Decomposition Percentage" },
+    { name: "patternScore", label: "patternRecognition Score" },
+    { name: "patternScorePercentage", label: "patternRecognition Percentage" },
+    { name: "abstractionScore", label: "abstraction Score" },
+    { name: "abstractionPercentage", label: "abstraction Percentage" },
+    { name: "reviewScore", label: "review Score" },
+    { name: "reviewPercentage", label: "review Percentage" },
+    { name: "algorithmScore", label: "Algorithm Score" },
+    { name: "algorithmPercentage", label: "Algorithm Percentage" },
+    { name: "beyondScore", label: "Beyond Score" },
+    { name: "beyondPercentage", label: "Beyond Percentage" },
+    { name: "pythonOneScore", label: "Python One Score" },
+    { name: "pythonOnePercentage", label: "Python One Percentage" },
+    { name: "pythonTwoScore", label: "Python Two Score" },
+    { name: "pythonTwoPercentage", label: "Python Two Percentage" },
+    { name: "pythonThreeScore", label: "Python Three Score" },
+    { name: "pythonThreePercentage", label: "Python Three Percentage" },
+    { name: "pythonFiveScore", label: "Python Five Score" },
+    { name: "pythonFivePercentage", label: "Python Five Percentage" },
+    { name: "pythonSixScore", label: "Python Six Score" },
+    { name: "pythonSixPercentage", label: "Python Six Percentage" },
+    { name: "pythonSevenScore", label: "Python Seven Score" },
+    { name: "pythonSevenPercentage", label: "Python Seven Percentage" },
   ];
 
   const options = {
     filterType: "checkbox",
     responsive: "standard",
     rowsPerPage: 10,
-    page: 4, // Start from page 5 (index starts at 0)
     pagination: true,
     selectableRows: "none",
-    customTableBodyStyle: { textAlign: "center", padding: "12px" }, // Proper row spacing
-    customHeadLabelRender: (columnMeta) => (
-      <div style={{ textAlign: "center", fontWeight: "bold", fontSize: "14px" }}>
-        {columnMeta.label}
-      </div>
-    ),
+    customTableBodyStyle: { textAlign: "center", padding: "12px" },
     setTableProps: () => ({
-      style: { borderCollapse: "separate", borderSpacing: "10px 5px" }, // Adjusts row spacing
+      style: { borderCollapse: "separate", borderSpacing: "10px 5px" },
     }),
   };
 
@@ -166,48 +158,34 @@ const StudentScores = () => {
     firstName: user.firstName,
     lastName: user.lastName,
     introScore: replaceNegativeScores(user.introScore),
-    introPercentage: calculatePercentage(user.introScore, totalQuestions),
-    beyondScore: replaceNegativeScores(user.beyondScore),
-    beyondPercentage: calculatePercentage(user.beyondScore, totalQuestions),
+    introPercentage: calculatePercentage(user.introScore, "intro"),
     decompositionScore: replaceNegativeScores(user.decompositionScore),
-    decompositionPercentage: calculatePercentage(user.decompositionScore, totalQuestions),
+    decompositionPercentage: calculatePercentage(user.decompositionScore, "decomposition"),
+    patternScore: replaceNegativeScores(user.patternScore),
+    patternScorePercentage: calculatePercentage(user.patternScore, "patternrecognition"),
+    abstractionScore: replaceNegativeScores(user.abstractionScore),
+    abstractionPercentage: calculatePercentage(user.abstractionScore, "abstraction"),
+    reviewScore: replaceNegativeScores(user.reviewScore),
+    reviewPercentage: calculatePercentage(user.reviewScore, "review"),
+    beyondScore: replaceNegativeScores(user.beyondScore),
+    beyondPercentage: calculatePercentage(user.beyondScore, "beyond"),
     algorithmScore: replaceNegativeScores(user.algorithmScore),
-    algorithmPercentage: calculatePercentage(user.algorithmScore, totalQuestions),
+    algorithmPercentage: calculatePercentage(user.algorithmScore, "algorithm"),
     pythonOneScore: replaceNegativeScores(user.pythonOneScore),
-    pythonOnePercentage: calculatePercentage(user.pythonOneScore, totalQuestions),
+    pythonOnePercentage: calculatePercentage(user.pythonOneScore, "pythonone"),
     pythonTwoScore: replaceNegativeScores(user.pythonTwoScore),
-    pythonTwoPercentage: calculatePercentage(user.pythonTwoScore, totalQuestions ),
+    pythonTwoPercentage: calculatePercentage(user.pythonTwoScore, "pythontwo"),
     pythonThreeScore: replaceNegativeScores(user.pythonThreeScore),
-    pythonThreePercentage: calculatePercentage(user.pythonThreeScore, totalQuestions),
+    pythonThreePercentage: calculatePercentage(user.pythonThreeScore, "pythonthree"),
     pythonFiveScore: replaceNegativeScores(user.pythonFiveScore),
-    pythonFivePercentage: calculatePercentage(user.pythonFiveScore, totalQuestions ),
+    pythonFivePercentage: calculatePercentage(user.pythonFiveScore, "pythonfive"),
     pythonSixScore: replaceNegativeScores(user.pythonSixScore),
-    pythonSixPercentage: calculatePercentage(user.pythonSixScore, totalQuestions ),
+    pythonSixPercentage: calculatePercentage(user.pythonSixScore, "pythonsix"),
     pythonSevenScore: replaceNegativeScores(user.pythonSevenScore),
-    pythonSevenPercentage: calculatePercentage(user.pythonSevenScore, totalQuestions ),
-
+    pythonSevenPercentage: calculatePercentage(user.pythonSevenScore, "pythonseven"),
   }));
 
-  return (
-    <Box sx={{ padding: "20px" }}>
-      {loading ? (
-        <Box sx={{ textAlign: "center" }}>
-          <CircularProgress />
-          <Typography variant="h6" sx={{ marginTop: "10px" }}>
-            Loading student data...
-          </Typography>
-        </Box>
-      ) : (
-        <MUIDataTable
-          title={"Student Scores and Percentages"}
-          data={data}
-          columns={columns}
-          options={options}
-          style={{ textAlign: "center" }}
-        />
-      )}
-    </Box>
-  );
+  return <MUIDataTable title="Student Scores and Percentages" data={data} columns={columns} options={options} />;
 };
 
 export default StudentScores;
