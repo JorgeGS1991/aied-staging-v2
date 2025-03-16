@@ -24,6 +24,7 @@ const StudentScores = () => {
     pythonfive: "python5",
     pythonsix: "python6",
     pythonseven: "python7",
+    mainframeOne: "mainframe1",
   };
 
   console.log("Quiz Name Mapping:", quizNameMapping);
@@ -139,6 +140,8 @@ const StudentScores = () => {
     { name: "pythonSixPercentage", label: "Python Six Percentage" },
     { name: "pythonSevenScore", label: "Python Seven Score" },
     { name: "pythonSevenPercentage", label: "Python Seven Percentage" },
+    { name: "mainframeOneScore", label: "Mainframe One Score"},
+    { name: "mainframeOnePercentage", label: "Mainframe One Percentage"}
   ];
 
   const options = {
@@ -183,6 +186,8 @@ const StudentScores = () => {
     pythonSixPercentage: calculatePercentage(user.pythonSixScore, "pythonsix"),
     pythonSevenScore: replaceNegativeScores(user.pythonSevenScore),
     pythonSevenPercentage: calculatePercentage(user.pythonSevenScore, "pythonseven"),
+    mainframeOneScore: replaceNegativeScores(user.mainframeOneScore),
+    mainframeOnePercentage: calculatePercentage(user.mainframeOneScore, "mainframeOne")
   }));
 
   return <MUIDataTable title="Student Scores and Percentages" data={data} columns={columns} options={options} />;
