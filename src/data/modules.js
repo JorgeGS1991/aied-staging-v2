@@ -6716,6 +6716,7 @@ const data = [
         {
           id: 1,
           name: "Introduction to Mainframes",
+          type: "mainframe1",
           contents: [
             {
               id: 1,
@@ -6838,21 +6839,7 @@ const data = [
             {
               id: 3,
               topic: "Quiz",
-              content: `
-              <div class='debug'>
-                <p> Please Take the Quiz  <a target="_blank" href=" https://docs.google.com/forms/d/e/1FAIpQLSfi4DmSSqeAfRj4v_1zgmgg9H6gpAOjxQ30XE7lRsKPjLscDA/viewform?usp=sf_link  " style="color: red;"> Here! </a></p>
-              </div>
-              <style>
-              .debug p {
-                margin: 10px 0;
-              }
-              .notes pre {
-                font-size: 0.85em;
-                padding-left: 20px;
-                margin: 10px 0;
-              }
-              </style>
-              `,
+              type: "quiz",
             },
           ],
         },
@@ -7296,80 +7283,6 @@ type="video/mp4">
             },
           ],
         },
-        {
-          id: 8,
-          name: "Designing and developing applications for z/OS ",
-          type: "python2",
-          contents: [
-            {
-              id: 1,
-              topic: "Coming Soon!...",
-              content: `
-              <div class='data-rep'>
-                Coming Soon...
-              </div>
-              <style>
-              .data-rep a {
-                text-decoration: underline;
-              }
-              .data-rep p {
-                margin: 10px 0;
-              }
-  
-  
-              .notes {
-                margin-top: 20px;
-              }
-  
-              .notes .list {
-                list-style-type: disc;
-                padding: 10px 20px;
-              }
-  
-              .table {
-                display: flex;
-                justify-content: center;
-                padding: 20px;
-              }
-  
-              .table th, .table td {
-                border: 1px solid;
-              }
-  
-              .table th, .table td {
-                padding: 20px;
-              }
-              </style>
-              `,
-            },
-            {
-              id: 2,
-              topic: "Coming Soon!...",
-              content: `
-              <div class='script-compiled'>
-                 Coming Soon...
-              </div>
-              <style>
-              .script-compiled p {
-                margin: 10px 0;
-              }
-  
-  
-  
-              .notes .list {
-                list-style-type: disc;
-                padding: 10px 20px;
-              }
-  
-              .notes .sublist {
-                list-style-type: circle;
-                padding-left: 22px;
-              }
-              </style>
-              `,
-            },
-          ],
-        },
       ],
     },
     {
@@ -7378,8 +7291,8 @@ type="video/mp4">
       subTopics: [
         {
           id: 1,
-          name: "Lesson 1: Introduction to COBOL programming",
-          type: "Introduction to COBOL programming",
+          name: "Introduction to COBOL programming",
+          type: "cobol1",
           contents: [
             {
               id: 1,
@@ -7444,8 +7357,8 @@ type="video/mp4">
         },
         {
           id: 2,
-          name: "Lesson 2: How to compile, test, and debug a COBOL program",
-          type: "python1",
+          name: "How to compile, test, and debug a COBOL program",
+          type: "cobol2",
           contents: [
             {
               id: 1,
@@ -7529,8 +7442,8 @@ type="video/mp4">
         },
         {
           id: 3,
-          name: "Lesson 3: How to write a program that prepares a report ",
-          type: "python1",
+          name: "How to write a program that prepares a report ",
+          type: "cobol3",
           contents: [
             {
               id: 1,
@@ -7620,8 +7533,8 @@ type="video/mp4">
         },
         {
           id: 4,
-          name: "Lesson 4: How to design, code, and test a structured program ",
-          type: "python1",
+          name: "How to design, code, and test a structured program ",
+          type: "cobol4",
           contents: [
             {
               id: 1,
@@ -7715,82 +7628,8 @@ type="video/mp4">
         },
         {
           id: 5,
-          name: "Lesson 5: How to use the COBOL features for structured programming",
-          type: "python2",
-          contents: [
-            {
-              id: 1,
-              topic: "Coming Soon!...",
-              content: `
-              <div class='data-rep'>
-                Coming Soon...
-              </div>
-              <style>
-              .data-rep a {
-                text-decoration: underline;
-              }
-              .data-rep p {
-                margin: 10px 0;
-              }
-  
-  
-              .notes {
-                margin-top: 20px;
-              }
-  
-              .notes .list {
-                list-style-type: disc;
-                padding: 10px 20px;
-              }
-  
-              .table {
-                display: flex;
-                justify-content: center;
-                padding: 20px;
-              }
-  
-              .table th, .table td {
-                border: 1px solid;
-              }
-  
-              .table th, .table td {
-                padding: 20px;
-              }
-              </style>
-              `,
-            },
-            {
-              id: 2,
-              topic: "Coming Soon!...",
-              content: `
-              <div class='script-compiled'>
-                 Coming Soon...
-              </div>
-              <style>
-              .script-compiled p {
-                margin: 10px 0;
-              }
-  
-  
-  
-              .notes .list {
-                list-style-type: disc;
-                padding: 10px 20px;
-              }
-  
-              .notes .sublist {
-                list-style-type: circle;
-                padding-left: 22px;
-              }
-              </style>
-              `,
-            },
-          ],
-        },
-        {
-          id: 6,
-          name: "Lesson 6: Other ways to define, move, and initialize fields ",
-          type: "python1",
+          name: "Other ways to define, move, and initialize fields ",
+          type: "cobol6",
           contents: [
             {
               id: 1,
@@ -8006,9 +7845,9 @@ type="video/mp4">
           ],
         }, 
         {
-          id: 7,
-          name: "Lesson 7: How to arithmetic statements and intrinsic functions ",
-          type: "python1",
+          id: 6,
+          name: "How to arithmetic statements and intrinsic functions ",
+          type: "cobol7",
           contents: [
             {
               id: 1,
@@ -8066,9 +7905,9 @@ type="video/mp4">
           ],
         },
         {
-          id: 8,
-          name: "Lesson 8: How to work with dates ",
-          type: "python1",
+          id: 7,
+          name: "How to work with dates ",
+          type: "cobol8",
           contents: [
             {
               id: 1,
@@ -8127,9 +7966,9 @@ type="video/mp4">
           ],
         },
         {
-          id: 9,
-          name: "Lesson 9: How to work with characters ",
-          type: "python1",
+          id: 8,
+          name: "How to work with characters ",
+          type: "cobol9",
           contents: [
             {
               id: 1,
@@ -8226,9 +8065,9 @@ type="video/mp4">
           ],
         },
         {
-          id: 10,
-          name: "Lesson 10: How to work with tables ",
-          type: "python1",
+          id: 9,
+          name: "How to work with tables ",
+          type: "cobol10",
           contents: [
             {
               id: 1,
@@ -8299,9 +8138,9 @@ type="video/mp4">
           ],
         },
         {
-          id: 11,
-          name: "Lesson 11: How to use copy members and subprograms ",
-          type: "python1",
+          id: 10,
+          name: "How to use copy members and subprograms ",
+          type: "cobol11",
           contents: [
             {
               id: 1,

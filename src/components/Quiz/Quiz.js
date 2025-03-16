@@ -115,6 +115,8 @@ const Quiz = ({
       setQuizType("emailScore");
     } else if (type === "beyond") {
       setQuizType("beyondScore");
+    } else if (type === "mainframe1") {
+      setQuizType("mainframeOneScore");
     }
     if (score > 0) {
       updateQuizScore(score, quizType);
@@ -296,9 +298,7 @@ const Quiz = ({
         }, 3000);
       }
     });
-
     setScore(newScore); // Update the score state with the new score
-
     setSubmitted(true); // Set submitted to true to indicate the quiz has been submitted
   };
 
@@ -306,7 +306,7 @@ const Quiz = ({
     <Box
       className="quiz-container"
       sx={{
-        margin: "20px",
+        margin: "30px",
         padding: "30px",
         backgroundColor: "#f9f9f9",
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.1)", // Box shadow

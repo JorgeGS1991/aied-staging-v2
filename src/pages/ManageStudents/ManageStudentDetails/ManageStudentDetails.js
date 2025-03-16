@@ -152,6 +152,11 @@ function ManageStudentDetails({ user, getUser, totalScore }) {
                       "Python - Lesson 7 - Functions",
                       totalScore.pythonSevenScore
                     )}
+                    {renderScoreBar(
+                      currentUser.mainframeOneScore,
+                      "mainframe1 - Lesson 8 - mainframe1",
+                      totalScore.mainframeOneScore
+                    )}
                   </Grid>
                 </>
               )}

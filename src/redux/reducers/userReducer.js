@@ -31,6 +31,7 @@ const initialState = {
     reviewScore: 0,
     emailScore: 0,
     beyondScore: 0,
+    mainframeOneScore: 0,
   },
   totalScore: {
     decompositionScore: 9,
@@ -47,6 +48,7 @@ const initialState = {
     reviewScore: 15,
     emailScore: 0,
     beyondScore: 0,
+    mainframeOneScore: 14,
   },
 };
 
