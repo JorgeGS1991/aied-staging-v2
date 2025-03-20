@@ -14,7 +14,7 @@ const StudentScores = () => {
     intro: "intro",
     decomposition: "decomposition",
     abstraction: "abstraction",
-    pattern:"patternRecognition",
+    pattern:"pattern-recognition",
     beyond: "beyond",
     algorithm: "algorithms",
     review: "review",
@@ -165,7 +165,7 @@ const StudentScores = () => {
     decompositionScore: replaceNegativeScores(user.decompositionScore),
     decompositionPercentage: calculatePercentage(user.decompositionScore, "decomposition"),
     patternScore: replaceNegativeScores(user.patternScore),
-    patternScorePercentage: calculatePercentage(user.patternScore, "patternrecognition"),
+    patternScorePercentage: calculatePercentage(user.patternScore, "pattern-recognition"),
     abstractionScore: replaceNegativeScores(user.abstractionScore),
     abstractionPercentage: calculatePercentage(user.abstractionScore, "abstraction"),
     reviewScore: replaceNegativeScores(user.reviewScore),
@@ -187,7 +187,7 @@ const StudentScores = () => {
     pythonSevenScore: replaceNegativeScores(user.pythonSevenScore),
     pythonSevenPercentage: calculatePercentage(user.pythonSevenScore, "pythonseven"),
     mainframeOneScore: replaceNegativeScores(user.mainframeOneScore),
-    mainframeOnePercentage: calculatePercentage(user.mainframeOneScore, "mainframeOne")
+    mainframeOnePercentage: calculatePercentage(user.mainframeOneScore, "mainframe1")
   }));
 
   return <MUIDataTable title="Student Scores and Percentages" data={data} columns={columns} options={options} />;
