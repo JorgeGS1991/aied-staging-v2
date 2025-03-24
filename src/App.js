@@ -21,6 +21,7 @@ import StudentDetails from "./pages/ManageStudents/Studentdetails/StudentDetails
 import ManageStudentDetails from "./pages/ManageStudents/ManageStudentDetails/ManageStudentDetails";
 import { Navigate, Redirect } from "react-router";
 import Register from "./pages/Register/Register";
+import UserActivity from "./pages/ManageStudents/UserActivity";
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -60,6 +61,7 @@ function App() {
           path="/manage-students/:userId"
           element={<ManageStudentDetails />}
         />
+        <Route path="/manage-students/activity/:userId" element={<UserActivity />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
