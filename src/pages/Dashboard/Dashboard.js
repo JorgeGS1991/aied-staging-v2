@@ -99,6 +99,12 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
     updateRole(role);
   }, [user, role]);
 
+  useEffect(() => {
+    const userId = localStorage.getItem("userID");
+    const pageName = "Dashboard";
+    const timeSpent = 5;
+  }, []);
+
   const toggleDropdown = (index, length) => {
     setIsActive(Array(length).fill(false));
     const newIsActive = [...isActive];

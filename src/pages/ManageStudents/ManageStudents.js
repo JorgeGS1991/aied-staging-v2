@@ -35,14 +35,14 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
     if (!confirmHide) {
       return; // If user cancels, do nothing
     }
-  
+
     try {
       const response = await axios.put(
         `${process.env.REACT_APP_BACKEND_URL}/api/users/hide`,
         { user_id: id } // Pass user ID in the request body
       );
       alert(response.data.message); // Notify the user
-  
+
       // Refresh the users list after hiding the user
       const fetchUsers = async () => {
         await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
@@ -59,10 +59,10 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
   .filter((user) => user.role === "student")
   .map((user) => {
     const lastActivityDate = new Date(user.lastActivity);
-    const today = new Date();
+      const today = new Date();
     const inactiveDays = Math.floor((today - lastActivityDate) / (1000 * 60 * 60 * 24)); // Convert ms to days
 
-    return {
+      return {
       fullName: `${user.firstName} ${user.lastName}`,
       role: user.role,
       username: user.username,
@@ -70,32 +70,43 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
       inactiveDays: isNaN(inactiveDays) ? "N/A" : inactiveDays, // Handle invalid dates
       pythonOneScore: user.pythonOneScore,
       id: user._id,
-    };
-  });
+      };
+    });
 
-const columns = [
-  { name: "fullName", label: "Full Name" },
-  { name: "role", label: "Role" },
-  { name: "username", label: "Username" },
-  { name: "lastActivity", label: "Last Activity" },
+  const columns = [
+    { name: "fullName", label: "Full Name" },
+    { name: "role", label: "Role" },
+    { name: "username", label: "Username" },
+    { name: "lastActivity", label: "Last Activity" },
   { name: "inactiveDays", label: "Inactive Days" }, // New Column
   { name: "pythonOneScore", label: "Python One Score" },
-  {
-    name: "actions",
-    label: "Actions",
-    options: {
-      customBodyRender: (value, tableMeta) => {
-        const userId = tableMeta.rowData[6]; // Assuming the user ID is in the 7th column
-        return (
-          <Button variant="contained" color="primary" onClick={() => handleHideUser(userId)}>
-            Hide User
-          </Button>
-        );
+    {
+      name: "actions",
+      label: "Actions",
+      options: {
+        customBodyRender: (value, tableMeta) => {
+        const userId = tableMeta.rowData[7]; // Assuming the user ID is in the 7th column
+          return (
+            <>
+              <Button variant="contained" color="primary" onClick={() => handleHideUser(userId)}>
+                Hide User
+              </Button>
+              <Button
+                variant="contained"
+                color="secondary"
+                component={Link}
+                to={`/manage-students/activity/${userId}`}
+                sx={{ marginLeft: "10px" }}
+              >
+                View Activity
+              </Button>
+            </>
+          );
+        },
       },
     },
-  },
-  { name: "id", label: "ID", options: { display: false } },
-];
+    { name: "id", label: "ID", options: { display: false } },
+  ];
 
   const options = {
     filterType: "dropdown",

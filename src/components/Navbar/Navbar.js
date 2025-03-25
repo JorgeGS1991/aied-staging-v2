@@ -1,9 +1,11 @@
 import "./Navbar.css";
-
+import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut } from "../../redux/actions/userActions";
 import { useState } from "react";
+import { trackLogout } from "../../utils/trackLogout";
+
 function Navbar({ user, role, logOut }) {
   const [isActive, setActive] = useState(false);
   const toggleDropdown = () => {
@@ -13,8 +15,13 @@ function Navbar({ user, role, logOut }) {
   console.log(role);
 
   const handleLogout = () => {
+    const userId = localStorage.getItem("userID");
+    if (userId) {
+      trackLogout(userId);
+    }
     logOut();
   };
+
   return (
     <div className="navbar-section">
       <div className="navbar-nav">
