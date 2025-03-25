@@ -17,7 +17,6 @@ function Login({ setUser, setUserRole }) {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-//"http://localhost:3001/login",
          //"http://localhost:3001/login",
         `${process.env.REACT_APP_BACKEND_URL}/login`,
         {
