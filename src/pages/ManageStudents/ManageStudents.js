@@ -78,8 +78,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
     { name: "role", label: "Role" },
     { name: "username", label: "Username" },
     { name: "lastActivity", label: "Last Activity" },
-  { name: "inactiveDays", label: "Inactive Days" }, // New Column
-  { name: "pythonOneScore", label: "Python One Score" },
+    { name: "inactiveDays", label: "Inactive Days" }, 
     {
       name: "actions",
       label: "Actions",
@@ -143,7 +142,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
               </Typography>
               <Paper>
                 <MUIDataTable
-                  title={"Student List"}
+                  title={"STUDENT LIST"}
                   data={data}
                   columns={columns}
                   options={options}

@@ -66,8 +66,8 @@ function CircularProgressWithLabel(props) {
 }
 
 function Dashboard({ user, role, progress, setUser, setProgress }) {
-  const [isActive, setIsActive] = useState([]);
-  const [isActive2, setIsActive2] = useState(Array(data.length).fill(false));
+  const [isActive, setIsActive] = useState({});
+  const [isActive2, setIsActive2] = useState({});
   const [content, setContent] = useState(localStorage.getItem("content") || "");
   const [topic, setTopic] = useState("");
   const [notificationOpen, setNotificationOpen] = useState(false);
@@ -105,18 +105,30 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
     const timeSpent = 5;
   }, []);
 
-  const toggleDropdown = (index, length) => {
-    setIsActive(Array(length).fill(false));
-    const newIsActive = [...isActive];
-      newIsActive[index] = !newIsActive[index];
-    setIsActive(newIsActive);
+  const toggleDropdown = (topicIndex, subTopicIndex) => {
+    const key = `${topicIndex}-${subTopicIndex}`;
+    setIsActive((prev) => {
+      const newState = {};
+      // Close all others
+      Object.keys(prev).forEach((k) => {
+        newState[k] = false;
+      });
+      newState[key] = !prev[key]; // Toggle current
+      return newState;
+    });
+    setIsActive2({});
   };
-  
-  const toggleDropdown2 = (index, length) => {
-    setIsActive2(Array(length).fill(false));
-    const newIsActive2 = [...isActive2];
-      newIsActive2[index] = !newIsActive2[index];
-    setIsActive2(newIsActive2);
+
+  const toggleDropdown2 = (topicIndex, subTopicIndex, nestedIndex) => {
+    const key = `${topicIndex}-${subTopicIndex}-${nestedIndex}`;
+    setIsActive2((prev) => {
+      const newState = {};
+      Object.keys(prev).forEach((k) => {
+        newState[k] = false;
+      });
+      newState[key] = !prev[key];
+      return newState;
+    });
   };
 
   const handleNotificationClose = (event, reason) => {
@@ -131,7 +143,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
       <div className="db-sidebar">
         {data.map((item, i) => {
           return (
-            <div>
+            <div key={i}>
               <div className="db-unit">
                 <p>{item.topicName}</p>
               </div>
@@ -144,108 +156,89 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                   </div>
                 )}
                 {item.subTopics.map((subTopic, index) => {
+                  const mainKey = `${i}-${index}`;
                   return (
-                    <>
+                    <div key={mainKey}>
                       {i !== 0 && i !== 8 ? (
-                        <>
-                          <div className="db-item">
-                            <div className="db-link">
-                              <HashLink
-                                href="#"
-                                onClick={() =>
-                                  toggleDropdown(index, item.subTopics.length)
-                                }
-                              >
-                                {subTopic.name}
-                              </HashLink>
-                              <ArrowDropDownIcon />
-                            </div>
-                            {isActive && (
-                              <ul
-                                class="dropdown-container"
-                                style={{
-                                  display: isActive[index] ? "flex" : "none",
-                                  flexDirection: "column",
-                                  marginLeft: "30px",
-                                }}
-                              >
-                                {subTopic.contents.map((subContent, idx) => {
-                                  return !subContent.contents ? (
-                                    <li style={{ fontWeight: "400" }}>
-                                      <Link
-                                        to={`${item.id}/${index + 1}/${
-                                          subContent.id
-                                        }`}
-                                      >
-                                        {subContent.topic}
-                                      </Link>
-
-                                      {/* {subContent.contents ? (
-                                <div>{subContent.contents[0].topic}</div>
-                              ) : null} */}
-                                    </li>
-                                  ) : (
-                                    <div className="db-item mod-1">
-                                      <HashLink
-                                        to="#"
-                                        onClick={() =>
-                                          toggleDropdown2(
-                                            idx,
-                                            subContent.contents.length
-                                          )
-                                        }
-                                      >
-                                        {subContent.topic}
-                                        {"   "}
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          height="1em"
-                                          viewBox="0 0 320 512"
-                                        >
-                                          <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                                        </svg>
-                                      </HashLink>
-                                      {isActive2 && (
-                                        <ul
-                                          class="dropdown-container"
-                                          style={{
-                                            display: isActive2[idx]
-                                              ? "flex"
-                                              : "none",
-                                            flexDirection: "column",
-                                            marginLeft: "30px",
-                                          }}
-                                        >
-                                          {subContent.contents.map(
-                                            (nestedContent, idx) => {
-                                              return (
-                                                <li
-                                                  key={idx}
-                                                  className="db-nested-content"
-                                                  style={{ fontWeight: "400" }}
-                                                >
-                                                  <Link
-                                                    to={`${item.id}/${
-                                                      index + 1
-                                                    }/${subContent.id}/${
-                                                      nestedContent.id
-                                                    }`}
-                                                  >
-                                                    {nestedContent.topic}
-                                                  </Link>
-                                                </li>
-                                              );
-                                            }
-                                          )}
-                                        </ul>
-                                      )}
-                                    </div>
-                                  );
-                                })}
-                              </ul>
-                            )}
+                        <div className="db-item">
+                          <div className="db-link">
+                            <HashLink
+                              href="#"
+                              onClick={() =>
+                                toggleDropdown(i, index)
+                              }
+                            >
+                              {subTopic.name}
+                            </HashLink>
+                            <ArrowDropDownIcon />
                           </div>
-                        </>
+                          {isActive[mainKey] && (
+                            <ul
+                              className="dropdown-container"
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                marginLeft: "30px",
+                              }}
+                            >
+                              {subTopic.contents.map((subContent, idx) => {
+                                const nestedKey = `${i}-${index}-${idx}`;
+                                return !subContent.contents ? (
+                                  <li key={idx} style={{ fontWeight: "400" }} >
+                                    <Link
+                                      to={`${item.id}/${index + 1}/${subContent.id}`}>
+                                      {subContent.topic}
+                                    </Link>
+                                  </li>
+                                ) : (
+                                  <div className="db-item mod-1" key={idx}>
+                                    <HashLink
+                                      to="#"
+                                      onClick={() =>
+                                        toggleDropdown2(i, index, idx)
+                                      }
+                                    >
+                                      {subContent.topic}{" "}
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em"
+                                        viewBox="0 0 320 512"
+                                      >
+                                        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                      </svg>
+                                    </HashLink>
+                                    {isActive2[nestedKey] && (
+                                      <ul
+                                        className="dropdown-container"
+                                        style={{
+                                          display: "flex",
+                                          flexDirection: "column",
+                                          marginLeft: "30px",
+                                        }}
+                                      >
+                                        {subContent.contents.map(
+                                          (nestedContent, subIdx) => (
+                                            <li
+                                              key={subIdx}
+                                              className="db-nested-content"
+                                              style={{ fontWeight: "400" }}
+                                            >
+                                              <Link
+                                                to={`${item.id}/${index + 1}/${subContent.id}/${nestedContent.id}`}
+                                              >
+                                                {nestedContent.topic}
+                                              </Link>
+                                            </li>
+                                          )
+                                        )}
+                                      </ul>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </div>
                       ) : (
                         <div className="db-item">
                           <div className="db-link">
@@ -255,7 +248,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
                           </div>
                         </div>
                       )}
-                    </>
+                    </div>
                   );
                 })}
               </div>
@@ -276,8 +269,7 @@ function Dashboard({ user, role, progress, setUser, setProgress }) {
             <Route path="/" element={<DBContent />} />
             <Route path=":id" element={<Topics />} />
             <Route path=":id/:topicId" element={<Content />}>
-              <Route path=":contentId" element={<SubContent />}></Route>
-            </Route>
+              <Route path=":contentId" element={<SubContent />}/></Route>
             <Route
               path=":id/:topicId/:contentId/:subContentId"
               element={<NestedContent />}
