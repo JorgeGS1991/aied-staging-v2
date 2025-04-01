@@ -28,6 +28,10 @@ const data = [
             margin-top: 20px;
           }
           </style>
+          <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+                <a target="_blank"  style='text-decoration: underline' href='https://smu.az1.qualtrics.com/jfe/form/SV_bPLjuVE1N21OLYy' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+                <p style="margin-top:20px;">Completing this survey is worth $15.</p>
+                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_0wXrZjeZJ6OMYAK' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
           `,
         },
         {
@@ -35,7 +39,7 @@ const data = [
           name: "Link to Slack Channel",
           content: `
               <p>This is the link to the Slack Channel:</p>
-              <a style="margin-top: 20px; text-decoration: underline;" target="_blank" href="https://join.slack.com/t/worklearn-workspace/shared_invite/zt-2u5bwzwna-H7ImKN5hGZgq4IeqWh2ZJg">Slack Channel</a>
+              <a style="margin-top: 20px; text-decoration: underline;" target="_blank" href="https://join.slack.com/t/worklearn-workspace/shared_invite/zt-2u5bwzwna-H7ImKN5hGZgq4IeqWh2ZJg">WorkLearn</a>
               `,
         },
         {
@@ -108,19 +112,6 @@ const data = [
               }
               </style>
               `,
-        },
-        {
-          id: 6,
-          name: "Qualtrics Survey",
-          author: "Hollie Rosser",
-          creationDate: new Date(2023, 4, 28),
-          points: 100,
-          content: `
-                <p style="margin-top:20px;">Completing this survey is worth $5.</p>
-                <a target="_blank"  style='text-decoration: underline' href='https://smu.az1.qualtrics.com/jfe/form/SV_bPLjuVE1N21OLYy' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
-                <p style="margin-top:20px;">Completing this survey is worth $15.</p>
-                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_0wXrZjeZJ6OMYAK' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
-                `,
         },
         //       {
         //         id: 3,
@@ -3542,6 +3533,23 @@ const data = [
             },
           ],
         },
+        {
+          id: 7,
+          name: "Review Your Knowledge",
+          type: "review",
+          contents: [
+            {
+              id: 1,
+              topic: "Qualtrics Survey",
+              author: "Hollie Rosser",
+              points: 100,
+              content: `
+                <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+                `,
+            },
+          ],
+        },
         // ],
         // },
       ],
@@ -3831,7 +3839,6 @@ const data = [
             },
           ],
         },
-  
         {
           id: 2,
           name: "Introduction to Programming in Python",
@@ -6707,6 +6714,23 @@ const data = [
             },
           ],
         },
+        {
+          id: 9,
+          name: "Review Your Knowledge",
+          type: "review",
+          contents: [
+            {
+              id: 1,
+              topic: "Qualtrics Survey",
+              author: "Hollie Rosser",
+              points: 100,
+              content: `
+                <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+                `,
+            },
+          ],
+        },
       ],
     },
     {
@@ -7280,6 +7304,23 @@ type="video/mp4">
               }
               </style>
               `,
+            },
+          ],
+        },
+        {
+          id: 8,
+          name: "Review Your Knowledge",
+          type: "review",
+          contents: [
+            {
+              id: 1,
+              topic: "Qualtrics Survey",
+              author: "Hollie Rosser",
+              points: 100,
+              content: `
+                <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+                `,
             },
           ],
         },
@@ -8193,6 +8234,23 @@ type="video/mp4">
 </style>
 
 `,
+            },
+          ],
+        },
+        {
+          id: 11,
+          name: "Review Your Knowledge",
+          type: "review",
+          contents: [
+            {
+              id: 1,
+              topic: "Qualtrics Survey",
+              author: "Hollie Rosser",
+              points: 100,
+              content: `
+                <p style="margin-top:20px;">Completing this survey is worth $5.</p>
+                <a target="_blank"  style='text-decoration: underline' href='https://unomaha.az1.qualtrics.com/jfe/form/SV_6iomnRh5EwVwHn8' alt='qualtrics survey'>Please complete this Qualtrics Survey</a>
+                `,
             },
           ],
         },
