@@ -151,6 +151,31 @@ import {
                         "mainframe1 - Lesson 8 - mainframe1",
                         totalScore.mainframeOneScore
                       )}
+                      {renderScoreBar(
+                        currentUser.mainframeTwoScore,
+                        "mainframe2 - Lesson 9 - mainframe2",
+                        totalScore.mainframeTwoScore
+                      )}
+                      {renderScoreBar(
+                        currentUser.mainframeThreeScore,
+                        "mainframe3 - Lesson 10 - mainframe3",
+                        totalScore.mainframeThreeScore
+                      )}
+                      {renderScoreBar(
+                        currentUser.mainframeFourScore,
+                        "mainframe4 - Lesson 11 - mainframe4",
+                        totalScore.mainframeFourScore
+                      )}
+                      {renderScoreBar(
+                        currentUser.mainframeFiveScore,
+                        "mainframe5 - Lesson 12 - mainframe5",
+                        totalScore.mainframeFiveScore
+                      )}
+                      {renderScoreBar(
+                        currentUser.mainframeSixScore,
+                        "mainframe6 - Lesson 13 - mainframe6",
+                        totalScore.mainframeSixScore
+                      )}
                     </Grid>
                   </>
                 )}

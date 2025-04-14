@@ -522,10 +522,6 @@ const data = [
             },
           ],
         },
-        // {
-        // id: 1,
-        // name: "CT Module 1: Four Pillars of Computational Thinking",
-        // contents: [
         {
           id: 2,
           name: "Decomposition",
@@ -617,7 +613,7 @@ const data = [
     <div>
     <p>Try it here: <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScu_Iq6ojUC2qFrDt1I_dyR8LhWEhb1RxmGhcuZMHWILMvUfA/viewform">Google Forms</a></p>
   
-  </div>
+        </div>
   <style>
   
   .decomp p {
@@ -1278,7 +1274,6 @@ const data = [
   
   `,
             },
-  
             {
               id: 4,
               topic: "Applying Idea in the Real World",
@@ -1973,22 +1968,12 @@ const data = [
                     type="video/mp4">
                 </video>
               </div>
-  
-  
-              
-              
-  
-  
-  
-                </div>
+               </div>
                 <div class="decomp-how">
                 <h2>How Do We Use Abstraction in Computer Programming?</h2>
                 <p>As a programmer, you will basically face the same problems each and every time you approach a coding assignment--namely, you will need to find out what the program is going to do and then figure out how you will go about building the solution. Abstraction will help you solve this problem.</p>
                 <p>Abstraction allows programmers to hide all but the important data in order to make problems simpler and increase the efficiency of their programs. Abstraction allows us to create a representation or model using only the most important data. The programmer tries to make sure that the models they create are clearly named and include all of the necessary information to solve the problem they were designed to solve. This means that every time the computer runs into a similar problem, it has a program that knows exactly what information to pay attention to.</p>
                 </div>
-  
-  
-  
                 <div class="decomp-example"> 
                 <h3>Exercise One:</h3>
                 <p>A good example of abstraction in programming is to look at a database that contains a lot of information. Think about an online bookseller that sells a lot of digital books. People will want to be able to find books using all kinds of different information, they might search for the author, title, ISBN, or genre. They also might want to know the reviews others have given the book or how much the book costs. The online store might also have the size, color of the books, and length of the books, but this information is not as relevant for people searching for a new book to buy, so it would not be included in the model abstracted from the database. </p>
@@ -2016,11 +2001,7 @@ const data = [
               </div>
                 </div>
                 </div>
-              
-  
-  
-  
-  </body>
+                </body>
   <style>
   .abstraction p {
     color: black;
@@ -2033,12 +2014,8 @@ const data = [
     width: 600px;
     height: 350px;
     margin: auto;
-  
-  }
-  
-  
-  
-  .decomp-title *, .decomp-how * {
+  } 
+    .decomp-title *, .decomp-how * {
     padding: 10px 0;
   }
   ul  {
@@ -2143,20 +2120,12 @@ const data = [
   .purpose * {
     padding: 10px 0;
   }
-  
-  
-  
   .video-intro-section {
     margin-top: 20px;
   }
-  
-  
-  
   .video-intro {
     font-weight: 600;
   }
-  
-  
   ul {
     list-style-type: disc;
     margin: 0 20px;
@@ -2680,8 +2649,6 @@ const data = [
             },
           ],
         },
-        // ],
-        // },
         {
           id: 6,
           name: "Review Your Knowledge",
@@ -6870,6 +6837,7 @@ const data = [
         {
           id: 2,
           name: "Hardware Systems and LPARS",
+          type: "Hardwaresystems",
           contents: [
             {
               id: 1,
@@ -6916,11 +6884,17 @@ const data = [
   
               </style>`,
             },
+            {
+              id: 2,
+              topic: "Quiz",
+              type: "quiz",
+            },
           ],
         },
         {
           id: 3,
           name: "Z/OS Overview",
+          type: "ZOSOverview",
           contents: [
             {
               id: 1,
@@ -6993,12 +6967,18 @@ type="video/mp4">
         </style>
         `,
       },
+      {
+        id: 3,
+        topic: "Quiz",
+        type: "quiz",
+      },
       
           ],
         },
         {
           id: 4,
           name: "Interactive facilities of z/OS: TSO/E, ISPF, & UNIX",
+          type: "InteractiveFacilities",
           contents: [
             {
               id: 1,
@@ -7066,11 +7046,17 @@ type="video/mp4">
               </style>
               `,
             },
+            {
+              id: 3,
+              topic: "Quiz",
+              type: "quiz",
+            },
           ],
         },
         {
           id: 5,
           name: "Working with Data Sets",
+          type: "WorkingwithDataSets",
           contents: [
             {
               id: 1,
@@ -7147,11 +7133,17 @@ type="video/mp4">
               }
               </style>`,
             },
+            {
+              id: 3,
+              topic: "Quiz",
+              type: "quiz",
+            },
           ],
         },
         {
           id: 6,
           name: "Using JCL and SDSF",
+          type: "UsingJCLandSDSF",
           contents: [
             {
               id: 1,
@@ -7250,6 +7242,11 @@ type="video/mp4">
        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Mainframe/Using+JCL+and+SDSF/JCL+Lab+1%2C+Pt+1.mp4"
        type="video/mp4">
    </video>`,
+            },
+            {
+              id: 3,
+              topic: "Quiz",
+              type: "quiz",
             },
           ],
         },

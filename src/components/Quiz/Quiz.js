@@ -117,7 +117,17 @@ const Quiz = ({
       setQuizType("beyondScore");
     } else if (type === "mainframe1") {
       setQuizType("mainframeOneScore");
-    }
+    } else if (type === "mainframe2") {
+      setQuizType("mainframeTwoScore"); 
+    } else if (type === "mainframe3") {
+      setQuizType("mainframeThreeScore");
+    } else if (type === "mainframe4") {
+      setQuizType("mainframeFourScore");
+    } else if (type === "mainframe5") {
+      setQuizType("mainframeFiveScore");
+    } else if (type === "mainframe6") {
+      setQuizType("mainframeSixScore");
+    }   
     if (score > 0) {
       updateQuizScore(score, quizType);
     }

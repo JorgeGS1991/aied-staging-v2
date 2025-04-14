@@ -156,6 +156,31 @@ function ManageStudentDetails({ user, getUser, totalScore }) {
                       currentUser.mainframeOneScore,
                       "mainframe1 - Lesson 8 - mainframe1",
                       totalScore.mainframeOneScore
+                    )} 
+                    {renderScoreBar(
+                      currentUser.mainframeTwoScore,
+                      "mainframe1 - Lesson 9 - mainframe2",
+                      totalScore.mainframeTwoScore
+                    )}
+                    {renderScoreBar(
+                      currentUser.mainframeThreeScore,
+                      "mainframe1 - Lesson 10 - mainframe3",
+                      totalScore.mainframeThreeScore
+                    )}
+                    {renderScoreBar(
+                      currentUser.mainframeFourScore,
+                      "mainframe1 - Lesson 11 - mainframe4",
+                      totalScore.mainframeFourScore
+                    )}
+                    {renderScoreBar(
+                      currentUser.mainframeFiveScore,
+                      "mainframe1 - Lesson 12 - mainframe5",
+                      totalScore.mainframeFiveScore
+                    )}
+                    {renderScoreBar(
+                      currentUser.mainframeSixScore,
+                      "mainframe1 - Lesson 13 - mainframe6",
+                      totalScore.mainframeSixScore
                     )}
                   </Grid>
                 </>
