@@ -84,7 +84,7 @@ const ManageStudents = ({ user, users, fetchAllUsers }) => {
       label: "Actions",
       options: {
         customBodyRender: (value, tableMeta) => {
-        const userId = tableMeta.rowData[7]; // Assuming the user ID is in the 7th column
+          const userId = tableMeta.rowData[tableMeta.rowData.length - 1];
           return (
             <>
               <Button variant="contained" color="primary" onClick={() => handleHideUser(userId)}>

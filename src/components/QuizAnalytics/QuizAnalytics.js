@@ -25,9 +25,12 @@ const StudentScores = () => {
     pythonsix: "python6",
     pythonseven: "python7",
     mainframeOne: "mainframe1",
+    mainframeTwo: "Hardwaresystems",
+    mainframeThree: "ZOSOverview",
+    mainframeFour: "InteractiveFacilities",
+    mainframeFive: "WorkingwithDataSets",
+    mainframeSix: "UsingJCLandSDSF",
   };
-
-  console.log("Quiz Name Mapping:", quizNameMapping);
 
   const fetchQuestions = async () => {
     try {
@@ -139,7 +142,17 @@ const StudentScores = () => {
     { name: "pythonSevenScore", label: "Python Seven Score" },
     { name: "pythonSevenPercentage", label: "Python Seven Percentage" },
     { name: "mainframeOneScore", label: "Mainframe One Score"},
-    { name: "mainframeOnePercentage", label: "Mainframe One Percentage"}
+    { name: "mainframeOnePercentage", label: "Mainframe One Percentage"},
+    { name: "mainframeTwoScore", label: "Mainframe Two Score"},
+    { name: "mainframeTwoPercentage", label: "Mainframe Two Percentage"},
+    { name: "mainframeThreeScore", label: "Mainframe Three Score"},
+    { name: "mainframeThreePercentage", label: "Mainframe Three Percentage"},
+    { name: "mainframeFourScore", label: "Mainframe Four Score"},
+    { name: "mainframeFourPercentage", label: "Mainframe Four Percentage"},
+    { name: "mainframeFiveScore", label: "Mainframe Five Score"},
+    { name: "mainframeFivePercentage", label: "Mainframe Five Percentage"},
+    { name: "mainframeSixScore", label: "Mainframe Six Score"},
+    { name: "mainframeSixPercentage", label: "Mainframe Six Percentage"}
   ];
 
   const options = {
@@ -185,7 +198,17 @@ const StudentScores = () => {
     pythonSevenScore: replaceNegativeScores(user.pythonSevenScore),
     pythonSevenPercentage: calculatePercentage(user.pythonSevenScore, "pythonseven"),
     mainframeOneScore: replaceNegativeScores(user.mainframeOneScore),
-    mainframeOnePercentage: calculatePercentage(user.mainframeOneScore, "mainframe1")
+    mainframeOnePercentage: calculatePercentage(user.mainframeOneScore, "mainframe1"),
+    mainframeTwoScore: replaceNegativeScores(user.mainframeTwoScore),
+    mainframeTwoPercentage: calculatePercentage(user.mainframeTwoScore, "Hardwaresystems"),
+    mainframeThreeScore: replaceNegativeScores(user.mainframeThreeScore),
+    mainframeThreePercentage: calculatePercentage(user.mainframeThreeScore, "ZOSOverview"),
+    mainframeFourScore: replaceNegativeScores(user.mainframeFourScore),
+    mainframeFourPercentage: calculatePercentage(user.mainframeFourScore, "InteractiveFacilities"),
+    mainframeFiveScore: replaceNegativeScores(user.mainframeFiveScore),
+    mainframeFivePercentage: calculatePercentage(user.mainframeFiveScore, "WorkingwithDataSets"),
+    mainframeSixScore: replaceNegativeScores(user.mainframeSixScore),
+    mainframeSixPercentage: calculatePercentage(user.mainframeSixScore, "UsingJCLandSDSF"),
   }));
 
   return <MUIDataTable title="Student Scores and Percentages" data={data} columns={columns} options={options} />;
