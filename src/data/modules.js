@@ -6837,7 +6837,7 @@ const data = [
         {
           id: 2,
           name: "Hardware Systems and LPARS",
-          type: "Hardwaresystems",
+          type: "mainframe2",
           contents: [
             {
               id: 1,
@@ -6894,7 +6894,7 @@ const data = [
         {
           id: 3,
           name: "Z/OS Overview",
-          type: "ZOSOverview",
+          type: "mainframe3",
           contents: [
             {
               id: 1,
@@ -6978,7 +6978,7 @@ type="video/mp4">
         {
           id: 4,
           name: "Interactive facilities of z/OS: TSO/E, ISPF, & UNIX",
-          type: "InteractiveFacilities",
+          type: "mainframe4",
           contents: [
             {
               id: 1,
@@ -7056,7 +7056,7 @@ type="video/mp4">
         {
           id: 5,
           name: "Working with Data Sets",
-          type: "WorkingwithDataSets",
+          type: "mainframe5",
           contents: [
             {
               id: 1,
@@ -7143,7 +7143,7 @@ type="video/mp4">
         {
           id: 6,
           name: "Using JCL and SDSF",
-          type: "UsingJCLandSDSF",
+          type: "mainframe6",
           contents: [
             {
               id: 1,
