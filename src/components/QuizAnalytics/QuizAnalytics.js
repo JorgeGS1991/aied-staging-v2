@@ -25,11 +25,11 @@ const StudentScores = () => {
     pythonsix: "python6",
     pythonseven: "python7",
     mainframeOne: "mainframe1",
-    mainframeTwo: "Hardwaresystems",
-    mainframeThree: "ZOSOverview",
-    mainframeFour: "InteractiveFacilities",
-    mainframeFive: "WorkingwithDataSets",
-    mainframeSix: "UsingJCLandSDSF",
+    mainframeTwo: "mainframe2",
+    mainframeThree: "mainframe3",
+    mainframeFour: "mainframe4",
+    mainframeFive: "mainframe5",
+    mainframeSix: "mainframe6",
   };
 
   const fetchQuestions = async () => {
@@ -198,17 +198,17 @@ const StudentScores = () => {
     pythonSevenScore: replaceNegativeScores(user.pythonSevenScore),
     pythonSevenPercentage: calculatePercentage(user.pythonSevenScore, "pythonseven"),
     mainframeOneScore: replaceNegativeScores(user.mainframeOneScore),
-    mainframeOnePercentage: calculatePercentage(user.mainframeOneScore, "mainframe1"),
+    mainframeOnePercentage: calculatePercentage(user.mainframeOneScore, "mainframeOne"),
     mainframeTwoScore: replaceNegativeScores(user.mainframeTwoScore),
-    mainframeTwoPercentage: calculatePercentage(user.mainframeTwoScore, "Hardwaresystems"),
+    mainframeTwoPercentage: calculatePercentage(user.mainframeTwoScore, "mainframeTwo"),
     mainframeThreeScore: replaceNegativeScores(user.mainframeThreeScore),
-    mainframeThreePercentage: calculatePercentage(user.mainframeThreeScore, "ZOSOverview"),
+    mainframeThreePercentage: calculatePercentage(user.mainframeThreeScore, "mainframeThree"),
     mainframeFourScore: replaceNegativeScores(user.mainframeFourScore),
-    mainframeFourPercentage: calculatePercentage(user.mainframeFourScore, "InteractiveFacilities"),
+    mainframeFourPercentage: calculatePercentage(user.mainframeFourScore, "mainframeFour"),
     mainframeFiveScore: replaceNegativeScores(user.mainframeFiveScore),
-    mainframeFivePercentage: calculatePercentage(user.mainframeFiveScore, "WorkingwithDataSets"),
+    mainframeFivePercentage: calculatePercentage(user.mainframeFiveScore, "mainframeFive"),
     mainframeSixScore: replaceNegativeScores(user.mainframeSixScore),
-    mainframeSixPercentage: calculatePercentage(user.mainframeSixScore, "UsingJCLandSDSF"),
+    mainframeSixPercentage: calculatePercentage(user.mainframeSixScore, "mainframeSix"),
   }));
 
   return <MUIDataTable title="Student Scores and Percentages" data={data} columns={columns} options={options} />;
