@@ -24,12 +24,12 @@ const StudentScores = () => {
     pythonfive: "python5",
     pythonsix: "python6",
     pythonseven: "python7",
-    mainframeOne: "mainframe1",
-    mainframeTwo: "mainframe2",
-    mainframeThree: "mainframe3",
-    mainframeFour: "mainframe4",
-    mainframeFive: "mainframe5",
-    mainframeSix: "mainframe6",
+    mainframeone: "mainframe1",
+    mainframetwo: "mainframe2",
+    mainframethree: "mainframe3",
+    mainframefour: "mainframe4",
+    mainframefive: "mainframe5",
+    mainframesix: "mainframe6",
   };
 
   const fetchQuestions = async () => {
