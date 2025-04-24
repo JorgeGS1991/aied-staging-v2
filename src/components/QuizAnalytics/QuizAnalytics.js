@@ -45,7 +45,6 @@ const StudentScores = () => {
       const questions = await response.json();
 
       // Log raw quiz types received from backend
-      console.log("Raw quiz types from backend:", [...new Set(questions.map(q => q.type))]);
 
       // Normalize and store correct quiz types
       const quizQuestionCounts = questions.reduce((acc, question) => {
@@ -59,7 +58,6 @@ const StudentScores = () => {
         return acc;
       }, {});
 
-      console.log("Normalized quiz totals after processing:", quizQuestionCounts);
       setQuizTotals(quizQuestionCounts);
     } catch (error) {
       console.error("Error fetching questions:", error);
@@ -70,7 +68,6 @@ const StudentScores = () => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
       .then((response) => {
-        console.log("Fetched user data:", response.data);
         setUsers(response.data);
         setLoading(false);
       })
@@ -83,7 +80,6 @@ const StudentScores = () => {
   }, []);
 
   useEffect(() => {
-    console.log("Final quizTotals after fetching:", quizTotals);
   }, [quizTotals]);
 
   const replaceNegativeScores = (score) => (score < 0 || score === null || score === undefined ? 0 : score);
@@ -101,14 +97,12 @@ const StudentScores = () => {
     const totalQuestions = quizTotals[normalizedQuizType];
 
     if (!totalQuestions || totalQuestions <= 0) {
-      console.warn(`Missing or zero questions for quiz type "${normalizedQuizType}". Available quiz totals:`, quizTotals);
       return "0%";
     }
 
     let percentage = (score * 100) / totalQuestions;
     percentage = Math.min(100, Math.max(0, percentage));
 
-    console.log(` Quiz: ${normalizedQuizType}, Score: ${score}, Total Questions: ${totalQuestions}, Percentage: ${percentage.toFixed(2)}%`);
 
     return percentage.toFixed(2) + "%";
   };
