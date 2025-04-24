@@ -29,15 +29,14 @@ function Login({ setUser, setUserRole }) {
       setUser(user.firstName + " " + user.lastName);
       setUserRole(user.role);
       localStorage.setItem("userID",user._id)
-      console.log(user);
-      console.log(token);
+      
       localStorage.setItem("token", token);
 
       // Record login activity
       await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/users/activity/login`, {
         user_id: user._id,
       });
-
+      console.log("Login activity recorded successfully.");
       history("/dashboard");
     } catch (error) {
       console.error(error);

@@ -1,3 +1,4 @@
+// Enhanced version of ManageStudents.js
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -9,144 +10,180 @@ import MUIDataTable from "mui-datatables";
 import QuizAnalytics from "../../components/QuizAnalytics/QuizAnalytics";
 import { fetchAllUsers } from "../../redux/actions/userActions";
 import Login from "../Login/Login";
-import axios from "axios"; // For API calls
+import axios from "axios";
 import "./ManageStudents.css";
 
-const ManageStudents = ({ user, users, fetchAllUsers }) => {
+const ManageStudents = ({ user, fetchAllUsers }) => {
   const [value, setValue] = useState("1");
+  const [allUsers, setAllUsers] = useState([]);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (event, newValue) => setValue(newValue);
+
+  const fetchUsers = async () => {
+    try {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
+      const data = await res.json();
+      setAllUsers(data);
+      fetchAllUsers(data);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
   };
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
-        .then((res) => res.json())
-        .then((data) => fetchAllUsers(data));
-    };
     fetchUsers();
-  }, [fetchAllUsers]);
+  }, []);
 
-  const handleHideUser = async (id) => {
-    // Show confirmation dialog before proceeding
-    const confirmHide = window.confirm("Are you sure you want to hide this user?");
-    
-    if (!confirmHide) {
-      return; // If user cancels, do nothing
-    }
+  const handleUserAction = async (action, id) => {
+    const confirmMsg = `Are you sure you want to ${action} this user?`;
+    if (!window.confirm(confirmMsg)) return;
+
+    const url = `${process.env.REACT_APP_BACKEND_URL}/api/users/${action}`;
+    const method = action === "delete" ? "delete" : "put";
+    const config = method === "delete" ? { data: { user_id: id } } : { user_id: id };
 
     try {
-      const response = await axios.put(
-        `${process.env.REACT_APP_BACKEND_URL}/api/users/hide`,
-        { user_id: id } // Pass user ID in the request body
-      );
-      alert(response.data.message); // Notify the user
-
-      // Refresh the users list after hiding the user
-      const fetchUsers = async () => {
-        await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`)
-          .then((res) => res.json())
-          .then((data) => fetchAllUsers(data));
-      };
-      fetchUsers(); // Re-fetch users list
+      const response = await axios[method](url, config);
+      alert(response.data.message);
+      await fetchUsers();
     } catch (error) {
-      console.error("Error hiding user:", error);
-      alert("Failed to hide user.");
+      console.error(`Error on ${action}:`, error);
+      alert(`Failed to ${action} user.`);
     }
   };
-  const data = users
-  .filter((user) => user.role === "student")
-  .map((user) => {
-    const lastActivityDate = new Date(user.lastActivity);
-      const today = new Date();
-    const inactiveDays = Math.floor((today - lastActivityDate) / (1000 * 60 * 60 * 24)); // Convert ms to days
 
-      return {
+  const formatUser = (user) => {
+    const lastActivityDate = new Date(user.lastActivity);
+    const today = new Date();
+    const inactiveDays = Math.floor((today - lastActivityDate) / (1000 * 60 * 60 * 24));
+    return {
       fullName: `${user.firstName} ${user.lastName}`,
       role: user.role,
       username: user.username,
-      lastActivity: user.lastActivity,
-      inactiveDays: isNaN(inactiveDays) ? "N/A" : inactiveDays, // Handle invalid dates
+      registeredAt: user.registeredAt ? new Date(user.registeredAt).toLocaleDateString() : "N/A",
+      lastActivity: user.lastActivity ? new Date(user.lastActivity).toLocaleDateString() : "N/A",
+      inactiveDays: isNaN(inactiveDays) ? "N/A" : inactiveDays,
       pythonOneScore: user.pythonOneScore,
       id: user._id,
-      };
-    });
+    };
+  };
 
-  const columns = [
-    { name: "fullName", label: "Full Name" },
-    { name: "role", label: "Role" },
-    { name: "username", label: "Username" },
-    { name: "lastActivity", label: "Last Activity" },
-    { name: "inactiveDays", label: "Inactive Days" }, 
-    {
-      name: "actions",
-      label: "Actions",
-      options: {
-        customBodyRender: (value, tableMeta) => {
-          const userId = tableMeta.rowData[tableMeta.rowData.length - 1];
-          return (
-            <>
-              <Button variant="contained" color="primary" onClick={() => handleHideUser(userId)}>
-                Hide User
-              </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                component={Link}
-                to={`/manage-students/activity/${userId}`}
-                sx={{ marginLeft: "10px" }}
-              >
-                View Activity
-              </Button>
-            </>
-          );
-        },
-      },
-    },
-    { name: "id", label: "ID", options: { display: false } },
-  ];
+  const activeStudents = allUsers.filter(u => u.role === "student").map(formatUser);
+  const hiddenStudents = allUsers.filter(u => u.role === "Offline").map(formatUser);
+
+  const commonColumns = ["fullName", "role", "username", "registeredAt", "lastActivity", "inactiveDays"].map(name => ({
+    name,
+    label: name.charAt(0).toUpperCase() + name.slice(1).replace(/([A-Z])/g, ' $1'),
+    options: {
+      setCellHeaderProps: () => ({
+        style: {
+          textAlign: "center",
+          verticalAlign: "middle",
+          fontWeight: "600",
+          fontSize: "15px",
+          backgroundColor: "#f1f1f1",
+          padding: "12px 8px"
+        }
+      }),
+      setCellProps: () => ({
+        style: {
+          textAlign: "center",
+          verticalAlign: "middle",
+          padding: "12px 8px"
+        }
+      })
+    }
+  }));
+
+  const actionColumn = (hidden = false) => ({
+    name: "actions",
+    label: "Actions",
+    options: {
+      setCellHeaderProps: () => ({
+        style: {
+          textAlign: "center",
+          verticalAlign: "middle",
+          fontWeight: "600",
+          fontSize: "15px",
+          backgroundColor: "#f1f1f1",
+          padding: "12px 8px"
+        }
+      }),
+      setCellProps: () => ({
+        style: {
+          textAlign: "center",
+          verticalAlign: "middle",
+          padding: "12px 8px"
+        }
+      }),
+      customBodyRender: (value, tableMeta) => {
+        const userId = tableMeta.rowData[tableMeta.rowData.length - 1];
+        return (
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
+            {hidden ? (
+              <Button variant="contained" color="success" size="small" sx={{ borderRadius: "8px" }} onClick={() => handleUserAction("unhide", userId)}>Unhide</Button>
+            ) : (
+              <>
+                <Button variant="contained" color="primary" size="small" sx={{ borderRadius: "8px" }} onClick={() => handleUserAction("hide", userId)}>Hide</Button>
+                <Button variant="contained" color="secondary" size="small" component={Link} to={`/manage-students/activity/${userId}`} sx={{ borderRadius: "8px" }}>View Activity</Button>
+                <Button variant="contained" color="error" size="small" sx={{ borderRadius: "8px" }} onClick={() => handleUserAction("delete", userId)}>Delete</Button>
+              </>
+            )}
+          </Box>
+        );
+      }
+    }
+  });
+
+  const columnsWithId = (cols) => [...cols, { name: "id", label: "ID", options: { display: false } }];
 
   const options = {
     filterType: "dropdown",
     responsive: "standard",
-    selectableRows: "none", // Disable row selection
+    selectableRows: "none",
     rowsPerPage: 5,
     rowsPerPageOptions: [5, 10, 25],
     download: true,
     print: true,
     search: true,
+    elevation: 0,
+    setTableProps: () => ({
+      style: {
+        borderRadius: "12px",
+        boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.08)",
+        overflow: "hidden"
+      }
+    }),
+    setRowProps: (row, dataIndex, rowIndex) => ({
+      style: {
+        backgroundColor: rowIndex % 2 === 0 ? "#f9f9f9" : "#ffffff",
+        fontSize: "14px",
+        verticalAlign: "middle",
+        height: "56px"
+      }
+    })
   };
 
   return (
     <TabContext value={value}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <TabList onChange={handleChange} aria-label="Manage Students / Quizzes">
+        <TabList onChange={handleChange} aria-label="Manage Tabs">
           <Tab label="Manage Students" value="1" />
           <Tab label="Quiz Analytics" value="2" />
         </TabList>
       </Box>
       <TabPanel value="1">
-        <Box
-          sx={{
-            margin: "20px",
-            padding: "30px",
-            backgroundColor: "#f9f9f9",
-            boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.1)",
-          }}
-        >
+        <Box sx={{ margin: "20px", padding: "30px", backgroundColor: "#f9f9f9", boxShadow: "0px 0px 10px rgba(0,0,0,0.1)", borderRadius: "12px" }}>
           {user ? (
             <>
-              <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-                Manage Student Information
-              </Typography>
+              <Typography variant="h4" sx={{ marginBottom: "20px" }}>Manage Student Information</Typography>
+              <Typography variant="h5" sx={{ mt: 4, mb: 2 }}>Active Students</Typography>
+              <Paper sx={{ mb: 4 }}>
+                <MUIDataTable title={"STUDENT LIST"} data={activeStudents} columns={columnsWithId([...commonColumns, actionColumn()])} options={options} />
+              </Paper>
+              <Typography variant="h5" sx={{ mt: 4, mb: 2 }}>Hidden Students</Typography>
               <Paper>
-                <MUIDataTable
-                  title={"STUDENT LIST"}
-                  data={data}
-                  columns={columns}
-                  options={options}
-                />
+                <MUIDataTable title={"HIDDEN STUDENTS"} data={hiddenStudents} columns={columnsWithId([...commonColumns, actionColumn(true)])} options={options} />
               </Paper>
             </>
           ) : (
