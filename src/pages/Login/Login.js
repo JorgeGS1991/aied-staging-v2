@@ -86,6 +86,12 @@ function Login({ setUser, setUserRole }) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
+      <Typography variant="body2" sx={{ margin: "10px auto" }}>
+        Forgot password?{" "}
+        <Link to="/forgot-password" style={{ textDecoration: "underline" }}>
+          Reset here
+        </Link>
+      </Typography>
       <Button
         sx={{ width: "60%", margin: "auto", marginBottom: "30px" }}
         variant="contained"
