@@ -22,6 +22,8 @@ import ManageStudentDetails from "./pages/ManageStudents/ManageStudentDetails/Ma
 import { Navigate, Redirect } from "react-router";
 import Register from "./pages/Register/Register";
 import UserActivity from "./pages/ManageStudents/UserActivity";
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import ResetPassword from './pages/ResetPassword/ResetPassword';
 
 function App() {
   const [headerAppear, setHeaderAppear] = useState(false);
@@ -57,10 +59,9 @@ function App() {
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/student-details/:userId" element={<StudentDetails />} />
         <Route path="/manage-students" element={<ManageStudents />} />
-        <Route
-          path="/manage-students/:userId"
-          element={<ManageStudentDetails />}
-        />
+        <Route path="/manage-students/:userId" element={<ManageStudentDetails />}/>
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/manage-students/activity/:userId" element={<UserActivity />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
