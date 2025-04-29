@@ -22,6 +22,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import CobolCodeEditor from "./CobolCodeEditor";
 import { Box, Button, Typography } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
+import { setUser } from "../../redux/actions/userActions";
 
 const javascriptDefault = `// some comment`;
 
@@ -33,7 +34,7 @@ function Playground() {
   const [theme, setTheme] = useState("cobalt");
   const [language, setLanguage] = useState(languages[0]);
   const [value, setValue] = useState("1");
-
+  let userID = localStorage.getItem("userID");
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -180,6 +181,7 @@ function Playground() {
           <TabList onChange={handleChange} aria-label="lab API tabs example">
             <Tab label="JS/Python" value="1" />
             <Tab label="COBOL" value="2" />
+            <Tab label="VSCode" value="3" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -257,6 +259,27 @@ function Playground() {
         </TabPanel>
         <TabPanel value="2">
           <CobolCodeEditor />
+        </TabPanel>
+        <TabPanel value="3">
+        <div>
+      {userID ? (
+        <div style={{ width: "100%", height: "100vh", position: "relative" }}>
+          <iframe
+            src={`${process.env.REACT_APP_VSCODE_SERVER_URL}/?folder=/workspaces/${userID}`}
+            title="VSCode Web"
+            style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+            }}
+          />
+        </div>
+      ) : (
+        <div>
+          <p>Please log in to access the code editor.</p>
+        </div>
+      )}
+    </div>
         </TabPanel>
       </TabContext>
     </>
