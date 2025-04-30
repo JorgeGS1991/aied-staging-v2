@@ -60,8 +60,8 @@ const ManageStudents = ({ user, fetchAllUsers }) => {
       fullName: `${user.firstName} ${user.lastName}`,
       role: user.role,
       username: user.username,
-      registeredAt: user.registeredAt ? new Date(user.registeredAt).toLocaleDateString() : "N/A",
-      lastActivity: user.lastActivity ? new Date(user.lastActivity).toLocaleDateString() : "N/A",
+      registeredDate: user.registeredAt || null,
+      lastActivity: user.lastActivity || null,
       inactiveDays: isNaN(inactiveDays) ? "N/A" : inactiveDays,
       pythonOneScore: user.pythonOneScore,
       id: user._id,
@@ -71,7 +71,7 @@ const ManageStudents = ({ user, fetchAllUsers }) => {
   const activeStudents = allUsers.filter(u => u.role === "student").map(formatUser);
   const hiddenStudents = allUsers.filter(u => u.role === "Offline").map(formatUser);
 
-  const commonColumns = ["fullName", "role", "username", "registeredAt", "lastActivity", "inactiveDays"].map(name => ({
+  const commonColumns = ["fullName", "role", "username", "registeredDate", "lastActivity", "inactiveDays"].map(name => ({
     name,
     label: name.charAt(0).toUpperCase() + name.slice(1).replace(/([A-Z])/g, ' $1'),
     options: {
@@ -91,7 +91,13 @@ const ManageStudents = ({ user, fetchAllUsers }) => {
           verticalAlign: "middle",
           padding: "12px 8px"
         }
-      })
+      }),
+      ...(name === "registeredDate" || name === "lastActivity"
+        ? {
+            customBodyRender: (value) =>
+              value ? new Date(value).toLocaleDateString() : "N/A"
+          }
+        : {})
     }
   }));
 
