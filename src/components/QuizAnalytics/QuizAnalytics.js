@@ -30,6 +30,10 @@ const StudentScores = () => {
     mainframefour: "mainframe4",
     mainframefive: "mainframe5",
     mainframesix: "mainframe6",
+    coboltwo: "cobol2",
+    cobolthree: "cobol3",
+    cobolfour: "cobol4",
+    cobolsix: "cobol6",
   };
 
   const fetchQuestions = async () => {
@@ -146,7 +150,15 @@ const StudentScores = () => {
     { name: "mainframeFiveScore", label: "Mainframe Five Score"},
     { name: "mainframeFivePercentage", label: "Mainframe Five Percentage"},
     { name: "mainframeSixScore", label: "Mainframe Six Score"},
-    { name: "mainframeSixPercentage", label: "Mainframe Six Percentage"}
+    { name: "mainframeSixPercentage", label: "Mainframe Six Percentage"},
+    { name: "cobolTwoScore", label: "Cobol Two Score"},
+    { name: "cobolTwoPercentage", label: "Cobol Two Percentage"},
+    { name: "cobolThreeScore", label: "Cobol Three Score"},
+    { name: "cobolThreePercentage", label: "Cobol Three Percentage"},
+    { name: "cobolFourScore", label: "Cobol Four Score"},
+    { name: "cobolFourPercentage", label: "Cobol Four Percentage"},
+    { name: "cobolSixScore", label: "Cobol Six Score"},
+    { name: "cobolSixPercentage", label: "Cobol Six Percentage"},
   ];
 
   const options = {
@@ -203,6 +215,14 @@ const StudentScores = () => {
     mainframeFivePercentage: calculatePercentage(user.mainframeFiveScore, "mainframeFive"),
     mainframeSixScore: replaceNegativeScores(user.mainframeSixScore),
     mainframeSixPercentage: calculatePercentage(user.mainframeSixScore, "mainframeSix"),
+    cobolTwoScore: replaceNegativeScores(user.cobolTwoScore),
+    cobolTwoPercentage: calculatePercentage(user.cobolTwoScore, "cobolTwo"),
+    cobolThreeScore: replaceNegativeScores(user.cobolThreeScore),
+    cobolThreePercentage: calculatePercentage(user.cobolThreeScore, "cobolThree"),
+    cobolFourScore: replaceNegativeScores(user.cobolFourScore),
+    cobolFourPercentage: calculatePercentage(user.cobolFourScore, "cobolFour"),
+    cobolSixScore: replaceNegativeScores(user.cobolSixScore),
+    cobolSixPercentage: calculatePercentage(user.cobolSixScore, "cobolSix"),
   }));
 
   return <MUIDataTable title="Student Scores and Percentages" data={data} columns={columns} options={options} />;

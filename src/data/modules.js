@@ -6780,43 +6780,22 @@ const data = [
               content: `
               <div class='Getting on the System-submit'>
               <body>
-      
-  
   <p>
-  
       Welcome to the Mainframes Lab! In this lab, you'll embark on an exciting journey into the world of COBOL mainframes, a crucial technology that underpins many of today's enterprise systems. Whether you're a beginner or looking to deepen your expertise, our lab provides hands-on experience with real-world mainframe environments. You'll learn how to navigate the mainframe system, understand COBOL syntax and structure, and develop essential skills for maintaining and enhancing mainframe applications. Get ready to unlock the potential of one of the most enduring and powerful computing platforms in the industry.
-  
-  
   </p>
-  
-  
-  <h2 style="font-weight: bold;"> HERE'S Part One </h2>
-  
-  
+  <h2 style="font-weight: bold;"> HERE'S Part One </h2>  
   <video controls width="700">
       <source src="https://work-learn-bucket.s3.amazonaws.com/Mainframe/Getting+on+the+system+pt+1.mp4"
       type="video/mp4">
   </video>
-  
-  
-  
   <br /> 
-  
-  
-  <h2 style="font-weight: bold;"> Here's Part Two </h2>
-  
-  
-  
+  <h2 style="font-weight: bold;"> Here's Part Two </h2>  
   <video controls width="700">
       <source src="https://work-learn-bucket.s3.amazonaws.com/Mainframe/Getting+on+the+system+pt+2.mp4"
       type="video/mp4">
   </video>
-  
-  
-  
   </body>
-       
-              </div>
+     </div>
               <style>
               .Getting on the System-submit p {
                 margin: 10px 0;
@@ -7327,7 +7306,7 @@ type="video/mp4">
       id: 6,
       topicName: "Unit 5: Cobol",
       subTopics: [
-        {
+        {   
           id: 1,
           name: "Introduction to COBOL programming",
           type: "cobol1",
@@ -7344,10 +7323,13 @@ type="video/mp4">
   <div style="display: flex; justify-content: center">
     <video controls width="700">
       <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+1%3A+Introduction+to+COBOL+programming+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220110+2300-1.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <h2 style="font-weight: bold;">Lab</h2>
+    </video></div>`, 
+  },
+  {
+              id: 2,
+              topic: "Lab",
+              content: `
+              <body>
   <p>These lab sessions provide a practical introduction to COBOL programming on mainframes. You’ll learn how to write, compile, and execute COBOL programs while understanding key concepts such as data types, file handling, and numeric conversions. 
     Through step-by-step guidance, these labs will help you build a strong foundation in COBOL development, preparing you for real-world applications in enterprise systems. </p>
 
@@ -7388,9 +7370,8 @@ type="video/mp4">
   .data-rep p {
     margin: 10px 0;
   }
-</style>
-`,
-            },
+</style>`,
+            }
           ],
         },
         {
@@ -7442,7 +7423,14 @@ type="video/mp4">
         <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+2%3A+How+to+compile%2C+test%2C+and+debug+a+COBOL+program+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220131+2302-1.mp4"</source>
         type="video/mp4">
       </video><br/>
-      <h2 style="font-weight: bold;">Lab</h2>
+      `,
+            },
+            {
+              id: 2,
+              topic: "Lab",
+              content: `
+              <div class='Getting on the System-submit'>
+              <body>
   <p>This lab introduces COBOL programming through a classic "Hello, World!" program. It provides a step-by-step approach to coding, compiling, and executing a COBOL program on a mainframe system.</p>
  </div><br/>
   <div class="cobol-learning-objectives">
@@ -7474,7 +7462,12 @@ type="video/mp4">
   }
 </style>
 <br/>
-  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Lesson+2%3A+How+to+compile%2C+test%2C+and+debug+a+COBOL+program+/COBOL-Lab_Hello_3220_V2.pdf" type="application/pdf" width="100%" height="800">`,
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Lesson+2%3A+How+to+compile%2C+test%2C+and+debug+a+COBOL+program+/COBOL-Lab_Hello_3220_V2.pdf" type="application/pdf" width="100%" height="800"> `,
+            },
+            {
+              id: 3,
+              topic: "Quiz",
+              type: "quiz",
             },
           ],
         },
@@ -7524,8 +7517,12 @@ type="video/mp4">
 </style><br/>
 <video controls width="700">
         <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+3%3A+How+to+write+a+program+that+prepares+a+report+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220207+2302-1.mp4" type="video/mp4">
-      </video><br/>
-  <h2 style="font-weight: bold;">Lab:</h2>
+      </video><br/>`,
+            },
+            {
+              id: 2,
+              topic: "Lab",
+              content: `
   <p>This lab focuses on creating a COBOL program that generates a structured report from a customer data file (CUSTMAST) using sequential file processing in a mainframe environment. </p>
  </div>
   <div class="cobol-key-learning-objectives">
@@ -7566,6 +7563,11 @@ type="video/mp4">
   }
 </style>
   <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/Lesson+3%3A+How+to+write+a+program+that+prepares+a+report+/COBOL-RPT1000.pdf" type="application/pdf" width="100%" height="800">`,
+            },
+            {
+              id: 3,
+              topic: "Quiz",
+              type: "quiz",
             },
           ],
         },
@@ -7626,7 +7628,12 @@ type="video/mp4">
 <video controls width="700">
         <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+4%3A+How+to+design%2C+code%2C+and+test+a+structured+program+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220214+2317-1.mp4" type="video/mp4">
       </video><br/>
-  <h2 style="font-weight: bold;">Lab</h2><br/>
+  >`,
+            },
+            {
+              id: 2,
+              topic: "Lab",
+              content: `
   <p>This lab focuses on designing, coding, and testing a structured COBOL program that interactively calculates sales tax based on user input. </p>
 <div class="interactive-cobol-learning-objectives">
   <h2 style="font-weight: bold; color: black;">Key Learning Objectives:</h2>
@@ -7660,7 +7667,12 @@ type="video/mp4">
   }
 </style> 
 <br/>
-  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+4%3A+How+to+design%2C+code%2C+and+test+a+structured+program+/COBOL-CALC1000_Sp22_ECU.pdf" type="application/pdf" width="100%" height="800">`,
+  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+4%3A+How+to+design%2C+code%2C+and+test+a+structured+program+/COBOL-CALC1000_Sp22_ECU.pdf" type="application/pdf" width="100%" height="800" `,
+            },
+            {
+              id: 3,
+              topic: "Quiz",
+              type: "quiz",
             },
           ],
         },
@@ -7726,159 +7738,200 @@ type="video/mp4">
 <video controls width="700">
         <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220228+2302-1.mp4" type="video/mp4">
       </video><br/>
-  <h3 style="font-weight: bold;"> Lab 6a: Average Calculation Program (AVG1000)</h2>
-  <br/>
-  <p>This lab focuses on defining, moving, and initializing fields in COBOL by building a program that reads a series of numbers, calculates the sum and average, and outputs the results.</p><br/>
-<h2 style="font-weight: bold;">What You’ll Learn:</h2>
-  <div class="cobol-module">
-  <ul>
-    <li><strong>Using Working-Storage Variables</strong> – Defining and initializing:
-      <ul>
-        <li>A counter for the number of entries.</li>
-        <li>A sum variable to store the total.</li>
-        <li>An average variable for computation.</li>
-      </ul>
-    </li>
-    <li><strong>Reading and Converting Data</strong> – Accepting numeric input as text and converting it using <code>NUMVAL</code> for calculations.</li>
-    <li><strong>Modular Program Structure:</strong>
-      <ul>
-        <li><strong>Main Module</strong> – Controls the program flow.</li>
-        <li><strong>Calculation Module</strong> – Computes the sum and average.</li>
-        <li><strong>Output Module</strong> – Displays the results.</li>
-      </ul>
-    </li>
-    <li><strong>Handling Interactive Input</strong> – Prompting users for multiple inputs and defining a stopping condition.</li>
-    <li><strong>Executing and Debugging:</strong>
-      <ul>
-        <li>Running the program with JCL (modified from <code>CALC1000</code>).</li>
-        <li>Executing using a REXX script.</li>
-        <li>Checking for SDSF output errors (<code>ABEND S000</code> is acceptable).</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-<br/>
-  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_7_AVG1000_ECU.pdf" type="application/pdf" width="100%" height="800">`,
+  `,
             },
             {
               id: 2,
-              topic: "LAB 6b: Student Information Report (STUDENTS) ",
+              topic: "Lab 6a: Average Calculation Program (AVG1000)",
               content: `
               <div class='data-rep'>
-            <head><title>Student Information Report (STUDENTS)</title></head>  
-  <body>
-    <p>This lab focuses on processing and formatting a structured student report using COBOL, based on concepts from the MYEMPS program. </p><br/>
- <div class="cobol-key-learning-objectives">
-  <h2 style="font-weight: bold; color: black;">Key Learning Objectives:</h2>
-
-  <h3 style="font-weight: bold; color: black;">Using Working-Storage Variables – Defining and Initializing:</h3>
-  <ul>
-    <li>A counter for the number of entries.</li>
-    <li>A sum variable to store the total.</li>
-    <li>An average variable for computation.</li>
-  </ul>
-
-  <h3 style="font-weight: bold; color: black;">Reading and Converting Data:</h3>
-  <p>Accepting numeric input as text and converting it using <code>NUMVAL</code> for calculations.</p>
-
-  <h3 style="font-weight: bold; color: black;">Modular Program Structure:</h3>
-  <ul>
-    <li><strong>Main Module:</strong> Controls the program flow.</li>
-    <li><strong>Calculation Module:</strong> Computes the sum and average.</li>
-    <li><strong>Output Module:</strong> Displays the results.</li>
-  </ul>
-
-  <h3 style="font-weight: bold; color: black;">Handling Interactive Input:</h3>
-  <p>Prompting users for multiple inputs and defining a stopping condition.</p>
-
-  <h3 style="font-weight: bold; color: black;">Executing and Debugging:</h3>
-  <ul>
-    <li>Running the program with JCL (modified from CALC1000).</li>
-    <li>Executing using a REXX script.</li>
-    <li>Checking for SDSF output errors (ABEND S000 is acceptable).</li>
-  </ul>
-</div>
-
-<style>
-  .cobol-key-learning-objectives h2, .cobol-key-learning-objectives h3 {
-    color: black;
-  }
-  .cobol-key-learning-objectives ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    font-size: 16px;
-  }
-  .cobol-key-learning-objectives ul li {
-    margin: 5px 0;
-  }
-  .cobol-key-learning-objectives p {
-    font-size: 16px;
-  }
-  .cobol-key-learning-objectives code {
-    font-family: monospace;
-    font-size: 16px;
-  }
-</style>
-<br/>
-  <h2 style="font-weight: bold;">Lab 6b: Student Information Report (STUDENTS)</h2><br/>
-  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_8_+STUDENTS.pdf" type="application/pdf" width="100%" height="800">`,
+                <head><title>Lab 6a: Average Calculation Program (AVG1000)</title></head>  
+                <body>
+                  <p>This lab focuses on defining, moving, and initializing fields in COBOL by building a program that reads a series of numbers, calculates the sum and average, and outputs the results.</p>
+            
+                  <div class="cobol-programming-learning-objectives"><br/>
+                    <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+            
+                    <h3 style="font-weight: bold; color: black;">Using Working-Storage Variables:</h3>
+                    <p>Defining and initializing:</p>
+                    <ul>
+                      <li>A counter for the number of entries</li>
+                      <li>A sum variable to store the total</li>
+                      <li>An average variable for computation</li>
+                    </ul>
+            
+                    <h3 style="font-weight: bold; color: black;">Reading and Converting Data:</h3>
+                    <p>Accepting numeric input as text and converting it using <code>NUMVAL</code> for calculations.</p>
+            
+                    <h3 style="font-weight: bold; color: black;">Modular Program Structure:</h3>
+                    <ul>
+                      <li><strong>Main Module</strong> – Controls the program flow</li>
+                      <li><strong>Calculation Module</strong> – Computes the sum and average</li>
+                      <li><strong>Output Module</strong> – Displays the results</li>
+                    </ul>
+            
+                    <h3 style="font-weight: bold; color: black;">Handling Interactive Input:</h3>
+                    <p>Prompting users for multiple inputs and defining a stopping condition.</p>
+            
+                    <h3 style="font-weight: bold; color: black;">Executing and Debugging:</h3>
+                    <ul>
+                      <li>Running the program with JCL (modified from <code>CALC1000</code>)</li>
+                      <li>Executing using a REXX script</li>
+                      <li>Checking SDSF output errors (<code>ABEND S000</code> is acceptable)</li>
+                    </ul>
+                  </div>
+            
+                  <style>
+                    .cobol-programming-learning-objectives h2, .cobol-programming-learning-objectives h3 {
+                      color: black;
+                    }
+                    .cobol-programming-learning-objectives ul {
+                      list-style-type: disc;
+                      padding-left: 20px;
+                      font-size: 16px;
+                    }
+                    .cobol-programming-learning-objectives ul li {
+                      margin: 5px 0;
+                    }
+                    .cobol-programming-learning-objectives p {
+                      font-size: 16px;
+                    }
+                  </style>
+                  <br/>
+                  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_7_AVG1000_ECU.pdf" type="application/pdf" width="100%" height="800">
+                </body>
+              </div>
+              `
             },
             {
               id: 3,
-              topic: "LAB 6c: Interactive User Input Program (HELLOINT)",
+              topic: "Lab 6b: Student Information Report (STUDENTS)",
               content: `
               <div class='data-rep'>
-            <head><title>Interactive User Input Program (HELLOINT)</title></head>  
-  <body>
-    <p>This lab focuses on writing an interactive COBOL program that collects and displays user input, applying techniques learned in CALC1000 and HELLO. </p><br/>
- <div class="cobol-key-learning-objectives">
-  <h2 style="font-weight: bold; color: black;">Key Learning Objectives:</h2>
-
-  <h3 style="font-weight: bold; color: black;">Defining and Structuring Data Fields – Creating a STUDENT-RECORD with:</h3>
-  <ul>
-    <li>First Name (15 bytes)</li>
-    <li>Last Name (15 bytes)</li>
-    <li>Major (20 bytes)</li>
-    <li>Student ID (5 bytes)</li>
-  </ul>
-
-  <h3 style="font-weight: bold; color: black;">Creating and Reading Data Files:</h3>
-  <p>Using a STDATA file with at least three student records.</p>
-
-  <h3 style="font-weight: bold; color: black;">Working with COBOL File Handling:</h3>
-  <p>Defining FILE SECTION and using structured record processing.</p>
-
-  <h3 style="font-weight: bold; color: black;">Using Modular Programming:</h3>
-  <p>Implementing reusable sections for reading records, formatting output, and writing to a report.</p>
-
-  <h3 style="font-weight: bold; color: black;">Executing the Program in a Mainframe Environment:</h3>
-  <ul>
-    <li>Modifying JCL from MYEMPS for execution.</li>
-    <li>Running the program using a REXX script.</li>
-    <li>Checking SDSF output to ensure successful execution.</li>
-  </ul>
-</div>
-
-<style>
-  .cobol-key-learning-objectives h2, .cobol-key-learning-objectives h3 {
-    color: black;
-  }
-  .cobol-key-learning-objectives ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    font-size: 16px;
-  }
-  .cobol-key-learning-objectives ul li {
-    margin: 5px 0;
-  }
-  .cobol-key-learning-objectives p {
-    font-size: 16px;
-  }
-</style>
-
-<br/>
-<h2 style="font-weight: bold;">LAB 6c: Interactive User Input Program (HELLOINT)</h2><br/>
-  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_4_Hello_interactive.pdf" type="application/pdf" width="100%" height="800">`,
+                <head><title>Lab 6b: Student Information Report (STUDENTS)</title></head>  
+                <body>
+                  <p>This lab focuses on processing and formatting a structured student report using COBOL, based on concepts from the MYEMPS program.</p>
+            
+                  <div class="cobol-programming-learning-objectives"><br/>
+                    <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+            
+                    <h3 style="font-weight: bold; color: black;">Defining and Structuring Data Fields:</h3>
+                    <p>Creating a <code>STUDENT-RECORD</code> structure with the following fields:</p>
+                    <ul>
+                      <li>First Name (15 bytes)</li>
+                      <li>Last Name (15 bytes)</li>
+                      <li>Major (20 bytes)</li>
+                      <li>Student ID (5 bytes)</li>
+                    </ul>
+            
+                    <h3 style="font-weight: bold; color: black;">Creating and Reading Data Files:</h3>
+                    <p>Using a <code>STDATA</code> file with at least three student records.</p>
+            
+                    <h3 style="font-weight: bold; color: black;">Working with COBOL File Handling:</h3>
+                    <p>Defining <code>FILE SECTION</code> and processing structured records for reporting.</p>
+            
+                    <h3 style="font-weight: bold; color: black;">Using Modular Programming:</h3>
+                    <p>Implementing reusable program sections for:</p>
+                    <ul>
+                      <li>Reading student records</li>
+                      <li>Formatting the report output</li>
+                      <li>Writing formatted records to a report file</li>
+                    </ul>
+            
+                    <h3 style="font-weight: bold; color: black;">Executing the Program in a Mainframe Environment:</h3>
+                    <ul>
+                      <li>Modifying JCL from <code>MYEMPS</code> for execution</li>
+                      <li>Running the program using a REXX script</li>
+                      <li>Checking SDSF output to confirm successful execution</li>
+                    </ul>
+                  </div>
+            
+                  <style>
+                    .cobol-programming-learning-objectives h2, .cobol-programming-learning-objectives h3 {
+                      color: black;
+                    }
+                    .cobol-programming-learning-objectives ul {
+                      list-style-type: disc;
+                      padding-left: 20px;
+                      font-size: 16px;
+                    }
+                    .cobol-programming-learning-objectives ul li {
+                      margin: 5px 0;
+                    }
+                    .cobol-programming-learning-objectives p {
+                      font-size: 16px;
+                    }
+                  </style>
+                  <br/>
+                  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_8_+STUDENTS.pdf" width="100%" height="800">
+                </body>
+              </div>
+              `
+            },            
+            {
+              id: 4,
+              topic: "Lab 6c: Interactive COBOL Program (HELLO2)",
+              content: `
+              <div class='data-rep'>
+                <head><title>Lab 6c: Interactive COBOL Program (HELLO2)</title></head>  
+                <body>
+                  <p>This lab focuses on writing an interactive COBOL program that collects and displays user input, applying techniques learned in CALC1000 and HELLO.</p>
+            
+                  <div class="cobol-programming-learning-objectives"><br/>
+                    <h2 style="font-weight: bold; color: black;">What You’ll Learn:</h2>
+            
+                    <h3 style="font-weight: bold; color: black;">Handling Interactive Input:</h3>
+                    <p>Collecting user information such as:</p>
+                    <ul>
+                      <li>Name</li>
+                      <li>Hometown</li>
+                      <li>Major</li>
+                    </ul>
+            
+                    <h3 style="font-weight: bold; color: black;">Defining and Using Variables:</h3>
+                    <p>Declaring text-based (alphanumeric) fields using <code>Level 77</code> variables.</p>
+            
+                    <h3 style="font-weight: bold; color: black;">Structuring the Program with Modules:</h3>
+                    <ul>
+                      <li><strong>Main Module</strong> – Controls program execution</li>
+                      <li><strong>Input Module</strong> – Accepts user input</li>
+                      <li><strong>Output Module</strong> – Displays collected data</li>
+                    </ul>
+            
+                    <h3 style="font-weight: bold; color: black;">Executing the Program:</h3>
+                    <ul>
+                      <li>Running the program via JCL (modified from <code>HELLO</code> JCL)</li>
+                      <li>Understanding and handling expected <code>ABEND S000</code> due to interactive input</li>
+                      <li>Executing the program using a REXX script for interactive mode</li>
+                    </ul>
+                  </div>
+            
+                  <style>
+                    .cobol-programming-learning-objectives h2, .cobol-programming-learning-objectives h3 {
+                      color: black;
+                    }
+                    .cobol-programming-learning-objectives ul {
+                      list-style-type: disc;
+                      padding-left: 20px;
+                      font-size: 16px;
+                    }
+                    .cobol-programming-learning-objectives ul li {
+                      margin: 5px 0;
+                    }
+                    .cobol-programming-learning-objectives p {
+                      font-size: 16px;
+                    }
+                  </style>
+                  <br/>
+                  <embed src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+6%3A+Other+ways+to+define%2C+move%2C+and+initialize+fields+/COBOL-Lab_4_Hello_interactive.pdf" type="application/pdf" width="100%" height="800">
+                </body>
+              </div>
+              `
+            },
+            {
+              id: 5,
+              topic: "Quiz",
+              type: "quiz",
             },
           ],
         }, 
@@ -8025,7 +8078,12 @@ type="video/mp4">
   </ul>
 </div>
 <br/>
-<h2 style="font-weight: bold;">LAB: CALC2000 Program </h2><br/>
+`,
+            },
+            {
+              id: 2,
+              topic: "Lab",
+              content: `
 <p>This COBOL lab focuses on calculating the future value of an investment based on user input. It expands upon CALC1000 by introducing a complete financial computation process. </p><br/>
 <h3 style="font-weight: bold;">Key Components of the Lab: </h3><br/>
 <div class="cobol-procedure">
@@ -8229,7 +8287,6 @@ type="video/mp4">
     margin: 5px 0;
   }
 </style>
-
 `,
             },
           ],

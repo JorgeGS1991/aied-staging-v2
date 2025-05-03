@@ -127,7 +127,15 @@ const Quiz = ({
       setQuizType("mainframeFiveScore");
     } else if (type === "mainframe6") {
       setQuizType("mainframeSixScore");
-    }   
+    } else if (type === "cobol2") {
+      setQuizType("cobolTwoScore");
+    } else if (type === "cobol3") {
+      setQuizType("cobolThreeScore");
+    } else if (type === "cobol4") {
+      setQuizType("cobolFourScore");
+    } else if (type === "cobol6") {
+      setQuizType("cobolSixScore");
+    }
     if (score > 0) {
       updateQuizScore(score, quizType);
     }
