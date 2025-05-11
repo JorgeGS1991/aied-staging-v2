@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut } from "../../redux/actions/userActions";
 import { useState } from "react";
@@ -19,6 +19,7 @@ function Navbar({ user, role, logOut }) {
     if (userId) {
       trackLogout(userId);
     }
+    window.location.href = "/";
     logOut();
   };
 
@@ -49,12 +50,8 @@ function Navbar({ user, role, logOut }) {
           </div>
           {user ?(<>
             <div className="navbar-item">
-  <Link to={`/student-details/${localStorage.getItem('userID')}`}>
-    My Progress
-  </Link>
-</div></>):null}
-         
-
+          <Link to={`/student-details/${localStorage.getItem('userID')}`}>My Progress</Link>
+            </div></>):null}
           <div className="navbar-item">
             {user ? (
               <>
