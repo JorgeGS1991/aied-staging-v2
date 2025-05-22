@@ -7993,6 +7993,11 @@ type="video/mp4">
         <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+7%3A+How+to+arithmetic+statements+and+intrinsic+functions+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220314+2200-1.mp4" type="video/mp4">
         </video>`,
             },
+            {
+              id: 2,
+              topic: "Quiz",
+              type: "quiz",
+            },
           ],
         },
         {
@@ -8053,6 +8058,11 @@ type="video/mp4">
 <video controls width="700">
        <source src="https://work-learn-bucket.s3.us-east-1.amazonaws.com/COBOL/Lesson+8%3A+How+to+work+with+dates+/ICTN+3220++Enterprise+Server+Programming+Spring+2022-20220328+2202-1.mp4"</source>
        type="video/mp4">`,
+            },
+            {
+              id: 2,
+              topic: "Quiz",
+              type: "quiz",
             },
           ],
         },
@@ -8230,6 +8240,11 @@ type="video/mp4">
   }
 </style>
 `,
+            },
+            {
+              id: 2,
+              topic: "Quiz",
+              type: "quiz",
             },
           ],
         },
