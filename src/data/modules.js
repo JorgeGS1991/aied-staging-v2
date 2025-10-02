@@ -39,7 +39,7 @@ const data = [
           name: "Link to Slack Channel",
           content: `
               <p>This is the link to the Slack Channel:</p>
-              <a style="margin-top: 20px; text-decoration: underline;" target="_blank" href="https://join.slack.com/t/worklearn-workspace/shared_invite/zt-3e743j1sh-89RnamU6oyf9d98AsZbAcg">WorkLearn</a>
+              <a style="margin-top: 20px; text-decoration: underline;" target="_blank" href="https://bit.ly/worklearn-project">WorkLearn</a>
               `,
         },
         {
